@@ -18,7 +18,9 @@
 				style="width: 192px; height: 178px;"
 				src="logo-heart.png"
 				alt="fuzzy felt heart" />
-			<h1 class="p-4 flex-1 text-center">about felt</h1>
+			<span class="p-4 flex-1 text-center text-4xl font-hairline sm:text-6xl">
+				about felt
+			</span>
 			<img
 				style="width: 192px; height: 192px;"
 				src="logo-192-textured.png"
