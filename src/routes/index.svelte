@@ -46,10 +46,15 @@
 				ty for stopping by
 			</span>
 		</li>
-		<li class="py-4 font-hairline">
+		<li class="py-4 font-hairline flex flex-col items-center">
 			<div>
 				this is a
-				<span class="font-medium bg-red-200">pre-alpha preview version</span>
+				<span class="bg-red-200">
+					<span class="text-4xl">pre-alpha</span>
+					preview version
+				</span>
+			</div>
+			<div>
 				of
 				<a
 					class="github-repo"
@@ -59,12 +64,8 @@
 					felt
 				</a>
 			</div>
-			<div>
-				<span class="font-bold bg-red-400">
-					<span class="font-medium">expect nothing!</span>
-					~~assume security fails 100%~~
-				</span>
-			</div>
+			<div class="font-medium bg-red-400">expect nothing!</div>
+			<div class="font-bold bg-red-500">~~assume security fails 100%~~</div>
 		</li>
 		<li class="py-4">
 			<!-- wrap it so it doesn't fill the space -->
@@ -120,7 +121,10 @@
 
 <style>
 	.github-repo {
-		@apply font-hairline text-5xl;
+		@apply font-hairline text-5xl text-green-700;
+	}
+	.github-repo:hover {
+		@apply underline;
 	}
 	.exclaim {
 		@apply text-5xl font-hairline text-gray-600;
