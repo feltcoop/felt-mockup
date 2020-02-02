@@ -21,11 +21,11 @@
 		<h1>felt</h1>
 	</Content>
 	<div class="flex flex-col">
-		<TextInput bind:value={text} {submit} classes="mb-2" />
+		<TextInput bind:value={text} {submit} />
 		{#if text}
 			<div
-				class="px-2 py-1 border-4 border-purple-200 border-bl-lg mb-2
-				rounded-bl-lg rounded-tr-lg">
+				class="px-2 py-1 border-4 border-purple-200 border-bl-lg rounded-bl-lg
+				rounded-tr-lg">
 				{text}
 			</div>
 		{/if}
@@ -42,7 +42,7 @@
 		<li class="py-4">
 			<span class="text-4xl font-hairline">
 				hi,
-				<span class="text-6xl text-gray-600">welcome!</span>
+				<span class="text-5xl text-gray-600">welcome!</span>
 				ty for stopping by
 			</span>
 		</li>
@@ -50,7 +50,14 @@
 			<div>
 				this is a
 				<span class="font-medium bg-red-200">pre-alpha preview version</span>
-				of felt
+				of
+				<a
+					class="github-repo"
+					href="https://github.com/feltcoop/felt"
+					target="_blank"
+					rel="noopener">
+					felt
+				</a>
 			</div>
 			<div>
 				<span class="font-bold bg-red-400">
@@ -64,14 +71,14 @@
 			<div class="flex items-center justify-center">
 				<a
 					href="/about"
-					class="logo-heart flex flex-wrap items-top justify-center mt-8">
-					<span class="text-6xl mr-2 pb-2 font-hairline text-green-700">
+					class="logo-heart flex flex-wrap items-center justify-center mt-8">
+					<span class="text-5xl mr-2 pb-2 font-hairline text-green-700">
 						about
 					</span>
 					<img
 						src="/logo-heart.png"
 						alt="fuzzy felt heart"
-						style="width: 192px; height: 178px; margin-top: -18px" />
+						style="width: 192px; height: 178px;" />
 				</a>
 			</div>
 		</li>
@@ -113,7 +120,7 @@
 
 <style>
 	.github-repo {
-		@apply font-normal;
+		@apply font-hairline text-5xl;
 	}
 	.exclaim {
 		@apply text-5xl font-hairline text-gray-600;
