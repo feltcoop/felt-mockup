@@ -39,7 +39,7 @@
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
 				an open-source platform
 			</a>
-			, and a co-op of workers (
+			, and a co-op of workers -
 			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
 				@feltcoop on twitter
 			</a>
@@ -49,7 +49,7 @@
 			</a>
 			& email
 			<a href="mailto:team@felt.social">team@felt.social</a>
-			), all with a purpose that puts people first. If we do it right, Felt is
+			- all with a purpose that puts people first. If we do it right, Felt is
 			tech that feels good.
 		</p>
 		<p>
