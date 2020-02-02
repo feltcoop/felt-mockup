@@ -34,12 +34,14 @@
 			<a href="https://felt.social">a community</a>
 			,
 			<a href="https://github.com/feltcoop/felt">an open-source platform</a>
-			, and
-			<a href="mailto:team@felt.social">
-				a co-op of workers (team@felt.social)
-			</a>
-			, all with a purpose that puts people first. If we do it right, Felt
-			should be tech that feels good.
+			, and a co-op of workers (
+			<a href="https://twitter.com/feltcoop">@feltcoop on twitter</a>
+			&
+			<a href="https://github.com/feltcoop">github.com/feltcoop</a>
+			& email
+			<a href="mailto:team@felt.social">team@felt.social</a>
+			), all with a purpose that puts people first. If we do it right, Felt is
+			tech that feels good.
 		</p>
 		<p>
 			But Felt is not ready yet.
