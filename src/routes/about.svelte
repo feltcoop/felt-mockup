@@ -79,16 +79,15 @@
 				rel="noopener">
 				free and open-source software
 			</a>
-			released under the
+			released under the permissive
 			<a
 				href="https://github.com/feltcoop/website/blob/master/license"
 				target="_blank"
 				rel="noopener">
-				MIT
+				ISC license
 			</a>
-			license, and it's designed to be easily self-hosted, so you can run a
-			private instance for your community and maintain full control. To learn
-			more, see
+			, and it's designed to be easily self-hosted, so you can run a private
+			instance for your community and maintain full control. To learn more, see
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
 				our GitHub repo
 			</a>

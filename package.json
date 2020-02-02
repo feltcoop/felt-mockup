@@ -2,6 +2,7 @@
   "name": "felt",
   "description": "tech that feels good 💚 empowering people and democratic organizations",
   "version": "0.0.1",
+  "license": "ISC",
   "author": {
     "name": "Felt.coop",
     "email": "team@felt.social",

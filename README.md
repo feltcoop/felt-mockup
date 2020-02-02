@@ -53,4 +53,5 @@ and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
 ## license
 
-[MIT](license) <3
+permissive [ISC license](license) <3
+<sub>[learn more at wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub>
