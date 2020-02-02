@@ -9,10 +9,18 @@
 ## develop
 
 ```bash
+# play with the code
 npm i
 npm run ts # gogo typescript
 npm run tw # open another shell
 npm run dev # browse to localhost:3000 or whatever it says
+```
+
+```bash
+# deploy to real life
+npm i
+npm run build
+npm start
 ```
 
 ## credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
