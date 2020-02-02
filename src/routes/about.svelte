@@ -47,7 +47,13 @@
 			But Felt is not ready yet.
 			<span class="font-bold">
 				This is just a pre-alpha release for demonstration and design purposes.
-				Do not expect security when you use it (yet).
+				<span class="text-2xl">
+					Do
+					<span class="border-gray-700 border-b-8 border-double">not</span>
+					expect security when you run this software (
+					<span class="italic">yet</span>
+					).
+				</span>
 			</span>
 			Our goals are lofty and our team is small, but we hope to provide software
 			that solves priority problems and causes
