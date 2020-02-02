@@ -105,7 +105,7 @@
 			to its users (us) and society. To learn more about why we chose this
 			business structure, see our blog post "Why Felt is a worker co-op
 			<span class="font-bold text-xl">(TODO)</span>
-			" . In the future, we want to explore hybrid models that give users
+			" . In the future, we want to explore hybrid models to give users
 			(you-sers) significant ownership and control and accountability.
 		</p>
 		<!-- TODO email input -->
