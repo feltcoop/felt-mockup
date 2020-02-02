@@ -8,7 +8,10 @@
 
 	let text = '';
 
-	const defaultNotes = () => [{ content: 'im a note :)' }];
+	const defaultNotes = () => [
+		{ content: 'im a note :D' },
+		{ content: 'same lol' },
+	];
 	let notes = defaultNotes();
 
 	$: $world, (notes = defaultNotes()); // TODO this is a hack to make things less confusing - the fix is to persist state per world
