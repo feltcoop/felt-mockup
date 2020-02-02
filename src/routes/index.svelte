@@ -9,7 +9,7 @@
 		{ content: 'im a note :)' },
 		{
 			content:
-				'<span class="text-4xl font-hairline">hi, <span class="font-medium"><span class="text-purple-700">w</span><span class="text-green-700">e</span><span class="text-purple-700">l</span><span class="text-green-700">c</span><span class="text-purple-700">o</span><span class="text-green-700">m</span><span class="text-purple-700">e</span><span class="text-green-700">!</span><span class="text-purple-700">!</span></span> ty for stoppin by</span>',
+				'<span class="text-4xl font-hairline">hi, <span class="text-6xl"><span class="text-purple-700">w</span><span class="text-green-700">e</span><span class="text-purple-700">l</span><span class="text-green-700">c</span><span class="text-purple-700">o</span><span class="text-green-700">m</span><span class="text-purple-700">e</span><span class="text-green-700">!</span><span class="text-purple-700">!</span></span> ty for stoppin by</span>',
 		},
 	];
 
@@ -45,6 +45,12 @@
 	</ul>
 	<Content>
 		<ol class="text-2xl" style="padding-left: 36px;">
+			<li class="font-hairline">
+				this is a
+				<span class="font-medium underline">pre-alpha preview version</span>
+				of the software.
+				<span class="font-bold underline">expect nothing!</span>
+			</li>
 			<li>
 				<a href="/about" class="flex">
 					<span class="text-6xl mr-4 font-hairline">about</span>

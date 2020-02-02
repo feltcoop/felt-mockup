@@ -81,12 +81,12 @@
 			to help
 			<span class="font-bold italic">Felt The Business</span>
 			remain
-			<span class="font-bold">accountable</span>
-			to its users and society. To learn more about why we chose this business
-			structure, see our blog post "Why Felt is a worker co-op
+			<span class="font-bold">~accountable~</span>
+			to its users (us) and society. To learn more about why we chose this
+			business structure, see our blog post "Why Felt is a worker co-op
 			<span class="font-bold text-xl">(TODO)</span>
 			" . In the future, we want to explore hybrid models that give users
-			(you-sers) significant ownership and control.
+			(you-sers) significant ownership and control and accountability.
 		</p>
 		<!-- TODO email input -->
 		<hr class="pb-4" />
