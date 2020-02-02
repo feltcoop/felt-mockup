@@ -89,8 +89,10 @@
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
 				our GitHub repo
 			</a>
-			and check out the documentation at
+			, our dev site
 			<a href="https://felt.dev">felt.dev</a>
+			, and our community
+			<a href="https://felt.dev">felt.social</a>
 			.
 		</p>
 		<p>
