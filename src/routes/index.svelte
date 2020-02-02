@@ -8,7 +8,7 @@
 	let notes = [
 		{ content: 'im a note :)' },
 		{
-			content: `<span class="text-4xl font-hairline">hi, <span class="text-6xl"><span class="text-purple-700">w</span><span class="text-green-700">e</span><span class="text-purple-700">l</span><span class="text-green-700">c</span><span class="text-purple-700">o</span><span class="text-green-700">m</span><span class="text-purple-700">e</span><span class="text-green-700">!</span></span> ty for stoppin by</span>`,
+			content: `<span class="text-4xl font-hairline">hi, <span class="text-6xl text-gray-600">welcome!</span> ty for stoppin by</span>`,
 		},
 	];
 
