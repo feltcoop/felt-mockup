@@ -336,7 +336,7 @@ const data: Data = {
 		nav: [
 			{
 				title: 'avatars',
-				items: ['ryan', 'onuk', 'overtowed'],
+				items: ['ryan', 'rrr', 'r'],
 			},
 			{
 				title: 'communities',
@@ -392,8 +392,8 @@ const data: Data = {
 		{
 			type: 'avatar',
 			id: id(),
-			title: 'onuk',
-			slug: 'onuk',
+			title: 'rrr',
+			slug: 'rrr',
 			spaces: [
 				{ type: 'inbox', id: id(), title: 'inbox', slug: 'inbox', notes },
 				{ type: 'notes', id: id(), title: 'notes', slug: 'notes', notes },
@@ -409,8 +409,8 @@ const data: Data = {
 		{
 			type: 'avatar',
 			id: id(),
-			title: 'overtowed',
-			slug: 'overtowed',
+			title: 'r',
+			slug: 'r',
 			spaces: [
 				{ type: 'inbox', id: id(), title: 'inbox', slug: 'inbox', notes },
 				{ type: 'notes', id: id(), title: 'notes', slug: 'notes', notes },
