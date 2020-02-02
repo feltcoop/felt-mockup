@@ -27,12 +27,19 @@
 		<p>
 			Felt is community software for empowering people and democratic
 			organizations. It's a free and open alternative to many websites and apps
-			tucked into one sweet package. Features include chats, forums, events and
-			rsvps, polls, note taking and sharing, tasks and todos and reminders,
-			collaborating with others, blogs and web publishing, and more, and more!
-			And Felt is even more than a big bag of features. It's a community, a
-			platform, and a co-op of workers, all with a purpose that puts people
-			first. If we do it right, Felt should be tech that feels good.
+			tucked into one sweet package. Felt's features (will) include chats,
+			forums, events and rsvps, polls, note taking and sharing, tasks and todos
+			and reminders, collaborating with others, blogs and web publishing, and
+			more, and more! And Felt is even more than a big bag of features. It's
+			<a href="https://felt.social">a community</a>
+			,
+			<a href="https://github.com/feltcoop/felt">an open-source platform</a>
+			, and
+			<a href="mailto:team@felt.social">
+				a co-op of workers (team@felt.social)
+			</a>
+			, all with a purpose that puts people first. If we do it right, Felt
+			should be tech that feels good.
 		</p>
 		<p>
 			But Felt is not ready yet.
@@ -61,14 +68,17 @@
 			.
 		</p>
 		<p>
-			The company behind Felt is a democratic worker co-op, where the workers
-			jointly share equal ownership and control. We believe this is a good way
-			forward to help Felt The Business remain accountable to its users and
-			society. To learn more about why we chose this business structure, see our
-			blog post
-			<a href="blog/why-felt-is-worker-co-op">"Why Felt is a worker co-op"</a>
-			. In the future, we want to explore changing to a hybrid model that gives
-			users (you-sers) partial ownership and control.
+			The company behind Felt is a democratic worker co-op where the workers
+			equally share ownership and control. We believe this is a good way forward
+			to help
+			<span class="font-bold italic">Felt The Business</span>
+			remain
+			<span class="font-bold">accountable</span>
+			to its users and society. To learn more about why we chose this business
+			structure, see our blog post "Why Felt is a worker co-op
+			<span class="font-bold text-xl">(TODO)</span>
+			" . In the future, we want to explore hybrid models that give users
+			(you-sers) significant ownership and control.
 		</p>
 		<!-- TODO email input -->
 		<hr class="pb-4" />
