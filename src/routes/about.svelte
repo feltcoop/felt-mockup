@@ -111,6 +111,7 @@
 			" . In the future, we want to explore hybrid models to give users
 			(you-sers) significant ownership and control and accountability.
 		</p>
+		<p>Feedback is gold. 💚💚</p>
 		<!-- TODO email input -->
 		<hr class="pb-4" />
 		<SocialLinks />
