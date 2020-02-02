@@ -67,7 +67,7 @@
 				</span>
 			</span>
 			Our goals are lofty and our team is small, but we hope to provide software
-			that helps solve priority problems and causes
+			that helps solve priority problems and promotes
 			<a href="felt/memes">much joy</a>
 			.
 		</p>
