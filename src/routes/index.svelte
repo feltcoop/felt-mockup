@@ -93,7 +93,7 @@
 						class="exclaim">
 						!!
 					</a>
-					free
+					free source code
 					<a
 						href="https://en.wikipedia.org/wiki/Free_and_open-source_software"
 						target="_blank"
@@ -101,7 +101,6 @@
 						class="exclaim">
 						!!
 					</a>
-					source code
 				</div>
 				at
 				<a
