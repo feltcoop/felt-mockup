@@ -62,8 +62,21 @@
 			</li>
 			<li>
 				<span class="font-hairline">
+					<a
+						href="https://en.wikipedia.org/wiki/Free_software"
+						target="_blank"
+						rel="noopener"
+						class="text-4xl font-hairline">
+						!!
+					</a>
 					free
-					<span class="text-xs font-normal">!!!</span>
+					<a
+						href="https://en.wikipedia.org/wiki/Free_and_open-source_software"
+						target="_blank"
+						rel="noopener"
+						class="text-4xl font-hairline">
+						!!
+					</a>
 					source code at
 				</span>
 				<a
