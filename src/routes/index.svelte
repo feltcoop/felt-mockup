@@ -9,7 +9,7 @@
 		{ content: 'im a note :)' },
 		{
 			content:
-				'hi, <span class="font-bold"><span class="text-purple-700">w</span><span class="text-green-700">e</span><span class="text-purple-700">l</span><span class="text-green-700">c</span><span class="text-purple-700">o</span><span class="text-green-700">m</span><span class="text-purple-700">e</span><span class="text-green-700">!</span><span class="text-purple-700">!</span></span> ty for stoppin by',
+				'<span class="text-4xl font-hairline">hi, <span class="font-medium"><span class="text-purple-700">w</span><span class="text-green-700">e</span><span class="text-purple-700">l</span><span class="text-green-700">c</span><span class="text-purple-700">o</span><span class="text-green-700">m</span><span class="text-purple-700">e</span><span class="text-green-700">!</span><span class="text-purple-700">!</span></span> ty for stoppin by</span>',
 		},
 	];
 
@@ -47,14 +47,16 @@
 		<ol class="text-2xl" style="padding-left: 36px;">
 			<li>
 				<a href="/about" class="flex">
-					<span class="text-4xl mr-4">about</span>
+					<span class="text-6xl mr-4 font-hairline">about</span>
 					<img src="/logo-heart.png" alt="fuzzy felt heart" />
 				</a>
 			</li>
 			<li>
-				free
-				<small>!!!</small>
-				source code at
+				<span class="font-hairline">
+					free
+					<span class="text-xs font-normal">!!!</span>
+					source code at
+				</span>
 				<a
 					href="https://github.com/feltcoop/felt"
 					target="_blank"
