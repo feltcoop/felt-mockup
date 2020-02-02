@@ -33,11 +33,17 @@
 			more, and more! And Felt is even more than a big bag of features. It's
 			<a href="https://felt.social">a community</a>
 			,
-			<a href="https://github.com/feltcoop/felt">an open-source platform</a>
+			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
+				an open-source platform
+			</a>
 			, and a co-op of workers (
-			<a href="https://twitter.com/feltcoop">@feltcoop on twitter</a>
+			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
+				@feltcoop on twitter
+			</a>
 			&
-			<a href="https://github.com/feltcoop">github.com/feltcoop</a>
+			<a href="https://github.com/feltcoop" target="_blank" rel="noopener">
+				github.com/feltcoop
+			</a>
 			& email
 			<a href="mailto:team@felt.social">team@felt.social</a>
 			), all with a purpose that puts people first. If we do it right, Felt is
@@ -62,15 +68,25 @@
 		</p>
 		<p>
 			Felt is
-			<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">
+			<a
+				href="https://en.wikipedia.org/wiki/Free_and_open-source_software"
+				target="_blank"
+				rel="noopener">
 				free and open-source software
 			</a>
 			released under the
-			<a href="https://github.com/feltcoop/website/blob/master/license">MIT</a>
+			<a
+				href="https://github.com/feltcoop/website/blob/master/license"
+				target="_blank"
+				rel="noopener">
+				MIT
+			</a>
 			license, and it's designed to be easily self-hosted, so you can run a
 			private instance for your community and maintain full control. To learn
 			more, see
-			<a href="https://github.com/feltcoop/felt">our GitHub repo</a>
+			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
+				our GitHub repo
+			</a>
 			and check out the documentation at
 			<a href="https://felt.dev">felt.dev</a>
 			.
