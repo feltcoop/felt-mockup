@@ -45,7 +45,7 @@ using [`svelte`](https://github.com/sveltejs/svelte),
 [`tailwindcss`](https://github.com/tailwindcss/tailwindcss),
 [`sirv`](https://github.com/lukeed/sirv),
 [`polka`](https://github.com/lukeed/polka),
-[`node`](https://nodejs.org),
+[`node`](https://github.com/nodejs/node),
 [`vscode`](https://github.com/Microsoft/vscode),
 [`github`](https://github.com), [`git`](https://git-scm.com/),
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
