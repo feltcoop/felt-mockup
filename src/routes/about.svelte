@@ -66,8 +66,8 @@
 					).
 				</span>
 			</span>
-			Our goals are lofty and our team is small, but we hope to provide software
-			that helps solve priority problems and promotes
+			Our goals are lofty and our team is small, and through the might of
+			software we hope to help solve priority problems and promote
 			<a href="felt/memes">much joy</a>
 			.
 		</p>
