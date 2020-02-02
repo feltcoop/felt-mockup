@@ -55,9 +55,9 @@
 		<p>
 			But Felt is not ready yet.
 			<span class="font-bold">
-				This is just
-				<span class="text-2xl">a pre-alpha release</span>
-				for demonstration and design purposes.
+				This is just a
+				<span class="text-2xl">pre-alpha</span>
+				release for demonstration and design purposes.
 				<span class="text-2xl">
 					Do
 					<span class="border-gray-700 border-b-8 border-double">not</span>
