@@ -1,0 +1,28 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/node_modules/**": false,
+    "node_modules": true,
+    "node_modules/**": true,
+    "src/routes/_data.js": true,
+    "static/index.css": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/node_modules": false,
+    "node_modules": true,
+    "src/routes/_data.js": true,
+    "package-lock.json": true,
+    "static/index.css": true
+  },
+  "search.useIgnoreFiles": true
+}

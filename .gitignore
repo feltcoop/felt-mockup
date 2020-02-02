@@ -1,0 +1,11 @@
+/node_modules/
+.DS_Store
+
+yarn-error.log
+
+/src/node_modules/@sapper/
+/__sapper__/
+
+/static/index.css
+emails.txt
+*.ignore.*
