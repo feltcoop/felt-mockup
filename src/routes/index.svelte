@@ -50,7 +50,7 @@
 				of the software.
 				<span class="font-bold bg-red-400">
 					<span class="font-medium">expect nothing!</span>
-					~~assume security is all fails~~
+					~~assume security fails 100%~~
 				</span>
 			</li>
 			<li>
