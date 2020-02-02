@@ -52,7 +52,7 @@
 			<div>
 				this is a
 				<span class="font-medium bg-red-200">pre-alpha preview version</span>
-				of the software.
+				of felt
 			</div>
 			<div>
 				<span class="font-bold bg-red-400">
