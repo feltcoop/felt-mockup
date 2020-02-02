@@ -28,4 +28,8 @@
 	:global(textarea) {
 		@apply px-2 py-1 rounded-bl-lg rounded-tr-lg;
 	}
+	:global(img) {
+		/* do not show alt text by default */
+		color: transparent;
+	}
 </style>
