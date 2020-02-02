@@ -47,9 +47,9 @@
 		<ol class="text-2xl" style="padding-left: 36px;">
 			<li class="font-hairline">
 				this is a
-				<span class="font-medium underline">pre-alpha preview version</span>
+				<span class="font-medium bg-red-200">pre-alpha preview version</span>
 				of the software.
-				<span class="font-bold underline">expect nothing!</span>
+				<span class="font-bold bg-red-400">expect nothing!</span>
 			</li>
 			<li>
 				<a href="/about" class="flex">
