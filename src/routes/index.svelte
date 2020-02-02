@@ -48,7 +48,9 @@
 				this is a
 				<span class="font-medium bg-red-200">pre-alpha preview version</span>
 				of the software.
-				<span class="font-bold bg-red-400">expect nothing!</span>
+				<span class="font-bold bg-red-400">
+					expect nothing! ~~assume security is all fails~~
+				</span>
 			</li>
 			<li>
 				<a href="/about" class="flex">
