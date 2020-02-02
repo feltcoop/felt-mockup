@@ -8,16 +8,23 @@
 
 ## develop
 
+### play with the code
+
+- [package.json](package.json)
+
 ```bash
-# play with the code
-npm i
+npm i # node v12+
 npm run ts # gogo typescript
 npm run tw # open another shell
 npm run dev # browse to localhost:3000 or whatever it says
 ```
 
+### deploy to real life
+
+- [src/deploy/README.md](src/deploy/README.md)
+- [src/deploy/nginx_server_config.conf](src/deploy/nginx_server_config.conf)
+
 ```bash
-# deploy to real life
 npm i
 npm run build
 npm start
