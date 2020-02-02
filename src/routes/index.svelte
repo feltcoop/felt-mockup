@@ -5,17 +5,7 @@
 
 	let text = '';
 
-	let notes = [
-		{ content: 'im a note :)' },
-		{
-			content: `
-				<span class="text-4xl font-hairline">
-					hi, <span class="text-6xl text-gray-600">welcome!</span>
-					ty for stopping by
-				</span>
-			`,
-		},
-	];
+	let notes = [{ content: 'im a note :)' }];
 
 	const submit = () => {
 		notes = [{ content: text }, ...notes];
@@ -47,8 +37,16 @@
 			</li>
 		{/each}
 	</ul>
-	<ul class="text-2xl">
-		<li class="font-hairline">
+	<ul class="text-2xl text-center">
+
+		<li class="py-4">
+			<span class="text-4xl font-hairline">
+				hi,
+				<span class="text-6xl text-gray-600">welcome!</span>
+				ty for stopping by
+			</span>
+		</li>
+		<li class="py-4 font-hairline">
 			<div>
 				this is a
 				<span class="font-medium bg-red-200">pre-alpha preview version</span>
@@ -61,7 +59,7 @@
 				</span>
 			</div>
 		</li>
-		<li>
+		<li class="py-4">
 			<!-- wrap it so it doesn't fill the space -->
 			<div class="flex items-center justify-center">
 				<a
@@ -77,8 +75,8 @@
 				</a>
 			</div>
 		</li>
-		<li class="mb-8">
-			<Content classes="font-hairline text-center mb-4">
+		<li class="py-4 mb-8">
+			<Content classes="font-hairline mb-4">
 				<div>
 					<a
 						href="https://en.wikipedia.org/wiki/Free_software"
@@ -118,7 +116,7 @@
 		@apply font-normal;
 	}
 	.exclaim {
-		@apply text-6xl font-hairline text-gray-600;
+		@apply text-5xl font-hairline text-gray-600;
 	}
 	.logo-heart img {
 		transform: scale3d(1, 1, 1);
