@@ -54,7 +54,10 @@
 			<li>
 				<a href="/about" class="flex">
 					<span class="text-6xl mr-4 font-hairline">about</span>
-					<img src="/logo-heart.png" alt="fuzzy felt heart" />
+					<img
+						src="/logo-heart.png"
+						alt="fuzzy felt heart"
+						style="width: 192px; height: 178px;" />
 				</a>
 			</li>
 			<li>

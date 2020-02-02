@@ -444,7 +444,8 @@ const data: Data = {
 							type: 'message',
 							id: id(),
 							author: 'alice',
-							content: '<img src="/logo-heart.png"/>',
+							content:
+								'<img style="width: 192px; height: 178px;" src="/logo-heart.png"/>',
 						},
 						{
 							type: 'message',
