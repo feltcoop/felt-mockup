@@ -74,7 +74,7 @@
 					href="/about"
 					class="logo-heart flex flex-wrap items-center justify-center mt-8">
 					<span class="text-5xl mr-2 pb-2 font-hairline text-green-700">
-						about
+						learn about
 					</span>
 					<img
 						src="/logo-heart.png"
