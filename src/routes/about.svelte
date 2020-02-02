@@ -81,7 +81,7 @@
 			</a>
 			released under the permissive
 			<a
-				href="https://github.com/feltcoop/website/blob/master/license"
+				href="https://github.com/feltcoop/felt/blob/master/license"
 				target="_blank"
 				rel="noopener">
 				ISC license
