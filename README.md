@@ -4,7 +4,10 @@
 > for empowering people and democratic organizations
 > :green_heart: tech that feels good
 
-**work in progress** [felt.dev](https://felt.dev)
+- **work in progress**
+- [learn about felt](https://felt.dev/about)
+- [felt.dev](https://felt.dev)
+- [felt.social](https://felt.social)
 
 ## develop
 
