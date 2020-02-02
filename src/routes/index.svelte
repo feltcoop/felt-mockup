@@ -49,17 +49,23 @@
 				<span class="font-medium bg-red-200">pre-alpha preview version</span>
 				of the software.
 				<span class="font-bold bg-red-400">
-					expect nothing! ~~assume security is all fails~~
+					<span class="font-medium">expect nothing!</span>
+					~~assume security is all fails~~
 				</span>
 			</li>
 			<li>
-				<a href="/about" class="flex">
-					<span class="text-6xl mr-4 font-hairline">about</span>
-					<img
-						src="/logo-heart.png"
-						alt="fuzzy felt heart"
-						style="width: 192px; height: 178px;" />
-				</a>
+				<!-- wrap it so it doesn't fill the space -->
+				<div class="flex items-center justify-center">
+					<a
+						href="/about"
+						class="logo-heart flex flex-wrap items-top justify-center mt-8">
+						<span class="text-6xl mr-2 font-hairline">about</span>
+						<img
+							src="/logo-heart.png"
+							alt="fuzzy felt heart"
+							style="width: 192px; height: 178px; margin-top: -13px" />
+					</a>
+				</div>
 			</li>
 			<li>
 				<span class="font-hairline">
@@ -93,3 +99,16 @@
 		</ol>
 	</Content>
 </div>
+
+<style>
+	.logo-heart img {
+		transform: scale3d(1, 1, 1);
+		transition: transform 0.13s ease-out;
+	}
+	.logo-heart:hover img {
+		transform: scale3d(1.03, 1.03, 1);
+	}
+	.logo-heart:active img {
+		transform: scale3d(0.96, 0.96, 1);
+	}
+</style>
