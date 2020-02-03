@@ -39,7 +39,7 @@
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
 				a customizable open-source platform
 			</a>
-			, and a co-op of workers -
+			, and a co-op of worker-owners -
 			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
 				twitter.com/feltcoop
 			</a>
