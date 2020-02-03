@@ -118,8 +118,15 @@
 				rel="noopener">
 				ISC license
 			</a>
-			, and it's designed to be easily self-hosted, so you can run a private
-			instance for your communities and maintain full control.
+			, and it's designed to be
+			<a
+				href="https://github.com/feltcoop/felt/tree/master/src/deploy"
+				target="_blank"
+				rel="noopener">
+				easily self-hosted
+			</a>
+			, so you can run a private instance for your communities and maintain full
+			control.
 		</p>
 		<p>
 			The company behind Felt is a democratic worker co-op where we workers
