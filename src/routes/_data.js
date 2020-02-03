@@ -761,6 +761,7 @@ const data = {
             slug: 'feltcoop',
             description: '<small>our team <3</small>',
             spaces: [
+                { type: 'forum', id: id(), title: 'support', slug: 'support', topics },
                 { type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
                 { type: 'forum', id: id(), title: 'design', slug: 'design', topics },
                 {
