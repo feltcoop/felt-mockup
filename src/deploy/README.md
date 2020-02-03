@@ -14,7 +14,7 @@ TODO improve deployment docs!
 - https
   - https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
 - http2
-  - currently not enabled
+  - currently not enabled in [the nginx config](nginx_server_config.conf)
   - https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-18-04
 
 ### app setup
