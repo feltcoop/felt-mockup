@@ -38,41 +38,19 @@
 		{/each}
 	</ul>
 	<ul class="text-2xl text-center">
-
-		<li class="py-4">
-			<span class="text-4xl font-hairline">
-				hi,
-				<span class="text-5xl text-gray-600">welcome!</span>
-				ty for stopping by
-			</span>
-		</li>
 		<li class="py-4 font-hairline flex flex-col items-center">
-			<div>
-				this is a
-				<span class="bg-red-200">
-					<span class="text-4xl">pre-alpha</span>
-					preview version
-				</span>
-			</div>
-			<div>
-				of
-				<a
-					class="github-repo"
-					href="https://github.com/feltcoop/felt"
-					target="_blank"
-					rel="noopener">
-					felt
-				</a>
-			</div>
-			<div class="font-medium bg-red-400 flex items-center">
-				<span class="text-6xl leading-none">→</span>
-				expect nothing
-				<span class="text-6xl leading-none">←</span>
-			</div>
-			<div class="font-bold bg-red-600 flex items-center">
-				<span class="text-6xl leading-none">⚠</span>
-				assume security fails 100%
-				<span class="text-6xl leading-none">⚠</span>
+			<div class="flex justify-center items-center">
+				<div class="flex justify-center items-center text-right">
+					<img
+						src="/logo-192-textured.png"
+						alt="fuzzy felt f"
+						style="width: 192px; height: 192px;" />
+					<div class="italic" style="max-width: 256px;">
+						<span class="text-4xl">felt</span>
+						is free and open community software for empowering people and
+						democratic organizations
+					</div>
+				</div>
 			</div>
 		</li>
 		<li class="py-4">
@@ -89,6 +67,32 @@
 						alt="fuzzy felt heart"
 						style="width: 192px; height: 178px;" />
 				</a>
+			</div>
+		</li>
+		<li class="py-4 font-hairline">
+			<span class="text-4xl">
+				hi,
+				<span class="text-5xl text-gray-600">welcome!</span>
+				ty for stopping by
+			</span>
+			<div>
+				this is a
+				<span class="bg-red-200">
+					<span class="text-4xl">pre-alpha</span>
+					preview
+				</span>
+			</div>
+		</li>
+		<li class="py-4 font-hairline flex flex-col items-center">
+			<div class="font-medium bg-red-400 flex items-center">
+				<span class="text-6xl leading-none">→</span>
+				expect nothing
+				<span class="text-6xl leading-none">←</span>
+			</div>
+			<div class="font-bold bg-red-600 flex items-center">
+				<span class="text-6xl leading-none">⚠</span>
+				assume security fails 100%
+				<span class="text-6xl leading-none">⚠</span>
 			</div>
 		</li>
 		<li class="py-4 mb-8">
