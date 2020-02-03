@@ -41,7 +41,7 @@
 			</a>
 			, and a co-op of workers -
 			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
-				@feltcoop on twitter
+				twitter.com/feltcoop
 			</a>
 			&
 			<a href="https://github.com/feltcoop" target="_blank" rel="noopener">
@@ -97,7 +97,7 @@
 			</li>
 			<li>
 				<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
-					@feltcoop on twitter
+					twitter.com/feltcoop
 				</a>
 				and email
 				<a href="mailto:team@felt.social">team@felt.social</a>
