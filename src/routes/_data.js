@@ -1,80 +1,5 @@
 let idCounter = 0;
 export const id = () => idCounter++;
-// TODO should PEOPLE have child ACCOUNTS, and ACCOUNTS have child USERS?
-// or does PERSON === ACCOUNT?
-// TODO duplicate person data definitions
-const people = [
-    {
-        type: 'person',
-        name: 'Alex',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-    {
-        type: 'person',
-        name: 'Rick',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-    {
-        type: 'person',
-        name: 'Sue',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-    {
-        type: 'person',
-        name: 'Alice',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-    {
-        type: 'person',
-        name: 'Bob',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-    {
-        type: 'person',
-        name: 'Chris',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-    {
-        type: 'person',
-        name: 'Dara',
-        id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-        ],
-    },
-];
 // TODO chat messages
 const messages = [
     { type: 'message', id: id(), author: 'rick', content: 'hi!' },
@@ -200,6 +125,213 @@ const randPosts = () => [
         slug: '1',
         author: 'alex',
         content: 'Blog post content 1 <small>:):)</small>',
+    },
+];
+// TODO should PEOPLE have child ACCOUNTS, and ACCOUNTS have child USERS?
+// or does PERSON === ACCOUNT?
+const people = [
+    {
+        type: 'person',
+        slug: 'alex',
+        title: 'alex',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
+    },
+    {
+        type: 'person',
+        slug: 'rick',
+        title: 'Rick',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
+    },
+    {
+        type: 'person',
+        slug: 'sue',
+        title: 'Sue',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
+    },
+    {
+        type: 'person',
+        slug: 'alice',
+        title: 'Alice',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
+    },
+    {
+        type: 'person',
+        slug: 'bob',
+        title: 'Bob',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
+    },
+    {
+        type: 'person',
+        slug: 'chris',
+        title: 'Chris',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
+    },
+    {
+        type: 'person',
+        slug: 'dara',
+        title: 'Dara',
+        id: id(),
+        avatars: [
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        ],
+        spaces: [
+            {
+                type: 'blog',
+                id: id(),
+                title: 'blog',
+                slug: 'blog',
+                posts: randPosts(),
+            },
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+            {
+                type: 'activities',
+                id: id(),
+                title: 'history',
+                slug: 'history',
+                activities,
+            },
+        ],
     },
 ];
 const data = {
@@ -740,174 +872,7 @@ const data = {
             ],
         },
         // people
-        {
-            type: 'person',
-            id: id(),
-            title: 'Alex',
-            slug: 'alex',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
-        {
-            type: 'person',
-            id: id(),
-            title: 'Rick',
-            slug: 'rick',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
-        {
-            type: 'person',
-            id: id(),
-            title: 'Sue',
-            slug: 'sue',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
-        {
-            type: 'person',
-            id: id(),
-            title: 'Alice',
-            slug: 'alice',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
-        {
-            type: 'person',
-            id: id(),
-            title: 'Bob',
-            slug: 'bob',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
-        {
-            type: 'person',
-            id: id(),
-            title: 'Chris',
-            slug: 'chris',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
-        {
-            type: 'person',
-            id: id(),
-            title: 'Dara',
-            slug: 'dara',
-            spaces: [
-                {
-                    type: 'blog',
-                    id: id(),
-                    title: 'blog',
-                    slug: 'blog',
-                    posts: randPosts(),
-                },
-                { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-                { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-                {
-                    type: 'activities',
-                    id: id(),
-                    title: 'history',
-                    slug: 'history',
-                    activities,
-                },
-            ],
-        },
+        ...people,
         // pages
         {
             type: 'page',

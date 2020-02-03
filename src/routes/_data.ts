@@ -2,83 +2,6 @@ type Id = number;
 let idCounter = 0;
 export const id = (): number => idCounter++;
 
-// TODO should PEOPLE have child ACCOUNTS, and ACCOUNTS have child USERS?
-// or does PERSON === ACCOUNT?
-
-// TODO duplicate person data definitions
-const people: PersonData[] = [
-	{
-		type: 'person',
-		name: 'Alex',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-	{
-		type: 'person',
-		name: 'Rick',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-	{
-		type: 'person',
-		name: 'Sue',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-	{
-		type: 'person',
-		name: 'Alice',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-	{
-		type: 'person',
-		name: 'Bob',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-	{
-		type: 'person',
-		name: 'Chris',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-	{
-		type: 'person',
-		name: 'Dara',
-		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-		],
-	},
-];
-
 // TODO chat messages
 const messages: ChatMessageData[] = [
 	{ type: 'message', id: id(), author: 'rick', content: 'hi!' },
@@ -213,11 +136,218 @@ const randPosts = (): BlogPostData[] => [
 	},
 ];
 
+// TODO should PEOPLE have child ACCOUNTS, and ACCOUNTS have child USERS?
+// or does PERSON === ACCOUNT?
+const people: PersonData[] = [
+	{
+		type: 'person',
+		slug: 'alex',
+		title: 'alex',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+	{
+		type: 'person',
+		slug: 'rick',
+		title: 'Rick',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+	{
+		type: 'person',
+		slug: 'sue',
+		title: 'Sue',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+	{
+		type: 'person',
+		slug: 'alice',
+		title: 'Alice',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+	{
+		type: 'person',
+		slug: 'bob',
+		title: 'Bob',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+	{
+		type: 'person',
+		slug: 'chris',
+		title: 'Chris',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+	{
+		type: 'person',
+		slug: 'dara',
+		title: 'Dara', // who controls this? allow client renaming?
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+		spaces: [
+			{
+				type: 'blog',
+				id: id(),
+				title: 'blog',
+				slug: 'blog',
+				posts: randPosts(),
+			},
+			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
+			{
+				type: 'activities',
+				id: id(),
+				title: 'history',
+				slug: 'history',
+				activities,
+			},
+		],
+	},
+];
 interface Data {
 	people: PersonData[];
 	posts: BlogPostData[];
 	session: SessionData;
-	worlds: WorldData[];
+	worlds: WorldData[]; // TODO or names/refs to objects?
 }
 
 type Slug = string;
@@ -228,8 +358,10 @@ interface Entity {
 
 interface PersonData extends Entity {
 	type: 'person';
-	name: string;
+	slug: string;
+	title: string;
 	avatars: AvatarData[];
+	spaces: SpaceData[];
 }
 
 interface AvatarData extends Entity {
@@ -245,7 +377,7 @@ interface SessionData extends Entity {
 
 interface NavData {
 	title: string;
-	items: Slug[]; // space slug (TODO make a type?)
+	items: Slug[]; // space slug (TODO make a type?) -- TODO make this `children` and generic?
 }
 
 interface WorldData extends Entity {
@@ -891,174 +1023,7 @@ const data: Data = {
 		},
 
 		// people
-		{
-			type: 'person',
-			id: id(),
-			title: 'Alex',
-			slug: 'alex',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
-		{
-			type: 'person',
-			id: id(),
-			title: 'Rick',
-			slug: 'rick',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
-		{
-			type: 'person',
-			id: id(),
-			title: 'Sue',
-			slug: 'sue',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
-		{
-			type: 'person',
-			id: id(),
-			title: 'Alice',
-			slug: 'alice',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
-		{
-			type: 'person',
-			id: id(),
-			title: 'Bob',
-			slug: 'bob',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
-		{
-			type: 'person',
-			id: id(),
-			title: 'Chris',
-			slug: 'chris',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
-		{
-			type: 'person',
-			id: id(),
-			title: 'Dara',
-			slug: 'dara',
-			spaces: [
-				{
-					type: 'blog',
-					id: id(),
-					title: 'blog',
-					slug: 'blog',
-					posts: randPosts(),
-				},
-				{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
-				{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
-				{
-					type: 'activities',
-					id: id(),
-					title: 'history',
-					slug: 'history',
-					activities,
-				},
-			],
-		},
+		...people,
 
 		// pages
 		{
