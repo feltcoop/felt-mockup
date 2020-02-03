@@ -89,7 +89,7 @@
 			, and it's designed to be easily self-hosted, so you can run a private
 			instance for your community and maintain full control. To learn more, see
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
-				our GitHub repo
+				our GitHub source repo
 			</a>
 			, our dev site
 			<a href="https://felt.dev">felt.dev</a>
