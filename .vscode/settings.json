@@ -21,7 +21,6 @@
     "**/node_modules": false,
     "node_modules": true,
     "src/routes/_data.js": true,
-    "package-lock.json": true,
     "static/index.css": true
   },
   "search.useIgnoreFiles": true
