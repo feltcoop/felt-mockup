@@ -9,7 +9,7 @@ TODO improve deployment docs!
 - setup
   - https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
 - nginx
-  - skip step 5 and follow the "www dirs" instructions below instead
+  - skip step 5 and follow [the "www dirs" instructions](#www-dirs) below instead
   - https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 - https
   - https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
