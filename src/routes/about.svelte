@@ -80,7 +80,7 @@
 					rel="noopener">
 					felt source code on github
 				</a>
-				live at
+				live on the web at
 				<a href="https://felt.dev" target="_blank" rel="noopener">felt.dev</a>
 			</li>
 			<li>
