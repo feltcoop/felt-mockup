@@ -7,7 +7,7 @@
 > :green_heart: tech that feels good
 
 - **work in progress** pre-alpha demo at [felt.dev](https://felt.dev)
-- [learn about felt](https://felt.dev/about)
+- learn [about felt](https://felt.dev/about)
 - community at [felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
 
 ## develop
