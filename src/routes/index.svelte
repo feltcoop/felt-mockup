@@ -64,8 +64,16 @@
 					felt
 				</a>
 			</div>
-			<div class="font-medium bg-red-400">{'→'}expect nothing{'←'}</div>
-			<div class="font-bold bg-red-600">⚠ assume security fails 100% ⚠</div>
+			<div class="font-medium bg-red-400 flex items-center">
+				<span class="text-6xl leading-none">→</span>
+				expect nothing
+				<span class="text-6xl leading-none">←</span>
+			</div>
+			<div class="font-bold bg-red-600 flex items-center">
+				<span class="text-6xl leading-none">⚠</span>
+				assume security fails 100%
+				<span class="text-6xl leading-none">⚠</span>
+			</div>
 		</li>
 		<li class="py-4">
 			<!-- wrap it so it doesn't fill the space -->
