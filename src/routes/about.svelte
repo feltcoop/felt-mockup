@@ -71,6 +71,38 @@
 			<a href="felt/memes">much joy</a>
 			.
 		</p>
+		Some links:
+		<ul>
+			<li>
+				<a
+					href="https://github.com/feltcoop/felt"
+					target="_blank"
+					rel="noopener">
+					felt source code on github
+				</a>
+				live at
+				<a href="https://felt.dev" target="_blank" rel="noopener">felt.dev</a>
+			</li>
+			<li>
+				<a href="https://felt.social" target="_blank" rel="noopener">
+					community at felt.social
+				</a>
+				and its
+				<a
+					href="https://github.com/feltcoop/felt.social"
+					target="_blank"
+					rel="noopener">
+					source code on github
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
+					@feltcoop on twitter
+				</a>
+				and email
+				<a href="mailto:team@felt.social">team@felt.social</a>
+			</li>
+		</ul>
 		<p>
 			Felt is
 			<a
@@ -87,15 +119,7 @@
 				ISC license
 			</a>
 			, and it's designed to be easily self-hosted, so you can run a private
-			instance for your community and maintain full control. To learn more, see
-			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
-				our GitHub source repo
-			</a>
-			, our dev site
-			<a href="https://felt.dev">felt.dev</a>
-			, and our community
-			<a href="https://felt.social">felt.social</a>
-			.
+			instance for your community and maintain full control.
 		</p>
 		<p>
 			The company behind Felt is a democratic worker co-op where we workers
