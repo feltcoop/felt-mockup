@@ -94,7 +94,7 @@
 			, our dev site
 			<a href="https://felt.dev">felt.dev</a>
 			, and our community
-			<a href="https://felt.dev">felt.social</a>
+			<a href="https://felt.social">felt.social</a>
 			.
 		</p>
 		<p>
