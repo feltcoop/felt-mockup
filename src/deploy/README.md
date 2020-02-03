@@ -1,5 +1,7 @@
 # deploy
 
+TODO improve deployment docs!
+
 ## server setup
 
 ### tutorials followed
