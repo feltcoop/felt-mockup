@@ -578,7 +578,8 @@ const data: Data = {
 			slug: 'felt',
 			description: '<small>the felt community</small>',
 			spaces: [
-				{ type: 'forum', id: id(), title: 'support', slug: 'support', topics },
+				{ type: 'chat', id: id(), title: 'hi', slug: 'hi', messages },
+				{ type: 'forum', id: id(), title: 'help', slug: 'help', topics },
 				{
 					type: 'chat',
 					id: id(),
@@ -753,8 +754,27 @@ const data: Data = {
 			slug: 'felt.dev',
 			description: '<small>our team <3</small>',
 			spaces: [
-				{ type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
-				{ type: 'chat', id: id(), title: 'support', slug: 'support', messages },
+				{ type: 'chat', id: id(), title: 'stream', slug: 'stream', messages },
+				{
+					type: 'chat',
+					id: id(),
+					title: 'support',
+					slug: 'support',
+					messages: [
+						{
+							type: 'message',
+							id: id(),
+							author: 'rick',
+							content: 'i need help!',
+						},
+						{
+							type: 'message',
+							id: id(),
+							author: 'dara',
+							content: 'you came to the right place ~~',
+						},
+					],
+				},
 				{
 					type: 'forum',
 					id: id(),
@@ -777,7 +797,7 @@ const data: Data = {
 					slug: 'blog',
 					posts: randPosts(),
 				},
-				{ type: 'forum', id: id(), title: 'tech', slug: 'tech', topics },
+				{ type: 'forum', id: id(), title: 'test', slug: 'test', topics },
 				{
 					type: 'forum',
 					id: id(),
@@ -857,6 +877,7 @@ const data: Data = {
 						},
 					],
 				},
+				{ type: 'forum', id: id(), title: 'threads', slug: 'threads', topics },
 				{
 					type: 'chat',
 					id: id(),

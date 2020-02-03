@@ -1,6 +1,6 @@
 {
   // Commented-out options have their default values.
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/node_modules/@app/**/*"],
   "exclude": ["node_modules/*"],
   // "files": [], // A list of relative or absolute file paths to include.
   // "extends": "", // A string containing a path to another configuration file to inherit from.
