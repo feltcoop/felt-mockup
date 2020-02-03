@@ -133,7 +133,7 @@ const people = [
     {
         type: 'person',
         slug: 'alex',
-        title: 'alex',
+        title: 'Alex',
         id: id(),
         avatars: [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
@@ -611,7 +611,22 @@ const data = {
             description: '<small>our team <3</small>',
             spaces: [
                 { type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
+                { type: 'chat', id: id(), title: 'support', slug: 'support', messages },
+                {
+                    type: 'forum',
+                    id: id(),
+                    title: 'questions',
+                    slug: 'questions',
+                    topics,
+                },
                 { type: 'forum', id: id(), title: 'design', slug: 'design', topics },
+                {
+                    type: 'forum',
+                    id: id(),
+                    title: 'requests',
+                    slug: 'requests',
+                    topics,
+                },
                 {
                     type: 'blog',
                     id: id(),
@@ -696,6 +711,23 @@ const data = {
                             slug: 'punt-this',
                             content: '!?',
                             status: 'punt',
+                        },
+                    ],
+                },
+                {
+                    type: 'chat',
+                    id: id(),
+                    title: 'huh',
+                    slug: 'huh',
+                    messages: [
+                        { type: 'message', id: id(), author: 'rick', content: 'hii' },
+                        { type: 'message', id: id(), author: 'alice', content: 'omggg' },
+                        { type: 'message', id: id(), author: 'bob', content: 'why?' },
+                        {
+                            type: 'message',
+                            id: id(),
+                            author: 'chris',
+                            content: 'happy communities shitpost together',
                         },
                     ],
                 },
@@ -804,7 +836,7 @@ const data = {
             id: id(),
             title: 'village',
             slug: 'village',
-            description: '<small>a carefully curated community for people who care</small>',
+            description: '<small>sup</small>',
             spaces: [
                 { type: 'chat', id: id(), title: 'tavern', slug: 'tavern', messages },
                 {
@@ -812,7 +844,6 @@ const data = {
                     id: id(),
                     title: 'library',
                     slug: 'library',
-                    description: '<small>please mind the norms</small>',
                     topics,
                 },
                 {
