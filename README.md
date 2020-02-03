@@ -8,7 +8,7 @@
 
 - **work in progress** pre-alpha demo at [felt.dev](https://felt.dev)
 - [learn about felt](https://felt.dev/about)
-- [felt.social](https://felt.social)
+- community at [felt.social](https://felt.social)
 
 ## develop
 
