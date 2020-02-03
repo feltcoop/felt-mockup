@@ -53,15 +53,13 @@
 				</div>
 			</div>
 		</li>
-		<li class="py-4">
+		<li class="py-4 mt-8">
 			<!-- wrap it so it doesn't fill the space -->
 			<div class="flex items-center justify-center">
 				<a
 					href="/about"
-					class="logo-heart flex flex-wrap items-center justify-center mt-8">
-					<span class="text-5xl mr-2 pb-2 font-hairline text-green-700">
-						learn about
-					</span>
+					class="logo-heart flex flex-wrap items-center justify-center">
+					<span class="text-5xl mr-2 font-hairline text-green-700">about</span>
 					<img
 						src="/logo-heart.png"
 						alt="fuzzy felt heart"
