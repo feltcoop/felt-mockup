@@ -6,9 +6,8 @@
 > for empowering people and democratic organizations
 > :green_heart: tech that feels good
 
-- **work in progress** pre-alpha release
+- **work in progress** pre-alpha demo at [felt.dev](https://felt.dev)
 - [learn about felt](https://felt.dev/about)
-- [felt.dev](https://felt.dev)
 - [felt.social](https://felt.social)
 
 ## develop
