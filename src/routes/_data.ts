@@ -511,7 +511,7 @@ const data: Data = {
 			type: 'community',
 			id: id(),
 			title: 'felt.social',
-			slug: 'feltsocial',
+			slug: 'felt.social',
 			description: '<small>our team <3</small>',
 			spaces: [
 				{ type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
@@ -618,7 +618,7 @@ const data: Data = {
 			type: 'community',
 			id: id(),
 			title: 'felt.dev',
-			slug: 'feltdev',
+			slug: 'felt.dev',
 			description: '<small>our team <3</small>',
 			spaces: [
 				{ type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
@@ -715,7 +715,7 @@ const data: Data = {
 		{
 			type: 'community',
 			id: id(),
-			title: 'felt.coop',
+			title: 'feltcoop',
 			slug: 'feltcoop',
 			description: '<small>our team <3</small>',
 			spaces: [
