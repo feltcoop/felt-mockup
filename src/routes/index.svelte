@@ -122,7 +122,7 @@
 				</a>
 			</Content>
 		</li>
-		<li>
+		<li class="mb-8">
 			<SocialLinks />
 		</li>
 	</ul>
