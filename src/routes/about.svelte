@@ -37,7 +37,7 @@
 			<a href="https://felt.social">a community</a>
 			,
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
-				an open-source platform
+				a customizable open-source platform
 			</a>
 			, and a co-op of workers -
 			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
