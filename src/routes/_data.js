@@ -503,7 +503,7 @@ const data = {
             id: id(),
             title: 'felt.social',
             slug: 'felt.social',
-            description: '<small>our team <3</small>',
+            description: '<small>our for-profit community-as-a-service business</small>',
             spaces: [
                 { type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
                 { type: 'forum', id: id(), title: 'design', slug: 'design', topics },
@@ -609,7 +609,7 @@ const data = {
             id: id(),
             title: 'felt.dev',
             slug: 'felt.dev',
-            description: '<small>our team <3</small>',
+            description: '<small>the felt dev community</small>',
             spaces: [
                 { type: 'chat', id: id(), title: 'stream', slug: 'stream', messages },
                 {
@@ -759,7 +759,6 @@ const data = {
             id: id(),
             title: 'feltcoop',
             slug: 'feltcoop',
-            description: '<small>our team <3</small>',
             spaces: [
                 { type: 'forum', id: id(), title: 'support', slug: 'support', topics },
                 { type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
