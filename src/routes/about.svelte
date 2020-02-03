@@ -32,8 +32,8 @@
 			tucked into a warm fuzzy package. Felt's features (will one day) include
 			chats, forums, events and rsvps, polls, note taking and sharing, tasks and
 			todos and reminders, collaborating with others, blogs and web publishing,
-			and more, and more! You read that right! And Felt is even more than a big
-			bag of features. It's
+			and more, and more! You read that right! And Felt is more than a big bag
+			of features. It's
 			<a href="https://felt.social">a community</a>
 			,
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
