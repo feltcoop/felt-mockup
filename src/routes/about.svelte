@@ -119,7 +119,7 @@
 				ISC license
 			</a>
 			, and it's designed to be easily self-hosted, so you can run a private
-			instance for your community and maintain full control.
+			instance for your communities and maintain full control.
 		</p>
 		<p>
 			The company behind Felt is a democratic worker co-op where we workers
