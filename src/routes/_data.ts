@@ -4,10 +4,22 @@ export const id = (): number => idCounter++;
 
 // TODO should PEOPLE have child ACCOUNTS, and ACCOUNTS have child USERS?
 // or does PERSON === ACCOUNT?
-const people: PeopleData[] = [
+
+// TODO duplicate person data definitions
+const people: PersonData[] = [
 	{
 		type: 'person',
-		name: 'Hamilton',
+		name: 'Alex',
+		id: id(),
+		avatars: [
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		],
+	},
+	{
+		type: 'person',
+		name: 'Rick',
 		id: id(),
 		avatars: [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
@@ -69,14 +81,14 @@ const people: PeopleData[] = [
 
 // TODO chat messages
 const messages: ChatMessageData[] = [
-	{ type: 'message', id: id(), author: 'ryan', content: 'hi!' },
+	{ type: 'message', id: id(), author: 'rick', content: 'hi!' },
 	{
 		type: 'message',
 		id: id(),
-		author: 'hamilton',
+		author: 'alex',
 		content: 'what is up fellow chat friend?',
 	},
-	{ type: 'message', id: id(), author: 'ryan', content: 'nm u?' },
+	{ type: 'message', id: id(), author: 'rick', content: 'nm u?' },
 ];
 
 // TODO forum topics
@@ -84,7 +96,7 @@ const topics: ForumTopicData[] = [
 	{
 		type: 'topic',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'I have a serious topic to discuss!',
 		content: "Now that we're here for the serious topic, who wants icecream?",
 		slug: 'serious-topic',
@@ -93,14 +105,14 @@ const topics: ForumTopicData[] = [
 				type: 'reply',
 				id: id(),
 				parent: 1,
-				author: 'hamilton',
+				author: 'alex',
 				content: 'Ok!',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
 						parent: 2,
-						author: 'ryan',
+						author: 'rick',
 						content: 'We need topics and topics!',
 					},
 				],
@@ -109,7 +121,7 @@ const topics: ForumTopicData[] = [
 				type: 'reply',
 				id: id(),
 				parent: 1,
-				author: 'ryan',
+				author: 'rick',
 				content: 'orly?',
 			},
 		],
@@ -117,7 +129,7 @@ const topics: ForumTopicData[] = [
 	{
 		type: 'topic',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'What brought you here?',
 		slug: 'what-brought-you-here',
 	},
@@ -127,14 +139,14 @@ const activities: ActivityData[] = [
 	{
 		type: 'activity',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'activity1',
 		content: 'activity1 content',
 	},
 	{
 		type: 'activity',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'activity2',
 		content: 'activity2 content',
 	},
@@ -144,14 +156,14 @@ const notes: InboxNoteData[] = [
 	{
 		type: 'note',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'note1',
 		content: 'content1',
 	},
 	{
 		type: 'note',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'note2',
 		content: 'content2',
 	},
@@ -161,7 +173,7 @@ const posts: BlogPostData[] = [
 	{
 		type: 'post',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'What is Felt?',
 		slug: 'what-is-felt',
 		content: `
@@ -172,7 +184,7 @@ const posts: BlogPostData[] = [
 	{
 		type: 'post',
 		id: id(),
-		author: 'ryan',
+		author: 'rick',
 		title: 'Why Felt is a co-op',
 		slug: 'why-felt-is-a-co-op',
 		content: `
@@ -187,7 +199,7 @@ const randPosts = (): BlogPostData[] => [
 		id: id(),
 		title: 'Blog post title 2',
 		slug: '2',
-		author: 'ryan',
+		author: 'rick',
 		content: 'Blog post content 2 <small>:O:D</small>',
 	},
 
@@ -196,13 +208,13 @@ const randPosts = (): BlogPostData[] => [
 		id: id(),
 		title: 'Blog post title 1',
 		slug: '1',
-		author: 'hamilton',
+		author: 'alex',
 		content: 'Blog post content 1 <small>:):)</small>',
 	},
 ];
 
 interface Data {
-	people: PeopleData[];
+	people: PersonData[];
 	posts: BlogPostData[];
 	session: SessionData;
 	worlds: WorldData[];
@@ -214,7 +226,7 @@ interface Entity {
 	id: Id;
 }
 
-interface PeopleData extends Entity {
+interface PersonData extends Entity {
 	type: 'person';
 	name: string;
 	avatars: AvatarData[];
@@ -227,6 +239,7 @@ interface AvatarData extends Entity {
 
 interface SessionData extends Entity {
 	type: 'session';
+	person: PersonData;
 	nav: NavData[];
 }
 
@@ -333,10 +346,11 @@ const data: Data = {
 	session: {
 		type: 'session',
 		id: id(),
+		person: people[0],
 		nav: [
 			{
 				title: 'avatars',
-				items: ['ryan', 'rrr', 'r'],
+				items: ['rick', 'rrr', 'r'],
 			},
 			{
 				title: 'communities',
@@ -344,7 +358,7 @@ const data: Data = {
 			},
 			{
 				title: 'friends',
-				items: ['hamilton', 'sue', 'alice', 'bob', 'chris'],
+				items: ['alex', 'sue', 'alice', 'bob', 'chris'],
 			},
 			{
 				title: 'felt.social',
@@ -358,8 +372,8 @@ const data: Data = {
 		{
 			type: 'avatar',
 			id: id(),
-			title: 'ryan',
-			slug: 'ryan',
+			title: 'rick',
+			slug: 'rick',
 			spaces: [
 				{ type: 'inbox', id: id(), title: 'inbox', slug: 'inbox', notes },
 				{ type: 'notes', id: id(), title: 'notes', slug: 'notes', notes },
@@ -375,8 +389,8 @@ const data: Data = {
 		{
 			type: 'avatar',
 			id: id(),
-			title: 'ryanatkn',
-			slug: 'ryanatkn',
+			title: 'roll',
+			slug: 'roll',
 			spaces: [
 				{ type: 'inbox', id: id(), title: 'inbox', slug: 'inbox', notes },
 				{ type: 'notes', id: id(), title: 'notes', slug: 'notes', notes },
@@ -409,8 +423,8 @@ const data: Data = {
 		{
 			type: 'avatar',
 			id: id(),
-			title: 'r',
-			slug: 'r',
+			title: 'ape_of_clubs',
+			slug: 'ape_of_clubs',
 			spaces: [
 				{ type: 'inbox', id: id(), title: 'inbox', slug: 'inbox', notes },
 				{ type: 'notes', id: id(), title: 'notes', slug: 'notes', notes },
@@ -528,7 +542,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'hiring',
 							slug: 'hiring',
 							content: 'Hiring',
@@ -536,7 +550,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'funding',
 							slug: 'funding',
 							content: 'Funding',
@@ -544,7 +558,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'we need topics and replies!',
 							slug: 'we-need-topics-and-replies',
 							content: '!!',
@@ -563,7 +577,7 @@ const data: Data = {
 							// compared to to the discussion forum's topics
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'What should milestone 1 include?',
 							slug: 'what-should-milestone-1-include',
 							content: '??',
@@ -572,7 +586,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'Which software license should we use?',
 							slug: 'which-software-license-should-we-use',
 							content: '??',
@@ -581,7 +595,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'What should the name of the top-level community be?',
 							slug: 'what-should-the-name-of-the-top-level-community-be',
 							content: '??',
@@ -590,7 +604,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'punt this!?',
 							slug: 'punt-this',
 							content: '!?',
@@ -626,7 +640,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'hiring',
 							slug: 'hiring',
 							content: 'Hiring',
@@ -634,7 +648,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'funding',
 							slug: 'funding',
 							content: 'Funding',
@@ -642,7 +656,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'we need topics and replies!',
 							slug: 'we-need-topics-and-replies',
 							content: '!!',
@@ -661,7 +675,7 @@ const data: Data = {
 							// compared to to the discussion forum's topics
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'What should milestone 1 include?',
 							slug: 'what-should-milestone-1-include',
 							content: '??',
@@ -670,7 +684,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'Which software license should we use?',
 							slug: 'which-software-license-should-we-use',
 							content: '??',
@@ -679,7 +693,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'What should the name of the top-level community be?',
 							slug: 'what-should-the-name-of-the-top-level-community-be',
 							content: '??',
@@ -688,7 +702,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'punt this!?',
 							slug: 'punt-this',
 							content: '!?',
@@ -724,7 +738,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'hiring',
 							slug: 'hiring',
 							content: 'Hiring',
@@ -732,7 +746,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'funding',
 							slug: 'funding',
 							content: 'Funding',
@@ -740,7 +754,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'we need topics and replies!',
 							slug: 'we-need-topics-and-replies',
 							content: '!!',
@@ -759,7 +773,7 @@ const data: Data = {
 							// compared to to the discussion forum's topics
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'What should milestone 1 include?',
 							slug: 'what-should-milestone-1-include',
 							content: '??',
@@ -768,7 +782,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'Which software license should we use?',
 							slug: 'which-software-license-should-we-use',
 							content: '??',
@@ -777,7 +791,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'ryan',
+							author: 'rick',
 							title: 'What should the name of the top-level community be?',
 							slug: 'what-should-the-name-of-the-top-level-community-be',
 							content: '??',
@@ -786,7 +800,7 @@ const data: Data = {
 						{
 							type: 'topic',
 							id: id(),
-							author: 'hamilton',
+							author: 'alex',
 							title: 'punt this!?',
 							slug: 'punt-this',
 							content: '!?',
@@ -880,8 +894,8 @@ const data: Data = {
 		{
 			type: 'person',
 			id: id(),
-			title: 'Hamilton',
-			slug: 'hamilton',
+			title: 'Alex',
+			slug: 'alex',
 			spaces: [
 				{
 					type: 'blog',
@@ -904,8 +918,8 @@ const data: Data = {
 		{
 			type: 'person',
 			id: id(),
-			title: 'Ryan',
-			slug: 'Ryan',
+			title: 'Rick',
+			slug: 'rick',
 			spaces: [
 				{
 					type: 'blog',
