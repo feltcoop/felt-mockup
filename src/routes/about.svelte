@@ -65,6 +65,8 @@
 				</span>
 				Assume everything is broken.
 			</span>
+		</p>
+		<p>
 			Our goals are lofty and our team is small, and through the might of
 			software we aim to help people solve priority problems and promote
 			<a href="felt/memes">much joy</a>
@@ -117,7 +119,14 @@
 				rel="noopener">
 				ISC license
 			</a>
-			, and it's designed to be
+			(
+			<a
+				href="https://en.wikipedia.org/wiki/ISC_license"
+				target="_blank"
+				rel="noopener">
+				see wikipedia
+			</a>
+			) , and it's designed to be
 			<a
 				href="https://github.com/feltcoop/felt/tree/master/src/deploy"
 				target="_blank"
