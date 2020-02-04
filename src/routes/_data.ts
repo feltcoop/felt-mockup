@@ -75,6 +75,23 @@ const activities: ActivityData[] = [
 	},
 ];
 
+const events: EventData[] = [
+	{
+		type: 'event',
+		id: id(),
+		author: 'dara',
+		title: 'event1 title',
+		content: 'event1 content',
+	},
+	{
+		type: 'event',
+		id: id(),
+		author: 'chris',
+		title: 'event2 title',
+		content: 'event2 content',
+	},
+];
+
 const notes: InboxNoteData[] = [
 	{
 		type: 'note',
@@ -394,7 +411,8 @@ type SpaceData =
 	| InboxSpaceData
 	| NotesSpaceData
 	| BlogSpaceData
-	| ActivitySpaceData;
+	| ActivitySpaceData
+	| EventSpaceData;
 
 interface BaseSpaceData extends Entity {
 	title: string;
@@ -425,6 +443,10 @@ interface BlogSpaceData extends BaseSpaceData {
 interface ActivitySpaceData extends BaseSpaceData {
 	type: 'activities';
 	activities: ActivityData[];
+}
+interface EventSpaceData extends BaseSpaceData {
+	type: 'events';
+	events: EventData[];
 }
 
 interface ChatMessageData extends Entity {
@@ -468,6 +490,13 @@ interface ActivityData extends Entity {
 	type: 'activity';
 	author: string;
 	title?: string;
+	// slug: string; // TODO do this for permalink?
+	content: string;
+}
+interface EventData extends Entity {
+	type: 'event';
+	author: string;
+	title: string;
 	// slug: string; // TODO do this for permalink?
 	content: string;
 }
@@ -580,6 +609,8 @@ const data: Data = {
 			spaces: [
 				{ type: 'chat', id: id(), title: 'hi', slug: 'hi', messages },
 				{ type: 'forum', id: id(), title: 'help', slug: 'help', topics },
+				// TODO events page for local meetups (structured in a hierarchy?
+				// local/denver? local/denver/events and local/denver/{forum,chat}
 				{
 					type: 'chat',
 					id: id(),
@@ -649,6 +680,7 @@ const data: Data = {
 				'<small>our for-profit community-as-a-service business</small>',
 			spaces: [
 				{ type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
+				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
 				{ type: 'forum', id: id(), title: 'design', slug: 'design', topics },
 				{
 					type: 'forum',
@@ -776,6 +808,7 @@ const data: Data = {
 						},
 					],
 				},
+				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
 				{
 					type: 'forum',
 					id: id(),
@@ -906,6 +939,13 @@ const data: Data = {
 			spaces: [
 				{ type: 'forum', id: id(), title: 'support', slug: 'support', topics },
 				{ type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
+				{
+					type: 'events',
+					id: id(),
+					title: 'meetings',
+					slug: 'meetings',
+					events,
+				},
 				{ type: 'forum', id: id(), title: 'design', slug: 'design', topics },
 				{
 					type: 'blog',
@@ -1028,6 +1068,7 @@ const data: Data = {
 						// TODO maybe click this for more flavor, class="flavor-text"
 						'<small>depth, wet, rock, dark, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
 				}, // :dolphin:
+				{ type: 'events', id: id(), title: 'raids', slug: 'raids', events },
 				{
 					type: 'chat',
 					id: id(),
