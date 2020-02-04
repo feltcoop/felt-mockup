@@ -1,3 +1,4 @@
+import { symbols } from '@app/ui/symbols.js';
 let idCounter = 0;
 export const id = () => idCounter++;
 // TODO chat messages
@@ -7,9 +8,9 @@ const messages = [
         type: 'message',
         id: id(),
         author: 'alex',
-        content: 'what is up fellow chat friend?',
+        content: 'what is up fellow chat friends?',
     },
-    { type: 'message', id: id(), author: 'rick', content: 'nm u?' },
+    { type: 'message', id: id(), author: 'alice', content: 'nm u?' },
 ];
 // TODO forum topics
 const topics = [
@@ -49,7 +50,7 @@ const topics = [
     {
         type: 'topic',
         id: id(),
-        author: 'rick',
+        author: 'alice',
         title: 'What brought you here?',
         slug: 'what-brought-you-here',
     },
@@ -899,7 +900,26 @@ const data = {
                     id: id(),
                     title: 'underground',
                     slug: 'underground',
-                    messages,
+                    messages: [
+                        {
+                            type: 'message',
+                            id: id(),
+                            author: symbols.avatar,
+                            content: 'hi!',
+                        },
+                        {
+                            type: 'message',
+                            id: id(),
+                            author: symbols.avatar,
+                            content: 'what is up fellow chat friends?',
+                        },
+                        {
+                            type: 'message',
+                            id: id(),
+                            author: symbols.avatar,
+                            content: 'nm u?',
+                        },
+                    ],
                 },
                 {
                     type: 'forum',
