@@ -51,6 +51,12 @@
 			tech that feels good.
 		</p>
 		<p>
+			Our goals are lofty and our team is small, and through the might of
+			software we aim to help people solve priority problems and promote
+			<a href="felt/memes">much joy</a>
+			.
+		</p>
+		<p>
 			But Felt is not ready yet.
 			<span class="font-bold">
 				This is just a
@@ -65,12 +71,6 @@
 				</span>
 				Assume everything is broken.
 			</span>
-		</p>
-		<p>
-			Our goals are lofty and our team is small, and through the might of
-			software we aim to help people solve priority problems and promote
-			<a href="felt/memes">much joy</a>
-			.
 		</p>
 		Some links:
 		<ul>
