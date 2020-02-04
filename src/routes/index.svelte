@@ -2,6 +2,7 @@
 	import Content from '@app/ui/Content.svelte';
 	import TextInput from '@app/ui/TextInput.svelte';
 	import SocialLinks from '@app/ui/SocialLinks.svelte';
+	import PlaceholderInfo from '@app/ui/PlaceholderInfo.svelte';
 
 	let text = '';
 
@@ -16,11 +17,8 @@
 <svelte:head>
 	<title>felt</title>
 </svelte:head>
-<div class="flex flex-col flex-1 p-2" style="max-width: 640px;">
-	<Content>
-		<h1>felt</h1>
-	</Content>
-	<div class="flex flex-col">
+<div class="flex flex-col flex-1 p-2 items-center" style="max-width: 640px;">
+	<div class="flex flex-col" style="width: 240xp;">
 		<TextInput bind:value={text} {submit} />
 		{#if text}
 			<div
@@ -29,14 +27,20 @@
 				{text}
 			</div>
 		{/if}
+		<ul>
+			{#each notes as note}
+				<li>
+					{@html note.content}
+				</li>
+			{/each}
+		</ul>
 	</div>
-	<ul>
-		{#each notes as note}
-			<li>
-				{@html note.content}
-			</li>
-		{/each}
-	</ul>
+	<PlaceholderInfo>
+		TODO add global activity and other important info
+	</PlaceholderInfo>
+	<PlaceholderInfo>
+		TODO put customization handles on all the things
+	</PlaceholderInfo>
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
 			<div class="flex justify-center items-center">
