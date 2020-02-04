@@ -892,7 +892,7 @@ const data = {
                     messages,
                     description: 
                     // TODO maybe click this for more flavor, class="flavor-text"
-                    '<small>mystery, green, ferns, leaves, spiders, mushrooms, moss, birds, squirrels, danger</small>',
+                    '<small>mystery, green, ferns, leaves, spiders, mushrooms, moss, birds, squirrels, risk</small>',
                 },
                 {
                     type: 'forum',
