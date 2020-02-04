@@ -12,13 +12,33 @@ const messages = [
     },
     { type: 'message', id: id(), author: 'alice', content: 'nm u?' },
 ];
+const anonMessages = [
+    {
+        type: 'message',
+        id: id(),
+        author: symbols.avatar,
+        content: 'hi!',
+    },
+    {
+        type: 'message',
+        id: id(),
+        author: symbols.avatar,
+        content: 'what is up fellow anonymous chat friends?',
+    },
+    {
+        type: 'message',
+        id: id(),
+        author: symbols.avatar,
+        content: 'nm u?',
+    },
+];
 // TODO forum topics
 const topics = [
     {
         type: 'topic',
         id: id(),
         author: 'rick',
-        title: 'I have a serious topic to discuss!',
+        title: 'I have a serious anonymous topic to discuss!',
         content: "Now that we're here for the serious topic, who wants icecream?",
         slug: 'serious-topic',
         children: [
@@ -42,7 +62,7 @@ const topics = [
                 type: 'reply',
                 id: id(),
                 parent: 1,
-                author: 'rick',
+                author: 'alice',
                 content: 'orly?',
             },
         ],
@@ -51,8 +71,50 @@ const topics = [
         type: 'topic',
         id: id(),
         author: 'alice',
-        title: 'What brought you here?',
-        slug: 'what-brought-you-here',
+        title: 'When are you?',
+        slug: 'when-are-you',
+    },
+];
+const anonTopics = [
+    {
+        type: 'topic',
+        id: id(),
+        author: symbols.avatar,
+        title: 'I have a serious topic to discuss!',
+        content: "Now that we're here for the serious topic, who wants icecream?",
+        slug: 'serious-topic',
+        children: [
+            {
+                type: 'reply',
+                id: id(),
+                parent: 1,
+                author: symbols.avatar,
+                content: 'Ok!',
+                children: [
+                    {
+                        type: 'reply',
+                        id: id(),
+                        parent: 2,
+                        author: symbols.avatar,
+                        content: 'We need topics and topics!',
+                    },
+                ],
+            },
+            {
+                type: 'reply',
+                id: id(),
+                parent: 1,
+                author: symbols.avatar,
+                content: 'orly?',
+            },
+        ],
+    },
+    {
+        type: 'topic',
+        id: id(),
+        author: symbols.avatar,
+        title: 'When are you?',
+        slug: 'when-are-you',
     },
 ];
 const activities = [
@@ -900,36 +962,17 @@ const data = {
                     id: id(),
                     title: 'underground',
                     slug: 'underground',
-                    messages: [
-                        {
-                            type: 'message',
-                            id: id(),
-                            author: symbols.avatar,
-                            content: 'hi!',
-                        },
-                        {
-                            type: 'message',
-                            id: id(),
-                            author: symbols.avatar,
-                            content: 'what is up fellow chat friends?',
-                        },
-                        {
-                            type: 'message',
-                            id: id(),
-                            author: symbols.avatar,
-                            content: 'nm u?',
-                        },
-                    ],
+                    messages: anonMessages,
                 },
                 {
                     type: 'forum',
                     id: id(),
                     title: 'caves',
                     slug: 'caves',
-                    topics,
+                    topics: anonTopics,
                     description: 
                     // TODO maybe click this for more flavor, class="flavor-text"
-                    '<small>depth, wet, rock, dark, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
+                    '<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
                 },
                 { type: 'events', id: id(), title: 'raids', slug: 'raids', events },
                 {
