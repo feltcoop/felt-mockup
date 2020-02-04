@@ -63,6 +63,7 @@
 					<span class="italic">yet</span>
 					).
 				</span>
+				Assume everything is broken.
 			</span>
 			Our goals are lofty and our team is small, and through the might of
 			software we aim to help people solve priority problems and promote

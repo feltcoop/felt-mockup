@@ -1,15 +1,20 @@
 <script>
 	import PrimaryNav from '@app/ui/PrimaryNav.svelte';
+	import { provideSession } from '@app/session/context.js';
 	import { provideWorld } from '@app/world/context.js';
 	import { provideSpace } from '@app/space/context.js';
 	import { DEFAULT_WORLD } from '@app/world/constants.js';
 	import data from './_data.js';
 
-	const { worlds } = data;
+	const { worlds, session: initialSessionData } = data;
+
+	console.log('MAIN LAYOUT', initialSessionData);
 
 	export let segment;
 
 	// console.log('segment', segment);
+
+	provideSession(initialSessionData);
 
 	const world = provideWorld(worlds.find(w => w.slug === segment) || worlds[0]);
 	$: $world = worlds.find(w => w.slug === segment) || worlds[0];
