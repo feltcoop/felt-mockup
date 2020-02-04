@@ -33,9 +33,9 @@
 			and more, and more! You read that right! And Felt is more than a big bag
 			of features. It's
 			<a href="https://felt.social">a community</a>
-			,
+			, a customizable
 			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
-				a customizable open-source platform
+				open-source software platform
 			</a>
 			, and a co-op of worker-owners -
 			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
