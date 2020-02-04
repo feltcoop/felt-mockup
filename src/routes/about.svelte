@@ -137,6 +137,17 @@
 			control.
 		</p>
 		<p>
+			Felt the business makes money by selling value to users. Mostly, this is
+			through subscription services like
+			<a href="https://felt.social" target="_blank" rel="noopener">
+				felt.social
+			</a>
+			. We want a business model that keeps our incentives aligned with our
+			users, so we accept no revenue from third parties like advertisers. We
+			hope to provide an amazing customer experience, but you can always export
+			your data from our service to another.
+		</p>
+		<p>
 			The company behind Felt is a democratic worker co-op where we workers
 			share equal ownership and control. We believe this is a good way forward
 			to help
