@@ -8,7 +8,7 @@
 
 	const { worlds, session: initialSessionData } = data;
 
-	console.log('MAIN LAYOUT', initialSessionData);
+	// console.log('MAIN LAYOUT', initialSessionData);
 
 	export let segment;
 
