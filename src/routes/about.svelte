@@ -137,7 +137,7 @@
 			control.
 		</p>
 		<p>
-			Felt the business makes money by selling value to users. Mostly, this is
+			Felt The Business makes money by selling value to users. Mostly, this is
 			through subscription services like
 			<a href="https://felt.social" target="_blank" rel="noopener">
 				felt.social
