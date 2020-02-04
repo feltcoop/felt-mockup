@@ -15,16 +15,14 @@
 	<Content>
 		<div class="flex items-center flex-wrap justify-center">
 			<img
-				style="width: 192px; height: 178px;"
-				src="logo-heart.png"
-				alt="fuzzy felt heart" />
-			<span class="p-4 flex-1 text-center text-5xl font-hairline">
-				about felt
-			</span>
-			<img
 				style="width: 192px; height: 192px;"
 				src="logo-192-textured.png"
 				alt="fuzzy felt logo" />
+			<span class="p-4 flex-1 text-center text-5xl font-hairline">about</span>
+			<img
+				style="width: 192px; height: 178px;"
+				src="logo-heart.png"
+				alt="fuzzy felt heart" />
 		</div>
 		<p>
 			Felt is community software for empowering people and democratic
