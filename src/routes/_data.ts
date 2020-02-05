@@ -221,6 +221,16 @@ const posts: BlogPostData[] = [
 			<p>Great question! We're so glad you asked.</p>
 			<p>ok. good stuff.</p>
 		`,
+		children: [
+			{
+				type: 'reply',
+				id: id(),
+				author: 'alice',
+				content: 'comments go here',
+			},
+			{ type: 'reply', id: id(), author: 'bob', content: 'me too' },
+			{ type: 'reply', id: id(), author: 'dana', content: ':eyeroll' },
+		],
 	},
 	{
 		type: 'post',
@@ -231,6 +241,15 @@ const posts: BlogPostData[] = [
 		content: `
 			<p>todo</p>
 		`,
+		children: [
+			{
+				type: 'reply',
+				id: id(),
+				author: 'rick',
+				content: 'wait what where am i?',
+			},
+			{ type: 'reply', id: id(), author: 'chris', content: 'dont ask' },
+		],
 	},
 ];
 
@@ -242,6 +261,7 @@ const randPosts = (): BlogPostData[] => [
 		slug: '2',
 		author: 'rick',
 		content: 'Blog post content 2 <small>:O:D</small>',
+		children: [{ type: 'reply', id: id(), author: 'dana', content: '!??' }],
 	},
 
 	{
@@ -251,6 +271,15 @@ const randPosts = (): BlogPostData[] => [
 		slug: '1',
 		author: 'alex',
 		content: 'Blog post content 1 <small>:):)</small>',
+		children: [
+			{ type: 'reply', id: id(), author: 'dana', content: 'ohhh' },
+			{
+				type: 'reply',
+				id: id(),
+				author: 'dana',
+				content: 'wait how do i undo?',
+			},
+		],
 	},
 ];
 
@@ -586,6 +615,7 @@ interface BlogPostData extends Entity {
 	title: string;
 	slug: Slug;
 	content: string;
+	children?: ForumReplyData[]; // TODO customizable slot (might want a chat room, or both! space builders for custom pages?)
 }
 interface ActivityData extends Entity {
 	type: 'activity';
