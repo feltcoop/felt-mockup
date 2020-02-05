@@ -100,28 +100,18 @@
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
 				<div>
-					<a
-						href="https://en.wikipedia.org/wiki/Free_software"
-						target="_blank"
-						rel="noopener"
-						class="exclaim">
+					<a href="https://en.wikipedia.org/wiki/Free_software" class="exclaim">
 						!!
 					</a>
 					free source code
 					<a
 						href="https://en.wikipedia.org/wiki/Free_and_open-source_software"
-						target="_blank"
-						rel="noopener"
 						class="exclaim">
 						!!
 					</a>
 				</div>
 				at
-				<a
-					class="github-repo"
-					href="https://github.com/feltcoop/felt"
-					target="_blank"
-					rel="noopener">
+				<a class="github-repo" href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
 				</a>
 			</Content>

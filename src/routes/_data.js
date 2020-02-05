@@ -628,7 +628,7 @@ const data = {
                             type: 'message',
                             id: id(),
                             author: 'alice',
-                            content: '<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener"><img src="rick.jpg" alt="rick roll" /></a>',
+                            content: '<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="rick.jpg" alt="rick roll" /></a>',
                         },
                         {
                             type: 'message',

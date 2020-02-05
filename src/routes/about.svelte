@@ -34,17 +34,13 @@
 			more than a big bag of features. It's
 			<a href="https://felt.social">a community</a>
 			, a customizable
-			<a href="https://github.com/feltcoop/felt" target="_blank" rel="noopener">
+			<a href="https://github.com/feltcoop/felt">
 				open-source software platform
 			</a>
 			, and a co-op of worker-owners -
-			<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
-				twitter.com/feltcoop
-			</a>
+			<a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a>
 			&
-			<a href="https://github.com/feltcoop" target="_blank" rel="noopener">
-				github.com/feltcoop
-			</a>
+			<a href="https://github.com/feltcoop">github.com/feltcoop</a>
 			& email
 			<a href="mailto:team@felt.social">team@felt.social</a>
 			- all with a purpose that puts people first. If we do it right, Felt is
@@ -75,62 +71,38 @@
 		Some links:
 		<ul>
 			<li>
-				<a
-					href="https://github.com/feltcoop/felt"
-					target="_blank"
-					rel="noopener">
+				<a href="https://github.com/feltcoop/felt">
 					felt source code on github
 				</a>
 				live on the web at
-				<a href="https://felt.dev" target="_blank" rel="noopener">felt.dev</a>
+				<a href="https://felt.dev">felt.dev</a>
 			</li>
 			<li>
-				<a href="https://felt.social" target="_blank" rel="noopener">
-					community at felt.social
-				</a>
+				<a href="https://felt.social">community at felt.social</a>
 				and its
-				<a
-					href="https://github.com/feltcoop/felt.social"
-					target="_blank"
-					rel="noopener">
+				<a href="https://github.com/feltcoop/felt.social">
 					source code on github
 				</a>
 			</li>
 			<li>
-				<a href="https://twitter.com/feltcoop" target="_blank" rel="noopener">
-					twitter.com/feltcoop
-				</a>
+				<a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a>
 				and email
 				<a href="mailto:team@felt.social">team@felt.social</a>
 			</li>
 		</ul>
 		<p>
 			Felt is
-			<a
-				href="https://en.wikipedia.org/wiki/Free_and_open-source_software"
-				target="_blank"
-				rel="noopener">
+			<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">
 				free and open-source software
 			</a>
 			released under the permissive
-			<a
-				href="https://github.com/feltcoop/felt/blob/master/license"
-				target="_blank"
-				rel="noopener">
+			<a href="https://github.com/feltcoop/felt/blob/master/license">
 				ISC license
 			</a>
 			(
-			<a
-				href="https://en.wikipedia.org/wiki/ISC_license"
-				target="_blank"
-				rel="noopener">
-				see Wikipedia
-			</a>
+			<a href="https://en.wikipedia.org/wiki/ISC_license">see Wikipedia</a>
 			) , and it's designed to be
-			<a
-				href="https://github.com/feltcoop/felt/tree/master/src/deploy"
-				target="_blank"
-				rel="noopener">
+			<a href="https://github.com/feltcoop/felt/tree/master/src/deploy">
 				easily self-hosted
 			</a>
 			, so you can run a private instance for your communities and maintain full
@@ -139,9 +111,7 @@
 		<p>
 			Felt The Business makes money by selling value to users. Mostly, this is
 			through subscription services like
-			<a href="https://felt.social" target="_blank" rel="noopener">
-				felt.social
-			</a>
+			<a href="https://felt.social">felt.social</a>
 			. We want a business model that keeps our incentives aligned with our
 			users, so we accept no revenue from third parties like advertisers. We
 			hope to provide an amazing customer experience, but you can always export
