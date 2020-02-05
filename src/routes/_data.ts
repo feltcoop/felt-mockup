@@ -720,7 +720,12 @@ const data: Data = {
 							content:
 								'<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener"><img src="rick.jpg" alt="rick roll" /></a>',
 						},
-						...messages,
+						{
+							type: 'message',
+							id: id(),
+							author: 'rick',
+							content: `don't <span class="text-3xl font-hairline">u</span> meme on me!!1 <span class="text-transparent">pls :P</span>`,
+						},
 					],
 				},
 				{ type: 'forum', id: id(), title: 'code', slug: 'code', topics }, // TODO make this a separate community? felt.social/dev or devs?
@@ -842,6 +847,9 @@ const data: Data = {
 						},
 					],
 				},
+				{ type: 'events', id: id(), title: 'qna', slug: 'events', events },
+				{ type: 'chat', id: id(), title: 'heh', slug: 'heh', messages: [] },
+				{ type: 'forum', id: id(), title: 'hah', slug: 'hah', topics: [] },
 			],
 		},
 		{
