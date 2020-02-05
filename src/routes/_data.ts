@@ -143,15 +143,6 @@ const anonTopics: ForumTopicData[] = [
 						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
 						author: symbols.avatar,
 						content: 'now',
-						children: [
-							{
-								type: 'reply',
-								id: id(),
-								parent: 1, // TODO this is a nonsense value now that we're randomizing ids
-								author: symbols.avatar,
-								content: 'now!',
-							},
-						],
 					},
 				],
 			},

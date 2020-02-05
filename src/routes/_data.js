@@ -138,15 +138,6 @@ const anonTopics = [
                         parent: 2,
                         author: symbols.avatar,
                         content: 'now',
-                        children: [
-                            {
-                                type: 'reply',
-                                id: id(),
-                                parent: 1,
-                                author: symbols.avatar,
-                                content: 'now!',
-                            },
-                        ],
                     },
                 ],
             },
