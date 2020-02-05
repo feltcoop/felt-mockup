@@ -222,8 +222,8 @@ const randPosts = (): BlogPostData[] => [
 const people: PersonData[] = [
 	{
 		type: 'person',
-		slug: 'alex',
-		title: 'Alex',
+		slug: 'rick',
+		title: 'Rick',
 		id: id(),
 		avatars: [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
@@ -251,8 +251,8 @@ const people: PersonData[] = [
 	},
 	{
 		type: 'person',
-		slug: 'rick',
-		title: 'Rick',
+		slug: 'alex',
+		title: 'Alex',
 		id: id(),
 		avatars: [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
