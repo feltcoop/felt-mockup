@@ -119,8 +119,7 @@
 		</p>
 		<p>
 			The company behind Felt is a democratic worker co-op where we workers
-			share equal ownership and control. We believe this is a good way forward
-			to help
+			share equal ownership and control. We believe this will help
 			<span class="font-bold italic">Felt The Business</span>
 			remain
 			<span class="font-bold">~accountable~</span>
