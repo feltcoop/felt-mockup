@@ -399,8 +399,20 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            // bob's chat room is way after his blog. odd
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+            {
+                type: 'blog',
+                id: id(),
+                title: 'pics',
+                slug: 'pics',
+                posts: randPosts(),
+            },
+            {
+                type: 'blog',
+                id: id(),
+                title: 'bookmarks',
+                slug: 'bookmarks',
+                posts: randPosts(),
+            },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',

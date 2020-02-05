@@ -254,7 +254,6 @@ const randPosts = (): BlogPostData[] => [
 		content: 'Blog post content 2 <small>:O:D</small>',
 		children: [{ type: 'reply', id: id(), author: 'dana', content: '!??' }],
 	},
-
 	{
 		type: 'post',
 		id: id(),
@@ -411,8 +410,20 @@ const people: PersonData[] = [
 				slug: 'blog',
 				posts: randPosts(),
 			},
-			// bob's chat room is way after his blog. odd
-			{ type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
+			{
+				type: 'blog',
+				id: id(),
+				title: 'pics',
+				slug: 'pics',
+				posts: randPosts(),
+			},
+			{
+				type: 'blog',
+				id: id(),
+				title: 'bookmarks',
+				slug: 'bookmarks',
+				posts: randPosts(),
+			},
 			{ type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
 			{
 				type: 'activities',
