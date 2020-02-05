@@ -65,7 +65,7 @@
 					<span class="italic">yet</span>
 					).
 				</span>
-				Assume everything is broken.
+				Assume everything is broken or fake.
 			</span>
 		</p>
 		Some links:
