@@ -124,7 +124,7 @@
 				href="https://en.wikipedia.org/wiki/ISC_license"
 				target="_blank"
 				rel="noopener">
-				see wikipedia
+				see Wikipedia
 			</a>
 			) , and it's designed to be
 			<a
