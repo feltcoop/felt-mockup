@@ -285,6 +285,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             {
                 type: 'blog',
                 id: id(),
@@ -292,7 +293,6 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',
@@ -314,6 +314,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             {
                 type: 'blog',
                 id: id(),
@@ -321,7 +322,6 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',
@@ -343,6 +343,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             {
                 type: 'blog',
                 id: id(),
@@ -350,7 +351,6 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',
@@ -372,6 +372,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             {
                 type: 'blog',
                 id: id(),
@@ -379,7 +380,6 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',
@@ -408,6 +408,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
+            // bob's chat room is way after his blog. odd
             { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
@@ -430,6 +431,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             {
                 type: 'blog',
                 id: id(),
@@ -437,7 +439,6 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',
@@ -459,6 +460,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
+            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             {
                 type: 'blog',
                 id: id(),
@@ -466,7 +468,6 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            { type: 'chat', id: id(), title: 'chat', slug: 'chat', messages },
             { type: 'forum', id: id(), title: 'forum', slug: 'forum', topics },
             {
                 type: 'activities',
