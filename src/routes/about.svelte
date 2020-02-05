@@ -155,10 +155,9 @@
 			remain
 			<span class="font-bold">~accountable~</span>
 			to its users and society. To learn more about why we chose this business
-			structure, see our blog post "Why Felt is a worker co-op
-			<span class="font-bold text-xl">(TODO)</span>
-			" . In the future, we want to explore hybrid models to give users (you!?)
-			significant ownership and control and accountability.
+			structure, see our (forthcoming) blog post "Why Felt is a worker co-op"
+			(TODO). In the future, we want to explore hybrid models to give users
+			(you!?) significant ownership and control and accountability.
 		</p>
 		<p>Your feedback is 💚💚</p>
 		<!-- TODO email input -->
