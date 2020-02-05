@@ -51,8 +51,8 @@
 			tech that feels good.
 		</p>
 		<p>
-			Our goals are lofty and our team is small, and through the might of
-			software we aim to help people solve priority problems and promote
+			Our goals are lofty and our team is small, and with the might of software
+			we aim to help people solve priority problems and promote
 			<a href="felt/memes">much joy</a>
 			.
 		</p>

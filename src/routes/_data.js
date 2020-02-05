@@ -589,7 +589,7 @@ const data = {
             id: id(),
             title: 'felt.social',
             slug: 'felt.social',
-            description: '<small>our for-profit community-as-a-service business</small>',
+            description: '<small>our community-as-a-service business</small>',
             spaces: [
                 { type: 'chat', id: id(), title: 'talk', slug: 'talk', messages },
                 { type: 'events', id: id(), title: 'events', slug: 'events', events },
