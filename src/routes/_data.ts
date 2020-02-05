@@ -1,6 +1,6 @@
 import { symbols } from '@app/ui/symbols.js';
 
-type Id = number;
+export type Id = number;
 let idCounter = 0;
 export const id = (): number => idCounter++;
 
@@ -52,7 +52,7 @@ const topics: ForumTopicData[] = [
 				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 				author: 'alex',
 				content:
-					'wtf <span class="text-4xl">r</span> <span class="text-5xl">U</span> <span class="text-xl">SERIOUS?</span>',
+					'wtf <span class="text-4xl leading-none">r</span> <span class="text-5xl leading-none">U</span> <span class="text-xl">SERIOUS?</span>',
 				children: [
 					{
 						type: 'reply',
@@ -482,20 +482,20 @@ const people: PersonData[] = [
 		],
 	},
 ];
-interface Data {
+export interface Data {
 	people: PersonData[];
 	posts: BlogPostData[];
 	session: SessionData;
 	worlds: WorldData[]; // TODO or names/refs to objects?
 }
 
-type Slug = string;
+export type Slug = string;
 
-interface Entity {
+export interface Entity {
 	id: Id;
 }
 
-interface PersonData extends Entity {
+export interface PersonData extends Entity {
 	type: 'person';
 	slug: string;
 	title: string;
@@ -503,23 +503,23 @@ interface PersonData extends Entity {
 	spaces: SpaceData[];
 }
 
-interface AvatarData extends Entity {
+export interface AvatarData extends Entity {
 	type: 'avatar';
 	name: string;
 }
 
-interface SessionData extends Entity {
+export interface SessionData extends Entity {
 	type: 'session';
 	person: PersonData;
 	nav: NavData[];
 }
 
-interface NavData {
+export interface NavData {
 	title: string;
 	items: Slug[]; // space slug (TODO make a type?) -- TODO make this `children` and generic?
 }
 
-interface WorldData extends Entity {
+export interface WorldData extends Entity {
 	type: 'avatar' | 'community' | 'person' | 'page'; // TODO make this a union type like with spaces?
 	title: string;
 	slug: Slug;
@@ -527,7 +527,7 @@ interface WorldData extends Entity {
 	spaces: SpaceData[];
 }
 
-type SpaceData =
+export type SpaceData =
 	| ChatSpaceData
 	| ForumSpaceData
 	| InboxSpaceData
@@ -536,48 +536,48 @@ type SpaceData =
 	| ActivitySpaceData
 	| EventSpaceData;
 
-interface BaseSpaceData extends Entity {
+export interface BaseSpaceData extends Entity {
 	title: string;
 	slug: Slug;
 	description?: string;
 }
 
-interface ChatSpaceData extends BaseSpaceData {
+export interface ChatSpaceData extends BaseSpaceData {
 	type: 'chat';
 	messages: ChatMessageData[];
 }
-interface ForumSpaceData extends BaseSpaceData {
+export interface ForumSpaceData extends BaseSpaceData {
 	type: 'forum';
 	topics: ForumTopicData[];
 }
-interface InboxSpaceData extends BaseSpaceData {
+export interface InboxSpaceData extends BaseSpaceData {
 	type: 'inbox';
 	notes: InboxNoteData[];
 }
-interface NotesSpaceData extends BaseSpaceData {
+export interface NotesSpaceData extends BaseSpaceData {
 	type: 'notes';
 	notes: InboxNoteData[];
 }
-interface BlogSpaceData extends BaseSpaceData {
+export interface BlogSpaceData extends BaseSpaceData {
 	type: 'blog';
 	posts: BlogPostData[];
 }
-interface ActivitySpaceData extends BaseSpaceData {
+export interface ActivitySpaceData extends BaseSpaceData {
 	type: 'activities';
 	activities: ActivityData[];
 }
-interface EventSpaceData extends BaseSpaceData {
+export interface EventSpaceData extends BaseSpaceData {
 	type: 'events';
 	events: EventData[];
 }
 
-interface ChatMessageData extends Entity {
+export interface ChatMessageData extends Entity {
 	type: 'message';
 	author: string;
 	// slug: string; // TODO do this for permalink?
 	content: string;
 }
-interface ForumTopicData extends Entity {
+export interface ForumTopicData extends Entity {
 	type: 'topic';
 	author: string;
 	title: string;
@@ -586,7 +586,7 @@ interface ForumTopicData extends Entity {
 	status?: 'open' | 'done' | 'punt';
 	children?: ForumReplyData[];
 }
-interface ForumReplyData extends Entity {
+export interface ForumReplyData extends Entity {
 	type: 'reply';
 	author: string;
 	content: string;
@@ -594,14 +594,14 @@ interface ForumReplyData extends Entity {
 	children?: ForumReplyData[];
 	parent?: Id;
 }
-interface InboxNoteData extends Entity {
+export interface InboxNoteData extends Entity {
 	type: 'note';
 	author: string;
 	title?: string;
 	// slug: string; // TODO do this for permalink?
 	content: string;
 }
-interface BlogPostData extends Entity {
+export interface BlogPostData extends Entity {
 	type: 'post';
 	author: string;
 	title: string;
@@ -609,14 +609,14 @@ interface BlogPostData extends Entity {
 	content: string;
 	children?: ForumReplyData[]; // TODO customizable slot (might want a chat room, or both! space builders for custom pages?)
 }
-interface ActivityData extends Entity {
+export interface ActivityData extends Entity {
 	type: 'activity';
 	author: string;
 	title?: string;
 	// slug: string; // TODO do this for permalink?
 	content: string;
 }
-interface EventData extends Entity {
+export interface EventData extends Entity {
 	type: 'event';
 	author: string;
 	title: string;

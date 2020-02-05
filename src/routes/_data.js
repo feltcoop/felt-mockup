@@ -47,7 +47,7 @@ const topics = [
                 id: id(),
                 parent: 1,
                 author: 'alex',
-                content: 'wtf <span class="text-4xl">r</span> <span class="text-5xl">U</span> <span class="text-xl">SERIOUS?</span>',
+                content: 'wtf <span class="text-4xl leading-none">r</span> <span class="text-5xl leading-none">U</span> <span class="text-xl">SERIOUS?</span>',
                 children: [
                     {
                         type: 'reply',
