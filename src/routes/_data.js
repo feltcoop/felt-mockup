@@ -38,7 +38,7 @@ const topics = [
         type: 'topic',
         id: id(),
         author: 'rick',
-        title: 'I have a serious anonymous topic to discuss!',
+        title: 'I have a serious topic to discuss!',
         content: "Now that we're here for the serious topic, who wants icecream?",
         slug: 'serious-topic',
         children: [
@@ -80,7 +80,7 @@ const anonTopics = [
         type: 'topic',
         id: id(),
         author: symbols.avatar,
-        title: 'I have a serious topic to discuss!',
+        title: 'I have a serious anonymous topic to discuss!',
         content: "Now that we're here for the serious topic, who wants icecream?",
         slug: 'serious-topic',
         children: [
@@ -89,14 +89,14 @@ const anonTopics = [
                 id: id(),
                 parent: 1,
                 author: symbols.avatar,
-                content: 'Ok!',
+                content: 'u sure thats rly anon?',
                 children: [
                     {
                         type: 'reply',
                         id: id(),
                         parent: 2,
                         author: symbols.avatar,
-                        content: 'We need topics and topics!',
+                        content: "doesn't look very anonymous to me but IANAL",
                     },
                 ],
             },
@@ -115,6 +115,33 @@ const anonTopics = [
         author: symbols.avatar,
         title: 'When are you?',
         slug: 'when-are-you',
+        children: [
+            {
+                type: 'reply',
+                id: id(),
+                parent: 1,
+                author: symbols.avatar,
+                content: 'now',
+                children: [
+                    {
+                        type: 'reply',
+                        id: id(),
+                        parent: 2,
+                        author: symbols.avatar,
+                        content: 'now',
+                        children: [
+                            {
+                                type: 'reply',
+                                id: id(),
+                                parent: 1,
+                                author: symbols.avatar,
+                                content: 'now!',
+                            },
+                        ],
+                    },
+                ],
+            },
+        ],
     },
 ];
 const activities = [
