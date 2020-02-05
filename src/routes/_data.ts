@@ -49,25 +49,35 @@ const topics: ForumTopicData[] = [
 			{
 				type: 'reply',
 				id: id(),
-				parent: 1,
+				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 				author: 'alex',
-				content: 'Ok!',
+				content:
+					'wtf <span class="text-4xl">r</span> <span class="text-5xl">U</span> <span class="text-xl">SERIOUS?</span>',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
-						parent: 2,
+						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
 						author: 'rick',
-						content: 'We need topics and topics!',
+						content: 'yes absolutely',
 					},
 				],
 			},
 			{
 				type: 'reply',
 				id: id(),
-				parent: 1,
+				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 				author: 'alice',
 				content: 'orly?',
+				children: [
+					{
+						type: 'reply',
+						id: id(),
+						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+						author: 'dana',
+						content: 'ya rly',
+					},
+				],
 			},
 		],
 	},
@@ -91,14 +101,14 @@ const anonTopics: ForumTopicData[] = [
 			{
 				type: 'reply',
 				id: id(),
-				parent: 1,
+				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 				author: symbols.avatar,
 				content: 'u sure thats rly anon?',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
-						parent: 2,
+						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
 						author: symbols.avatar,
 						content: "doesn't look very anonymous to me but IANAL",
 					},
@@ -107,7 +117,7 @@ const anonTopics: ForumTopicData[] = [
 			{
 				type: 'reply',
 				id: id(),
-				parent: 1,
+				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 				author: symbols.avatar,
 				content: 'orly?',
 			},
@@ -123,21 +133,21 @@ const anonTopics: ForumTopicData[] = [
 			{
 				type: 'reply',
 				id: id(),
-				parent: 1,
+				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 				author: symbols.avatar,
 				content: 'now',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
-						parent: 2,
+						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
 						author: symbols.avatar,
 						content: 'now',
 						children: [
 							{
 								type: 'reply',
 								id: id(),
-								parent: 1,
+								parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 								author: symbols.avatar,
 								content: 'now!',
 							},
@@ -170,7 +180,7 @@ const events: EventData[] = [
 	{
 		type: 'event',
 		id: id(),
-		author: 'dara',
+		author: 'dana',
 		title: 'event1 title',
 		content: 'event1 content',
 	},
@@ -423,8 +433,8 @@ const people: PersonData[] = [
 	},
 	{
 		type: 'person',
-		slug: 'dara',
-		title: 'Dara', // who controls this? allow client renaming?
+		slug: 'dana',
+		title: 'Dana', // who controls this? allow client renaming?
 		id: id(),
 		avatars: [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
@@ -922,7 +932,7 @@ const data: Data = {
 						{
 							type: 'message',
 							id: id(),
-							author: 'dara',
+							author: 'dana',
 							content: 'you came to the right place ~~',
 						},
 					],

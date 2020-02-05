@@ -47,14 +47,14 @@ const topics = [
                 id: id(),
                 parent: 1,
                 author: 'alex',
-                content: 'Ok!',
+                content: 'wtf <span class="text-4xl">r</span> <span class="text-5xl">U</span> <span class="text-xl">SERIOUS?</span>',
                 children: [
                     {
                         type: 'reply',
                         id: id(),
                         parent: 2,
                         author: 'rick',
-                        content: 'We need topics and topics!',
+                        content: 'yes absolutely',
                     },
                 ],
             },
@@ -64,6 +64,15 @@ const topics = [
                 parent: 1,
                 author: 'alice',
                 content: 'orly?',
+                children: [
+                    {
+                        type: 'reply',
+                        id: id(),
+                        parent: 2,
+                        author: 'dana',
+                        content: 'ya rly',
+                    },
+                ],
             },
         ],
     },
@@ -164,7 +173,7 @@ const events = [
     {
         type: 'event',
         id: id(),
-        author: 'dara',
+        author: 'dana',
         title: 'event1 title',
         content: 'event1 content',
     },
@@ -412,8 +421,8 @@ const people = [
     },
     {
         type: 'person',
-        slug: 'dara',
-        title: 'Dara',
+        slug: 'dana',
+        title: 'Dana',
         id: id(),
         avatars: [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
@@ -765,7 +774,7 @@ const data = {
                         {
                             type: 'message',
                             id: id(),
-                            author: 'dara',
+                            author: 'dana',
                             content: 'you came to the right place ~~',
                         },
                     ],
