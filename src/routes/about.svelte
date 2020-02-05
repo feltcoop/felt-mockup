@@ -28,7 +28,7 @@
 			Felt is community software for empowering people and democratic
 			organizations. It's a free and open alternative to many websites and apps
 			tucked into a warm fuzzy package. Felt's features (will one day) include
-			chats, forums, events and rsvps, polls, note taking and sharing, tasks and
+			chats, forums, events and rsvps, note taking and sharing, polls, tasks and
 			todos and reminders, collaborating with others, shared governance, blogs
 			and web publishing, and more, and more! You read that right! And Felt is
 			more than a big bag of features. It's
