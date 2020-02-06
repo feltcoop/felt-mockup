@@ -99,17 +99,7 @@
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
-				<div>
-					<a href="https://en.wikipedia.org/wiki/Free_software" class="exclaim">
-						!!
-					</a>
-					free source code
-					<a
-						href="https://en.wikipedia.org/wiki/Free_and_open-source_software"
-						class="exclaim">
-						!!
-					</a>
-				</div>
+				<div>free source code</div>
 				at
 				<a class="github-repo" href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
@@ -128,9 +118,6 @@
 	}
 	.github-repo:hover {
 		@apply underline;
-	}
-	.exclaim {
-		@apply text-5xl font-hairline text-gray-600;
 	}
 	.logo-heart img {
 		transform: scale3d(1, 1, 1);
