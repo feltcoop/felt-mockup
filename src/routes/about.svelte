@@ -31,12 +31,12 @@
 			chats, forums, events and rsvps, note taking and sharing, polls, tasks and
 			todos and reminders, collaborating with others, shared governance, blogs
 			and web publishing, and more, and more! You read that right! And Felt is
-			more than a big bag of features. It's
-			<a href="https://felt.social">a community</a>
-			, a customizable
+			more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
 				open-source software platform
 			</a>
+			,
+			<a href="https://felt.social">a community</a>
 			, and a co-op of worker-owners -
 			<a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a>
 			&
@@ -125,9 +125,9 @@
 			remain
 			<span class="font-bold">~accountable~</span>
 			to its users and society. To learn more about why we chose this business
-			structure, see our (forthcoming) blog post "Why Felt is a worker co-op"
-			(TODO). In the future, we want to explore hybrid models to give users
-			(you!?) significant ownership and control and accountability.
+			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
+			In the future, we want to explore hybrid models to give users (you!?)
+			significant ownership and control and accountability.
 		</p>
 		<p>Your feedback is 💚💚</p>
 		<!-- TODO email input -->
