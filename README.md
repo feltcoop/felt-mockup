@@ -51,7 +51,6 @@ using [`svelte`](https://github.com/sveltejs/svelte),
 [`polka`](https://github.com/lukeed/polka),
 [`node`](https://github.com/nodejs/node),
 [`fnm`](https://github.com/Schniz/fnm),
-[`vscode`](https://github.com/Microsoft/vscode),
 [`github`](https://github.com), [`git`](https://git-scm.com/),
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
