@@ -113,9 +113,10 @@
 			through subscription services like
 			<a href="https://felt.social">felt.social</a>
 			. We want a business model that keeps our incentives aligned with our
-			users, so we accept no revenue from third parties like advertisers. We
-			hope to provide an amazing customer experience, but you can always export
-			your data from our service to another.
+			users, so we accept no revenue from third parties like advertisers. You're
+			probably a person so we should treat you like one. We hope to provide an
+			amazing customer experience, but you can always export your data from our
+			service to another.
 		</p>
 		<p>
 			The company behind Felt is a democratic worker co-op where we workers
