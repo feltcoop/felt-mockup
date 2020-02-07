@@ -41,13 +41,10 @@
 			messages={chatMessages}
 			classes="overflow-hidden"
 			style={'max-height: 300px;'} />
-		<Forum
-			topics={forumTopics}
-			classes="mb-4 overflow-hidden mt-20"
-			style={'max-height: 480px;'} />
+		<Forum topics={forumTopics} classes="mb-4 overflow-hidden mt-20" />
 	{:else}
 		{#if blogPosts}
-			<Inbox notes={inboxNotes} classes="mb-4" style={'max-height: 480px;'} />
+			<Inbox notes={inboxNotes} classes="mb-4" />
 		{/if}
 		{#if blogPosts}
 			<Blog posts={blogPosts} classes="mb-4 mt-20" />
