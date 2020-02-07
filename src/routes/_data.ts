@@ -50,16 +50,22 @@ const topics: ForumTopicData[] = [
 				type: 'reply',
 				id: id(),
 				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
-				author: 'alex',
-				content:
-					'wtf <span class="text-4xl leading-none">r</span> <span class="text-5xl leading-none">U</span> <span class="text-xl">SERIOUS?</span>',
+				author: 'alice',
+				content: 'me?',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
 						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
-						author: 'rick',
-						content: 'yes absolutely',
+						author: 'dana',
+						content: 'you?',
+					},
+					{
+						type: 'reply',
+						id: id(),
+						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+						author: 'alex',
+						content: 'u',
 					},
 				],
 			},
@@ -77,6 +83,13 @@ const topics: ForumTopicData[] = [
 						author: 'dana',
 						content: 'ya rly',
 					},
+					{
+						type: 'reply',
+						id: id(),
+						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+						author: 'bob',
+						content: ':|',
+					},
 				],
 			},
 		],
@@ -85,8 +98,10 @@ const topics: ForumTopicData[] = [
 		type: 'topic',
 		id: id(),
 		author: 'alice',
-		title: 'When are you?',
-		slug: 'when-are-you',
+		title: 'Welcome! Read me first :D',
+		slug: 'welcome',
+		content: 'jk we got no content!',
+		// TODO maybe an option to disable comments, right here?
 	},
 ];
 const anonTopics: ForumTopicData[] = [
@@ -220,7 +235,29 @@ const posts: BlogPostData[] = [
 				content: 'comments go here',
 			},
 			{ type: 'reply', id: id(), author: 'bob', content: 'me too' },
-			{ type: 'reply', id: id(), author: 'dana', content: ':eyeroll' },
+			{
+				type: 'reply',
+				id: id(),
+				author: 'dana',
+				content: ':eyeroll',
+				children: [
+					{
+						type: 'reply',
+						id: id(),
+						author: 'bob',
+						content: 'I was being cheeky :d',
+						children: [
+							{
+								type: 'reply',
+								id: id(),
+								author: 'dana',
+								content: ':O',
+							},
+						],
+					},
+				],
+			},
+			{ type: 'reply', id: id(), author: 'alex', content: ':P' },
 		],
 	},
 	{
@@ -774,7 +811,66 @@ const data: Data = {
 					title: 'news',
 					slug: 'news',
 					description: '<small>take it real easy <3</small>',
-					topics,
+					topics: [
+						{
+							type: 'topic',
+							id: id(),
+							author: 'rick',
+							title: 'I have a serious topic to discuss!',
+							content:
+								"Now that we're here for the serious topic, who wants icecream?",
+							slug: 'serious-topic',
+							children: [
+								{
+									type: 'reply',
+									id: id(),
+									parent: 1, // TODO this is a nonsense value now that we're randomizing ids
+									author: 'alex',
+									content:
+										'wtf <span class="text-4xl leading-none">r</span> <span class="text-5xl leading-none">U</span> <span class="text-xl">SERIOUS?</span>',
+									children: [
+										{
+											type: 'reply',
+											id: id(),
+											parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+											author: 'rick',
+											content: 'yes absolutely',
+										},
+									],
+								},
+								{
+									type: 'reply',
+									id: id(),
+									parent: 1, // TODO this is a nonsense value now that we're randomizing ids
+									author: 'alice',
+									content: 'orly?',
+									children: [
+										{
+											type: 'reply',
+											id: id(),
+											parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+											author: 'dana',
+											content: 'ya rly',
+										},
+										{
+											type: 'reply',
+											id: id(),
+											parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+											author: 'chris',
+											content: 'ya rly',
+										},
+										{
+											type: 'reply',
+											id: id(),
+											parent: 2, // TODO this is a nonsense value now that we're randomizing ids
+											author: 'bob',
+											content: 'ya rly',
+										},
+									],
+								},
+							],
+						},
+					],
 				},
 				{ type: 'forum', id: id(), title: 'fun', slug: 'fun', topics },
 				{
