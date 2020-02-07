@@ -57,4 +57,4 @@ and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 ## license
 
 [ISC](license)
-<sub>permissive, [learn more at wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub>
+<sub>permissive, [learn more at Wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub> <3
