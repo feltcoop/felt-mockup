@@ -15,7 +15,7 @@
 	let errorMessage;
 	let submitting;
 
-	const submit = async (_, e) => {
+	const submit = async e => {
 		e.preventDefault();
 		e.stopPropagation();
 		if (!email) {
@@ -56,7 +56,7 @@
 
 	const onKeyPress = e => {
 		if (e.key === 'Enter') {
-			submit();
+			submit(e);
 		}
 	};
 </script>
