@@ -1,7 +1,6 @@
-/node_modules/
+node_modules/
 .DS_Store
 
-/src/node_modules/@sapper/
 /__sapper__/
 
 *.ignore.*

@@ -1,0 +1,30 @@
+import { writable } from 'svelte/store';
+export const createSelectionStore = (initialValue) => {
+    const { subscribe, set, update } = writable(initialValue);
+    return {
+        subscribe,
+        set,
+        update,
+        test: ({ id }, $selection) => {
+            if ($selection === null)
+                return false;
+            if (Array.isArray($selection)) {
+                return Boolean($selection.find(s => s.id === id));
+            }
+            else {
+                return $selection.id === id;
+            }
+        },
+        select: (ent) => {
+            set(ent);
+        },
+        add: (ents) => {
+            update((($value) => {
+                return [
+                    ...(Array.isArray($value) ? $value : $value ? [$value] : []),
+                    ...(Array.isArray(ents) ? ents : ents ? [ents] : []),
+                ];
+            })); // TODO
+        },
+    };
+};

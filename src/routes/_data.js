@@ -1,4 +1,4 @@
-import { symbols } from '@app/ui/symbols.js';
+import { symbols } from '../app/ui/symbols.js';
 let idCounter = 0;
 export const id = () => idCounter++;
 // TODO chat messages

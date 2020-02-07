@@ -1,7 +1,7 @@
 <script>
-	import Content from '@app/ui/Content.svelte';
-	import SocialLinks from '@app/ui/SocialLinks.svelte';
-	import MediaListCallout from '@app/ui/MediaListCallout.svelte';
+	import Content from '../app/ui/Content.svelte';
+	import SocialLinks from '../app/ui/SocialLinks.svelte';
+	import MediaListCallout from '../app/ui/MediaListCallout.svelte';
 
 	let el;
 </script>

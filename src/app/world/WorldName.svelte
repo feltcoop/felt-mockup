@@ -1,0 +1,29 @@
+<script>
+	import { useSession } from '../session/context.js';
+	import { symbols } from '../ui/symbols.js';
+
+	const session = useSession();
+	// console.log('worldname session', session);
+
+	export let name;
+	export let isMention = false;
+	export let classes = '';
+	export let innerClasses = '';
+
+	$: isAnonymous = name === symbols.avatar;
+	$: isSession = name === $session.person.slug;
+	$: href = isAnonymous ? undefined : name;
+	$: colorClasses = isSession ? 'text-purple-700' : 'text-green-700';
+	// $: console.log('href', href, name, isAnonymous, symbols.avatar);
+</script>
+
+<a {href} class="hover:underline {classes} {colorClasses} {innerClasses}">
+	{#if isAnonymous}
+		<span class="text-2xl leading-none">{name}</span>
+	{:else}
+		{#if isMention}
+			<span class="opacity-50">@</span>
+		{/if}
+		{name}
+	{/if}
+</a>

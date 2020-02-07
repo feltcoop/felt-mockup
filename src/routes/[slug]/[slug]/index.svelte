@@ -1,7 +1,7 @@
 <script>
-	import Space from '@app/space/Space.svelte';
-	import { useWorld } from '@app/world/context.js';
-	import { useSpace } from '@app/space/context.js';
+	import Space from '../../../app/space/Space.svelte';
+	import { useWorld } from '../../../app/world/context.js';
+	import { useSpace } from '../../../app/space/context.js';
 
 	const world = useWorld();
 	const space = useSpace();

@@ -1,8 +1,8 @@
 <script>
-	import Content from '@app/ui/Content.svelte';
-	import TextInput from '@app/ui/TextInput.svelte';
-	import SocialLinks from '@app/ui/SocialLinks.svelte';
-	import PlaceholderInfo from '@app/ui/PlaceholderInfo.svelte';
+	import Content from '../app/ui/Content.svelte';
+	import TextInput from '../app/ui/TextInput.svelte';
+	import SocialLinks from '../app/ui/SocialLinks.svelte';
+	import PlaceholderInfo from '../app/ui/PlaceholderInfo.svelte';
 
 	let text = '';
 

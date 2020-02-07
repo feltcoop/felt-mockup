@@ -9,8 +9,8 @@
 </script>
 
 <script>
-	import Content from '@app/ui/Content.svelte';
-	import Blog from '@app/blog/Blog.svelte';
+	import Content from '../../app/ui/Content.svelte';
+	import Blog from '../../app/blog/Blog.svelte';
 
 	export let posts;
 </script>

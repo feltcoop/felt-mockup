@@ -5,7 +5,7 @@ import * as sapper from '@sapper/server';
 import fs from 'fs';
 import bodyParser from 'body-parser';
 
-import { isEmail, normalizeEmail } from '@app/email/utils.js';
+import { isEmail, normalizeEmail } from './app/email/utils.js';
 
 const EMAILS_FILE_PATH = './emails.txt';
 

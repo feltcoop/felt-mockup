@@ -1,0 +1,36 @@
+import { Entity } from '../../routes/_data.js';
+
+import { writable } from 'svelte/store';
+
+export type SelectionStoreState = null | Entity | Entity[];
+
+export const createSelectionStore = <T extends SelectionStoreState>(
+	initialValue: T,
+) => {
+	const { subscribe, set, update } = writable(initialValue);
+
+	return {
+		subscribe,
+		set,
+		update,
+		test: ({ id }: Entity, $selection: SelectionStoreState) => {
+			if ($selection === null) return false;
+			if (Array.isArray($selection)) {
+				return Boolean($selection.find(s => s.id === id));
+			} else {
+				return $selection.id === id;
+			}
+		},
+		select: (ent: T) => {
+			set(ent);
+		},
+		add: (ents: T) => {
+			update((($value: T): Entity[] => {
+				return [
+					...(Array.isArray($value) ? $value : $value ? [$value] : []),
+					...(Array.isArray(ents) ? ents : ents ? [ents] : []),
+				];
+			}) as any); // TODO
+		},
+	};
+};

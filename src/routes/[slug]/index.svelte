@@ -1,8 +1,8 @@
 <script>
-	import World from '@app/world/World.svelte';
-	import Content from '@app/ui/Content.svelte';
-	import { useWorld } from '@app/world/context.js';
-	import TextInput from '@app/ui/TextInput.svelte';
+	import World from '../../app/world/World.svelte';
+	import Content from '../../app/ui/Content.svelte';
+	import { useWorld } from '../../app/world/context.js';
+	import TextInput from '../../app/ui/TextInput.svelte';
 
 	const world = useWorld();
 

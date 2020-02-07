@@ -1,4 +1,4 @@
-import { symbols } from '@app/ui/symbols.js';
+import { symbols } from '../app/ui/symbols.js';
 
 export type Id = number;
 let idCounter = 0;

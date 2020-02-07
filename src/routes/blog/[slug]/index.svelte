@@ -14,9 +14,9 @@
 </script>
 
 <script>
-	import Content from '@app/ui/Content.svelte';
-	import BlogPost from '@app/blog/BlogPost.svelte';
-	import BlogFooter from '@app/blog/BlogFooter.svelte';
+	import Content from '../../../app/ui/Content.svelte';
+	import BlogPost from '../../../app/blog/BlogPost.svelte';
+	import BlogFooter from '../../../app/blog/BlogFooter.svelte';
 
 	// export let segment;
 	// console.log('blog slug segment', segment);
