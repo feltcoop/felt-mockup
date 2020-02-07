@@ -19,7 +19,7 @@ for any cloud Linux VPS provider.
   https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04 -
   and do this instead:
 
-We make a sepecial user group for accessing the website's directories, and
+We make a special user group for accessing the website's directories, and
 include both our user and nginx's `www-data` user. This provides a good mix of
 security and convenience. See the answer by user cube here:
 https://www.digitalocean.com/community/questions/proper-permissions-for-web-server-s-directory
