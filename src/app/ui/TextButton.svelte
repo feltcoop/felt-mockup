@@ -6,7 +6,7 @@
 </script>
 
 <button
-	class="flex items-center hover:underline italic {classes}"
+	class="flex items-center italic {classes}"
 	type="button"
 	on:click
 	bind:this={el}
@@ -14,12 +14,17 @@
 	{#if symbol}
 		<span class="text-3xl leading-none">{symbol}</span>
 	{/if}
-	<slot />
+	<span class="content">
+		<slot />
+	</span>
 </button>
 
 <style>
 	button:hover {
 		transform: scale3d(1.05, 1.05, 1);
+	}
+	button:hover .content {
+		text-decoration: underline;
 	}
 	button:active {
 		transform: scale3d(0.95, 0.95, 1);
