@@ -34,3 +34,8 @@ code {
 	width: 100%;
 	display: flex;
 }
+
+::selection {
+	/* TODO customize */
+	background-color: #e9d8fd;
+}
