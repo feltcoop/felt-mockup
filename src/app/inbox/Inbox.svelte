@@ -4,6 +4,7 @@
 	import InboxListItem from './InboxListItem.svelte';
 	import { id } from '../../routes/_data.js';
 	import { useSession } from '../session/context.js';
+	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 
 	// TODO should type="inbox" be type="activity"?
 
@@ -67,5 +68,9 @@
 	{/if}
 	<div class="overflow-y-scroll flex flex-col flex-1">
 		<InboxList {notes} />
+		<PlaceholderInfo>
+			<span class="text-2xl">TODO</span>
+			toggle these inbox items among various states
+		</PlaceholderInfo>
 	</div>
 </div>
