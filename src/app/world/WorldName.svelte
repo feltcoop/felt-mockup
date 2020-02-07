@@ -24,3 +24,9 @@
 		{#if isMention}<span class="opacity-50">@</span>{/if}{name}
 	{/if}
 </a>
+
+<style>
+	a:focus {
+		outline: 3px dotted rgba(84, 153, 73, 0.75);
+	}
+</style>
