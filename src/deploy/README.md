@@ -9,20 +9,47 @@ for any cloud Linux VPS provider.
 
 ### tutorials followed
 
-- setup
-  - https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
-- nginx
-  - skip step 5 and follow [the "www dirs" instructions](#www-dirs) below instead
-  - https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
-- https
-  - https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
-- http2
-  - currently not enabled in [the nginx config](nginx_server_config.conf)
-  - https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-18-04
-- copy over [the nginx config `./nginx_server_config.conf`](nginx_server_config.conf)
-  (replacing `felt.dev` with your domain if needed)
-  to `/etc/nginx/sites-available/felt.dev`
-  (TODO set this config somewhere when Felt is used as a library)
+#### 1. setup
+
+- https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
+
+#### 2. nginx installation
+
+- skip step 5 and follow [the "www dirs" instructions](#www-dirs) below instead
+- https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+
+#### 3. https
+
+- https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
+
+#### 4. http2
+
+- currently not enabled in [the nginx config](nginx_server_config.conf)
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-18-04
+
+#### 5. nginx config
+
+copy over [the nginx config `./nginx_server_config.conf`](nginx_server_config.conf)
+(replacing `felt.dev` with your domain if needed)
+to `/etc/nginx/sites-available/felt.dev`
+(TODO set this config somewhere when Felt is used as a library)
+
+#### 6. install node
+
+```bash
+# via fnm - https://github.com/Schniz/fnm
+curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+fnm install v12
+# install pm2 - https://github.com/Unitech/pm2
+npm i -g pm2
+# do this once
+pm2 start /var/www/felt.dev/felt/__sapper__/build/index.js
+pm2 list # should see your thing
+pm2 startup # and follow the instructions
+pm2 save
+# do this on subsequent deploys
+pm2 restart 0 # TODO - automate this!
+```
 
 ### app setup
 
