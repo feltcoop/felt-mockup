@@ -80,11 +80,11 @@
 		<BlogPostInput
 			bind:value={titleValue}
 			bind:el={titleEl}
-			placeholder="blog post title.." />
+			placeholder="blog post title • • •" />
 		<BlogPostInput
 			bind:value={contentValue}
 			bind:el={contentEl}
-			placeholder="..content." />
+			placeholder="• • • content • • •" />
 		<div class="mt-2">
 			<Button on:click={toggleDraft}>{symbols.command} stash draft</Button>
 			<Button on:click={submit}>{symbols.publish} publish this post</Button>
@@ -92,7 +92,8 @@
 	{:else}
 		<div>
 			<Button on:click={toggleDraft}>
-				{#if hasDraft}+ resume draft{:else}+ write a new post{/if}
+				{symbols.add}
+				{#if hasDraft}resume draft{:else}write a new post{/if}
 			</Button>
 		</div>
 	{/if}

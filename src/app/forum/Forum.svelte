@@ -91,12 +91,12 @@
 <div class="flex flex-col h-full">
 	<div class="mb-2">
 		{#if showDraft}
-			<Button on:click={toggleDraft}>~ stash draft</Button>
-			<Button on:click={submit}>! publish this draft</Button>
+			<Button on:click={toggleDraft}>{symbols.command} stash draft</Button>
+			<Button on:click={submit}>{symbols.publish} publish this draft</Button>
 		{:else if hasDraft}
-			<Button on:click={toggleDraft}>+ resume draft</Button>
+			<Button on:click={toggleDraft}>{symbols.add} resume draft</Button>
 		{:else}
-			<Button on:click={toggleDraft}>+ add a topic</Button>
+			<Button on:click={toggleDraft}>{symbols.add} add a topic</Button>
 		{/if}
 	</div>
 	{#if showDraft}
@@ -104,12 +104,12 @@
 		<ForumInput
 			bind:el={titleEl}
 			bind:value={titleValue}
-			placeholder="title.."
+			placeholder="title • • •"
 			submit={submitTitle} />
 		<ForumInput
 			bind:el={contentEl}
 			bind:value={contentValue}
-			placeholder="..content!"
+			placeholder="• • • content!"
 			submit={submitContent}
 			classes="border-t-0" />
 		{#if hasDraft}

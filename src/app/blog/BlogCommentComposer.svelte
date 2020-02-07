@@ -4,6 +4,7 @@
 	import { useSession } from '../session/context.js';
 	import { id } from '../../routes/_data.js';
 	import ForumReply from '../forum/ForumReply.svelte';
+	import { symbols } from '../ui/symbols.js';
 
 	const session = useSession();
 
@@ -50,7 +51,7 @@
 		<ForumReply reply={{ content: value, author: $session.person.slug }} />
 	</div>
 {/if}
-<TextButton symbol="~" on:click={() => toggleOpen()}>
+<TextButton symbol={symbols.command} on:click={() => toggleOpen()}>
 	{#if isOpen}stash{:else}comment{/if}
 </TextButton>
 {#if isOpen}
