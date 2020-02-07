@@ -13,7 +13,7 @@
 
 	const session = useSession();
 	const selection = useSelection();
-	$: console.log(`selection`, $selection);
+	// $: console.log(`selection`, $selection);
 
 	// TODO do this properly! this just infers anon status, which should be a property on the space
 	// `inferAuthor` or `getAuthor` could be a pluginable bit of code attached to spaces
