@@ -1,6 +1,9 @@
 # deploy
 
-TODO improve deployment docs!
+Felt is being developed on Ubuntu 18.04
+running on a \$5/mo Digital Ocean VPS,
+but the instructions should work
+for any cloud Linux VPS provider.
 
 ## server setup
 
@@ -16,6 +19,10 @@ TODO improve deployment docs!
 - http2
   - currently not enabled in [the nginx config](nginx_server_config.conf)
   - https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-18-04
+- copy over [the nginx config `./nginx_server_config.conf`](nginx_server_config.conf)
+  (replacing `felt.dev` with your domain if needed)
+  to `/etc/nginx/sites-available/felt.dev`
+  (TODO set this config somewhere when Felt is used as a library)
 
 ### app setup
 
