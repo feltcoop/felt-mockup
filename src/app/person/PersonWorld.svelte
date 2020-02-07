@@ -39,11 +39,11 @@
 	{#if chatMessages}
 		<Chat
 			messages={chatMessages}
-			classes="mb-4 overflow-hidden"
+			classes="overflow-hidden"
 			style={'max-height: 300px;'} />
 		<Forum
 			topics={forumTopics}
-			classes="mb-4 overflow-hidden"
+			classes="mb-4 overflow-hidden mt-20"
 			style={'max-height: 480px;'} />
 	{:else}
 		{#if blogPosts}

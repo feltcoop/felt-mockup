@@ -126,7 +126,5 @@
 			</div>
 		{/if}
 	{/if}
-	<hr />
 	<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
-	<hr />
 </div>
