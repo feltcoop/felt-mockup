@@ -60,6 +60,14 @@ const createTopics = (author = 'rick') => [
     {
         type: 'topic',
         id: id(),
+        author: 'alice',
+        title: 'Welcome! Read me first :D',
+        slug: 'welcome',
+        content: 'jk we got no content!',
+    },
+    {
+        type: 'topic',
+        id: id(),
         author,
         title: 'I have a serious topic to discuss!',
         content: "Now that we're here for the serious topic, who wants icecream?",
@@ -112,14 +120,6 @@ const createTopics = (author = 'rick') => [
                 ],
             },
         ],
-    },
-    {
-        type: 'topic',
-        id: id(),
-        author: 'alice',
-        title: 'Welcome! Read me first :D',
-        slug: 'welcome',
-        content: 'jk we got no content!',
     },
 ];
 const anonTopics = [

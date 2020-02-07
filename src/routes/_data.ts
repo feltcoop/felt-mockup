@@ -74,6 +74,15 @@ const createTopics = (author: string = 'rick'): ForumTopicData[] => [
 	{
 		type: 'topic',
 		id: id(),
+		author: 'alice',
+		title: 'Welcome! Read me first :D',
+		slug: 'welcome',
+		content: 'jk we got no content!',
+		// TODO maybe an option to disable comments, right here?
+	},
+	{
+		type: 'topic',
+		id: id(),
 		author,
 		title: 'I have a serious topic to discuss!',
 		content: "Now that we're here for the serious topic, who wants icecream?",
@@ -126,15 +135,6 @@ const createTopics = (author: string = 'rick'): ForumTopicData[] => [
 				],
 			},
 		],
-	},
-	{
-		type: 'topic',
-		id: id(),
-		author: 'alice',
-		title: 'Welcome! Read me first :D',
-		slug: 'welcome',
-		content: 'jk we got no content!',
-		// TODO maybe an option to disable comments, right here?
 	},
 ];
 const anonTopics: ForumTopicData[] = [
