@@ -18,7 +18,7 @@
 <li>
 	<a
 		class="flex items-center pt-1 pb-1 pr-2 rounded-bl-lg rounded-tr-lg
-		border-dashed border-r-4 border-l-4 border-t-2 border-b-2 border-tr-lg
+		border-dashed border-r-2 border-l-4 border-t-2 border-b-4 border-tr-lg
 		border-bl-lg hover:bg-green-100 hover:border-green-200 {selectedClasses}"
 		class:selected={isSelected}
 		rel="prefetch"

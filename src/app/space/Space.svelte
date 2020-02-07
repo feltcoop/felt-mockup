@@ -32,8 +32,8 @@
 			-->
 		<div class="w-0 z-10 text-gray-500 relative" style="left: -5px;">/</div>
 		<a
-			class="active-space-link bg-purple-100 px-4 border-r-4 border-t-2
-			border-b-2 border-purple-200 cursor-default rounded-tr-lg border-dashed "
+			class="active-space-link bg-purple-100 px-4 border-r-2 border-t-2
+			border-b-4 border-purple-200 cursor-default rounded-tr-lg border-dashed "
 			href="{$world.slug}/{$space.slug}">
 			{$space.title}
 		</a>

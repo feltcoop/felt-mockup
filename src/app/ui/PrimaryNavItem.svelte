@@ -22,7 +22,7 @@
 		color: inherit;
 		width: 100%;
 		height: 100%;
-		@apply border-dashed rounded-bl-lg rounded-tr-lg border-l-4 border-r-4 border-t-2 border-b-2 border-transparent;
+		@apply border-dashed rounded-bl-lg rounded-tr-lg border-l-4 border-r-2 border-t-2 border-b-4 border-transparent;
 		position: relative;
 	}
 	a:hover {

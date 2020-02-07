@@ -16,7 +16,7 @@
 		<a
 			class="text-2xl active-world-link relative bg-purple-100 px-4
 			cursor-default border-dashed rounded-tr-lg rounded-bl-lg border-l-4
-			border-r-4 border-t-2 border-b-2 border-purple-200 font-normal"
+			border-r-2 border-t-2 border-b-4 border-purple-200 font-normal"
 			href={$world.slug}>
 			{$world.title}
 		</a>
