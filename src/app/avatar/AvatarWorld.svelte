@@ -18,8 +18,10 @@
 	<WorldName classes="text-4xl" name={$world.slug} isMention={true} />
 </PlaceholderInfo>
 <PlaceholderInfo>
-	avatars are pseudonyms that you control in online spaces, like characters in a
-	story
+	avatars are pseudonyms, names under your control in online spaces
+</PlaceholderInfo>
+<PlaceholderInfo>
+	sometimes we think of them as characters in a story
 </PlaceholderInfo>
 <PlaceholderInfo>
 	on the left, you'll see your avatar's spaces - click around to learn more
