@@ -34,8 +34,7 @@
 			more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
 				open-source software platform
-			</a>
-			,
+			</a>,
 			<a href="https://felt.social">a community</a>
 			, and a co-op of worker-owners -
 			<a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a>
@@ -49,8 +48,7 @@
 		<p>
 			Our goals are lofty and our team is small, and with the might of software
 			we aim to help people solve priority problems and promote
-			<a href="felt/memes">much joy</a>
-			.
+			<a href="felt/memes">much joy</a>.
 		</p>
 		<p>
 			But Felt is not ready yet.
@@ -61,9 +59,7 @@
 				<span class="text-2xl">
 					Do
 					<span class="border-gray-700 border-b-8 border-double">not</span>
-					expect security when you run this software (
-					<span class="italic">yet</span>
-					).
+					expect security when you run this software (<span class="italic">yet</span>).
 				</span>
 				Assume everything is broken or fake.
 			</span>
@@ -99,20 +95,16 @@
 			<a href="https://github.com/feltcoop/felt/blob/master/license">
 				ISC license
 			</a>
-			(
-			<a href="https://en.wikipedia.org/wiki/ISC_license">see Wikipedia</a>
-			) , and it's designed to be
+			(<a href="https://en.wikipedia.org/wiki/ISC_license">see Wikipedia</a>), and it's designed to be
 			<a href="https://github.com/feltcoop/felt/tree/master/src/deploy">
 				easily self-hosted
-			</a>
-			, so you can run a private instance for your communities and maintain full
+			</a>, so you can run a private instance for your communities and maintain full
 			control.
 		</p>
 		<p>
 			Felt The Business makes money by selling value to users. Mostly, this is
 			through subscription services like
-			<a href="https://felt.social">felt.social</a>
-			. We want a business model that keeps our incentives aligned with our
+			<a href="https://felt.social">felt.social</a>. We want a business model that keeps our incentives aligned with our
 			users, so we accept no revenue from third parties like advertisers. You're
 			probably a person so we should treat you like one. We hope to provide an
 			amazing customer experience, but you can always export your data from our

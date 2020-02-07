@@ -21,9 +21,6 @@
 	{#if isAnonymous}
 		<span class="text-2xl leading-none">{name}</span>
 	{:else}
-		{#if isMention}
-			<span class="opacity-50">@</span>
-		{/if}
-		{name}
+		{#if isMention}<span class="opacity-50">@</span>{/if}{name}
 	{/if}
 </a>
