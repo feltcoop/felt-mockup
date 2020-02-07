@@ -45,8 +45,8 @@ npm run dev # browse to localhost:3000 or whatever it says
 
 ### deploy to real life
 
-- [src/deploy/README.md](src/deploy/README.md)
-- [src/deploy/nginx_server_config.conf](src/deploy/nginx_server_config.conf)
+- [instructions at src/deploy](src/deploy/README.md)
+- [nginx server config](src/deploy/nginx_server_config.conf)
 
 ```bash
 npm i
