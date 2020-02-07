@@ -47,7 +47,7 @@ const createChat = (slug = 'chat', author = 'rick', doc) => ({
     messages: createMessages(author),
     ...doc,
 });
-const createForum = (author = 'rick', slug = 'forum', doc) => ({
+const createForum = (slug = 'forum', author = 'rick', doc) => ({
     type: 'forum',
     id: id(),
     slug,

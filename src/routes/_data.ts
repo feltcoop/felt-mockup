@@ -57,8 +57,8 @@ const createChat = (
 });
 
 const createForum = (
-	author: string = 'rick',
 	slug: string = 'forum',
+	author: string = 'rick',
 	doc?: Partial<ForumSpaceData>,
 ): ForumSpaceData => ({
 	type: 'forum',
