@@ -21,7 +21,6 @@
 		border-dashed border-r-2 border-l-4 border-t-2 border-b-4 border-tr-lg
 		border-bl-lg hover:bg-green-100 hover:border-green-200 {selectedClasses}"
 		class:selected={isSelected}
-		rel="prefetch"
 		href="{$world.slug}/{space.slug}">
 		<div
 			class="w-8 text-center text-gray-400"

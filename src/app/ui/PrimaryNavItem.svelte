@@ -4,7 +4,7 @@
 </script>
 
 <li>
-	<a class:selected={isSelected} rel="prefetch" {href}>
+	<a class:selected={isSelected} {href}>
 		<slot />
 	</a>
 </li>

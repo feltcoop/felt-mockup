@@ -38,7 +38,7 @@
 <nav>
 	<ul class="pl-2">
 		<li class="logo">
-			<a class:selected={segment === undefined} rel="prefetch" href=".">
+			<a class:selected={segment === undefined} href=".">
 				<img src="favicon.png" alt="home" class="felt-icon" />
 			</a>
 		</li>
