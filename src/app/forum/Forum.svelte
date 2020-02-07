@@ -12,6 +12,8 @@
 	export let topics;
 	export let classes = '';
 	export let style;
+	export let topicsClasses = '';
+	export let topicsStyle;
 
 	const session = useSession();
 	const selection = useSelection();
@@ -43,7 +45,7 @@
 
 	$: slug = slugify(titleValue);
 
-	const submit = (e) => {
+	const submit = e => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', titleValue, contentValue);
@@ -126,5 +128,7 @@
 			</div>
 		{/if}
 	{/if}
-	<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
+	<div class="overflow-y-auto {topicsClasses}" style={topicsStyle}>
+		<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
+	</div>
 </div>

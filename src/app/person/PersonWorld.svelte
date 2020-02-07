@@ -37,11 +37,11 @@
 		TODO show {$world.title}'s custom homepage and other helpful info
 	</PlaceholderInfo>
 	{#if chatMessages}
-		<Chat
-			messages={chatMessages}
-			classes="overflow-hidden"
-			style={'max-height: 300px;'} />
-		<Forum topics={forumTopics} classes="mb-4 overflow-hidden mt-20" />
+		<Chat messages={chatMessages} messagesStyle={'max-height: 300px;'} />
+		<Forum
+			topics={forumTopics}
+			classes="mb-4 mt-20"
+			topicsStyle={'max-height: 300px;'} />
 	{:else}
 		{#if blogPosts}
 			<Inbox notes={inboxNotes} classes="mb-4" />
