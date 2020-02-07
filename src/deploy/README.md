@@ -15,7 +15,25 @@ for any cloud Linux VPS provider.
 
 #### 2. nginx installation
 
-- skip step 5 and follow [the "www dirs" instructions](#www-dirs) below instead
+- skip step 5 and do this instead:
+
+We make a sepecial user group for accessing the website's directories, and
+include both our user and nginx's `www-data` user. This provides a good mix of
+security and convenience. See the answer by user cube here:
+https://www.digitalocean.com/community/questions/proper-permissions-for-web-server-s-directory
+
+```bash
+sudo addgroup sftp-users
+sudo adduser $USER sftp-users
+sudo adduser www-data sftp-users
+sudo chown root /var/www
+sudo chgrp sftp-users /var/www
+sudo chmod 775 /var/www
+sudo chmod g+s /var/www
+sudo mkdir /var/www/felt.dev
+sudo chown $USER /var/www/felt.dev
+```
+
 - https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 
 #### 3. https
@@ -49,27 +67,4 @@ pm2 startup # and follow the instructions
 pm2 save
 # do this on subsequent deploys
 pm2 restart 0 # TODO - automate this!
-```
-
-### app setup
-
-#### www dirs
-
-Do this during the nginx tutorial above.
-
-We make a sepecial user group for accessing the website's directories, and
-include both our user and nginx's `www-data` user. This provides a good mix of
-security and convenience. See the answer by user cube here:
-https://www.digitalocean.com/community/questions/proper-permissions-for-web-server-s-directory
-
-```bash
-sudo addgroup sftp-users
-sudo adduser $USER sftp-users
-sudo adduser www-data sftp-users
-sudo chown root /var/www
-sudo chgrp sftp-users /var/www
-sudo chmod 775 /var/www
-sudo chmod g+s /var/www
-sudo mkdir /var/www/felt.dev
-sudo chown $USER /var/www/felt.dev
 ```
