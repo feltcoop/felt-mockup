@@ -23,7 +23,7 @@
 	}
 	button:active {
 		box-shadow: 0 1px 0 1px rgba(84, 153, 73, 0.75) inset;
-		top: 1px;
+		top: 2px;
 	}
 	button:focus {
 		outline-width: 3px;

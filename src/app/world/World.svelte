@@ -48,7 +48,7 @@
 		@apply text-purple-400 !important;
 	}
 	.active-world-link:active {
-		top: -1px;
+		top: -2spx;
 		@apply border-purple-300;
 	}
 </style>

@@ -34,11 +34,11 @@
 		cursor: default;
 	}
 	a:active {
-		top: 1px;
+		top: 2px;
 		@apply border-green-300;
 	}
 	a.selected:active {
 		@apply border-purple-300;
-		top: -1px;
+		top: -2px;
 	}
 </style>

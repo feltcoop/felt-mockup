@@ -73,11 +73,11 @@
 		position: relative;
 	}
 	a:active {
-		top: 1px;
+		top: 2px;
 		@apply border-green-300;
 	}
 	.active-space-link:active {
-		top: -1px;
+		top: -2px;
 		@apply border-purple-300;
 	}
 </style>

@@ -16,11 +16,11 @@
 
 <style lang="postcss">
 	.subheading:active {
-		top: 1px;
+		top: 2px;
 		@apply border-green-300;
 	}
 	.subheading.selected:active {
 		@apply border-purple-300;
-		top: -1px;
+		top: -2px;
 	}
 </style>

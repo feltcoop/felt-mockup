@@ -112,7 +112,7 @@
 		top: 1px;
 	}
 	.logo a.selected:active {
-		top: -1px;
+		top: -2px;
 	}
 	.logo a.selected {
 		@apply text-purple-700;

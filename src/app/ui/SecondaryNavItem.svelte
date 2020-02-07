@@ -48,11 +48,11 @@
 		text-decoration: underline;
 	}
 	a:active {
-		top: 1px;
+		top: 2px;
 		@apply border-green-300;
 	}
 	a.selected:active {
-		top: -1px;
+		top: -2px;
 		@apply border-purple-300;
 	}
 </style>
