@@ -77,7 +77,7 @@
 		{/each}
 
 		<PrimaryNavSubheading isActive={$world && $world.type === 'page'}>
-			pages
+			felt.dev
 		</PrimaryNavSubheading>
 
 		{#each pages as world}
