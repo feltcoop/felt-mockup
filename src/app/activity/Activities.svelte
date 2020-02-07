@@ -8,6 +8,8 @@
 	const session = useSession();
 
 	export let activities;
+	export let classes = '';
+	export let style;
 
 	export let value = '';
 
@@ -23,7 +25,7 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full">
+<div class="flex flex-col {classes}" {style}>
 	<ActivityInput bind:value {submit} placeholder="• • •" />
 	<div
 		class="overflow-y-scroll flex flex-col flex-1 border-4 border-purple-200

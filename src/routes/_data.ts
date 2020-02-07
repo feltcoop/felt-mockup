@@ -14,6 +14,7 @@ const createMessages = (author: string = 'rick'): ChatMessageData[] => [
 		content: 'what is up fellow chat friends?',
 	},
 	{ type: 'message', id: id(), author: 'alice', content: 'nm u?' },
+	{ type: 'message', id: id(), author: 'bob', content: 'i found a bug' },
 ];
 const createAnonMessages = (): ChatMessageData[] => [
 	{
@@ -33,6 +34,12 @@ const createAnonMessages = (): ChatMessageData[] => [
 		id: id(),
 		author: symbols.avatar,
 		content: 'nm u?',
+	},
+	{
+		type: 'message',
+		id: id(),
+		author: symbols.avatar,
+		content: 'a bug found me',
 	},
 ];
 
@@ -478,6 +485,13 @@ const people: PersonData[] = [
 				title: 'blog',
 				slug: 'blog',
 				posts: randPosts(),
+			},
+			{
+				type: 'inbox',
+				id: id(),
+				title: 'inbox',
+				slug: 'inbox',
+				notes: createNotes('bob'),
 			},
 			{
 				type: 'blog',

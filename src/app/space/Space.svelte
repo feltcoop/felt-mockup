@@ -11,6 +11,7 @@
 
 	export let world;
 	export let space;
+	export let classes = '';
 </script>
 
 <!-- TODO where should this padding ideally go? -->
@@ -45,19 +46,19 @@
 
 	<div class="flex-1">
 		{#if $space.type === 'chat'}
-			<Chat messages={$space.messages} />
+			<Chat messages={$space.messages} {classes} />
 		{:else if $space.type === 'forum'}
-			<Forum topics={$space.topics} />
+			<Forum topics={$space.topics} {classes} />
 		{:else if $space.type === 'blog'}
-			<Blog posts={$space.posts} />
+			<Blog posts={$space.posts} {classes} />
 		{:else if $space.type === 'inbox'}
-			<Inbox notes={$space.notes} />
+			<Inbox notes={$space.notes} {classes} />
 		{:else if $space.type === 'notes'}
-			<Notes notes={$space.notes} />
+			<Notes notes={$space.notes} {classes} />
 		{:else if $space.type === 'activities'}
-			<Activities activities={$space.activities} />
+			<Activities activities={$space.activities} {classes} />
 		{:else if $space.type === 'events'}
-			<Events events={$space.events} />
+			<Events events={$space.events} {classes} />
 		{:else}
 			<ErrorMessage message={`Unknown space type "${$space.type}"`} />
 		{/if}

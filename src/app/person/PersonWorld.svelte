@@ -1,10 +1,22 @@
 <script>
 	import EntityExplorer from '../ui/EntityExplorer.svelte';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
+	import Chat from '../chat/Chat.svelte';
+	import Forum from '../forum/Forum.svelte';
+	import Blog from '../blog/Blog.svelte';
+	import Inbox from '../inbox/Inbox.svelte';
 
 	export let world;
 
 	let subpage = 0;
+
+	$: chatMessages = $world.spaces[0].messages;
+	$: forumTopics = $world.spaces[2].topics;
+	$: blogPosts = $world.spaces[0].posts;
+	$: inboxNotes = (() => {
+		const space = $world.spaces.find(s => s.type === 'inbox');
+		return space && space.notes;
+	})();
 </script>
 
 <div class="flex flex-col">
@@ -24,6 +36,23 @@
 	<PlaceholderInfo>
 		TODO show {$world.title}'s custom homepage and other helpful info
 	</PlaceholderInfo>
+	{#if chatMessages}
+		<Chat
+			messages={chatMessages}
+			classes="mb-4 overflow-hidden"
+			style={'max-height: 300px;'} />
+		<Forum
+			topics={forumTopics}
+			classes="mb-4 overflow-hidden"
+			style={'max-height: 480px;'} />
+	{:else}
+		{#if blogPosts}
+			<Inbox notes={inboxNotes} classes="mb-4" style={'max-height: 480px;'} />
+		{/if}
+		{#if blogPosts}
+			<Blog posts={blogPosts} classes="mb-4 mt-20" />
+		{/if}
+	{/if}
 {:else}
 	<EntityExplorer entity={$world} />
 {/if}

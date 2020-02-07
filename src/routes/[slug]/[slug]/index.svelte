@@ -11,4 +11,4 @@
 	<title>felt / {$world.title} / {$space.title}</title>
 </svelte:head>
 
-<Space {world} {space} />
+<Space {world} {space} classes="h-full" />

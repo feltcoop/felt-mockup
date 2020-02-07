@@ -10,6 +10,8 @@
 	const session = useSession();
 
 	export let notes;
+	export let classes = '';
+	export let style;
 
 	export let contentValue = '';
 	export let titleValue = '';
@@ -41,7 +43,7 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full">
+<div class="flex flex-col {classes}" {style}>
 	<InboxInput
 		placeholder="• • • notes notes • • •"
 		bind:value={contentValue}

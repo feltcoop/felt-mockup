@@ -8,6 +8,8 @@
 	const session = useSession();
 
 	export let events;
+	export let classes = '';
+	export let style;
 
 	export let titleValue = '';
 	export let contentValue = '';
@@ -47,7 +49,7 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full">
+<div class="flex flex-col {classes}" {style}>
 	<EventInput
 		bind:value={titleValue}
 		bind:el={titleEl}

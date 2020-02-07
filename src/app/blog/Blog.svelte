@@ -12,6 +12,8 @@
 	// to make it less confusing when you toggle the drafts
 
 	export let posts;
+	export let classes = '';
+	export let style;
 	// $: console.log('blog posts', posts);
 
 	export let titleValue = '';
@@ -75,7 +77,7 @@
 	TODO replace this and other `max-width: 640px` stuff
 	with a <Container/> or <Cell /> or <Box /> or something
 -->
-<div class="flex-1 flex flex-col p-2" style="max-width: 640px;">
+<div class="flex-1 flex flex-col p-2 {classes}" {style}>
 	{#if showDraft}
 		<BlogPostInput
 			bind:value={titleValue}

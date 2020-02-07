@@ -8,6 +8,8 @@
 	import { symbols } from '../ui/symbols.js';
 
 	export let messages;
+	export let classes = '';
+	export let style;
 
 	const session = useSession();
 	const selection = useSelection();
@@ -35,7 +37,8 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full">
+<!-- TODO how to do height? -->
+<div class="flex flex-col {classes}" {style}>
 	<div
 		class="overflow-y-scroll flex flex-col justify-end flex-1 border-4
 		border-b-0 border-purple-200 rounded-tr-lg">

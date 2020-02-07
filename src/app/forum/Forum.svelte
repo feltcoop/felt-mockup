@@ -10,6 +10,8 @@
 	import { symbols } from '../ui/symbols.js';
 
 	export let topics;
+	export let classes = '';
+	export let style;
 
 	const session = useSession();
 	const selection = useSelection();
@@ -88,7 +90,8 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full">
+<!-- TODO how to do height? -->
+<div class="flex flex-col {classes}" {style}>
 	<div class="mb-2">
 		{#if showDraft}
 			<Button on:click={toggleDraft}>{symbols.command} stash draft</Button>
@@ -119,5 +122,7 @@
 			</div>
 		{/if}
 	{/if}
+	<hr />
 	<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
+	<hr />
 </div>
