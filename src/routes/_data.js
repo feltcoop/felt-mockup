@@ -2,16 +2,10 @@ import { symbols } from '../app/ui/symbols.js';
 let idCounter = 0;
 export const id = () => idCounter++;
 // TODO chat messages
-const createMessages = (author = 'rick') => [
-    { type: 'message', id: id(), author, content: 'hi!' },
-    {
-        type: 'message',
-        id: id(),
-        author: 'alex',
-        content: 'what is up fellow chat friends?',
-    },
-    { type: 'message', id: id(), author: 'alice', content: 'nm u?' },
-    { type: 'message', id: id(), author: 'bob', content: 'i found a bug' },
+const createMessages = (author1 = 'rick', author2 = 'alice') => [
+    { type: 'message', id: id(), author: author1, content: 'hi!' },
+    { type: 'message', id: id(), author: author2, content: 'supp' },
+    { type: 'message', id: id(), author: author2, content: 'i found a bug' },
 ];
 const createAnonMessages = () => [
     {
@@ -39,12 +33,12 @@ const createAnonMessages = () => [
         content: 'a bug found me',
     },
 ];
-const createChat = (slug = 'chat', author = 'rick', doc) => ({
+const createChat = (slug = 'chat', author = 'rick', doc, author2 = 'alice') => ({
     type: 'chat',
     id: id(),
     slug,
     title: slug,
-    messages: createMessages(author),
+    messages: createMessages(author, author2),
     ...doc,
 });
 const createForum = (slug = 'forum', author = 'rick', doc) => ({
@@ -341,7 +335,14 @@ const people = [
                 id: id(),
                 title: 'chat',
                 slug: 'chat',
-                messages: createMessages('rick'),
+                messages: [
+                    {
+                        type: 'message',
+                        id: id(),
+                        author: 'rick',
+                        content: 'echo-ey in here',
+                    },
+                ],
             },
             {
                 type: 'blog',
@@ -371,7 +372,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            createChat('chat', 'alex'),
+            createChat('chat', 'alex', undefined, 'rick'),
             {
                 type: 'blog',
                 id: id(),
@@ -400,7 +401,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            createChat('chat', 'sue'),
+            createChat('chat', 'sue', undefined, 'rick'),
             {
                 type: 'blog',
                 id: id(),
@@ -429,7 +430,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            createChat('chat', 'alice'),
+            createChat('chat', 'alice', undefined, 'rick'),
             {
                 type: 'blog',
                 id: id(),
@@ -507,7 +508,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            createChat('chat', 'chris'),
+            createChat('chat', 'chris', undefined, 'rick'),
             {
                 type: 'blog',
                 id: id(),
@@ -536,7 +537,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            createChat('chat', 'dana'),
+            createChat('chat', 'dana', undefined, 'rick'),
             {
                 type: 'blog',
                 id: id(),
