@@ -8,7 +8,9 @@
 
 	let notes = [{ content: 'im a note :)' }];
 
-	const submit = () => {
+	const submit = (_, e) => {
+		e.preventDefault(); // TODO needed?
+		e.stopPropagation(); // TODO needed?
 		notes = [{ content: text }, ...notes];
 		text = '';
 	};

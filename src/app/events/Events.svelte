@@ -19,7 +19,9 @@
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = () => {
+	const submit = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		// console.log('submit event', titleValue, contentValue);
 		if (!titleValue) {
 			titleEl.focus();
@@ -39,10 +41,14 @@
 		titleEl.focus();
 	};
 
-	const submitTitle = () => {
+	const submitTitle = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		contentEl.focus();
 	};
-	const submitContent = () => {
+	const submitContent = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		submit(); // TODO almost definitely want buttons instead
 	};
 

@@ -43,7 +43,9 @@
 
 	$: slug = slugify(titleValue);
 
-	const submit = () => {
+	const submit = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		// console.log('submit content', titleValue, contentValue);
 		if (!titleValue) {
 			titleEl.focus();
@@ -63,12 +65,14 @@
 		contentValue = '';
 		toggleDraft();
 	};
-	const submitTitle = () => {
-		// TODO how to advance to next form tab index?
+	const submitTitle = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		contentEl.focus();
 	};
-	const submitContent = () => {
-		// TODO how to advance to next form tab index?
+	const submitContent = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		titleEl.focus();
 	};
 

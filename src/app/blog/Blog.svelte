@@ -62,6 +62,18 @@
 		contentValue = '';
 		showDraft = false;
 	};
+	const submitTitle = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
+		contentEl.focus();
+	};
+	const submitContent = (_, e) => {
+		if (contentValue.endsWith('\n\n')) {
+			e.preventDefault();
+			e.stopPropagation();
+			titleEl.focus();
+		}
+	};
 	const addComment = (post, comment) => {
 		posts = posts.map(p => {
 			if (p.id !== post.id) return p;
@@ -82,11 +94,13 @@
 		<BlogPostInput
 			bind:value={titleValue}
 			bind:el={titleEl}
-			placeholder="blog post title • • •" />
+			placeholder="blog post title • • •"
+			submit={submitTitle} />
 		<BlogPostInput
 			bind:value={contentValue}
 			bind:el={contentEl}
-			placeholder="• • • content • • •" />
+			placeholder="• • • content • • •"
+			submit={submitContent} />
 		<div class="mt-2">
 			<Button on:click={toggleDraft}>{symbols.command} stash draft</Button>
 			<Button on:click={submit}>{symbols.publish} publish this post</Button>

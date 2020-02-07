@@ -14,7 +14,9 @@
 
 	export let value = '';
 
-	const submit = content => {
+	const submit = (content, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		// console.log('submit content', content);
 		notes = [
 			{ type: 'note', author: $session.person.slug, id: id(), content },

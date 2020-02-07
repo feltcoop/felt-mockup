@@ -17,7 +17,9 @@
 	export let titleValue = '';
 	export let contentEl;
 
-	const submit = () => {
+	const submit = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		if (!contentValue && !titleValue) {
 			contentEl.focus();
 			return;
@@ -36,7 +38,9 @@
 		titleValue = '';
 	};
 
-	const submitTitle = () => {
+	const submitTitle = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		contentEl.focus();
 	};
 

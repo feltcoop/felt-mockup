@@ -15,7 +15,9 @@
 	let errorMessage;
 	let submitting;
 
-	const submit = async () => {
+	const submit = async (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		if (!email) {
 			inputEl.focus();
 			errorMessage = 'Please enter an email address.';

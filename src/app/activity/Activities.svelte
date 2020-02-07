@@ -13,7 +13,9 @@
 
 	export let value = '';
 
-	const submit = content => {
+	const submit = (content, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		// console.log('submit activity content', content);
 		activities = [
 			{ author: $session.person.slug, id: id(), content },

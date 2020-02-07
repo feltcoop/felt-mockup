@@ -23,7 +23,9 @@
 			? symbols.avatar
 			: $session.person.slug;
 
-	const submit = content => {
+	const submit = (content, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		// console.log('submit content', content);
 		messages = [...messages, { type: 'message', author, id: id(), content }];
 		value = '';
