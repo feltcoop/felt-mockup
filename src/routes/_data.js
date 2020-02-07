@@ -32,6 +32,22 @@ const createAnonMessages = () => [
         content: 'nm u?',
     },
 ];
+const createChat = (author = 'rick', slug = 'chat', doc) => ({
+    type: 'chat',
+    id: id(),
+    slug,
+    title: slug,
+    messages: createMessages(author),
+    ...doc,
+});
+const createForum = (author = 'rick', slug = 'forum', doc) => ({
+    type: 'forum',
+    id: id(),
+    slug,
+    title: slug,
+    topics: createTopics(author),
+    ...doc,
+});
 // TODO forum topics
 const createTopics = (author = 'rick') => [
     {
@@ -327,13 +343,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('rick'),
-            },
+            createForum('rick'),
             {
                 type: 'activities',
                 id: id(),
@@ -354,13 +364,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            {
-                type: 'chat',
-                id: id(),
-                title: 'chat',
-                slug: 'chat',
-                messages: createMessages('alex'),
-            },
+            createChat('alex'),
             {
                 type: 'blog',
                 id: id(),
@@ -368,13 +372,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('alex'),
-            },
+            createForum('alex'),
             {
                 type: 'activities',
                 id: id(),
@@ -395,13 +393,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            {
-                type: 'chat',
-                id: id(),
-                title: 'chat',
-                slug: 'chat',
-                messages: createMessages('sue'),
-            },
+            createChat('sue'),
             {
                 type: 'blog',
                 id: id(),
@@ -409,13 +401,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('sue'),
-            },
+            createForum('sue'),
             {
                 type: 'activities',
                 id: id(),
@@ -436,13 +422,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            {
-                type: 'chat',
-                id: id(),
-                title: 'chat',
-                slug: 'chat',
-                messages: createMessages('alice'),
-            },
+            createChat('alice'),
             {
                 type: 'blog',
                 id: id(),
@@ -450,13 +430,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('alice'),
-            },
+            createForum('alice'),
             {
                 type: 'activities',
                 id: id(),
@@ -498,13 +472,7 @@ const people = [
                 slug: 'bookmarks',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('bob'),
-            },
+            createForum('bob'),
             {
                 type: 'activities',
                 id: id(),
@@ -525,13 +493,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            {
-                type: 'chat',
-                id: id(),
-                title: 'chat',
-                slug: 'chat',
-                messages: createMessages('chris'),
-            },
+            createChat('chris'),
             {
                 type: 'blog',
                 id: id(),
@@ -539,13 +501,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('chris'),
-            },
+            createForum('chris'),
             {
                 type: 'activities',
                 id: id(),
@@ -566,13 +522,7 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
         spaces: [
-            {
-                type: 'chat',
-                id: id(),
-                title: 'chat',
-                slug: 'chat',
-                messages: createMessages('dana'),
-            },
+            createChat('dana'),
             {
                 type: 'blog',
                 id: id(),
@@ -580,13 +530,7 @@ const people = [
                 slug: 'blog',
                 posts: randPosts(),
             },
-            {
-                type: 'forum',
-                id: id(),
-                title: 'forum',
-                slug: 'forum',
-                topics: createTopics('dana'),
-            },
+            createForum('dana'),
             {
                 type: 'activities',
                 id: id(),
@@ -778,20 +722,8 @@ const data = {
             slug: 'felt',
             description: '<small>the felt community</small>',
             spaces: [
-                {
-                    type: 'chat',
-                    id: id(),
-                    title: 'hi',
-                    slug: 'hi',
-                    messages: createMessages(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'help',
-                    slug: 'help',
-                    topics: createTopics(),
-                },
+                createChat(undefined, 'hi'),
+                createForum(undefined, 'help'),
                 // TODO events page for local meetups (structured in a hierarchy?
                 // local/denver? local/denver/events and local/denver/{forum,chat}
                 {
@@ -915,20 +847,8 @@ const data = {
                     slug: 'code',
                     topics: createTopics(),
                 },
-                {
-                    type: 'chat',
-                    id: id(),
-                    title: 'etc',
-                    slug: 'etc',
-                    messages: createMessages(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'meta',
-                    slug: 'meta',
-                    topics: createTopics(),
-                },
+                createChat(undefined, 'etc'),
+                createForum(undefined, 'meta'),
                 {
                     type: 'blog',
                     id: id(),
@@ -953,13 +873,7 @@ const data = {
                     messages: createMessages(),
                 },
                 { type: 'events', id: id(), title: 'events', slug: 'events', events },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'design',
-                    slug: 'design',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'design'),
                 {
                     type: 'forum',
                     title: 'steam',
@@ -975,13 +889,7 @@ const data = {
                     slug: 'blog',
                     posts: randPosts(),
                 },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'tech',
-                    slug: 'tech',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'tech'),
                 {
                     type: 'forum',
                     id: id(),
@@ -1122,27 +1030,9 @@ const data = {
                     ],
                 },
                 { type: 'events', id: id(), title: 'events', slug: 'events', events },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'questions',
-                    slug: 'questions',
-                    topics: createTopics(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'design',
-                    slug: 'design',
-                    topics: createTopics(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'requests',
-                    slug: 'requests',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'questions'),
+                createForum(undefined, 'design'),
+                createForum(undefined, 'requests'),
                 {
                     type: 'blog',
                     id: id(),
@@ -1150,13 +1040,7 @@ const data = {
                     slug: 'blog',
                     posts: randPosts(),
                 },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'test',
-                    slug: 'test',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'test'),
                 {
                     type: 'forum',
                     id: id(),
@@ -1236,13 +1120,7 @@ const data = {
                         },
                     ],
                 },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'threads',
-                    slug: 'threads',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'threads'),
                 {
                     type: 'chat',
                     id: id(),
@@ -1268,20 +1146,8 @@ const data = {
             title: 'feltcoop',
             slug: 'feltcoop',
             spaces: [
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'support',
-                    slug: 'support',
-                    topics: createTopics(),
-                },
-                {
-                    type: 'chat',
-                    id: id(),
-                    title: 'talk',
-                    slug: 'talk',
-                    messages: createMessages(),
-                },
+                createForum(undefined, 'support'),
+                createChat(undefined, 'talk'),
                 {
                     type: 'events',
                     id: id(),
@@ -1289,13 +1155,7 @@ const data = {
                     slug: 'meetings',
                     events,
                 },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'design',
-                    slug: 'design',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'design'),
                 {
                     type: 'blog',
                     id: id(),
@@ -1303,13 +1163,7 @@ const data = {
                     slug: 'blog',
                     posts: randPosts(),
                 },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'tech',
-                    slug: 'tech',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'tech'),
                 {
                     type: 'forum',
                     id: id(),
@@ -1405,13 +1259,7 @@ const data = {
                     slug: 'tavern',
                     messages: createMessages(),
                 },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'library',
-                    slug: 'library',
-                    topics: createTopics(),
-                },
+                createForum(undefined, 'library'),
                 {
                     type: 'chat',
                     id: id(),
@@ -1464,22 +1312,7 @@ const data = {
             title: 'help',
             slug: 'help',
             description: "<p><small>need support? got some questions? we're here to help!</small></p><p>TODO show summary preview thumbnails of both the chat and forum, and other actionable insights into this world</p>",
-            spaces: [
-                {
-                    type: 'chat',
-                    id: id(),
-                    title: 'chat',
-                    slug: 'chat',
-                    messages: createMessages(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'forum',
-                    slug: 'forum',
-                    topics: createTopics(),
-                },
-            ],
+            spaces: [createChat('help'), createForum('help')],
         },
         // people
         ...people,
@@ -1489,44 +1322,14 @@ const data = {
             id: id(),
             title: 'about',
             slug: 'about',
-            spaces: [
-                {
-                    type: 'chat',
-                    id: id(),
-                    title: 'chat',
-                    slug: 'chat',
-                    messages: createMessages(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'forum',
-                    slug: 'forum',
-                    topics: createTopics(),
-                },
-            ],
+            spaces: [createChat('about'), createForum('about')],
         },
         {
             type: 'page',
             id: id(),
             title: 'blog',
             slug: 'blog',
-            spaces: [
-                {
-                    type: 'chat',
-                    id: id(),
-                    title: 'chat',
-                    slug: 'chat',
-                    messages: createMessages(),
-                },
-                {
-                    type: 'forum',
-                    id: id(),
-                    title: 'forum',
-                    slug: 'forum',
-                    topics: createTopics(),
-                },
-            ],
+            spaces: [createChat('blog'), createForum('blog')],
         },
     ],
 };
