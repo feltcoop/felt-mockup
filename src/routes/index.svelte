@@ -38,9 +38,6 @@
 	<PlaceholderInfo>
 		TODO add global activity and other important info
 	</PlaceholderInfo>
-	<PlaceholderInfo>
-		TODO put customization handles on all the things
-	</PlaceholderInfo>
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
 			<div class="flex justify-center items-center">
