@@ -20,9 +20,15 @@
 </script>
 
 <textarea
-	class="w-full border-4 border-purple-200 {classes} focus:outline-none
-	focus:border-green-300"
+	class="w-full border-4 border-purple-200 {classes} focus:border-green-300"
 	bind:value
 	bind:this={el}
 	on:keydown={onKeyDown}
 	{placeholder} />
+
+<style>
+	textarea:focus {
+		/* // -purple-100 */
+		outline: 6px dotted #e9d8fd;
+	}
+</style>
