@@ -24,4 +24,7 @@
 	button:active {
 		transform: scale3d(0.95, 0.95, 1);
 	}
+	button:focus {
+		outline: 3px dotted rgba(0, 0, 0, 0.4);
+	}
 </style>
