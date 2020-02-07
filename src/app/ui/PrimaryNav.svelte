@@ -66,7 +66,7 @@
 		{/each}
 
 		<PrimaryNavSubheading isActive={$world && $world.type === 'person'}>
-			people
+			friends
 		</PrimaryNavSubheading>
 
 		{#each people as world}
