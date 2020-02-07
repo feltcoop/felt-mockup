@@ -36,7 +36,7 @@
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = (_, e) => {
+	const submit = e => {
 		e.preventDefault();
 		e.stopPropagation();
 		// TODO publish confirmation

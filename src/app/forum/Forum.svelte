@@ -43,7 +43,7 @@
 
 	$: slug = slugify(titleValue);
 
-	const submit = (_, e) => {
+	const submit = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', titleValue, contentValue);

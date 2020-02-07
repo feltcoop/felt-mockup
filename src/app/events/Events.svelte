@@ -19,7 +19,7 @@
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = (_, e) => {
+	const submit = e => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit event', titleValue, contentValue);
@@ -49,7 +49,7 @@
 	const submitContent = (_, e) => {
 		e.preventDefault();
 		e.stopPropagation();
-		submit(); // TODO almost definitely want buttons instead
+		submit(e); // TODO almost definitely want buttons instead
 	};
 
 	// TODO need a store per chat that saves the input state
