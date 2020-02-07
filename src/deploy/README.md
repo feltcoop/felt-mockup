@@ -15,7 +15,9 @@ for any cloud Linux VPS provider.
 
 #### 2. nginx installation
 
-- skip step 5 and do this instead:
+- skip step 5 of the tutorial -
+  https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04 -
+  and do this instead:
 
 We make a sepecial user group for accessing the website's directories, and
 include both our user and nginx's `www-data` user. This provides a good mix of
@@ -33,8 +35,6 @@ sudo chmod g+s /var/www
 sudo mkdir /var/www/felt.dev
 sudo chown $USER /var/www/felt.dev
 ```
-
-- https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 
 #### 3. https
 
