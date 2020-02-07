@@ -36,7 +36,9 @@
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = () => {
+	const submit = (_, e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		// TODO publish confirmation
 		// TODO show good errors where they occur (forms library!)
 		// console.log('submit blog post', titleValue, contentValue);
