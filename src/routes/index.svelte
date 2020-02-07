@@ -46,7 +46,7 @@
 						src="/logo-192-textured.png"
 						alt="fuzzy felt f"
 						style="width: 192px; height: 192px;" />
-					<div class="italic" style="max-width: 256px;">
+					<div style="max-width: 256px;">
 						<span class="text-4xl">felt</span>
 						is free and open community software for empowering people and
 						democratic organizations
