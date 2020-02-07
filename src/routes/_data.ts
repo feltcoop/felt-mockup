@@ -1502,7 +1502,7 @@ const data: Data = {
 			slug: 'help',
 			description:
 				"<p><small>need support? got some questions? we're here to help!</small></p><p>TODO show summary preview thumbnails of both the chat and forum, and other actionable insights into this world</p>",
-			spaces: [createChat('help'), createForum('help')],
+			spaces: [createChat(), createForum()],
 		},
 
 		// people
