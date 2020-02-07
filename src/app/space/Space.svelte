@@ -20,7 +20,7 @@
 	<div class="flex text-2xl mb-2">
 		<a
 			class="bg-green-100 px-4 rounded-bl-lg border-dashed border-l-4 border-t-2
-			border-b-2 border-green-200 text-green-700"
+			border-b-4 border-green-200 text-green-700"
 			href={$world.slug}>
 			{$world.title}
 		</a>
