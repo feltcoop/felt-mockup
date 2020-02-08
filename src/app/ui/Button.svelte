@@ -25,6 +25,6 @@
 		top: 2px;
 	}
 	button:focus {
-		outline: 3px dotted rgba(84, 153, 73, 0.75);
+		outline: 4px dotted rgba(84, 153, 73, 0.75);
 	}
 </style>
