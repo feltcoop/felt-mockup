@@ -20,19 +20,8 @@
 
 	$: avatars = worlds.filter(w => w.type === 'avatar');
 	$: communities = worlds.filter(w => w.type === 'community');
-	$: people = worlds.filter(w => w.type === 'person');
+	$: friends = worlds.filter(w => w.type === 'person' && w.slug !== 'rick');
 	$: pages = worlds.filter(w => w.type === 'page');
-	$: {
-		const expectedCount = worlds.length;
-		const actualCount =
-			avatars.length + communities.length + people.length + pages.length;
-		if (actualCount !== expectedCount) {
-			// TODO do this debug check better, elide in prod
-			console.error(
-				`not all work nav items are getting rendered: ${actualCount} / ${expectedCount}`,
-			);
-		}
-	}
 
 	let subheadingsOpen = {
 		avatar: true,
@@ -93,7 +82,7 @@
 		</PrimaryNavSubheading>
 
 		{#if subheadingsOpen.person}
-			{#each people as world}
+			{#each friends as world}
 				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
 					<div class="item-icon" />
 					{world.title}
