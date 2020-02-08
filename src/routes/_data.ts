@@ -1484,6 +1484,8 @@ const data: Data = {
 					id: id(),
 					title: 'underground',
 					slug: 'underground',
+					description:
+						'// TODO some spaces should be ephemeral, saving no history, and others may allow or force an expiry time on content - this message will be destroyed in 5, 4,',
 					messages: createAnonMessages(),
 				}, // polls only and no topics - "psst ;)" - anonymous? oh dear lol
 				{
