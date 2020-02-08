@@ -12,7 +12,7 @@
 <div class="flex flex-col flex-1 p-2" style="max-width: 640px;">
 	<!-- TODO componentize - SpaceBreadcrumb or PathBreadcrumb or SlugBreadcrumb -->
 	<!-- TODO make this transition with the equivalent component (and DOM element) in `<Space/>` -->
-	<div>
+	<div class="mb-4">
 		<a
 			class="text-2xl active-world-link relative bg-purple-100 px-4
 			cursor-default border-dashed rounded-tr-lg rounded-bl-lg border-l-4

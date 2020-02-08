@@ -91,7 +91,7 @@
 	TODO replace this and other `max-width: 640px` stuff
 	with a <Container/> or <Cell /> or <Box /> or something
 -->
-<div class="flex-1 flex flex-col p-2 {classes}" {style}>
+<div class="flex-1 flex flex-col {classes}" {style}>
 	{#if showDraft}
 		<BlogPostInput
 			bind:value={titleValue}
