@@ -47,20 +47,6 @@
 			we aim to help people solve priority problems and promote
 			<a href="felt/memes">much joy</a>.
 		</p>
-		<p>
-			But Felt is not ready yet.
-			<span class="font-bold">
-				This is just a
-				<span class="text-2xl">pre-alpha</span>
-				release for demonstration and design purposes.
-				<span class="text-2xl">
-					Do
-					<span class="border-gray-700 border-b-8 border-double">not</span>
-					expect security when you run this software (<span class="italic">yet</span>).
-				</span>
-				Assume everything is broken or fake.
-			</span>
-		</p>
 		Some links:
 		<ul>
 			<li>
@@ -83,6 +69,20 @@
 				<a href="mailto:team@felt.social">team@felt.social</a>
 			</li>
 		</ul>
+		<p>
+			But Felt is not ready yet.
+			<span class="font-bold">
+				This is just a
+				<span class="text-2xl">pre-alpha</span>
+				release for demonstration and design purposes.
+				<span class="text-2xl">
+					Do
+					<span class="border-gray-700 border-b-8 border-double">not</span>
+					expect security when you run this software (<span class="italic">yet</span>).
+				</span>
+				Assume everything is broken or fake.
+			</span>
+		</p>
 		<p>
 			Felt is
 			<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">
