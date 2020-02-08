@@ -27,6 +27,9 @@
 	on the left, you'll see your avatar's spaces - we're a work in progress
 </PlaceholderInfo>
 <PlaceholderInfo>
+	TODO show this avatar's communities and custom nav and spaces
+</PlaceholderInfo>
+<PlaceholderInfo>
 	TODO show all activity for this avatar & interact with it
 </PlaceholderInfo>
 
