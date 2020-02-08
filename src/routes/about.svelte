@@ -33,14 +33,10 @@
 			and web publishing, and more, and more! You read that right! And Felt is
 			more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
-				open-source software platform</a>, <a href="https://felt.social">a community</a>, and a co-op of worker-owners -
-			<a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a>
-			&
-			<a href="https://github.com/feltcoop">github.com/feltcoop</a>
-			& email
-			<a href="mailto:team@felt.social">team@felt.social</a>
-			- all with a purpose that puts people first. If we do it right, Felt is
-			tech that feels good.
+				open-source software platform</a>, <a href="https://felt.social">a community</a>,
+				and a co-op of worker-owners,
+				all with a purpose that puts people first.
+				If we do it right, Felt is tech that feels good.
 		</p>
 		<p>
 			Our goals are lofty and our team is small, and with the might of software
