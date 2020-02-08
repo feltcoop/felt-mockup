@@ -4,7 +4,7 @@
 	export let activity;
 </script>
 
-<div>
+<div class="px-2 py-1">
 	<WorldName name={activity.author} classes="mr-2" />
 	{@html activity.content}
 </div>
