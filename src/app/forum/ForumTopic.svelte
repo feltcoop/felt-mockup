@@ -18,7 +18,9 @@
 		<div>{topic.title}</div>
 	</div>
 	{#if topic.content}
-		<div>{topic.content}</div>
+		<div>
+			{@html topic.content}
+		</div>
 	{/if}
 	<div>
 		{#if addReply}
