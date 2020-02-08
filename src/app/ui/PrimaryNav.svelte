@@ -33,6 +33,19 @@
 			);
 		}
 	}
+
+	let subheadingsOpen = {
+		avatar: true,
+		community: true,
+		person: true,
+		page: true,
+	};
+	const toggleSubheading = subheading => {
+		subheadingsOpen = {
+			...subheadingsOpen,
+			[subheading]: !subheadingsOpen[subheading],
+		};
+	};
 </script>
 
 <nav>
@@ -43,49 +56,65 @@
 			</a>
 		</li>
 
-		<PrimaryNavSubheading isActive={$world && $world.type === 'avatar'}>
+		<PrimaryNavSubheading
+			isActive={$world && $world.type === 'avatar'}
+			on:click={() => toggleSubheading('avatar')}>
 			avatars
 		</PrimaryNavSubheading>
 
-		{#each avatars as world}
-			<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
-				<div class="item-icon" />
-				{world.title}
-			</PrimaryNavItem>
-		{/each}
+		{#if subheadingsOpen.avatar}
+			{#each avatars as world}
+				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+					<div class="item-icon" />
+					{world.title}
+				</PrimaryNavItem>
+			{/each}
+		{/if}
 
-		<PrimaryNavSubheading isActive={$world && $world.type === 'community'}>
+		<PrimaryNavSubheading
+			isActive={$world && $world.type === 'community'}
+			on:click={() => toggleSubheading('community')}>
 			communities
 		</PrimaryNavSubheading>
 
-		{#each communities as world}
-			<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
-				<div class="item-icon" />
-				{world.title}
-			</PrimaryNavItem>
-		{/each}
+		{#if subheadingsOpen.community}
+			{#each communities as world}
+				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+					<div class="item-icon" />
+					{world.title}
+				</PrimaryNavItem>
+			{/each}
+		{/if}
 
-		<PrimaryNavSubheading isActive={$world && $world.type === 'person'}>
+		<PrimaryNavSubheading
+			isActive={$world && $world.type === 'person'}
+			on:click={() => toggleSubheading('person')}>
 			friends
 		</PrimaryNavSubheading>
 
-		{#each people as world}
-			<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
-				<div class="item-icon" />
-				{world.title}
-			</PrimaryNavItem>
-		{/each}
+		{#if subheadingsOpen.person}
+			{#each people as world}
+				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+					<div class="item-icon" />
+					{world.title}
+				</PrimaryNavItem>
+			{/each}
+		{/if}
 
-		<PrimaryNavSubheading isActive={$world && $world.type === 'page'}>
+		<PrimaryNavSubheading
+			isActive={$world && $world.type === 'page'}
+			on:click={() => toggleSubheading('page')}>
 			felt.dev
 		</PrimaryNavSubheading>
 
-		{#each pages as world}
-			<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
-				<div class="item-icon" />
-				{world.title}
-			</PrimaryNavItem>
-		{/each}
+		{#if subheadingsOpen.page}
+			{#each pages as world}
+				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+					<div class="item-icon" />
+					{world.title}
+				</PrimaryNavItem>
+			{/each}
+		{/if}
 
 	</ul>
 </nav>
