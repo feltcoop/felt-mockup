@@ -24,7 +24,7 @@
 	sometimes we think of them as characters in a story
 </PlaceholderInfo>
 <PlaceholderInfo>
-	on the left, you'll see your avatar's spaces - click around to learn more
+	on the left, you'll see your avatar's spaces - we're a work in progress
 </PlaceholderInfo>
 <PlaceholderInfo>
 	TODO show all activity for this avatar & interact with it
