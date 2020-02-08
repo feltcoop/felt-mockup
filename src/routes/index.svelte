@@ -38,7 +38,7 @@
 		</ul>
 	</div>
 	<PlaceholderInfo>
-		TODO add global activity and other important info
+		TODO add global activity, user settings, & other info
 	</PlaceholderInfo>
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
