@@ -5,6 +5,7 @@
 	import ActivitiesList from '../activity/ActivitiesList.svelte';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 	import WorldName from '../world/WorldName.svelte';
+	import View from '../ui/View.svelte';
 
 	export let world;
 
@@ -39,3 +40,7 @@
 <ActivitiesList {activities} />
 
 {#if $world.content}{$world.content}{/if}
+
+{#if $world.view}
+	<View view={$world.view} />
+{/if}

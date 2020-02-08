@@ -5,6 +5,7 @@
 	import Forum from '../forum/Forum.svelte';
 	import Blog from '../blog/Blog.svelte';
 	import Inbox from '../inbox/Inbox.svelte';
+	import View from '../ui/View.svelte';
 
 	export let world;
 
@@ -55,3 +56,7 @@
 {/if}
 
 {#if $world.content}{$world.content}{/if}
+
+{#if $world.view}
+	<View view={$world.view} />
+{/if}

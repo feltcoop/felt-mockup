@@ -1351,14 +1351,86 @@ const data = {
                     description: '<small>$ $ $ $ $ $ $ $ $</small>',
                 },
             ],
+            view: {
+                type: 'view',
+                id: id(),
+                component: 'BoxView',
+                children: [
+                    {
+                        type: 'view',
+                        id: id(),
+                        component: 'BoxView',
+                        children: [
+                            {
+                                type: 'view',
+                                id: id(),
+                                component: 'ChatView',
+                                props: { chatSlug: 'tavern' },
+                            },
+                            {
+                                type: 'view',
+                                id: id(),
+                                component: 'ForumView',
+                                props: { forumSlug: 'library' },
+                            },
+                        ],
+                    },
+                    {
+                        type: 'view',
+                        id: id(),
+                        component: 'EventsView',
+                        props: { eventsSlug: 'raids' },
+                    },
+                ],
+            },
         },
         {
             type: 'community',
             id: id(),
             title: 'help',
             slug: 'help',
-            description: "<p><small>need support? got some questions? we're here to help!</small></p><p>TODO show summary preview thumbnails of both the chat and forum, and other actionable insights into this world</p>",
-            spaces: [createChat(), createForum()],
+            description: "<small>need support? got some questions? we're here to help!</small>",
+            spaces: [
+                {
+                    ...createChat(),
+                    messages: [
+                        {
+                            type: 'message',
+                            id: id(),
+                            author: 'alex',
+                            content: 'i need help',
+                        },
+                        {
+                            type: 'message',
+                            id: id(),
+                            author: 'alice',
+                            content: 'what can we help you with?',
+                        },
+                        { type: 'message', id: id(), author: 'alex', content: 'im lost' },
+                    ],
+                },
+                createForum(),
+            ],
+            // TODO this belongs in the layout no? points to a world and a view for that world?
+            view: {
+                type: 'view',
+                id: id(),
+                component: 'BoxView',
+                children: [
+                    {
+                        type: 'view',
+                        id: id(),
+                        component: 'ChatView',
+                        props: { chatSlug: 'chat' },
+                    },
+                    {
+                        type: 'view',
+                        id: id(),
+                        component: 'ForumView',
+                        props: { forumSlug: 'forum' },
+                    },
+                ],
+            },
         },
         // people
         ...people,

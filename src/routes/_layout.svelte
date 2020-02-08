@@ -13,7 +13,7 @@
 
 	export let segment;
 
-	// console.log('segment', segment);
+	// $: console.log('segment', segment);
 
 	provideSession(initialSessionData);
 	provideSelection(null);

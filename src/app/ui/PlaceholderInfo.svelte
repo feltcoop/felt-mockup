@@ -6,7 +6,7 @@
 		: 'bg-gray-100 text-gray-700';
 </script>
 
-<div class="pl-2 {classes}" class:interactive>
+<div class="pl-2 whitespace-no-wrap {classes}" class:interactive>
 	<span class="{colorClasses} text-lg font-hairline">
 		<span class="text-5xl leading-none">{'{'}</span>
 		<slot />

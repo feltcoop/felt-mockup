@@ -22,7 +22,9 @@
 		</a>
 	</div>
 	{#if $world.description}
-		{@html $world.description}
+		<div class="mb-4">
+			{@html $world.description}
+		</div>
 	{/if}
 	<!-- 
 	{#each $world.children as space}

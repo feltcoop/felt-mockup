@@ -624,6 +624,7 @@ export interface WorldData extends Entity {
 	slug: Slug;
 	description?: string;
 	spaces: SpaceData[];
+	view?: ViewData;
 }
 
 export type SpaceData =
@@ -721,6 +722,12 @@ export interface EventData extends Entity {
 	title: string;
 	// slug: string; // TODO do this for permalink?
 	content: string;
+}
+export interface ViewData extends Entity {
+	type: 'view';
+	component: string;
+	props?: object;
+	children?: ViewData[];
 }
 
 const data: Data = {
@@ -1531,6 +1538,38 @@ const data: Data = {
 				// park - forum for comedy/recreation
 				// forest - anon forum
 			],
+			view: {
+				type: 'view',
+				id: id(),
+				component: 'BoxView',
+				children: [
+					{
+						type: 'view',
+						id: id(),
+						component: 'BoxView',
+						children: [
+							{
+								type: 'view',
+								id: id(),
+								component: 'ChatView',
+								props: { chatSlug: 'tavern' }, // TODO bikeshed
+							}, // TODO slug? we're pointing to a resource - should they be ids?
+							{
+								type: 'view',
+								id: id(),
+								component: 'ForumView',
+								props: { forumSlug: 'library' }, // TODO bikeshed
+							}, // TODO slug? we're pointing to a resource - should they be ids?
+						],
+					},
+					{
+						type: 'view',
+						id: id(),
+						component: 'EventsView',
+						props: { eventsSlug: 'raids' }, // TODO bikeshed
+					}, // TODO slug? we're pointing to a resource - should they be ids?
+				],
+			},
 		},
 		{
 			type: 'community',
@@ -1538,8 +1577,50 @@ const data: Data = {
 			title: 'help',
 			slug: 'help',
 			description:
-				"<p><small>need support? got some questions? we're here to help!</small></p><p>TODO show summary preview thumbnails of both the chat and forum, and other actionable insights into this world</p>",
-			spaces: [createChat(), createForum()],
+				"<small>need support? got some questions? we're here to help!</small>",
+			spaces: [
+				{
+					...createChat(),
+					messages: [
+						{
+							type: 'message',
+							id: id(),
+							author: 'alex',
+							content: 'i need help',
+						},
+						{
+							type: 'message',
+							id: id(),
+							author: 'alice',
+							content: 'what can we help you with?',
+						},
+						{ type: 'message', id: id(), author: 'alex', content: 'im lost' },
+					],
+				},
+				createForum(),
+			],
+			// TODO this belongs in the layout no? points to a world and a view for that world?
+			view: {
+				type: 'view',
+				id: id(),
+				component: 'BoxView',
+				children: [
+					{
+						type: 'view',
+						id: id(),
+						component: 'ChatView',
+						props: { chatSlug: 'chat' }, // TODO bikeshed
+						// props: { chatSlug: './chat' }, // TODO bikeshed
+						// props: { chatSlug: 'help/chat' }, // TODO bikeshed
+					}, // TODO slug? we're pointing to a resource - should they be ids?
+					{
+						type: 'view',
+						id: id(),
+						component: 'ForumView',
+						props: { forumSlug: 'forum' }, // TODO bikeshed
+					}, // TODO slug? we're pointing to a resource - should they be ids?
+				],
+			},
 		},
 
 		// people
