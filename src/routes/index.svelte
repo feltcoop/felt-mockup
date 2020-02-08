@@ -74,7 +74,6 @@
 			<span class="text-4xl">
 				hi,
 				<span class="text-5xl text-gray-600">welcome!</span>
-				ty for stopping by
 			</span>
 			<div>
 				this is a
