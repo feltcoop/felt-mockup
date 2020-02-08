@@ -2,6 +2,6 @@
 	import Button from '../ui/Button.svelte';
 </script>
 
-<a href="blog" rel="preload">
+<a href="blog">
 	<Button>← back to blog ←</Button>
 </a>
