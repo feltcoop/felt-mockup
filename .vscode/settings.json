@@ -19,6 +19,5 @@
     "**/node_modules": true,
     "src/routes/_data.js": true,
     "static/index.css": true
-  },
-  "search.useIgnoreFiles": true
+  }
 }
