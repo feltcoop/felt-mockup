@@ -25,4 +25,21 @@
 -->
 <div class="flex-1 p-2" style="max-width: 640px;">
 	<Blog {posts} />
+	<div style="width: 300px;">
+		<div
+			class="bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap"
+			style="border: 4px dotted #ed64a6; height: 32px; width: 110px">
+			subscribe
+		</div>
+		<div
+			class="bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap"
+			style="border: 4px dotted #4c51bf; height: 32px; width: 250px">
+			like
+		</div>
+		<div
+			class="bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap"
+			style="border: 4px dotted #b7791f; height: 32px; width: 170px">
+			meh
+		</div>
+	</div>
 </div>
