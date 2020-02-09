@@ -40,6 +40,7 @@
 			<li>polls and surveys and shared governance</li>
 			<li>collaborating with others</li>
 			<li>blogs and web publishing</li>
+			<li>maybe one day, expanses of interesting communities to explore</li>
 			<li>and more! you betcha</li>
 		</ul>
 		<p>
