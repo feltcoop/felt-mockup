@@ -30,19 +30,19 @@
 			class="bg-pink-200 text-pink-700 border-pink-300 border-dashed mb-1
 			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
 			style="height: 32px; width: 90px">
-			subscribe 18%
+			:D subscribe 18%
 		</div>
 		<div
 			class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed mb-1
 			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
 			style="height: 32px; width: 250px">
-			like 49%
+			:) like 49%
 		</div>
 		<div
 			class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed mb-1
 			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
 			style="height: 32px; width: 170px">
-			meh 33%
+			:| meh 33%
 		</div>
 	</div>
 </div>
