@@ -42,7 +42,7 @@
 			<li>blogs and web publishing</li>
 			<li>maybe one day, expanses of interesting communities to explore</li>
 			<li>client software that's firmly in your control -
-				<a href="https://github.com/feltcoop/felt">fork us</a> on github!
+				<a href="https://github.com/feltcoop/felt">fork us</a> on GitHub!
 			</li>
 			<li>and more! you betcha</li>
 		</ul>
@@ -62,7 +62,7 @@
 		<ul>
 			<li>
 				<a href="https://github.com/feltcoop/felt">
-					felt source code on github
+					felt source code on GitHub
 				</a>
 				live on the web at
 				<a href="https://felt.dev">felt.dev</a>
@@ -71,7 +71,7 @@
 				<a href="https://felt.social">community at felt.social</a>
 				and its
 				<a href="https://github.com/feltcoop/felt.social">
-					source code on github
+					source code on GitHub
 				</a>
 			</li>
 			<li>
