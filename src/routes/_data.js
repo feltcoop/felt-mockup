@@ -329,6 +329,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             {
                 type: 'chat',
@@ -371,6 +390,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             createChat('chat', 'alex', undefined, 'rick'),
             {
@@ -400,6 +438,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             createChat('chat', 'sue', undefined, 'rick'),
             {
@@ -429,6 +486,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             createChat('chat', 'alice', undefined, 'rick'),
             {
@@ -458,6 +534,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             {
                 type: 'blog',
@@ -507,6 +602,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             createChat('chat', 'chris', undefined, 'rick'),
             {
@@ -536,6 +650,25 @@ const people = [
             { type: 'avatar', name: `avatar${id()}`, id: id() },
             { type: 'avatar', name: `avatar${id()}`, id: id() },
         ],
+        view: {
+            type: 'view',
+            id: id(),
+            component: 'BoxView',
+            children: [
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ChatView',
+                    props: { chatSlug: 'chat' },
+                },
+                {
+                    type: 'view',
+                    id: id(),
+                    component: 'ForumView',
+                    props: { forumSlug: 'forum' },
+                },
+            ],
+        },
         spaces: [
             createChat('chat', 'dana', undefined, 'rick'),
             {

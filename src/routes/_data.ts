@@ -354,6 +354,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			{
 				type: 'chat',
@@ -396,6 +415,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			createChat('chat', 'alex', undefined, 'rick'),
 			{
@@ -425,6 +463,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			createChat('chat', 'sue', undefined, 'rick'),
 			{
@@ -454,6 +511,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			createChat('chat', 'alice', undefined, 'rick'),
 			{
@@ -483,6 +559,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			{
 				type: 'blog',
@@ -532,6 +627,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			createChat('chat', 'chris', undefined, 'rick'),
 			{
@@ -561,6 +675,25 @@ const people: PersonData[] = [
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 			{ type: 'avatar', name: `avatar${id()}`, id: id() },
 		],
+		view: {
+			type: 'view',
+			id: id(),
+			component: 'BoxView',
+			children: [
+				{
+					type: 'view',
+					id: id(),
+					component: 'ChatView',
+					props: { chatSlug: 'chat' }, // TODO bikeshed
+				},
+				{
+					type: 'view',
+					id: id(),
+					component: 'ForumView',
+					props: { forumSlug: 'forum' }, // TODO bikeshed
+				},
+			],
+		},
 		spaces: [
 			createChat('chat', 'dana', undefined, 'rick'),
 			{
@@ -600,6 +733,7 @@ export interface PersonData extends Entity {
 	title: string;
 	avatars: AvatarData[];
 	spaces: SpaceData[];
+	view: ViewData;
 }
 
 export interface AvatarData extends Entity {
