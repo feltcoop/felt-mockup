@@ -38,6 +38,8 @@
 					activity={{ author: $session.person.slug, content: value }} />
 			</div>
 		{/if}
-		<ActivitiesList {activities} />
+		{#if activities && activities.length}
+			<ActivitiesList {activities} />
+		{:else}• • •{/if}
 	</div>
 </div>

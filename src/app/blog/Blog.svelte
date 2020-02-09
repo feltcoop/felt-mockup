@@ -121,5 +121,7 @@
 				post={{ author: $session.person.slug, title: titleValue, content: contentValue }} />
 		</div>
 	{/if}
-	<BlogPostList {posts} {addComment} />
+	{#if posts && posts.length}
+		<BlogPostList {posts} {addComment} />
+	{:else}• • •{/if}
 </div>

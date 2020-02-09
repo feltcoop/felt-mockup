@@ -128,7 +128,9 @@
 			</div>
 		{/if}
 	{/if}
-	<div class="overflow-y-auto p-1 {topicsClasses}" style={topicsStyle}>
-		<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
-	</div>
+	{#if topics && topics.length}
+		<div class="overflow-y-auto p-1 {topicsClasses}" style={topicsStyle}>
+			<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
+		</div>
+	{:else}• • •{/if}
 </div>

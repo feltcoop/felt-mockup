@@ -35,7 +35,9 @@
 			<NotesListItem note={{ author: $session.person.slug, content: value }} />
 		</div>
 	{/if}
-	<div class="overflow-y-scroll flex flex-col justify-start flex-1">
-		<NotesList {notes} />
-	</div>
+	{#if notes && notes.length}
+		<div class="overflow-y-scroll flex flex-col justify-start flex-1">
+			<NotesList {notes} />
+		</div>
+	{:else}• • •{/if}
 </div>

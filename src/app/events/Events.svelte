@@ -75,6 +75,8 @@
 					event={{ author: $session.person.slug, title: titleValue, content: contentValue }} />
 			</div>
 		{/if}
-		<EventsList {events} />
+		{#if events && events.length}
+			<EventsList {events} />
+		{:else}• • •{/if}
 	</div>
 </div>

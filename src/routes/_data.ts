@@ -1020,21 +1020,21 @@ const data: Data = {
 					id: id(),
 					title: 'inbox',
 					slug: 'inbox',
-					notes: createNotes('ape_of_clubs'),
+					notes: [],
 				},
 				{
 					type: 'notes',
 					id: id(),
 					title: 'notes',
 					slug: 'notes',
-					notes: createNotes('ape_of_clubs'),
+					notes: [],
 				},
 				{
 					type: 'activities',
 					id: id(),
 					title: 'history',
 					slug: 'history',
-					activities: createActivities('ape_of_clubs'),
+					activities: [],
 				},
 			],
 		},
@@ -1661,10 +1661,18 @@ const data: Data = {
 					id: id(),
 					title: 'forest',
 					slug: 'forest',
-					messages: createMessages(),
+					messages: [],
 					description:
 						// TODO maybe click this for more flavor, class="flavor-text"
-						'<small>mystery, green, ferns, leaves, spiders, mushrooms, moss, birds, squirrels, risk</small>',
+						'this place has no memory<br/><small>mystery, green, ferns, leaves, spiders, mushrooms, moss, birds, squirrels, risk</small>',
+				}, // :beetle:
+				{
+					type: 'forum',
+					id: id(),
+					title: 'mountains',
+					slug: 'mountains',
+					topics: [],
+					description: 'this place has no memory',
 				}, // :beetle:
 				{
 					type: 'forum',
@@ -1686,7 +1694,6 @@ const data: Data = {
 				// type: 'forum', id: id(), { title: 'dump', slug: 'dump', topics: createTopics() }, // lower-quality random junk, maybe limited to 1 message a week?
 				// temple - chat for encouragement, platitudes, and other cheerful/motivational stuff
 				// park - forum for comedy/recreation
-				// forest - anon forum
 			],
 			view: {
 				type: 'view',

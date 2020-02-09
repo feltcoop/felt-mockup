@@ -67,7 +67,9 @@
 		</div>
 	{/if}
 	<div class="overflow-y-scroll flex flex-col flex-1">
-		<InboxList {notes} />
+		{#if notes && notes.length}
+			<InboxList {notes} />
+		{:else}• • •{/if}
 		<PlaceholderInfo>
 			<span class="text-2xl">TODO</span>
 			toggle these inbox items among various states
