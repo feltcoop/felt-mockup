@@ -9,6 +9,8 @@
 </script>
 
 <script>
+	import { fly } from 'svelte/transition';
+	import { elasticOut, bounceOut } from 'svelte/easing';
 	import Content from '../../app/ui/Content.svelte';
 	import Blog from '../../app/blog/Blog.svelte';
 
@@ -63,7 +65,9 @@
 					class="bg-pink-200 text-pink-700 border-pink-300 border-dashed mb-1
 					rounded-lg border-l-4 border-b-4 border-t-2 border-r-2 text-xl p-2
 					whitespace-no-wrap"
-					style="width: 48px; height: 48px;">
+					style="width: 48px; height: 48px;"
+					in:fly={{ x: -20, y: -200, easing: elasticOut }}
+					on:click={() => count1--}>
 					:D
 				</div>
 			{/each}
@@ -72,7 +76,9 @@
 					class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed
 					mb-1 rounded-lg border-l-4 border-b-4 border-t-2 border-r-2 text-xl
 					p-2 whitespace-no-wrap"
-					style="width: 48px; height: 48px;">
+					style="width: 48px; height: 48px;"
+					in:fly={{ x: -20, y: -200, easing: elasticOut }}
+					on:click={() => count2--}>
 					:)
 				</div>
 			{/each}
@@ -81,7 +87,9 @@
 					class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed
 					mb-1 rounded-lg border-l-4 border-b-4 border-t-2 border-r-2 text-xl
 					p-2 whitespace-no-wrap"
-					style="width: 48px; height: 48px;">
+					style="width: 48px; height: 48px;"
+					in:fly={{ x: -20, y: -200, easing: bounceOut }}
+					on:click={() => count3--}>
 					:|
 				</div>
 			{/each}
