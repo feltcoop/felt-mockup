@@ -21,7 +21,8 @@
 	// TODO do this properly! this just infers anon status, which should be a property on the space
 	// `inferAuthor` or `getAuthor` could be a pluginable bit of code attached to spaces
 	$: author =
-		messages[0] && messages[0].author === symbols.avatar
+		// TODO add optional chaining operator `?`
+		messages && messages[0] && messages[0].author === symbols.avatar
 			? symbols.avatar
 			: $session.person.slug;
 
@@ -29,7 +30,10 @@
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', content);
-		messages = [...messages, { type: 'message', author, id: id(), content }];
+		messages = [
+			...(messages || []),
+			{ type: 'message', author, id: id(), content },
+		];
 		value = '';
 	};
 
@@ -47,7 +51,9 @@
 		class="overflow-y-scroll flex flex-col justify-end flex-1 border-4
 		border-b-0 border-purple-200 rounded-tr-lg {messagesClasses}"
 		style={messagesStyle}>
-		<ChatMessages {messages} {selectMessage} {selection} />
+		{#if messages && messages.length}
+			<ChatMessages {messages} {selectMessage} {selection} />
+		{:else}• • •{/if}
 		{#if value}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
 				<ChatMessage message={{ author, content: value }} />

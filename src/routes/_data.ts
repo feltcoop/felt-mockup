@@ -1189,7 +1189,9 @@ const data: Data = {
 					slug: 'code',
 					topics: createTopics(),
 				}, // TODO make this a separate community? felt.social/dev or devs?
-				createChat('etc'),
+				createChat('etc', undefined, {
+					messages: undefined,
+				}),
 				createForum('meta'),
 				{
 					type: 'blog',

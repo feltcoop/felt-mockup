@@ -1008,7 +1008,9 @@ const data = {
                     slug: 'code',
                     topics: createTopics(),
                 },
-                createChat('etc'),
+                createChat('etc', undefined, {
+                    messages: undefined,
+                }),
                 createForum('meta'),
                 {
                     type: 'blog',
