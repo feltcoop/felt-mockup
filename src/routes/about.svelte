@@ -31,7 +31,7 @@
 		</p>
 		Felt features (one day):
 		<ul>
-			<li>online and offline community building</li>
+			<li>tools for online and offline community building</li>
 			<li>chat and forums</li>
 			<li>events and rsvps</li>
 			<li>note taking and sharing</li>
