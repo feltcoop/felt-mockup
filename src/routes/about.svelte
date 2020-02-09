@@ -32,7 +32,7 @@
 		Felt's features (one day):
 		<ul>
 			<li>online and offline community building</li>
-			<li>forums</li>
+			<li>chat and forums</li>
 			<li>events and rsvps</li>
 			<li>note taking and sharing</li>
 			<li>tasks and todos and reminders</li>
