@@ -54,7 +54,7 @@ const createTopics = (author = 'rick') => [
     {
         type: 'topic',
         id: id(),
-        author: 'alice',
+        author,
         title: 'Welcome! Read me first :D',
         slug: 'welcome',
         content: 'jk we got no content!',
