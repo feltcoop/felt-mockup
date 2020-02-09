@@ -61,12 +61,14 @@
 			<div class="flex items-center justify-center">
 				<a
 					href="/about"
-					class="logo-heart flex flex-wrap items-center justify-center">
-					<span class="text-5xl mr-2 font-hairline text-green-700">about</span>
+					class="logo-heart flex flex-wrap flex-col items-center justify-center">
 					<img
 						src="/logo-heart.png"
 						alt="fuzzy felt heart"
 						style="width: 192px; height: 178px;" />
+					<span class="text-5xl mr-2 font-hairline text-green-700">
+						learn about felt
+					</span>
 				</a>
 			</div>
 		</li>
@@ -97,8 +99,7 @@
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
-				<div>free source code</div>
-				at
+				<div>source code at</div>
 				<a class="github-repo" href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
 				</a>
