@@ -1079,14 +1079,15 @@ const data = {
                             type: 'topic',
                             id: id(),
                             author: 'alex',
-                            title: 'we need topics and replies!',
-                            slug: 'we-need-topics-and-replies',
+                            title: 'Who can drink the most parsecs in a millenium?',
+                            slug: 'what-should-the-name-of-the-top-level-community-be',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics 18%</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">?? 49%</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..? 33%</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">Han 18%</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">shot b 49%</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">first c 33%</div>
 							</div>`,
+                            status: 'open',
                         },
                     ],
                 },
