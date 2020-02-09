@@ -13,6 +13,10 @@
 	import Blog from '../../app/blog/Blog.svelte';
 
 	export let posts;
+
+	let count1 = 0;
+	let count2 = 0;
+	let count3 = 0;
 </script>
 
 <svelte:head>
@@ -29,20 +33,26 @@
 		<div
 			class="bg-pink-200 text-pink-700 border-pink-300 border-dashed mb-1
 			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
-			style="height: 32px; width: 90px">
+			style="height: {30 + 2 * count1}px; width: {90 * (1 + count1 * count1)}px;"
+			on:click={() => count1++}>
 			:D subscribe 18%
+			{#if count1}+ {count1}{/if}
 		</div>
 		<div
 			class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed mb-1
 			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
-			style="height: 32px; width: 250px">
+			style="height: {30 + 2 * count2}px; width: {250 * (1 + count2 * count2)}px;"
+			on:click={() => count2++}>
 			:) like 49%
+			{#if count2}+ {count2}{/if}
 		</div>
 		<div
 			class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed mb-1
 			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
-			style="height: 32px; width: 170px">
+			style="height: {30 + 2 * count3}px; width: {170 * (1 + count3 * count3)}px;"
+			on:click={() => count3++}>
 			:| meh 33%
+			{#if count3}+ {count3}{/if}
 		</div>
 	</div>
 </div>
