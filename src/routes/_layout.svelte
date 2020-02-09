@@ -39,4 +39,8 @@
 		/* do not show alt text by default */
 		color: transparent;
 	}
+	:global(a) {
+		/* TODO doing this because of underlining */
+		@apply text-green-700;
+	}
 </style>
