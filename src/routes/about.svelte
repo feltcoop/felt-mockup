@@ -27,16 +27,28 @@
 		<p>
 			Felt is community software for empowering people and democratic
 			organizations. It's a free and open alternative to many websites and apps
-			tucked into a warm fuzzy package. Felt's features (will one day) include
-			chats, forums, events and rsvps, note taking and sharing, polls, tasks and
-			todos and reminders, collaborating with others, shared governance, blogs
-			and web publishing, and more, and more! You read that right! And Felt is
-			more than a big bag of features. It's a customizable
+			tucked into a warm fuzzy package.
+		</p>
+		Felt's features (one day):
+		<ul>
+			<li>online and offline community building</li>
+			<li>forums</li>
+			<li>events and rsvps</li>
+			<li>note taking and sharing</li>
+			<li>tasks and todos and reminders</li>
+			<li>bookmarks and aggregation and adventure</li>
+			<li>polls and surveys and shared governance</li>
+			<li>collaborating with others</li>
+			<li>blogs and web publishing</li>
+			<li>and more! you betcha</li>
+		</ul>
+		<p>
+			And Felt is more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
-				open-source software platform</a>, <a href="https://felt.social">a community</a>,
-				and a co-op of worker-owners,
-				all with a purpose that puts people first.
-				If we do it right, Felt is tech that feels good.
+				open-source software platform
+			</a>,
+			<a href="https://felt.social">a community</a>, and a co-op of worker-owners, all with a purpose that puts people first.
+			If we do it right, Felt is tech that feels good.
 		</p>
 		<p>
 			Our goals are lofty and our team is small, and with the might of software
