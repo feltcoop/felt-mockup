@@ -27,22 +27,22 @@
 	<Blog {posts} />
 	<div style="width: 300px;">
 		<div
-			class="bg-pink-200 text-pink-700 border-pink-300 border-dashed border-4
-			text-xl pl-1 whitespace-no-wrap"
-			style="height: 32px; width: 110px">
-			subscribe
+			class="bg-pink-200 text-pink-700 border-pink-300 border-dashed mb-1
+			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
+			style="height: 32px; width: 90px">
+			subscribe 18%
 		</div>
 		<div
-			class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed
-			border-4 text-xl pl-1 whitespace-no-wrap"
+			class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed mb-1
+			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
 			style="height: 32px; width: 250px">
-			like
+			like 49%
 		</div>
 		<div
-			class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed
-			border-4 text-xl pl-1 whitespace-no-wrap"
+			class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed mb-1
+			rounded-lg border-4 text-xl pl-1 whitespace-no-wrap"
 			style="height: 32px; width: 170px">
-			meh
+			meh 33%
 		</div>
 	</div>
 </div>

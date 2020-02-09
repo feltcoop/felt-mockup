@@ -935,9 +935,9 @@ const data = {
                             slug: 'we-need-topics-and-replies',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">??</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..?</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics 18%</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">?? 49%</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..? 33%</div>
 							</div>`,
                         },
                     ],
@@ -977,9 +977,9 @@ const data = {
                             slug: 'what-should-the-name-of-the-top-level-community-be',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">felt</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">i dunno</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">felt.social</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">felt</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">i dunno</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">felt.social</div>
 							</div>`,
                             status: 'open',
                         },
@@ -1096,9 +1096,9 @@ const data = {
                             slug: 'we-need-topics-and-replies',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">??</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..?</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics 18%</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">?? 49%</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..? 33%</div>
 							</div>`,
                         },
                     ],
@@ -1129,9 +1129,9 @@ const data = {
                             slug: 'which-software-license-should-we-use',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">AGPL</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">ISC</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">I feel disenfranchised</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">AGPL 18%</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">ISC 49%</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">I feel disenfranchised 33%</div>
 							</div>`,
                             status: 'done',
                         },
@@ -1229,9 +1229,9 @@ const data = {
                             slug: 'we-need-topics-and-replies',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">??</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..?</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">topics 18%</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">?? 49%</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">replies..? 33%</div>
 							</div>`,
                         },
                     ],
@@ -1262,9 +1262,9 @@ const data = {
                             slug: 'which-software-license-should-we-use',
                             content: `
 							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">AGPL</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">ISC</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">I feel disenfranchised</div>
+								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 90px">AGPL 18%</div>
+								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 250px">ISC 49%</div>
+								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-4 border-dashed" style="height: 32px; width: 170px">I feel disenfranchised 33%</div>
 							</div>`,
                             status: 'done',
                         },
