@@ -20,12 +20,12 @@
 		e.stopPropagation();
 		if (!email) {
 			inputEl.focus();
-			errorMessage = 'Please enter an email address.';
+			errorMessage = 'please enter an email address to do that :)';
 			return;
 		}
 		if (!isEmail(email)) {
 			inputEl.focus();
-			errorMessage = 'Please enter a valid email address.';
+			errorMessage = 'please enter a valid email address to do that :)';
 			return;
 		}
 
