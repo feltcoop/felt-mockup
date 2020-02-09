@@ -34,14 +34,24 @@ and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
 ### play with the code
 
-- [package.json](package.json)
+Don't have `node` and `npm` installed?
+See [fnm](https://github.com/Schniz/fnm):
 
 ```bash
-npm i # node v12+
+fnm install v13
+fnm use v13
+```
+
+With node v12+ installed:
+
+```bash
+npm i
 npm run ts # gogo typescript
 npm run tw # open another shell
 npm run dev # browse to localhost:3000 or whatever it says
 ```
+
+See the [package.json](package.json) for more.
 
 ### deploy to real life
 
