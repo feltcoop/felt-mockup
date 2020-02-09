@@ -54,5 +54,31 @@
 			:| meh 33%
 			{#if count3}+ {count3}{/if}
 		</div>
+		<div class="flex">
+			{#each { length: count1 } as item}
+				<div
+					class="bg-pink-200 text-pink-700 border-pink-300 border-dashed mb-1
+					rounded-lg border-4 text-xl p-2 whitespace-no-wrap"
+					style="width: 48px; height: 48px;">
+					:D
+				</div>
+			{/each}
+			{#each { length: count2 } as item}
+				<div
+					class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed
+					mb-1 rounded-lg border-4 text-xl p-2 whitespace-no-wrap"
+					style="width: 48px; height: 48px;">
+					:)
+				</div>
+			{/each}
+			{#each { length: count3 } as item}
+				<div
+					class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed
+					mb-1 rounded-lg border-4 text-xl p-2 whitespace-no-wrap"
+					style="width: 48px; height: 48px;">
+					:|
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
