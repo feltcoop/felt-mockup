@@ -30,7 +30,8 @@
 
 <World {world} />
 
-<div class="flex flex-col p-2">
+<!-- TODO this is only here to satisfy the "input box on every page" constraint -->
+<div class="flex flex-col p-2" style="max-width: 640px;">
 	<ul>
 		{#each notes as note}
 			<li>
