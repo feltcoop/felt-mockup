@@ -1046,6 +1046,19 @@ const data: Data = {
 			title: 'felt',
 			slug: 'felt',
 			description: '<small>the felt community</small>',
+			view: {
+				type: 'view',
+				id: id(),
+				component: 'BoxView',
+				children: [
+					{
+						type: 'view',
+						id: id(),
+						component: 'ChatView',
+						props: { chatSlug: 'hi' }, // TODO bikeshed
+					},
+				],
+			},
 			spaces: [
 				createChat('hi'),
 				createForum('help'),
