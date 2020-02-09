@@ -29,7 +29,7 @@
 			organizations. It's a free and open alternative to many websites and apps
 			tucked into a warm fuzzy package.
 		</p>
-		Felt's features (one day):
+		Felt features (one day):
 		<ul>
 			<li>online and offline community building</li>
 			<li>chat and forums</li>
