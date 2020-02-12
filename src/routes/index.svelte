@@ -50,8 +50,7 @@
 						style="width: 192px; height: 192px;" />
 					<div style="max-width: 256px;">
 						<span class="text-4xl">felt</span>
-						is free and open community software for empowering people and
-						democratic organizations
+						is customizable community software that feels good
 					</div>
 				</div>
 			</div>

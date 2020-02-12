@@ -2,9 +2,7 @@
 
 [<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
 
-> free and open community software
-> for empowering people and democratic organizations
-> :green_heart: tech that feels good
+> customizable community software that feels good :green_heart:
 
 - **work in progress** pre-alpha demo at [felt.dev](https://felt.dev)
 - learn [about felt](https://felt.dev/about)
