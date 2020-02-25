@@ -49,8 +49,8 @@
 						alt="fuzzy felt f"
 						style="width: 192px; height: 192px;" />
 					<div style="max-width: 256px;">
-						<span class="text-4xl">felt</span>
-						is customizable community software that feels good
+						<div class="text-4xl">felt</div>
+						<div>customizable community tools that feel good</div>
 					</div>
 				</div>
 			</div>

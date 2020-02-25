@@ -2,7 +2,7 @@
 
 [<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
 
-> customizable community software that feels good :green_heart:
+> customizable community tools that feel good :green_heart:
 
 - **work in progress** mockup at [felt.dev](https://felt.dev)
 - learn [about felt](https://felt.dev/about)
