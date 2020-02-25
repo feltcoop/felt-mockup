@@ -42,18 +42,8 @@
 	</PlaceholderInfo> -->
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
-			<div class="flex justify-center items-center">
-				<div class="flex justify-center items-center text-right">
-					<img
-						src="/logo-192-textured.png"
-						alt="fuzzy felt f"
-						style="width: 192px; height: 192px;" />
-					<div style="max-width: 256px;">
-						<div class="text-4xl">felt</div>
-						<div>customizable community tools that feel good</div>
-					</div>
-				</div>
-			</div>
+			<div class="text-6xl">felt</div>
+			<div>customizable community tools that feel good</div>
 		</li>
 		<li class="py-4 font-hairline">
 			<span class="text-4xl">hi, welcome!</span>
