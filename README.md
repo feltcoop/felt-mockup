@@ -65,4 +65,4 @@ npm start
 ## license
 
 [ISC](license)
-<sub>permissive, [learn more at Wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub> <3
+<sub>permissive <3 [learn more at wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub>
