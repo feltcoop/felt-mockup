@@ -1178,7 +1178,7 @@ const data: Data = {
 							type: 'message',
 							id: id(),
 							author: 'rick',
-							content: `don't <span class="text-3xl font-hairline">u</span> meme on me!!1 <span class="text-transparent">pls :P</span>`,
+							content: `don't <span class="text-3xl font-hairline">u</span> meme on me!!1`,
 						},
 					],
 				},
