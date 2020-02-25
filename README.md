@@ -53,7 +53,7 @@ See the [package.json](package.json) for more.
 
 ### deploy to real life
 
-- [src/deploy/README.md](src/deploy/README.md) for instructions
+- instructions at [src/deploy/README.md](src/deploy/README.md)
 - [nginx server config](src/deploy/nginx_server_config.conf) for `felt.dev`
 
 ```bash
