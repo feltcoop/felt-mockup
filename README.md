@@ -4,7 +4,7 @@
 
 > customizable community software that feels good :green_heart:
 
-- **work in progress** pre-alpha demo at [felt.dev](https://felt.dev)
+- **work in progress** mockup at [felt.dev](https://felt.dev)
 - learn [about felt](https://felt.dev/about)
 - community at [felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
 
@@ -36,8 +36,8 @@ Don't have `node` and `npm` installed?
 See [fnm](https://github.com/Schniz/fnm):
 
 ```bash
-fnm install v13
-fnm use v13
+fnm install v12
+fnm use v12
 ```
 
 With node v12+ installed:

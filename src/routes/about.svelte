@@ -32,7 +32,7 @@
 		</p>
 		Felt features (one day):
 		<ul>
-			<li>super customizable tools for online and offline community building</li>
+			<li>super customizable tools for online and offline communities</li>
 			<li>chats and forums</li>
 			<li>events and rsvps</li>
 			<li>note taking and sharing</li>
@@ -56,8 +56,8 @@
 		</p>
 		<p>
 			Our goals are lofty and our team is small, and with the might of software
-			we aim to help people solve priority problems and promote
-			<a href="felt/memes">much joy</a>.
+			we aim to help people solve priority problems and
+			<a href="felt/memes">generate joy</a>.
 		</p>
 		Some links:
 		<ul>
@@ -85,8 +85,8 @@
 			But Felt is not ready yet.
 			<span class="font-bold">
 				This is just a
-				<span class="text-2xl">pre-alpha</span>
-				release for demonstration and design purposes.
+				<span class="text-2xl">mockup</span>
+				  for demonstration and design purposes.
 				<span class="text-2xl">
 					Do
 					<span class="border-gray-700 border-b-8 border-double">not</span>

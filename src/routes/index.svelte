@@ -2,25 +2,25 @@
 	import Content from '../app/ui/Content.svelte';
 	import TextInput from '../app/ui/TextInput.svelte';
 	import SocialLinks from '../app/ui/SocialLinks.svelte';
-	import PlaceholderInfo from '../app/ui/PlaceholderInfo.svelte';
+	// import PlaceholderInfo from '../app/ui/PlaceholderInfo.svelte';
 
-	let text = '';
+	// let text = '';
 
-	let notes = [{ content: 'im a note :)' }];
+	// let notes = [{ content: 'im a note :)' }];
 
-	const submit = (_, e) => {
-		e.preventDefault(); // TODO needed?
-		e.stopPropagation(); // TODO needed?
-		notes = [{ content: text }, ...notes];
-		text = '';
-	};
+	// const submit = (_, e) => {
+	// 	e.preventDefault(); // TODO needed?
+	// 	e.stopPropagation(); // TODO needed?
+	// 	notes = [{ content: text }, ...notes];
+	// 	text = '';
+	// };
 </script>
 
 <svelte:head>
 	<title>felt</title>
 </svelte:head>
 <div class="flex flex-col flex-1 p-2 items-center" style="max-width: 640px;">
-	<div class="flex flex-col" style="width: 240xp;">
+	<!-- <div class="flex flex-col" style="width: 240xp;">
 		<TextInput bind:value={text} {submit} />
 		{#if text}
 			<div
@@ -39,7 +39,7 @@
 	</div>
 	<PlaceholderInfo>
 		TODO add global activity, user settings, & other info
-	</PlaceholderInfo>
+	</PlaceholderInfo> -->
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
 			<div class="flex justify-center items-center">
@@ -55,46 +55,27 @@
 				</div>
 			</div>
 		</li>
+		<li class="py-4 font-hairline">
+			<span class="text-4xl">hi, welcome!</span>
+			<div>
+				this is a
+				<span class="bg-red-300 font-bold">mockup</span>
+				not a working website
+			</div>
+		</li>
 		<li class="py-4 mt-8">
 			<!-- wrap it so it doesn't fill the space -->
-			<div class="flex items-center justify-center">
+			<Content classes="flex items-center justify-center">
 				<a
 					href="/about"
 					class="logo-heart flex flex-wrap flex-col items-center justify-center">
+					<span class="text-4xl mr-2 font-hairline">learn about felt</span>
 					<img
 						src="/logo-heart.png"
 						alt="fuzzy felt heart"
 						style="width: 192px; height: 178px;" />
-					<span class="text-5xl mr-2 font-hairline text-green-700">
-						learn about felt
-					</span>
 				</a>
-			</div>
-		</li>
-		<li class="py-4 font-hairline">
-			<span class="text-4xl">
-				hi,
-				<span class="text-5xl text-gray-600">welcome!</span>
-			</span>
-			<div>
-				this is a
-				<span class="bg-red-200">
-					<span class="text-4xl">pre-alpha</span>
-					preview
-				</span>
-			</div>
-		</li>
-		<li class="py-4 font-hairline flex flex-col items-center">
-			<div class="font-medium bg-red-400 flex items-center">
-				<span class="text-6xl leading-none">→</span>
-				expect nothing
-				<span class="text-6xl leading-none">←</span>
-			</div>
-			<div class="font-bold bg-red-600 flex items-center">
-				<span class="text-6xl leading-none">⚠</span>
-				assume security fails 100%
-				<span class="text-6xl leading-none">⚠</span>
-			</div>
+			</Content>
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
@@ -102,6 +83,13 @@
 				<a class="github-repo" href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
 				</a>
+			</Content>
+		</li>
+		<li class="py-4 mb-8">
+			<Content classes="font-hairline mb-4">
+				<div>want to follow our progress?</div>
+				<div>sign up for our mailing list at</div>
+				<a class="github-repo" href="https://felt.social">felt.social</a>
 			</Content>
 		</li>
 		<li class="mb-8">
@@ -112,7 +100,7 @@
 
 <style>
 	.github-repo {
-		@apply font-hairline text-5xl text-green-700;
+		@apply font-hairline text-4xl text-green-700;
 	}
 	.github-repo:hover {
 		@apply underline;
