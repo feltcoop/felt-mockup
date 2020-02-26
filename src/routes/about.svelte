@@ -41,6 +41,7 @@
 			<li>polls and surveys and shared governance</li>
 			<li>collaborating with others</li>
 			<li>blogs and web publishing</li>
+			<li>commerce</li>
 			<li>maybe one day, expanses of interesting communities to explore</li>
 			<li>client software that's firmly in your control -
 				<a href="https://github.com/feltcoop/felt">fork us</a> on GitHub!
