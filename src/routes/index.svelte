@@ -71,20 +71,30 @@
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
 				<div>source code at</div>
-				<a class="big-link" href="https://github.com/feltcoop/felt">
+				<a
+					class="text-4xl"
+					style="font-weight: 100;"
+					href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
 				</a>
 			</Content>
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
-				<a class="big-link" href="https://felt.social">felt.social</a>
+				<a
+					class="text-4xl"
+					style="font-weight: 100;"
+					href="https://felt.social">
+					felt.social
+				</a>
 				<div>is our service and business</div>
 			</Content>
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
-				<a class="big-link" href="https://felt.dev">felt.dev</a>
+				<a class="text-4xl" style="font-weight: 100;" href="https://felt.dev">
+					felt.dev
+				</a>
 				<div>is for Felt the free software</div>
 			</Content>
 		</li>
@@ -98,12 +108,6 @@
 </div>
 
 <style>
-	.big-link {
-		@apply font-hairline text-4xl text-green-700;
-	}
-	.big-link:hover {
-		@apply underline;
-	}
 	.logo-heart img {
 		transform: scale3d(1, 1, 1);
 		transition: transform 0.09s ease-out;

@@ -2,7 +2,7 @@
 	export let classes = '';
 	export let interactive = false;
 	$: colorClasses = interactive
-		? 'bg-purple-100 text-purple-700'
+		? 'bg-purple-100 text-green-700'
 		: 'bg-gray-100 text-gray-700';
 </script>
 
@@ -16,9 +16,9 @@
 
 <style>
 	.interactive:hover {
-		@apply text-purple-800;
+		@apply text-purple-700;
 	}
 	.interactive:active {
-		@apply text-purple-900;
+		@apply text-green-700;
 	}
 </style>

@@ -17,10 +17,12 @@
 		font-weight: bold;
 	}
 	.content :global(a:hover) {
+		@apply text-purple-700;
 		text-decoration: underline;
 	}
 	/* TODO different outline colors based on if it's an external or internal link */
 	.content :global(a:focus) {
+		@apply text-green-700;
 		outline: 3px dotted #b794f4; /* TODO add class? tailwind keeps me wanting @apply outline-purple-400 */
 	}
 	.content :global(h1) {

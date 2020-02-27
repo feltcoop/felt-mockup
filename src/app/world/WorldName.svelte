@@ -8,6 +8,7 @@
 	export let name;
 	export let isMention = false;
 	export let classes = '';
+	export let style = '';
 	export let innerClasses = '';
 
 	$: isAnonymous = name === symbols.avatar;
@@ -17,7 +18,7 @@
 	// $: console.log('href', href, name, isAnonymous, symbols.avatar);
 </script>
 
-<a {href} class="hover:underline {classes} {colorClasses} {innerClasses}">
+<a {href} class="hover:underline {classes} {colorClasses} {innerClasses}" {style}>
 	{#if isAnonymous}
 		<span class="text-2xl leading-none">{name}</span>
 	{:else}

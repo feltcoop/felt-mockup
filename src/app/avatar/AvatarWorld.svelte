@@ -6,6 +6,7 @@
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 	import WorldName from '../world/WorldName.svelte';
 	import View from '../ui/View.svelte';
+	import Content from '../ui/Content.svelte';
 
 	export let world;
 
@@ -14,25 +15,31 @@
 	$: activities = $world.spaces[2].activities; // TODO temporarily hardcoded
 </script>
 
-<PlaceholderInfo>
-	this is one of your avatars,
-	<WorldName classes="text-4xl" name={$world.slug} isMention={true} />
-</PlaceholderInfo>
-<PlaceholderInfo>
-	avatars are pseudonyms, names under your control in online spaces
-</PlaceholderInfo>
-<PlaceholderInfo>
-	sometimes we think of them as characters in a story
-</PlaceholderInfo>
-<PlaceholderInfo>
-	on the left, you'll see your avatar's spaces - we're a work in progress
-</PlaceholderInfo>
-<PlaceholderInfo>
-	TODO show this avatar's communities and custom nav and spaces
-</PlaceholderInfo>
-<PlaceholderInfo>
-	TODO show all activity for this avatar & interact with it
-</PlaceholderInfo>
+<Content>
+	<PlaceholderInfo>
+		this is one of your avatars,
+		<WorldName
+			classes="text-4xl"
+			style="font-weight: 100;"
+			name={$world.slug}
+			isMention={true} />
+	</PlaceholderInfo>
+	<PlaceholderInfo>
+		avatars are pseudonyms, names under your control in online spaces
+	</PlaceholderInfo>
+	<PlaceholderInfo>
+		sometimes we think of them as characters in a story
+	</PlaceholderInfo>
+	<PlaceholderInfo>
+		on the left, you'll see your avatar's spaces - we're a work in progress
+	</PlaceholderInfo>
+	<PlaceholderInfo>
+		TODO show this avatar's communities and custom nav and spaces
+	</PlaceholderInfo>
+	<PlaceholderInfo>
+		TODO show all activity for this avatar & interact with it
+	</PlaceholderInfo>
+</Content>
 
 <!-- TODO this is temp  -->
 <InboxList notes={inboxNotes} />
