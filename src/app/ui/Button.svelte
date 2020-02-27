@@ -1,7 +1,7 @@
 <script>
 	export let classes = '';
-	export let el;
-	export let disabled;
+	export let el = undefined;
+	export let disabled = false;
 </script>
 
 <!-- TODO custom colors -->

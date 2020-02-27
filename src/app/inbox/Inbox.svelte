@@ -12,11 +12,11 @@
 
 	export let notes;
 	export let classes = '';
-	export let style;
+	export let style = '';
 
-	export let contentValue = '';
-	export let titleValue = '';
-	export let contentEl;
+	let contentValue = '';
+	let titleValue = '';
+	let contentEl;
 
 	const submit = (_, e) => {
 		e.preventDefault();

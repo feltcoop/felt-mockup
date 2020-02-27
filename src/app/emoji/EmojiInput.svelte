@@ -2,7 +2,7 @@
 	import { sizes, sizeClasses } from './emoji.js';
 
 	export let values;
-	export let submit;
+	export let submit = undefined;
 	export let classes = '';
 </script>
 

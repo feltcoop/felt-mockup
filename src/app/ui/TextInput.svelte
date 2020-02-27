@@ -1,11 +1,11 @@
 <script>
 	export let value = '';
 	$: cleanValue = value.trim();
-	export let el;
-	export let submit;
+	export let el = undefined;
+	export let submit = undefined;
 	export let classes = '';
 	export let placeholder = '• • •';
-	export let submitMatcher; // optional regexp that includes the input value snapshot BEFORE any current keyboard event is applied
+	export let submitMatcher = undefined; // optional regexp that includes the input value snapshot BEFORE any current keyboard event is applied
 	export let shouldSubmit = v => (submitMatcher ? submitMatcher.test(v) : true);
 
 	const onKeyDown = e => {

@@ -1,6 +1,6 @@
 <script>
-	export let el;
-	export let value;
+	export let el = undefined;
+	export let value = '';
 	export let placeholder = 'email@address.com';
 	export let disabled = false;
 </script>

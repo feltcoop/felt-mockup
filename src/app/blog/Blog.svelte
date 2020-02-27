@@ -13,16 +13,16 @@
 
 	export let posts;
 	export let classes = '';
-	export let style;
+	export let style = '';
 	// $: console.log('blog posts', posts);
 
-	export let titleValue = '';
-	export let contentValue = '';
+	let titleValue = '';
+	let contentValue = '';
 
 	let titleEl;
 	let contentEl;
 
-	export let showDraft = false;
+	let showDraft = false;
 
 	const session = useSession();
 	// $: console.log('blog session', $session);

@@ -9,10 +9,12 @@
 	// TODO should type="inbox" be type="activity"?
 
 	export let notes;
+	export let classes = '';
+	export let style = '';
 
 	const session = useSession();
 
-	export let value = '';
+	let value = '';
 
 	const submit = (content, e) => {
 		e.preventDefault();
@@ -28,7 +30,7 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full">
+<div class="flex flex-col h-full {classes}" {style}>
 	<NotesInput bind:value {submit} />
 	{#if value}
 		<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">

@@ -11,11 +11,11 @@
 	export let classes = '';
 	export let style;
 
-	export let titleValue = '';
-	export let contentValue = '';
+	let titleValue = '';
+	let contentValue = '';
 
-	export let titleEl;
-	export let contentEl;
+	let titleEl;
+	let contentEl;
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 

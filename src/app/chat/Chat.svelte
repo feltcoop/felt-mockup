@@ -9,14 +9,14 @@
 
 	export let messages;
 	export let classes = '';
-	export let style;
+	export let style = '';
 	export let messagesClasses = '';
-	export let messagesStyle;
+	export let messagesStyle = '';
 
 	const session = useSession();
 	const selection = useSelection();
 
-	export let value = '';
+	let value = '';
 
 	// TODO do this properly! this just infers anon status, which should be a property on the space
 	// `inferAuthor` or `getAuthor` could be a pluginable bit of code attached to spaces

@@ -9,9 +9,9 @@
 
 	export let activities;
 	export let classes = '';
-	export let style;
+	export let style = '';
 
-	export let value = '';
+	let value = '';
 
 	const submit = (content, e) => {
 		e.preventDefault();

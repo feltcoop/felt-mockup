@@ -11,9 +11,9 @@
 
 	export let topics;
 	export let classes = '';
-	export let style;
+	export let style = '';
 	export let topicsClasses = '';
-	export let topicsStyle;
+	export let topicsStyle = '';
 
 	const session = useSession();
 	const selection = useSelection();
@@ -26,9 +26,8 @@
 			? symbols.avatar
 			: $session.person.slug;
 
-	export let titleValue = '';
-	export let contentValue = '';
-
+	let titleValue = '';
+	let contentValue = '';
 	let titleEl;
 	let contentEl;
 
