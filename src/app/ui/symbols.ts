@@ -6,6 +6,7 @@ export const symbols = {
 	add: '+',
 	publish: '!',
 	person: '⚇', // TODO differentiate from avatar?
+	emojis: '⚇', // TODO differentiate from avatar?
 	forum: '⚎',
 	chat: '🗨',
 	blog: '♦',

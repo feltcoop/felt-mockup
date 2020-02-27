@@ -9,6 +9,7 @@
 	import Events from '../events/Events.svelte';
 	import Emojis from '../emoji/Emojis.svelte';
 	import ErrorMessage from '../ui/ErrorMessage.svelte';
+	import { symbols } from '../ui/symbols.js';
 
 	export let world;
 	export let space;
@@ -36,7 +37,7 @@
 			class="active-space-link bg-purple-100 px-4 border-r-2 border-t-2
 			border-b-4 border-purple-200 cursor-default rounded-tr-lg border-dashed "
 			href="{$world.slug}/{$space.slug}">
-			{$space.title}
+			{$space.title} {symbols[$space.type] || symbols.other}
 		</a>
 	</div>
 	{#if $space.description}

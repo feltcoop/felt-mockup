@@ -6,6 +6,7 @@ export const symbols = {
     add: '+',
     publish: '!',
     person: '⚇',
+    emojis: '⚇',
     forum: '⚎',
     chat: '🗨',
     blog: '♦',
