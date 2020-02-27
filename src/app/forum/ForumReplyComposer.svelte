@@ -10,8 +10,9 @@
 
 	export let topic;
 	export let addReply;
-	export let value;
-	export let isOpen = false; // TODO xstate?
+
+	let value;
+	let isOpen = false; // TODO xstate?
 
 	let commentEl;
 

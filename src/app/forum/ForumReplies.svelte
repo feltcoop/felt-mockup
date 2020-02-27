@@ -2,8 +2,8 @@
 	import ForumReply from './ForumReply.svelte';
 
 	export let parent;
-	export let selectReply;
-	export let selection;
+	export let selectReply = undefined;
+	export let selection = undefined;
 </script>
 
 {#each parent.children as reply}
