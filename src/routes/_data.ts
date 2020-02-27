@@ -1,4 +1,5 @@
 import { symbols } from '../app/ui/symbols.js';
+import { emotionEmoji } from '../app/emoji/emoji.js';
 
 export type Id = number;
 let idCounter = 0;
@@ -222,7 +223,7 @@ const createEmojis = (
 	title: slug,
 	slug: slug,
 	emojis,
-	values: emojiValues,
+	values: emotionEmoji,
 	...doc,
 });
 
@@ -243,38 +244,23 @@ const events: EventData[] = [
 	},
 ];
 
-const emojiValues = [
-	'🙂',
-	'😂',
-	'😐',
-	'🙁',
-	'🙃',
-	'🤔',
-	'😊',
-	'😠',
-	'😩',
-	'🤥',
-	'😮',
-	'😢',
-	'😭',
-];
 const emojis: EmojiData[] = [
 	{
 		type: 'emoji',
 		id: id(),
-		text: emojiValues[2],
+		text: emotionEmoji[2],
 		size: 2,
 	},
 	{
 		type: 'emoji',
 		id: id(),
-		text: emojiValues[1],
+		text: emotionEmoji[1],
 		size: 1,
 	},
 	{
 		type: 'emoji',
 		id: id(),
-		text: emojiValues[3],
+		text: emotionEmoji[3],
 		size: 3,
 	},
 ];
