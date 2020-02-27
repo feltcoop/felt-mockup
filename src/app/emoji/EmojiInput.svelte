@@ -4,12 +4,24 @@
 	export let values;
 	export let submit = undefined;
 	export let classes = '';
+
+	let lastValue;
+	let toggle = false;
+	const getSizeClass = (sizeClasses, size, value) => {
+		if (lastValue !== value) {
+			lastValue = value;
+			toggle = !toggle;
+		}
+		return toggle ? sizeClasses[size] : sizeClasses[sizes.length - size];
+	};
 </script>
 
 <div class="flex flex-wrap items-center {classes}">
 	{#each values as value}
 		{#each sizes as size}
-			<button class={sizeClasses[size]} on:click={() => submit(value, size)}>
+			<button
+				class={getSizeClass(sizeClasses, size, value)}
+				on:click={() => submit(value, size)}>
 				{value}
 			</button>
 		{/each}
