@@ -1554,6 +1554,7 @@ const data: Data = {
 						},
 					],
 				},
+				createEmojis('emo'),
 			],
 		},
 		{

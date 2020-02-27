@@ -1356,6 +1356,7 @@ const data = {
                         },
                     ],
                 },
+                createEmojis('emo'),
             ],
         },
         {
