@@ -6,7 +6,7 @@
 </script>
 
 <button
-	class="flex items-center italic {classes}"
+	class="clickable flex items-center italic {classes}"
 	type="button"
 	on:click
 	bind:this={el}
@@ -20,14 +20,8 @@
 </button>
 
 <style>
-	button:hover {
-		transform: scale3d(1.05, 1.05, 1);
-	}
 	button:hover .content {
 		text-decoration: underline;
-	}
-	button:active {
-		transform: scale3d(0.95, 0.95, 1);
 	}
 	button:focus {
 		outline: 3px dotted rgba(0, 0, 0, 0.4);

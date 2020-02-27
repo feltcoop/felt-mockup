@@ -1,12 +1,14 @@
 <script>
 	export let size = 64;
 	export let fill = '#495499';
+	export let classes = '';
 </script>
 
 <svg
 	viewBox="0 0 1024 1024"
 	fill="none"
-	style="width: {size}px; height: {size}px">
+	style="width: {size}px; height: {size}px"
+	class={classes}>
 	<path
 		{fill}
 		fill-rule="evenodd"

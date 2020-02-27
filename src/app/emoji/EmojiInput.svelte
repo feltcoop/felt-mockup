@@ -21,7 +21,9 @@
 
 <div class="flex flex-wrap items-center {classes}">
 	{#each items as item}
-		<button class={item.classes} on:click={() => submit(item.value, item.size)}>
+		<button
+			class="clickable {item.classes}"
+			on:click={() => submit(item.value, item.size)}>
 			{item.value}
 		</button>
 	{/each}
@@ -33,15 +35,5 @@
 	}
 	button:focus {
 		outline: 6px dotted #b794f4; /* TODO add class? tailwind keeps me wanting @apply outline-purple-400 */
-	}
-	button {
-		transform: scale3d(1, 1, 1);
-		transition: transform 0.09s ease-out;
-	}
-	button:hover {
-		transform: scale3d(1.1, 1.1, 1);
-	}
-	button:active {
-		transform: scale3d(0.9, 0.9, 1);
 	}
 </style>

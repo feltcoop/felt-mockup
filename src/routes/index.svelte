@@ -110,7 +110,7 @@
 <style>
 	.logo-heart img {
 		transform: scale3d(1, 1, 1);
-		transition: transform 0.09s ease-out;
+		transition: transform 0.06s ease-out;
 	}
 	.logo-heart:hover {
 		text-decoration: underline;
@@ -119,6 +119,6 @@
 		transform: scale3d(1.03, 1.03, 1);
 	}
 	.logo-heart:active img {
-		transform: scale3d(0.96, 0.96, 1);
+		transform: scale3d(1.06, 1.06, 1);
 	}
 </style>

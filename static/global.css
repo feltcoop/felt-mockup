@@ -39,3 +39,14 @@ code {
 	/* TODO customize */
 	background-color: #e9d8fd;
 }
+
+.clickable {
+	transform: scale3d(1, 1, 1);
+	transition: transform 0.06s ease-out;
+}
+.clickable:hover {
+	transform: scale3d(1.07, 1.07, 1);
+}
+.clickable:active {
+	transform: scale3d(1.15, 1.15, 1);
+}
