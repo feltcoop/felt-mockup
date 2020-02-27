@@ -53,7 +53,7 @@
 			And Felt is more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
 				open-source software platform</a>,
-			<a href="https://felt.social">a community</a>,
+			<a href="https://felt.social">a community and business</a>,
 			and <a href="https://twitter.com/feltcoop">a co-op of worker-owners</a>,
 			all with a purpose that puts people first.
 			If we do it right, Felt is tech that feels good.
