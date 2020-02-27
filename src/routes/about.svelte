@@ -40,6 +40,7 @@
 			<li>bookmarks and aggregation and adventure</li>
 			<li>polls and surveys and shared governance</li>
 			<li>collaborating with others</li>
+			<li>p2p video, audio, messaging, etc</li>
 			<li>blogs and web publishing</li>
 			<li>commerce</li>
 			<li>maybe one day, galaxies of interesting communities to explore</li>
