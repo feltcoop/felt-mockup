@@ -5,26 +5,25 @@
 	export let submit = undefined;
 	export let classes = '';
 
-	let lastValue;
-	let toggle = false;
-	const getSizeClass = (sizeClasses, size, value) => {
-		if (lastValue !== value) {
-			lastValue = value;
-			toggle = !toggle;
-		}
-		return toggle ? sizeClasses[size] : sizeClasses[sizes.length - size + 1];
-	};
+	$: items = values
+		.map((value, i) => {
+			const isGrowing = !(i % 2);
+			const result = [
+				{ size: 1, value, classes: sizeClasses[1] },
+				{ size: 2, value, classes: sizeClasses[2] },
+				{ size: 3, value, classes: sizeClasses[3] },
+			];
+			if (!isGrowing) result.reverse();
+			return result;
+		})
+		.flat();
 </script>
 
 <div class="flex flex-wrap items-center {classes}">
-	{#each values as value}
-		{#each sizes as size}
-			<button
-				class={getSizeClass(sizeClasses, size, value)}
-				on:click={() => submit(value, size)}>
-				{value}
-			</button>
-		{/each}
+	{#each items as item}
+		<button class={item.classes} on:click={() => submit(item.value, item.size)}>
+			{item.value}
+		</button>
 	{/each}
 </div>
 
@@ -34,5 +33,15 @@
 	}
 	button:focus {
 		outline: 6px dotted #b794f4; /* TODO add class? tailwind keeps me wanting @apply outline-purple-400 */
+	}
+	button {
+		transform: scale3d(1, 1, 1);
+		transition: transform 0.09s ease-out;
+	}
+	button:hover {
+		transform: scale3d(1.1, 1.1, 1);
+	}
+	button:active {
+		transform: scale3d(0.9, 0.9, 1);
 	}
 </style>

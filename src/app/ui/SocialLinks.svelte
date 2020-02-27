@@ -20,7 +20,7 @@
 	}
 	a :global(svg) {
 		transform: scale3d(1, 1, 1);
-		transition: transform 0.16s ease-in-out;
+		transition: transform 0.09s ease-out;
 	}
 	a:hover :global(svg) {
 		transform: scale3d(1.1, 1.1, 1);

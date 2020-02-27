@@ -106,7 +106,7 @@
 	}
 	.logo-heart img {
 		transform: scale3d(1, 1, 1);
-		transition: transform 0.13s ease-out;
+		transition: transform 0.09s ease-out;
 	}
 	.logo-heart:hover {
 		text-decoration: underline;
