@@ -19,7 +19,7 @@
 <!-- TODO where should this padding ideally go? -->
 <div class="flex flex-col flex-1 p-2" style="max-width: 640px;">
 	<!-- TODO componentize - SpaceBreadcrumb or PathBreadcrumb or SlugBreadcrumb -->
-	<div class="flex text-2xl mb-4">
+	<div class="flex text-3xl font-hairline mb-4">
 		<a
 			class="bg-green-100 px-4 rounded-bl-lg border-dashed border-l-4 border-t-2
 			border-b-4 border-green-200 text-green-700"

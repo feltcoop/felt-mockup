@@ -12,11 +12,11 @@
 <div class="flex flex-col flex-1 p-2" style="max-width: 640px;">
 	<!-- TODO componentize - SpaceBreadcrumb or PathBreadcrumb or SlugBreadcrumb -->
 	<!-- TODO make this transition with the equivalent component (and DOM element) in `<Space/>` -->
-	<div class="mb-4">
+	<div class="text-3xl font-hairline mb-4">
 		<a
-			class="text-2xl active-world-link relative bg-purple-100 px-4
-			cursor-default border-dashed rounded-tr-lg rounded-bl-lg border-l-4
-			border-r-2 border-t-2 border-b-4 border-purple-200 font-normal"
+			class="active-world-link relative bg-purple-100 px-4 cursor-default
+			border-dashed rounded-tr-lg rounded-bl-lg border-l-4 border-r-2 border-t-2
+			border-b-4 border-purple-200"
 			href={$world.slug}>
 			{$world.title}
 		</a>
