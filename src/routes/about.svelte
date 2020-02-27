@@ -43,6 +43,7 @@
 			<li>blogs and web publishing</li>
 			<li>commerce</li>
 			<li>maybe one day, galaxies of interesting communities to explore</li>
+			<li>server software that's easy to self-host</li>
 			<li>client software that's firmly in your control -
 				<a href="https://github.com/feltcoop/felt">fork us</a> on GitHub!
 			</li>
