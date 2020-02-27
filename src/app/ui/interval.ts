@@ -1,19 +1,23 @@
 import { onMount, onDestroy } from 'svelte';
 
-export const useInterval = (cb: () => void, getTime: () => number | null) => {
+type ClearInterval = () => void;
+
+export const useInterval = (
+	cb: () => void,
+	getTime: () => number,
+): ClearInterval => {
 	let timeout: number | undefined;
 	const run = () => {
-		const time = getTime();
-		if (time === null) return;
 		timeout = setTimeout(() => {
 			cb();
 			run();
-		}, time);
+		}, getTime());
 	};
-	onMount(() => {
-		run();
-	});
-	onDestroy(() => {
+	const stop = () => {
 		clearTimeout(timeout);
-	});
+		timeout = undefined;
+	};
+	onMount(() => run());
+	onDestroy(() => stop());
+	return () => stop();
 };
