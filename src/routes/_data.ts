@@ -213,6 +213,19 @@ const createActivities = (author: string = 'rick'): ActivityData[] => [
 	},
 ];
 
+const createEmojis = (
+	slug: string = 'emojis',
+	doc?: Partial<EmojiSpaceData>,
+): EmojiSpaceData => ({
+	type: 'emojis',
+	id: id(),
+	title: slug,
+	slug: slug,
+	emojis,
+	values: emojiValues,
+	...doc,
+});
+
 const events: EventData[] = [
 	{
 		type: 'event',
@@ -227,6 +240,42 @@ const events: EventData[] = [
 		author: 'chris',
 		title: 'event2 title',
 		content: 'event2 content',
+	},
+];
+
+const emojiValues = [
+	'🙂',
+	'😂',
+	'😐',
+	'🙁',
+	'🙃',
+	'🤔',
+	'😊',
+	'😠',
+	'😩',
+	'🤥',
+	'😮',
+	'😢',
+	'😭',
+];
+const emojis: EmojiData[] = [
+	{
+		type: 'emoji',
+		id: id(),
+		text: emojiValues[2],
+		size: 2,
+	},
+	{
+		type: 'emoji',
+		id: id(),
+		text: emojiValues[1],
+		size: 1,
+	},
+	{
+		type: 'emoji',
+		id: id(),
+		text: emojiValues[3],
+		size: 3,
 	},
 ];
 
@@ -768,7 +817,8 @@ export type SpaceData =
 	| NotesSpaceData
 	| BlogSpaceData
 	| ActivitySpaceData
-	| EventSpaceData;
+	| EventSpaceData
+	| EmojiSpaceData;
 
 export interface BaseSpaceData extends Entity {
 	title: string;
@@ -803,6 +853,11 @@ export interface ActivitySpaceData extends BaseSpaceData {
 export interface EventSpaceData extends BaseSpaceData {
 	type: 'events';
 	events: EventData[];
+}
+export interface EmojiSpaceData extends BaseSpaceData {
+	type: 'emojis';
+	emojis: EmojiData[];
+	values: string[];
 }
 
 export interface ChatMessageData extends Entity {
@@ -856,6 +911,11 @@ export interface EventData extends Entity {
 	title: string;
 	// slug: string; // TODO do this for permalink?
 	content: string;
+}
+export interface EmojiData extends Entity {
+	type: 'emoji';
+	text: string;
+	size: 1 | 2 | 3; // small/medium/large
 }
 export interface ViewData extends Entity {
 	type: 'view';
@@ -1217,6 +1277,7 @@ const data: Data = {
 					messages: createMessages(),
 				},
 				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
+				createEmojis('mood'),
 				createForum('design'),
 				{
 					type: 'forum',
@@ -1656,6 +1717,7 @@ const data: Data = {
 						'<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
 				}, // :dolphin:
 				{ type: 'events', id: id(), title: 'raids', slug: 'raids', events },
+				createEmojis('air'),
 				{
 					type: 'chat',
 					id: id(),
@@ -1719,6 +1781,12 @@ const data: Data = {
 							}, // TODO slug? we're pointing to a resource - should they be ids?
 						],
 					},
+					{
+						type: 'view',
+						id: id(),
+						component: 'EmojisView',
+						props: { emojisSlug: 'mood' },
+					}, // TODO slug? we're pointing to a resource - should they be ids?
 					{
 						type: 'view',
 						id: id(),

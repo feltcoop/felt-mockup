@@ -7,6 +7,7 @@
 	import Notes from '../notes/Notes.svelte';
 	import Activities from '../activity/Activities.svelte';
 	import Events from '../events/Events.svelte';
+	import Emojis from '../emoji/Emojis.svelte';
 	import ErrorMessage from '../ui/ErrorMessage.svelte';
 
 	export let world;
@@ -44,6 +45,7 @@
 		</Content>
 	{/if}
 
+	<!-- TODO maybe use `<svelte:component>` and pass the entire space? -->
 	<div class="flex-1">
 		{#if $space.type === 'chat'}
 			<Chat messages={$space.messages} {classes} />
@@ -59,6 +61,8 @@
 			<Activities activities={$space.activities} {classes} />
 		{:else if $space.type === 'events'}
 			<Events events={$space.events} {classes} />
+		{:else if $space.type === 'emojis'}
+			<Emojis emojis={$space.emojis} values={$space.values} {classes} />
 		{:else}
 			<ErrorMessage message={`Unknown space type "${$space.type}"`} />
 		{/if}

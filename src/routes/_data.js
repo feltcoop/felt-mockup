@@ -192,6 +192,15 @@ const createActivities = (author = 'rick') => [
         content: 'activity2 content',
     },
 ];
+const createEmojis = (slug = 'emojis', doc) => ({
+    type: 'emojis',
+    id: id(),
+    title: slug,
+    slug: slug,
+    emojis,
+    values: emojiValues,
+    ...doc,
+});
 const events = [
     {
         type: 'event',
@@ -206,6 +215,41 @@ const events = [
         author: 'chris',
         title: 'event2 title',
         content: 'event2 content',
+    },
+];
+const emojiValues = [
+    '🙂',
+    '😂',
+    '😐',
+    '🙁',
+    '🙃',
+    '🤔',
+    '😊',
+    '😠',
+    '😩',
+    '🤥',
+    '😮',
+    '😢',
+    '😭',
+];
+const emojis = [
+    {
+        type: 'emoji',
+        id: id(),
+        text: emojiValues[2],
+        size: 2,
+    },
+    {
+        type: 'emoji',
+        id: id(),
+        text: emojiValues[1],
+        size: 1,
+    },
+    {
+        type: 'emoji',
+        id: id(),
+        text: emojiValues[3],
+        size: 3,
     },
 ];
 const createNotes = (author = 'rick') => [
@@ -1036,6 +1080,7 @@ const data = {
                     messages: createMessages(),
                 },
                 { type: 'events', id: id(), title: 'events', slug: 'events', events },
+                createEmojis('mood'),
                 createForum('design'),
                 {
                     type: 'forum',
@@ -1473,6 +1518,7 @@ const data = {
                     '<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
                 },
                 { type: 'events', id: id(), title: 'raids', slug: 'raids', events },
+                createEmojis('air'),
                 {
                     type: 'chat',
                     id: id(),
@@ -1531,6 +1577,12 @@ const data = {
                                 props: { forumSlug: 'library' },
                             },
                         ],
+                    },
+                    {
+                        type: 'view',
+                        id: id(),
+                        component: 'EmojisView',
+                        props: { emojisSlug: 'mood' },
                     },
                     {
                         type: 'view',

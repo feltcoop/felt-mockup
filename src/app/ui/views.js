@@ -2,6 +2,7 @@ import BoxView from './BoxView.svelte';
 import ChatView from '../chat/ChatView.svelte';
 import ForumView from '../forum/ForumView.svelte';
 import EventsView from '../events/EventsView.svelte';
+import EmojisView from '../emoji/EmojisView.svelte';
 
 // TODO this has circular dependencies
 // Circular dependency: src/app/forum/ForumReply.svelte -> src/app/forum/ForumReplies.svelte -> src/app/forum/ForumReply.svelte
@@ -14,4 +15,5 @@ export const views = {
 	ChatView,
 	ForumView,
 	EventsView,
+	EmojisView,
 };

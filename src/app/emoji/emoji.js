@@ -1,0 +1,2 @@
+export const sizes = [1, 2, 3]; // TODO connect type to `EmojiData`
+export const sizeClasses = { 1: 'text-lg', 2: 'text-3xl', 3: 'text-5xl' }; // TODO type is `Record<EmojiSize, string>`
