@@ -2,6 +2,7 @@
 	import Content from '../app/ui/Content.svelte';
 	import TextInput from '../app/ui/TextInput.svelte';
 	import SocialLinks from '../app/ui/SocialLinks.svelte';
+	import MediaListCallout from '../app/ui/MediaListCallout.svelte';
 	// import PlaceholderInfo from '../app/ui/PlaceholderInfo.svelte';
 
 	// let text = '';
@@ -59,7 +60,7 @@
 				<a
 					href="/about"
 					class="logo-heart flex flex-wrap flex-col items-center justify-center">
-					<span class="text-4xl mr-2 font-hairline">learn about felt</span>
+					<span class="text-4xl mr-2 font-hairline">→ learn about felt ←</span>
 					<img
 						src="/logo-heart.png"
 						alt="fuzzy felt heart"
@@ -70,17 +71,25 @@
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
 				<div>source code at</div>
-				<a class="github-repo" href="https://github.com/feltcoop/felt">
+				<a class="big-link" href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
 				</a>
 			</Content>
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
-				<div>want to follow our progress?</div>
-				<div>sign up for our mailing list at</div>
-				<a class="github-repo" href="https://felt.social">felt.social</a>
+				<a class="big-link" href="https://felt.social">felt.social</a>
+				<div>is our service and business</div>
 			</Content>
+		</li>
+		<li class="py-4 mb-8">
+			<Content classes="font-hairline mb-4">
+				<a class="big-link" href="https://felt.dev">felt.dev</a>
+				<div>is for Felt the free software</div>
+			</Content>
+		</li>
+		<li class="mb-8 text-base">
+			<MediaListCallout />
 		</li>
 		<li class="mb-8">
 			<SocialLinks />
@@ -89,10 +98,10 @@
 </div>
 
 <style>
-	.github-repo {
+	.big-link {
 		@apply font-hairline text-4xl text-green-700;
 	}
-	.github-repo:hover {
+	.big-link:hover {
 		@apply underline;
 	}
 	.logo-heart img {

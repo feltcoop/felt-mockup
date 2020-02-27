@@ -3,10 +3,9 @@
 
 	import { isEmail } from '../email/utils.js';
 	import Button from '../ui/Button.svelte';
+	import Content from '../ui/Content.svelte';
 	import WaitingAnimation from '../ui/WaitingAnimation.svelte';
 	import EmailInput from '../email/EmailInput.svelte';
-
-	// TODO animate while submitting
 
 	let email = process.env.NODE_ENV === 'development' ? 'hi@test.com' : '';
 	let submittedEmail;
@@ -61,10 +60,10 @@
 	};
 </script>
 
-<div class="wrapper">
+<Content classes="wrapper relative" style="height: 160px;">
 	{#if !submittedEmail}
 		<div in:scale class="inner-wrapper">
-			<h2>Want to learn more? Join our mailing list!</h2>
+			<h2>want more? join our mailing list!</h2>
 			<div class="input-wrapper">
 				<EmailInput
 					bind:el={inputEl}
@@ -76,7 +75,7 @@
 				<Button bind:el={buttonEl} on:click={submit} disabled={submitting}>
 					{#if submitting}
 						<WaitingAnimation />
-					{:else}Send me updates!{/if}
+					{:else}send me updates!{/if}
 				</Button>
 			</div>
 			{#if errorMessage}
@@ -87,15 +86,15 @@
 		</div>
 	{:else}
 		<div in:scale class="inner-wrapper">
-			<h2>Thank you for your interest!</h2>
+			<h2>thank you for your interest!!</h2>
 			<p>
-				We'll contact you at
+				we'll contact you at
 				<span class="submitted-email">{submittedEmail}</span>
-				when we're ready to share.
+				when we're ready to share
 			</p>
 		</div>
 	{/if}
-</div>
+</Content>
 
 <style>
 	.wrapper {

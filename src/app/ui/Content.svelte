@@ -1,8 +1,9 @@
 <script>
 	export let classes = '';
+	export let style = '';
 </script>
 
-<div class="content {classes}">
+<div class="content {classes}" {style}>
 	<slot />
 </div>
 
