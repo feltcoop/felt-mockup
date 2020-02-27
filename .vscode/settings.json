@@ -18,6 +18,7 @@
     "**/dist": true,
     "**/node_modules": true,
     "src/routes/_data.js": true,
-    "static/index.css": true
+    "static/index.css": true,
+    "package-lock.json": true
   }
 }
