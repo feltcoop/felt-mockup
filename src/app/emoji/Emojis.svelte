@@ -37,7 +37,7 @@
 <div class="flex flex-col {classes}" {style}>
 	<EmojiInput {submit} {values} />
 	<div
-		class="overflow-y-scroll flex items-start flex-1 border-4 border-purple-200
+		class="overflow-y-hidden flex items-start flex-1 border-4 border-purple-200
 		rounded-bl-lg rounded-tr-lg">
 		{#if emojis && emojis.length}
 			<EmojisList {emojis} />
