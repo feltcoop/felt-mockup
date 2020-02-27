@@ -21,7 +21,7 @@
 				text,
 				size,
 			},
-			...emojis,
+			...emojis.slice(0, 100),
 		];
 	};
 
