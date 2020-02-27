@@ -1506,7 +1506,6 @@ const data = {
                     '<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
                 },
                 { type: 'events', id: id(), title: 'raids', slug: 'raids', events },
-                createEmojis('air'),
                 {
                     type: 'chat',
                     id: id(),
@@ -1525,6 +1524,7 @@ const data = {
                     topics: [],
                     description: 'this place has no memory',
                 },
+                createEmojis('air'),
                 {
                     type: 'forum',
                     id: id(),

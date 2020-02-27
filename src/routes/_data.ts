@@ -1705,7 +1705,6 @@ const data: Data = {
 						'<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
 				}, // :dolphin:
 				{ type: 'events', id: id(), title: 'raids', slug: 'raids', events },
-				createEmojis('air'),
 				{
 					type: 'chat',
 					id: id(),
@@ -1724,6 +1723,7 @@ const data: Data = {
 					topics: [],
 					description: 'this place has no memory',
 				}, // :beetle:
+				createEmojis('air'),
 				{
 					type: 'forum',
 					id: id(),
