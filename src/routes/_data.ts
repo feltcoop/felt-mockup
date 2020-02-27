@@ -1812,6 +1812,7 @@ const data: Data = {
 					],
 				},
 				createForum(),
+				createEmojis('pulse'),
 			],
 			// TODO this belongs in the layout no? points to a world and a view for that world?
 			view: {
