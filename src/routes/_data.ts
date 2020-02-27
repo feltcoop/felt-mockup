@@ -1107,6 +1107,7 @@ const data: Data = {
 			},
 			spaces: [
 				createChat('hi'),
+				createEmojis('feelings'),
 				createForum('help'),
 				// TODO events page for local meetups (structured in a hierarchy?
 				// local/denver? local/denver/events and local/denver/{forum,chat}
