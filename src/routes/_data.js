@@ -1081,6 +1081,8 @@ const data = {
                 },
                 { type: 'events', id: id(), title: 'events', slug: 'events', events },
                 createEmojis('mood'),
+                createForum('web'),
+                createChat('net'),
                 createForum('design'),
                 {
                     type: 'forum',
