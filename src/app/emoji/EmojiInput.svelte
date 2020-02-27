@@ -12,7 +12,7 @@
 			lastValue = value;
 			toggle = !toggle;
 		}
-		return toggle ? sizeClasses[size] : sizeClasses[sizes.length - size];
+		return toggle ? sizeClasses[size] : sizeClasses[sizes.length - size + 1];
 	};
 </script>
 
