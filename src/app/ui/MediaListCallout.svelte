@@ -60,7 +60,7 @@
 	};
 </script>
 
-<Content classes="wrapper relative" style="height: 160px;">
+<Content classes="wrapper relative" style="height: 180px;">
 	{#if !submittedEmail}
 		<div in:scale class="inner-wrapper">
 			<h2>want more? join our mailing list!</h2>
