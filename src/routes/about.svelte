@@ -38,16 +38,13 @@
 			<li>note taking and sharing</li>
 			<li>tasks and todos and reminders</li>
 			<li>bookmarks and aggregation and adventure</li>
-			<li>polls and surveys and shared governance</li>
-			<li>collaborating with others</li>
+			<li>polls and shared governance</li>
 			<li>p2p video, audio, messaging, etc</li>
 			<li>blogs and web publishing</li>
 			<li>commerce</li>
 			<li>maybe one day, galaxies of interesting communities to explore</li>
 			<li>server software that's easy to self-host</li>
-			<li>client software that's firmly in your control -
-				<a href="https://github.com/feltcoop/felt">fork us</a> on GitHub!
-			</li>
+			<li>client software that works with many service providers in a single app</li>
 			<li>and more! you betcha</li>
 		</ul>
 		<p>
@@ -60,7 +57,7 @@
 			If we do it right, Felt is tech that feels good.
 		</p>
 		<p>
-			Our goals are lofty and our team is small, and with the might of software
+			Our goals are big and our team is small, and with the might of software
 			we aim to help people solve priority problems and
 			<a href="felt/memes">generate joy</a>.
 		</p>
@@ -74,7 +71,7 @@
 				<a href="https://felt.dev">felt.dev</a>
 			</li>
 			<li>
-				<a href="https://felt.social">community at felt.social</a>
+				community at <a href="https://felt.social">felt.social</a>
 				and its
 				<a href="https://github.com/feltcoop/felt.social">
 					source code on GitHub
@@ -91,12 +88,9 @@
 			<span class="font-bold">
 				This is just a
 				<span class="text-2xl">mockup</span>
-				  for demonstration and design purposes.
-				<span class="text-2xl">
-					Do
-					<span class="border-gray-700 border-b-8 border-double">not</span>
-					expect security when you run this software (<span class="italic">yet</span>).
-				</span>
+				for demonstration and design purposes. Do
+				<span class="border-gray-700 border-b-8 border-double">not</span>
+				expect security when you run this software (<span class="italic">yet</span>).
 				Assume everything is broken or fake.
 			</span>
 		</p>
@@ -117,7 +111,8 @@
 		<p>
 			Felt The Business makes money by selling value to users. Mostly, this is
 			through subscription services like
-			<a href="https://felt.social">felt.social</a>. We want a business model that keeps our incentives aligned with our
+			<a href="https://felt.social">felt.social</a>.
+			We want a business model that keeps our incentives aligned with our
 			users, so we accept no revenue from third parties like advertisers. You're
 			probably a person so we should treat you like one. We hope to provide an
 			amazing customer experience, but you can always export your data from our
@@ -126,13 +121,12 @@
 		<p>
 			The company behind Felt is a democratic worker co-op where we workers
 			share equal ownership and control. We believe this will help
-			<span class="font-bold italic">Felt The Business</span>
-			remain
+			Felt The Business remain
 			<span class="font-bold">~accountable~</span>
 			to its users and society. To learn more about why we chose this business
 			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
-			In the future, we want to explore hybrid models to give users (you!?)
-			significant ownership and control and accountability.
+			In the future, we want to explore the platform cooperative model to give
+			users (you!?) significant ownership and control and accountability.
 		</p>
 		<p>Your feedback is 💚💚</p>
 		<!-- TODO email input -->
