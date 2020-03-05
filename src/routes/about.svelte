@@ -90,7 +90,7 @@
 				This is just a
 				<span class="text-2xl">mockup</span>
 				for demonstration and design purposes. Do
-				<span class="border-gray-700 border-b-8 border-double">not</span>
+				<span class="underline">not</span>
 				expect security when you run this software (<span class="italic">yet</span>).
 				Assume everything is broken or fake.
 			</span>
