@@ -57,7 +57,8 @@
 			If we do it right, Felt is tech that feels good.
 		</p>
 		<p>
-			Our goals are big and our team is small, and with the might of software
+			Our team is small and our goals are over the top.
+			Through the might of software
 			we aim to help people solve priority problems and
 			<a href="felt/memes">generate joy</a>.
 		</p>
