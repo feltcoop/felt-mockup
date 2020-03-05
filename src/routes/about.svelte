@@ -25,8 +25,8 @@
 				alt="fuzzy felt heart" />
 		</div>
 		<p>
-			Felt is customizable community software for empowering people
-			and improving our communication.
+			Felt is customizable community software for empowering people,
+			helping us organize, and improving our communication.
 			It's a free and open alternative to many websites and apps
 			tucked into a warm fuzzy package.
 		</p>
