@@ -38,7 +38,8 @@
 			<li>note taking and sharing</li>
 			<li>tasks and todos and reminders</li>
 			<li>bookmarks and aggregation and adventure</li>
-			<li>polls and shared governance</li>
+			<li>polls and fun interactives</li>
+			<li>advanced moderation and shared governance</li>
 			<li>p2p video, audio, messaging, etc</li>
 			<li>blogs and web publishing</li>
 			<li>commerce</li>
