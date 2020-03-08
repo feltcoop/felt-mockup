@@ -52,8 +52,8 @@
 			And Felt is more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
 				open-source software platform</a>,
-			<a href="https://felt.social">a community and business</a>,
-			and <a href="https://twitter.com/feltcoop">a co-op of worker-owners</a>,
+			a <a href="https://felt.social">community and business</a>,
+			a <a href="https://twitter.com/feltcoop">co-op of worker-owners</a>,
 			and hopefully one day a
 			<a href="https://platform.coop/">platform co-op</a>
 			(communities owning thsemselves? absurd)
