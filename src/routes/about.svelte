@@ -27,7 +27,7 @@
 		<p>
 			Felt is customizable community software that seeks to empower people,
 			help us organize, and improve our communication.
-			It's a free and open alternative to many websites and apps
+			It's a free and open source alternative to many websites and apps
 			tucked into a warm fuzzy package.
 		</p>
 		Felt features (one day):
@@ -92,7 +92,7 @@
 				<span class="text-2xl">mockup</span>
 				for demonstration and design purposes. Do
 				<span class="underline">not</span>
-				expect security when you run this software (<span class="italic">yet</span>).
+				expect security when you run this software.
 				Assume everything is broken or fake.
 			</span>
 		</p>
@@ -121,7 +121,7 @@
 			service to another.
 		</p>
 		<p>
-			The company behind Felt is a democratic worker co-op where we workers
+			The company behind Felt is a democratic worker co-op where us workers
 			share equal ownership and control. We believe this will help
 			Felt The Business remain
 			<span class="font-bold">~accountable~</span>
