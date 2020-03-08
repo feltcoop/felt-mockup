@@ -54,7 +54,10 @@
 				open-source software platform</a>,
 			<a href="https://felt.social">a community and business</a>,
 			and <a href="https://twitter.com/feltcoop">a co-op of worker-owners</a>,
-			all with a purpose that puts people first.
+			and hopefully one day a
+			<a href="https://platform.coop/">platform co-op</a>
+			(communities owning thsemselves? absurd)
+			— all with a purpose that puts people first.
 			If we do it right, Felt is tech that feels good.
 		</p>
 		<p>
