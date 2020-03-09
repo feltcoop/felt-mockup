@@ -54,11 +54,11 @@ npm run tw # open another shell
 npm run dev # browse to localhost:3000 or whatever it says
 ```
 
-See the [package.json](package.json) for more.
+See [`package.json`](package.json) for more.
 
 ### deploy to real life
 
-- instructions at [src/deploy/README.md](src/deploy/README.md)
+- instructions at [`src/deploy/README.md`](src/deploy/README.md)
 - [nginx server config](src/deploy/nginx_server_config.conf) for `felt.dev`
 
 ```bash
