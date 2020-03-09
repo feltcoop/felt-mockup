@@ -45,7 +45,7 @@ fnm install v12
 fnm use v12
 ```
 
-With node v12+ installed:
+With `node` v12+ installed:
 
 ```bash
 npm i
