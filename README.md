@@ -4,10 +4,10 @@
 
 > customizable community tools that feel good :green_heart:
 
-> [`felt`](https://github.com/feltcoop/felt)
-> seeks to empower people,
-> help us organize,
-> and improve our communication
+[`felt`](https://github.com/feltcoop/felt)
+seeks to empower people,
+help us organize,
+and improve our communication
 
 - **work in progress** mockup at [felt.dev](https://felt.dev)
 - learn [about `felt`](https://felt.dev/about)
