@@ -10,7 +10,7 @@
 
 	export let post;
 	export let addComment;
-	export let value;
+	export let value = '';
 	export let isOpen = false; // TODO xstate?
 
 	let commentEl;
