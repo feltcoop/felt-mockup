@@ -3,6 +3,9 @@
 [<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
 
 > customizable community tools that feel good :green_heart:
+> `felt` seeks to empower people,
+> help us organize,
+> and improve our communication
 
 - **work in progress** mockup at [felt.dev](https://felt.dev)
 - learn [about felt](https://felt.dev/about)
