@@ -30,6 +30,28 @@
 			It's a free and open source alternative to many websites and apps
 			tucked into a warm fuzzy package.
 		</p>
+		<p>
+			Felt The Business makes money by selling value to users. Mostly, this is
+			through subscription services like
+			<a href="https://felt.social">felt.social</a>.
+			We want a business model that keeps our incentives aligned with our
+			users, so we accept no revenue from third parties like advertisers. You're
+			probably a person so we should treat you like one. We hope to provide an
+			amazing customer experience, but you can always export your data from our
+			service to another.
+		</p>
+		<p>
+			The company behind Felt is a democratic worker co-op where us workers
+			share equal ownership and control. We believe this will help
+			Felt The Business remain
+			<span class="font-bold">~accountable~</span>
+			to its users and society,
+			and it's the kind of company we want to work for.
+			To learn more about why we chose this business
+			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
+			In the future, we want to explore the platform cooperative model to give
+			users (you!?) significant ownership and control and accountability.
+		</p>
 		Felt features (one day):
 		<ul>
 			<li>super customizable tools for online and offline communities</li>
@@ -110,28 +132,6 @@
 			<a href="https://github.com/feltcoop/felt/tree/master/src/deploy">
 				easily self-hosted</a>, so you can run a private instance for your communities and maintain full
 			control.
-		</p>
-		<p>
-			Felt The Business makes money by selling value to users. Mostly, this is
-			through subscription services like
-			<a href="https://felt.social">felt.social</a>.
-			We want a business model that keeps our incentives aligned with our
-			users, so we accept no revenue from third parties like advertisers. You're
-			probably a person so we should treat you like one. We hope to provide an
-			amazing customer experience, but you can always export your data from our
-			service to another.
-		</p>
-		<p>
-			The company behind Felt is a democratic worker co-op where us workers
-			share equal ownership and control. We believe this will help
-			Felt The Business remain
-			<span class="font-bold">~accountable~</span>
-			to its users and society,
-			and it's the kind of company we want to work for.
-			To learn more about why we chose this business
-			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
-			In the future, we want to explore the platform cooperative model to give
-			users (you!?) significant ownership and control and accountability.
 		</p>
 		<p>Your feedback is 💚💚</p>
 		<!-- TODO email input -->
