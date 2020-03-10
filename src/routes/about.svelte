@@ -87,6 +87,7 @@
 			Through the might of software
 			we aim to help people solve priority problems and
 			<a href="felt/memes">generate joy</a>.
+			Felt is what the web should be.
 		</p>
 		Some links:
 		<ul>
