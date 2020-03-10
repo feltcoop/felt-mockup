@@ -93,7 +93,7 @@
 		<ul>
 			<li>
 				<a href="https://github.com/feltcoop/felt">
-					felt source code on GitHub
+					Felt source code on GitHub
 				</a>
 				live on the web at
 				<a href="https://felt.dev">felt.dev</a>
