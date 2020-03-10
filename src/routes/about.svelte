@@ -84,8 +84,6 @@
 			</li>
 			<li>
 				<a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a>
-				and email
-				<a href="mailto:team@felt.social">team@felt.social</a>
 			</li>
 		</ul>
 		<p>
