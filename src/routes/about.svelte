@@ -56,7 +56,7 @@
 			a <a href="https://twitter.com/feltcoop">co-op of worker-owners</a>,
 			and hopefully one day a
 			<a href="https://platform.coop/">platform co-op</a>
-			(communities owning thsemselves? absurd)
+			(communities owning themselves? absurd)
 			— all with a purpose that puts people first.
 			If we do it right, Felt is tech that feels good.
 		</p>
