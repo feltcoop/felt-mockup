@@ -5,7 +5,7 @@
 > customizable community tools that feel good :green_heart:
 
 [`felt`](https://github.com/feltcoop/felt)
-seeks to empower people,
+seeks to empower us,
 help us organize,
 and improve our communication
 
