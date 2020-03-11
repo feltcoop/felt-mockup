@@ -5,9 +5,11 @@
 > customizable community tools that feel good :green_heart:
 
 [`felt`](https://github.com/feltcoop/felt)
-seeks to empower us,
+is a set of free and open source tools
+for building customizable self-governing communities.
+It seeks to empower us,
 help us organize,
-and improve our communication
+and improve our communication.
 
 - **work in progress** mockup at [felt.dev](https://felt.dev)
 - learn [about `felt`](https://felt.dev/about)
