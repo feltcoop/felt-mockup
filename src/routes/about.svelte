@@ -88,8 +88,8 @@
 		<p>
 			Our team is small and our goals are over the top.
 			Through the might of software
-			we aim to help people solve priority problems and
-			<a href="felt/memes">generate joy</a>.
+			we aim to help people solve priority problems with
+			<a href="felt/memes">joy</a>.
 			Felt is what the web should be.
 		</p>
 		Some links:
