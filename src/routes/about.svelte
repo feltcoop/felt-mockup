@@ -68,8 +68,8 @@
 			Mostly this is through subscription services and commerce mediation like
 			<a href="https://felt.social">felt.social</a>.
 			We want a business model that keeps our incentives aligned with our
-			users, so we accept no revenue from third parties like advertisers. You're
-			probably a person so we should treat you like one. We hope to provide an
+			users, so we accept no revenue from third parties like advertisers.
+			You're a person so we will treat you like one. We hope to provide an
 			amazing customer experience, but you can always export your data from our
 			service to another.
 		</p>
@@ -82,8 +82,9 @@
 			and it's the kind of company we want to work for.
 			To learn more about why we chose this business
 			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
-			In the future, we want to explore the platform cooperative model to give
-			users (you!?) significant ownership and control and accountability.
+			In the future, we want to explore the platform cooperative model
+			to give users (you, we hope!)
+			significant ownership and control and accountability.
 		</p>
 		<p>
 			Our team is small and our goals are over the top.
