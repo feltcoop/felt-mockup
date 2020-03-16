@@ -33,6 +33,13 @@
 			It's a free and open source alternative to many websites and apps
 			tucked into a warm fuzzy package.
 		</p>
+		<p>
+			Our team is small and our goals are over the top.
+			Through the might of software
+			we aim to help people solve priority problems with
+			<a href="felt/memes">joy</a>.
+			Felt is what the web should be.
+		</p>
 		Felt features (one day):
 		<ul>
 			<li>customizable tools for online and offline communities</li>
@@ -84,13 +91,6 @@
 			In the future, we want to explore the
 			<a href="https://platform.coop/">platform cooperative model</a>
 			to share control and ownership with our users. (you, we hope!)
-		</p>
-		<p>
-			Our team is small and our goals are over the top.
-			Through the might of software
-			we aim to help people solve priority problems with
-			<a href="felt/memes">joy</a>.
-			Felt is what the web should be.
 		</p>
 		Some links:
 		<ul>
