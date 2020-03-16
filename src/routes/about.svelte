@@ -35,7 +35,7 @@
 		</p>
 		Felt features (one day):
 		<ul>
-			<li>super customizable tools for online and offline communities</li>
+			<li>customizable tools for online and offline communities</li>
 			<li>chats and forums</li>
 			<li>events and rsvps</li>
 			<li>note taking and sharing</li>
@@ -49,7 +49,7 @@
 			<li>maybe one day, galaxies of interesting communities to explore</li>
 			<li>server software that's easy to self-host</li>
 			<li>client software that works with many service providers in a single app</li>
-			<li>and more! you betcha</li>
+			<li>and more! much more</li>
 		</ul>
 		<p>
 			And Felt is more than a big bag of features. It's a customizable
@@ -75,16 +75,15 @@
 		</p>
 		<p>
 			The company behind Felt is a democratic worker co-op where us workers
-			share equal ownership and control. We believe this will help
-			Felt The Business remain
-			<span class="font-bold">~accountable~</span>
-			to its users and society,
-			and it's the kind of company we want to work for.
+			share equal ownership and control.
+			We believe this model will help Felt The Business remain
+			<span class="font-bold">→ accountable ←</span>
+			to its users, workers, and society.
 			To learn more about why we chose this business
 			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
-			In the future, we want to explore the platform cooperative model
-			to give users (you, we hope!)
-			significant ownership and control and accountability.
+			In the future, we want to explore the
+			<a href="https://platform.coop/">platform cooperative model</a>
+			to share control and ownership with our users. (you, we hope!)
 		</p>
 		<p>
 			Our team is small and our goals are over the top.
