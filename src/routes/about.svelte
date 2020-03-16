@@ -73,7 +73,7 @@
 		<p>
 			Felt The Business makes money (or will!) by selling value to users.
 			Mostly this is through subscription services and commerce mediation like
-			<a href="https://felt.social">felt.social</a>.
+			<a href="https://felt.social">Felt.social</a>.
 			We want a business model that keeps our incentives aligned with our
 			users, so we accept no revenue from third parties like advertisers.
 			You're a person so we will treat you like one. We hope to provide an
@@ -99,10 +99,10 @@
 					Felt source code on GitHub
 				</a>
 				live on the web at
-				<a href="https://felt.dev">felt.dev</a>
+				<a href="https://felt.dev">Felt.dev</a>
 			</li>
 			<li>
-				community at <a href="https://felt.social">felt.social</a>
+				community at <a href="https://felt.social">Felt.social</a>
 				and its
 				<a href="https://github.com/feltcoop/felt.social">
 					source code on GitHub

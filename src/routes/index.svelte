@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>felt</title>
+	<title>Felt</title>
 </svelte:head>
 <div class="flex flex-col flex-1 p-2 items-center" style="max-width: 640px;">
 	<!-- <div class="flex flex-col" style="width: 240xp;">
@@ -43,7 +43,7 @@
 	</PlaceholderInfo> -->
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
-			<div class="text-6xl">felt</div>
+			<div class="text-6xl">Felt</div>
 			<div>customizable community tools that feel good</div>
 		</li>
 		<li class="py-4 font-hairline">
@@ -60,7 +60,7 @@
 				<a
 					href="/about"
 					class="logo-heart flex flex-wrap flex-col items-center justify-center">
-					<span class="text-4xl mr-2 font-hairline">→ learn about felt ←</span>
+					<span class="text-4xl mr-2 font-hairline">→ learn about Felt ←</span>
 					<img
 						src="/logo-heart.png"
 						alt="fuzzy felt heart"
@@ -85,7 +85,7 @@
 					class="text-4xl"
 					style="font-weight: 100;"
 					href="https://felt.social">
-					felt.social
+					Felt.social
 				</a>
 				<div>is our service and business</div>
 			</Content>
@@ -93,7 +93,7 @@
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
 				<a class="text-4xl" style="font-weight: 100;" href="https://felt.dev">
-					felt.dev
+					Felt.dev
 				</a>
 				<div>is for Felt the free software</div>
 			</Content>

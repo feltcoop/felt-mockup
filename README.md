@@ -1,19 +1,19 @@
-# felt
+# Felt
 
 [<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
 
 > customizable community tools that feel good :green_heart:
 
-[`felt`](https://github.com/feltcoop/felt)
+[Felt](https://github.com/feltcoop/felt)
 is a set of free and open source tools
 for building customizable self-governing communities.
 It seeks to empower us,
 help us organize,
 and improve our communication.
 
-- **work in progress** mockup at [felt.dev](https://felt.dev)
-- learn [about `felt`](https://felt.dev/about)
-- community at [felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
+- **work in progress** mockup at [Felt.dev](https://felt.dev)
+- learn [about Felt](https://felt.dev/about)
+- community at [Felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
 
 ## credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
 
@@ -61,7 +61,8 @@ See [`package.json`](package.json) for more.
 ### deploy to real life
 
 - instructions at [`src/deploy/README.md`](src/deploy/README.md)
-- [nginx server config](src/deploy/nginx_server_config.conf) for `felt.dev`
+- [nginx server config](src/deploy/nginx_server_config.conf)
+  for [Felt.dev](https://felt.dev)
 
 ```bash
 npm i
