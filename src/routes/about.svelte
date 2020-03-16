@@ -61,7 +61,7 @@
 		<p>
 			And Felt is more than a big bag of features. It's a customizable
 			<a href="https://github.com/feltcoop/felt">
-				open-source software platform</a>,
+				open source software platform</a>,
 			a <a href="https://felt.social">community and business</a>,
 			a <a href="https://twitter.com/feltcoop">co-op of worker-owners</a>,
 			and hopefully one day a
@@ -126,7 +126,7 @@
 		<p>
 			Felt is
 			<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">
-				free and open-source software
+				free and open source software
 			</a>
 			released under the permissive
 			<a href="https://github.com/feltcoop/felt/blob/master/license">
