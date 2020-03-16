@@ -84,7 +84,7 @@
 			The company behind Felt is a democratic worker co-op where us workers
 			share equal ownership and control.
 			We believe this model will help Felt The Business remain
-			<span class="font-bold">→ accountable ←</span>
+			<span class="font-bold whitespace-no-wrap">→ accountable ←</span>
 			to its users, workers, and society.
 			To learn more about why we chose this business
 			structure, see our (forthcoming) blog post "Why Felt is a worker co-op".
