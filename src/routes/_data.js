@@ -12,25 +12,25 @@ const createAnonMessages = () => [
     {
         type: 'message',
         id: id(),
-        author: symbols.avatar,
+        author: symbols.persona,
         content: 'hi!',
     },
     {
         type: 'message',
         id: id(),
-        author: symbols.avatar,
+        author: symbols.persona,
         content: 'what is up fellow anonymous chat friends?',
     },
     {
         type: 'message',
         id: id(),
-        author: symbols.avatar,
+        author: symbols.persona,
         content: 'nm u?',
     },
     {
         type: 'message',
         id: id(),
-        author: symbols.avatar,
+        author: symbols.persona,
         content: 'a bug found me',
     },
 ];
@@ -121,7 +121,7 @@ const anonTopics = [
     {
         type: 'topic',
         id: id(),
-        author: symbols.avatar,
+        author: symbols.persona,
         title: 'I have a serious anonymous topic to discuss!',
         content: "Now that we're here for the serious topic, who wants icecream?",
         slug: 'serious-topic',
@@ -130,14 +130,14 @@ const anonTopics = [
                 type: 'reply',
                 id: id(),
                 parent: 1,
-                author: symbols.avatar,
+                author: symbols.persona,
                 content: 'u sure thats rly anon?',
                 children: [
                     {
                         type: 'reply',
                         id: id(),
                         parent: 2,
-                        author: symbols.avatar,
+                        author: symbols.persona,
                         content: "doesn't look very anonymous to me but IANAL",
                     },
                 ],
@@ -146,7 +146,7 @@ const anonTopics = [
                 type: 'reply',
                 id: id(),
                 parent: 1,
-                author: symbols.avatar,
+                author: symbols.persona,
                 content: 'orly?',
             },
         ],
@@ -154,7 +154,7 @@ const anonTopics = [
     {
         type: 'topic',
         id: id(),
-        author: symbols.avatar,
+        author: symbols.persona,
         title: 'When are you?',
         slug: 'when-are-you',
         children: [
@@ -162,14 +162,14 @@ const anonTopics = [
                 type: 'reply',
                 id: id(),
                 parent: 1,
-                author: symbols.avatar,
+                author: symbols.persona,
                 content: 'now',
                 children: [
                     {
                         type: 'reply',
                         id: id(),
                         parent: 2,
-                        author: symbols.avatar,
+                        author: symbols.persona,
                         content: 'now',
                     },
                 ],
@@ -354,10 +354,10 @@ const people = [
         slug: 'rick',
         title: 'Rick',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -415,10 +415,10 @@ const people = [
         slug: 'alex',
         title: 'Alex',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -463,10 +463,10 @@ const people = [
         slug: 'sue',
         title: 'Sue',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -511,10 +511,10 @@ const people = [
         slug: 'alice',
         title: 'Alice',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -559,10 +559,10 @@ const people = [
         slug: 'bob',
         title: 'Bob',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -627,10 +627,10 @@ const people = [
         slug: 'chris',
         title: 'Chris',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -675,10 +675,10 @@ const people = [
         slug: 'dana',
         title: 'Dana',
         id: id(),
-        avatars: [
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
-            { type: 'avatar', name: `avatar${id()}`, id: id() },
+        personas: [
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
+            { type: 'persona', name: `persona${id()}`, id: id() },
         ],
         view: {
             type: 'view',
@@ -728,7 +728,7 @@ const data = {
         person: people[0],
         nav: [
             {
-                title: 'avatars',
+                title: 'personas',
                 items: ['rick', 'rrr', 'r'],
             },
             {
@@ -746,9 +746,9 @@ const data = {
         ],
     },
     worlds: [
-        // avatars
+        // personas
         {
-            type: 'avatar',
+            type: 'persona',
             id: id(),
             title: 'rick',
             slug: 'rick',
@@ -777,7 +777,7 @@ const data = {
             ],
         },
         {
-            type: 'avatar',
+            type: 'persona',
             id: id(),
             title: 'rick_of_legend',
             slug: 'rick_of_legend',
@@ -806,7 +806,7 @@ const data = {
             ],
         },
         {
-            type: 'avatar',
+            type: 'persona',
             id: id(),
             title: 'roll',
             slug: 'roll',
@@ -835,7 +835,7 @@ const data = {
             ],
         },
         {
-            type: 'avatar',
+            type: 'persona',
             id: id(),
             title: 'rrr',
             slug: 'rrr',
@@ -864,7 +864,7 @@ const data = {
             ],
         },
         {
-            type: 'avatar',
+            type: 'persona',
             id: id(),
             title: 'ape_of_clubs',
             slug: 'ape_of_clubs',

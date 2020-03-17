@@ -1,6 +1,6 @@
 <script>
 	import PersonWorld from '../person/PersonWorld.svelte';
-	import AvatarWorld from '../avatar/AvatarWorld.svelte';
+	import PersonaWorld from '../persona/PersonaWorld.svelte';
 	import CommunityWorld from '../community/CommunityWorld.svelte';
 	import PageWorld from '../page/PageWorld.svelte';
 	import ErrorMessage from '../ui/ErrorMessage.svelte';
@@ -33,8 +33,8 @@
 	<div class="flex-1">
 		{#if $world.type === 'person'}
 			<PersonWorld {world} />
-		{:else if $world.type === 'avatar'}
-			<AvatarWorld {world} />
+		{:else if $world.type === 'persona'}
+			<PersonaWorld {world} />
 		{:else if $world.type === 'community'}
 			<CommunityWorld {world} />
 		{:else if $world.type === 'page'}

@@ -11,18 +11,26 @@
 	export let style = '';
 	export let innerClasses = '';
 
-	$: isAnonymous = name === symbols.avatar;
+	$: isAnonymous = name === symbols.persona;
 	$: isSession = name === $session.person.slug;
 	$: href = isAnonymous ? undefined : name;
 	$: colorClasses = isSession ? 'text-purple-700' : 'text-green-700';
-	// $: console.log('href', href, name, isAnonymous, symbols.avatar);
+	// $: console.log('href', href, name, isAnonymous, symbols.persona);
 </script>
 
-<a {href} class="hover:underline {classes} {colorClasses} {innerClasses}" {style}>
+<a
+	{href}
+	class="hover:underline {classes}
+	{colorClasses}
+	{innerClasses}"
+	{style}>
 	{#if isAnonymous}
 		<span class="text-2xl leading-none">{name}</span>
 	{:else}
-		{#if isMention}<span class="opacity-50">@</span>{/if}{name}
+		{#if isMention}
+			<span class="opacity-50">@</span>
+		{/if}
+		{name}
 	{/if}
 </a>
 

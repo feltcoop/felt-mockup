@@ -17,8 +17,8 @@
 	on:click={selectMessage ? () => selectMessage(message) : undefined}
 	class:selected={isSelected}>
 	<span class="px-2">
-		{#if message.author === symbols.avatar}
-			<span class="text-2xl leading-none">{symbols.avatar}</span>
+		{#if message.author === symbols.persona}
+			<span class="text-2xl leading-none">{symbols.persona}</span>
 		{:else}
 			<WorldName name={message.author} />
 		{/if}

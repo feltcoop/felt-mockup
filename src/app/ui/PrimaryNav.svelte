@@ -18,13 +18,13 @@
 	// users should be able to share their layouts
 	// with friends or the public or other audiences.
 
-	$: avatars = worlds.filter(w => w.type === 'avatar');
+	$: personas = worlds.filter(w => w.type === 'persona');
 	$: communities = worlds.filter(w => w.type === 'community');
 	$: friends = worlds.filter(w => w.type === 'person' && w.slug !== 'rick');
 	$: pages = worlds.filter(w => w.type === 'page');
 
 	let subheadingsOpen = {
-		avatar: true,
+		persona: true,
 		community: true,
 		person: true,
 		page: true,
@@ -46,13 +46,13 @@
 		</li>
 
 		<PrimaryNavSubheading
-			isActive={$world && $world.type === 'avatar'}
-			on:click={() => toggleSubheading('avatar')}>
-			avatars
+			isActive={$world && $world.type === 'persona'}
+			on:click={() => toggleSubheading('persona')}>
+			personas
 		</PrimaryNavSubheading>
 
-		{#if subheadingsOpen.avatar}
-			{#each avatars as world}
+		{#if subheadingsOpen.persona}
+			{#each personas as world}
 				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
 					<div class="item-icon" />
 					{world.title}

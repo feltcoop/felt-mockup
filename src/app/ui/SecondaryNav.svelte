@@ -12,7 +12,7 @@
 		{/each}
 
 		<!-- TODO put these in the data -->
-		<!-- {#if $world.type === 'avatar'}
+		<!-- {#if $world.type === 'persona'}
 			<li>
 				<a>scratchpad</a>
 			</li>

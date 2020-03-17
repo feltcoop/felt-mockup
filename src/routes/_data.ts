@@ -18,25 +18,25 @@ const createAnonMessages = (): ChatMessageData[] => [
 	{
 		type: 'message',
 		id: id(),
-		author: symbols.avatar,
+		author: symbols.persona,
 		content: 'hi!',
 	},
 	{
 		type: 'message',
 		id: id(),
-		author: symbols.avatar,
+		author: symbols.persona,
 		content: 'what is up fellow anonymous chat friends?',
 	},
 	{
 		type: 'message',
 		id: id(),
-		author: symbols.avatar,
+		author: symbols.persona,
 		content: 'nm u?',
 	},
 	{
 		type: 'message',
 		id: id(),
-		author: symbols.avatar,
+		author: symbols.persona,
 		content: 'a bug found me',
 	},
 ];
@@ -140,7 +140,7 @@ const anonTopics: ForumTopicData[] = [
 	{
 		type: 'topic',
 		id: id(),
-		author: symbols.avatar,
+		author: symbols.persona,
 		title: 'I have a serious anonymous topic to discuss!',
 		content: "Now that we're here for the serious topic, who wants icecream?",
 		slug: 'serious-topic',
@@ -149,14 +149,14 @@ const anonTopics: ForumTopicData[] = [
 				type: 'reply',
 				id: id(),
 				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
-				author: symbols.avatar,
+				author: symbols.persona,
 				content: 'u sure thats rly anon?',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
 						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
-						author: symbols.avatar,
+						author: symbols.persona,
 						content: "doesn't look very anonymous to me but IANAL",
 					},
 				],
@@ -165,7 +165,7 @@ const anonTopics: ForumTopicData[] = [
 				type: 'reply',
 				id: id(),
 				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
-				author: symbols.avatar,
+				author: symbols.persona,
 				content: 'orly?',
 			},
 		],
@@ -173,7 +173,7 @@ const anonTopics: ForumTopicData[] = [
 	{
 		type: 'topic',
 		id: id(),
-		author: symbols.avatar,
+		author: symbols.persona,
 		title: 'When are you?',
 		slug: 'when-are-you',
 		children: [
@@ -181,14 +181,14 @@ const anonTopics: ForumTopicData[] = [
 				type: 'reply',
 				id: id(),
 				parent: 1, // TODO this is a nonsense value now that we're randomizing ids
-				author: symbols.avatar,
+				author: symbols.persona,
 				content: 'now',
 				children: [
 					{
 						type: 'reply',
 						id: id(),
 						parent: 2, // TODO this is a nonsense value now that we're randomizing ids
-						author: symbols.avatar,
+						author: symbols.persona,
 						content: 'now',
 					},
 				],
@@ -384,10 +384,10 @@ const people: PersonData[] = [
 		slug: 'rick',
 		title: 'Rick',
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -445,10 +445,10 @@ const people: PersonData[] = [
 		slug: 'alex',
 		title: 'Alex',
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -493,10 +493,10 @@ const people: PersonData[] = [
 		slug: 'sue',
 		title: 'Sue',
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -541,10 +541,10 @@ const people: PersonData[] = [
 		slug: 'alice',
 		title: 'Alice',
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -589,10 +589,10 @@ const people: PersonData[] = [
 		slug: 'bob',
 		title: 'Bob',
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -657,10 +657,10 @@ const people: PersonData[] = [
 		slug: 'chris',
 		title: 'Chris',
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -705,10 +705,10 @@ const people: PersonData[] = [
 		slug: 'dana',
 		title: 'Dana', // who controls this? allow client renaming?
 		id: id(),
-		avatars: [
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
-			{ type: 'avatar', name: `avatar${id()}`, id: id() },
+		personas: [
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{ type: 'persona', name: `persona${id()}`, id: id() },
 		],
 		view: {
 			type: 'view',
@@ -766,13 +766,13 @@ export interface PersonData extends Entity {
 	type: 'person';
 	slug: string;
 	title: string;
-	avatars: AvatarData[];
+	personas: PersonaData[];
 	spaces: SpaceData[];
 	view: ViewData;
 }
 
-export interface AvatarData extends Entity {
-	type: 'avatar';
+export interface PersonaData extends Entity {
+	type: 'persona';
 	name: string;
 }
 
@@ -788,7 +788,7 @@ export interface NavData {
 }
 
 export interface WorldData extends Entity {
-	type: 'avatar' | 'community' | 'person' | 'page'; // TODO make this a union type like with spaces?
+	type: 'persona' | 'community' | 'person' | 'page'; // TODO make this a union type like with spaces?
 	title: string;
 	slug: Slug;
 	description?: string;
@@ -919,7 +919,7 @@ const data: Data = {
 		person: people[0],
 		nav: [
 			{
-				title: 'avatars',
+				title: 'personas',
 				items: ['rick', 'rrr', 'r'],
 			},
 			{
@@ -938,9 +938,9 @@ const data: Data = {
 	},
 
 	worlds: [
-		// avatars
+		// personas
 		{
-			type: 'avatar',
+			type: 'persona',
 			id: id(),
 			title: 'rick',
 			slug: 'rick',
@@ -969,7 +969,7 @@ const data: Data = {
 			],
 		},
 		{
-			type: 'avatar',
+			type: 'persona',
 			id: id(),
 			title: 'rick_of_legend',
 			slug: 'rick_of_legend',
@@ -998,7 +998,7 @@ const data: Data = {
 			],
 		},
 		{
-			type: 'avatar',
+			type: 'persona',
 			id: id(),
 			title: 'roll',
 			slug: 'roll',
@@ -1027,7 +1027,7 @@ const data: Data = {
 			],
 		},
 		{
-			type: 'avatar',
+			type: 'persona',
 			id: id(),
 			title: 'rrr',
 			slug: 'rrr',
@@ -1056,7 +1056,7 @@ const data: Data = {
 			],
 		},
 		{
-			type: 'avatar',
+			type: 'persona',
 			id: id(),
 			title: 'ape_of_clubs',
 			slug: 'ape_of_clubs',

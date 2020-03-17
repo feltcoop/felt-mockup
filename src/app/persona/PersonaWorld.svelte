@@ -17,7 +17,7 @@
 
 <Content>
 	<PlaceholderInfo>
-		this is one of your avatars,
+		this is one of your personas,
 		<WorldName
 			classes="text-4xl"
 			style="font-weight: 100;"
@@ -25,19 +25,19 @@
 			isMention={true} />
 	</PlaceholderInfo>
 	<PlaceholderInfo>
-		avatars are pseudonyms, names under your control in online spaces
+		personas are pseudonyms, names under your control in online spaces
 	</PlaceholderInfo>
 	<PlaceholderInfo>
 		sometimes we think of them as characters in a story
 	</PlaceholderInfo>
 	<PlaceholderInfo>
-		on the left, you'll see your avatar's spaces - we're a work in progress
+		on the left, you'll see your persona's spaces - we're a work in progress
 	</PlaceholderInfo>
 	<PlaceholderInfo>
-		TODO show this avatar's communities and custom nav and spaces
+		TODO show this persona's communities and custom nav and spaces
 	</PlaceholderInfo>
 	<PlaceholderInfo>
-		TODO show all activity for this avatar & interact with it
+		TODO show all activity for this persona & interact with it
 	</PlaceholderInfo>
 </Content>
 

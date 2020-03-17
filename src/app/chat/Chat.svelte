@@ -22,8 +22,8 @@
 	// `inferAuthor` or `getAuthor` could be a pluginable bit of code attached to spaces
 	$: author =
 		// TODO add optional chaining operator `?`
-		messages && messages[0] && messages[0].author === symbols.avatar
-			? symbols.avatar
+		messages && messages[0] && messages[0].author === symbols.persona
+			? symbols.persona
 			: $session.person.slug;
 
 	const submit = (content, e) => {

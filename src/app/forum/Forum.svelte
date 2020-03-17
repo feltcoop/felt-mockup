@@ -22,8 +22,8 @@
 	// TODO do this properly! this just infers anon status, which should be a property on the space
 	// `inferAuthor` or `getAuthor` could be a pluginable bit of code attached to spaces
 	$: author =
-		topics[0] && topics[0].author === symbols.avatar
-			? symbols.avatar
+		topics[0] && topics[0].author === symbols.persona
+			? symbols.persona
 			: $session.person.slug;
 
 	let titleValue = '';
