@@ -133,7 +133,7 @@
 				ISC license
 			</a>
 			(<a href="https://en.wikipedia.org/wiki/ISC_license">see Wikipedia</a>), and it's designed to be
-			<a href="https://github.com/feltcoop/felt/tree/master/src/deploy">
+			<a href="https://github.com/feltcoop/felt/tree/master/src/project/deploy">
 				easily self-hosted</a>, so you can run a private instance for your communities and maintain full
 			control.
 		</p>

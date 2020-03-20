@@ -15,6 +15,12 @@ and improve our communication.
 - learn [about Felt](https://felt.dev/about)
 - community at [Felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
 
+## docs
+
+- [project](src/project)
+  - [setup](src/project/setup)
+  - [deploy](src/project/deploy)
+
 ## credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
 
 made by
@@ -34,41 +40,6 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 [`fnm`](https://github.com/Schniz/fnm) .
 [`github`](https://github.com) . [`git`](https://git-scm.com/)
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
-
-## develop
-
-### play with the code
-
-Don't have `node` and `npm` installed?
-See [fnm](https://github.com/Schniz/fnm):
-
-```bash
-fnm install v12
-fnm use v12
-```
-
-With `node` v12+ installed:
-
-```bash
-npm i
-npm run ts # gogo typescript
-npm run tw # open another shell
-npm run dev # browse to localhost:3000 or whatever it says
-```
-
-See [`package.json`](package.json) for more.
-
-### deploy to real life
-
-- instructions at [`src/deploy/README.md`](src/deploy/README.md)
-- [nginx server config](src/deploy/nginx_server_config.conf)
-  for [Felt.dev](https://felt.dev)
-
-```bash
-npm i
-npm run build
-npm start
-```
 
 ## license
 
