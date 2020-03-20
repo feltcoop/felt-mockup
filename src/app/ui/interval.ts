@@ -6,7 +6,7 @@ export const useInterval = (
 	cb: () => void,
 	getTime: () => number,
 ): ClearInterval => {
-	let timeout: number | undefined;
+	let timeout: any; // TODO type for Node and browser?
 	const run = () => {
 		timeout = setTimeout(() => {
 			cb();
