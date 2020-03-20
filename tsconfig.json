@@ -61,7 +61,7 @@
     // "rootDirs": [], // List of root folders whose combined content represents the structure of the project at runtime.
     // "typeRoots": [], // List of folders to include type definitions from.
     "types": [], // Type declaration files to be included in compilation.
-    // "allowSyntheticDefaultImports": false // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
     // "esModuleInterop": false, // Emit '__importStar' and '__importDefault' helpers for runtime babel ecosystem compatibility and enable '--allowSyntheticDefaultImports' for typesystem compatibility.
     // "maxNodeModuleJsDepth": 0, // The maximum dependency depth to search under node_modules and load JavaScript files. Only applicable with --allowJs.
     // "preserveSymlinks": false, // Do not resolve the real path of symlinks.

@@ -9,3 +9,5 @@ node_modules/
 
 /static/index.css
 emails.txt
+
+.env

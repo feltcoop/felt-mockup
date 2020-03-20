@@ -2,18 +2,19 @@ import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
-import fs from 'fs';
+import fs from 'fs-extra';
+import fp from 'path';
 import bodyParser from 'body-parser';
 
 import { isEmail, normalizeEmail } from './app/email/utils.js';
 
-const EMAILS_FILE_PATH = './emails.txt';
-
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-console.log('PORT', PORT);
-console.log('NODE_ENV', NODE_ENV);
+// TODO put these in a centralized paths module
+const DATA_DIR = fp.resolve(dev ? '__sapper__/data' : '../data');
+fs.ensureDirSync(DATA_DIR);
+const EMAILS_FILE_PATH = fp.join(DATA_DIR, 'emails.txt');
 
 polka()
 	.use(compression({ threshold: 0 }), sirv('static', { dev }))

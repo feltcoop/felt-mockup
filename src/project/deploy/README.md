@@ -1,4 +1,4 @@
-# deploy
+# Felt deployment
 
 Felt is being developed on Ubuntu 18.04
 running on a \$5/mo Digital Ocean VPS,
@@ -47,24 +47,37 @@ sudo chown $USER /var/www/felt.dev
 
 #### 5. nginx config
 
-copy over [the nginx config `./nginx_server_config.conf`](nginx_server_config.conf)
-(replacing `felt.dev` with your domain if needed)
+copy [the nginx config `./nginx_server_config.conf`](nginx_server_config.conf)
 to `/etc/nginx/sites-available/felt.dev`
-(TODO set this config somewhere when Felt is used as a library)
+(replacing `felt.dev` in both the config file and path - TODO automate)
 
-#### 6. install node
+#### 6. install node and other deps
 
 ```bash
-# via fnm - https://github.com/Schniz/fnm
+# manage Node via fnm - https://github.com/Schniz/fnm
+sudo apt install -y unzip # fnm dependency
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-fnm install v12
-# install pm2 - https://github.com/Unitech/pm2
+fnm install v12 && fnm use v12
+# install pm2 to manage the Node server process - https://github.com/Unitech/pm2
 npm i -g pm2
-# do this once
-pm2 start /var/www/felt.dev/felt/__sapper__/build/index.js
-pm2 list # should see your thing
+```
+
+#### 7. start the server
+
+TODO automate initial deployment
+
+On the dev machine, manually do the following:
+
+- copy `src/project/deploy/pm2-app.json` to `/var/www/felt.dev`
+- run `npm run build` to create the build
+- run `npm run deploy` to copy the build `/var/www/felt.dev/dist`
+
+```bash
+pm2 start /var/www/felt.dev/pm2-app.json
+pm2 ls # should see your thing
+# TODO server is erroring after a reboot and pm2's error log isn't helpful
 pm2 startup # and follow the instructions
 pm2 save
-# do this on subsequent deploys
-pm2 restart 0 # TODO - automate this!
 ```
+
+Subsequent deployments should be as simple as `npm run build && npm run deploy`.
