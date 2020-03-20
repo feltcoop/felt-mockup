@@ -1,6 +1,8 @@
 node_modules/
 .DS_Store
 
+.env
+
 /__sapper__/
 
 *.ignore.*
