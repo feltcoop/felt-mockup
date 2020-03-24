@@ -2,58 +2,81 @@
 
 This document walks through setting up Felt for development.
 
-1. If you already have Node and npm installed, skip this step.
+## Initial setup
 
-You can use any preferred method to [install Node](https://nodejs.org).
-We recommend [fnm](https://github.com/Schniz/fnm):
+**1. Install system dependencies**
+
+[See our docs](system.md) for installing Felt's system dependencies.
+
+**2. Set up your editor**
+
+We recommend VSCode for its Svelte support.
+See [our docs for setting it up](vscode.md).
+Other editors may have
+[varying degrees of support for Svelte](https://github.com/sveltejs/integrations).
+
+**3. Install Node dependencies**
 
 ```bash
-fnm install v12
-fnm use v12
+$ npm i
 ```
 
-You should now have both Node and npm installed.
+See [`package.json`](/package.json) for more about what's being installed.
+Felt tries to minimize external dependencies within reason -
+if you see avoidable bloat please help us reduce it!
+
+**4. Initialize .env**
+
+Copy [`.env.sample`](.env.sample) as `.env` to the root directory.
+This file will not be committed in git.
 
 ```bash
-node --version # => v12...
-npm --version # => 6...
-```
-
-2. Copy [`.env.sample`](./.env.sample) as `.env` to the root directory.
-   This file will not be committed in git.
-
-```bash
-cp src/project/setup/.env.sample .env
+$ cp src/project/setup/.env.sample .env
 ```
 
 > TODO automate this with a setup task
 
-For now you don't need to change any values,
-but before [deploying to a production server](../deploy)
-you'll need to edit `.env` with important config.
-
-3. Install dependencies.
+Now it's time to set up a database and environment variables.
+By default PostgreSQL uses the "postgres" user.
+Set a password for it:
 
 ```bash
-npm i
+$ sudo -u postgres psql
 ```
 
-See [`package.json`](package.json) for more about what's being installed.
-Felt tries to minimize external dependencies within reason -
-if you see avoidable bloat please help us fix it!
+```
+postgres=# \password
+<enter your password>
+```
 
-4. Run the dev server!
+Add that password to `.env` at the root of your project.
 
 ```bash
-npm run ts # gogo typescript
-npm run tw # open another shell
-npm run dev
+DB_NAME=felt_dev
+DB_USER=postgres
+DB_PASS=<your password> # <-- replace with your password
+```
+
+Create the database:
+
+```bash
+$ sudo -u postgres createdb felt_dev # same as DB_NAME
+```
+
+Note that you'll have to add additional config to this file
+before [deploying to a production server](../deploy).
+
+**5. Run the dev server!**
+
+```bash
+$ npm run ts # for typescript
+$ npm run tw # open another shell for tailwind
+$ npm run dev # open a third shell for the dev server
 ```
 
 > TODO wrap these into a single command
 
 Now open your browser to `localhost:3000` or whatever it says.
 
-All done! You should now be running Felt on your local machine for development.
-To deploy to a real life server, see the deployment instructions
-at [`src/project/deploy`](../deploy).
+All done! Felt should now be running on your local machine for development.
+To deploy to a real life server, see [our deployment instructions](../deploy).

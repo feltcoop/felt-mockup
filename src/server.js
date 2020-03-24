@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
@@ -5,9 +6,11 @@ import * as sapper from '@sapper/server';
 import fs from 'fs-extra';
 import fp from 'path';
 import bodyParser from 'body-parser';
+import pgPromise from 'pg-promise';
 
 import { isEmail, normalizeEmail } from './app/email/utils.js';
 
+dotenv.config();
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
@@ -15,6 +18,36 @@ const dev = NODE_ENV === 'development';
 const DATA_DIR = fp.resolve(dev ? '__sapper__/data' : '../data');
 fs.ensureDirSync(DATA_DIR);
 const EMAILS_FILE_PATH = fp.join(DATA_DIR, 'emails.txt');
+
+// TODO this is temporary code that verifies the db is working
+const testDb = () => {
+	const pgp = pgPromise();
+	const db = pgp({
+		host: process.env.DB_HOST,
+		port: process.env.DB_PORT,
+		database: process.env.DB_NAME,
+		user: process.env.DB_USER,
+		password: process.env.DB_PASS,
+	});
+	return db
+		.one('INSERT INTO accounts(email) VALUES($1) RETURNING id', [
+			'foo@email.com',
+		])
+		.then(data => {
+			console.log('db inserted', data);
+		})
+		.then(() => {
+			return db.any('SELECT * FROM accounts WHERE email = $1', [
+				'foo@email.com',
+			]);
+		})
+		.then(data => {
+			console.log('db selected', data);
+		});
+};
+testDb().catch(error => {
+	console.log('db error', error);
+});
 
 polka()
 	.use(compression({ threshold: 0 }), sirv('static', { dev }))
