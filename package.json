@@ -26,6 +26,7 @@
     "dotenv": "^8.2.0",
     "kleur": "^3.0.3",
     "minimist": "^1.2.5",
+    "pg-promise": "^10.4.4",
     "polka": "next",
     "sirv": "^0.4.0"
   },
