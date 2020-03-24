@@ -15,13 +15,13 @@ and improve our communication.
 - learn [about Felt](https://felt.dev/about)
 - community at [Felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
 
-## docs
+## Docs
 
 - [project](src/project)
-  - [setup](src/project/setup)
-  - [deploy](src/project/deploy)
+  - [setup](src/project/setup) - get started developing Felt
+  - [deploy](src/project/deploy) - run Felt in production
 
-## credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
+## Credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
 
 made by
 [all these people](https://github.com/feltcoop/felt/graphs/contributors)
@@ -41,7 +41,7 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 [`github`](https://github.com) . [`git`](https://git-scm.com/)
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
-## license
+## License
 
 [ISC](license)
 <sub>permissive <3 [learn more at Wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub>
