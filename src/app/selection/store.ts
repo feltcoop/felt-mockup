@@ -1,12 +1,10 @@
-import { Entity } from '../../routes/_data.js';
-
 import { writable } from 'svelte/store';
+
+import { Entity } from '../../routes/_data.js';
 
 export type SelectionStoreState = null | Entity | Entity[];
 
-export const createSelectionStore = <T extends SelectionStoreState>(
-	initialValue: T,
-) => {
+export const createSelectionStore = (initialValue: SelectionStoreState) => {
 	const { subscribe, set, update } = writable(initialValue);
 
 	return {
@@ -21,16 +19,16 @@ export const createSelectionStore = <T extends SelectionStoreState>(
 				return $selection.id === id;
 			}
 		},
-		select: (ent: T) => {
+		select: (ent: SelectionStoreState) => {
 			set(ent);
 		},
-		add: (ents: T) => {
-			update((($value: T): Entity[] => {
+		add: (ents: SelectionStoreState) => {
+			update($value => {
 				return [
 					...(Array.isArray($value) ? $value : $value ? [$value] : []),
 					...(Array.isArray(ents) ? ents : ents ? [ents] : []),
 				];
-			}) as any); // TODO
+			});
 		},
 	};
 };
