@@ -24,7 +24,7 @@ const testDb = () => {
 	const pgp = pgPromise();
 	const db = pgp({
 		host: process.env.DB_HOST,
-		port: process.env.DB_PORT,
+		port: Number(process.env.DB_PORT),
 		database: process.env.DB_NAME,
 		user: process.env.DB_USER,
 		password: process.env.DB_PASS,
@@ -52,12 +52,12 @@ testDb().catch(error => {
 polka()
 	.use(compression({ threshold: 0 }), sirv('static', { dev }))
 	.use(bodyParser.json())
-	.post('/mailing-list', (req, res, next) => {
+	.post('/mailing-list', (req: any, res: any, next: Function) => {
 		console.log('POST /mailing-list', req.body);
 		const { email } = req.body;
 		if (!isEmail(email)) {
 			console.log('invalid email');
-			const err = new Error('Invalid email address');
+			const err: any = new Error('Invalid email address');
 			err.code = 400;
 			next(err);
 			return;
@@ -66,11 +66,11 @@ polka()
 		res.end('success!');
 	})
 	.use(sapper.middleware())
-	.listen(PORT, err => {
+	.listen(PORT, (err: any) => {
 		if (err) console.log('error', err);
 	});
 
-const addEmail = email => {
+const addEmail = (email: string): void => {
 	console.log('add email', email);
 	initEmailsFile();
 	const line = JSON.stringify({ email, time: Date.now() });
@@ -79,7 +79,7 @@ const addEmail = email => {
 	fs.writeFileSync(EMAILS_FILE_PATH, newFileText, 'utf8');
 };
 
-const initEmailsFile = () => {
+const initEmailsFile = (): void => {
 	if (fs.existsSync(EMAILS_FILE_PATH)) return;
 	fs.writeFileSync(EMAILS_FILE_PATH, '');
 };
