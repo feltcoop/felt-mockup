@@ -1,4 +1,11 @@
-import { timestamp, files, shell, routes } from '@sapper/service-worker';
+import { timestamp, files, shell } from '@sapper/service-worker';
+// routes was imported
+
+// TODO types
+// We could get types in here by adding
+// "webworker" to the tsconfig.json "lib" array,
+// but that makes them available everywhere.
+// We probablty want to use TypeScript's project compilation strategy to fix.
 
 const ASSETS = `cache${timestamp}`;
 
@@ -7,7 +14,9 @@ const ASSETS = `cache${timestamp}`;
 const to_cache = shell.concat(files);
 const cached = new Set(to_cache);
 
-self.addEventListener('install', event => {
+declare const self: any;
+
+self.addEventListener('install', (event: any) => {
 	event.waitUntil(
 		caches
 			.open(ASSETS)
@@ -18,7 +27,7 @@ self.addEventListener('install', event => {
 	);
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', (event: any) => {
 	event.waitUntil(
 		caches.keys().then(async keys => {
 			// delete old caches
@@ -31,7 +40,7 @@ self.addEventListener('activate', event => {
 	);
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event: any) => {
 	if (event.request.method !== 'GET' || event.request.headers.has('range'))
 		return;
 
