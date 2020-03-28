@@ -21,7 +21,7 @@ For instructions visit [git-scm.com](https://git-scm.com/).
 You can use any preferred method to [install Node](https://nodejs.org).
 We recommend [fnm](https://github.com/Schniz/fnm):
 
-Using `fnm use` in the root of the project will tell you what version to install.
+Running `fnm use` in the root of the project will tell you what version to install.
 
 ```bash
 $ fnm install v12
