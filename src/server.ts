@@ -8,7 +8,7 @@ import fp from 'path';
 import bodyParser from 'body-parser';
 import pgPromise from 'pg-promise';
 
-import { isEmail, normalizeEmail } from './app/email/utils.js';
+import { isEmail, normalizeEmail } from './client/email/utils.js';
 
 dotenv.config();
 const { PORT, NODE_ENV } = process.env;

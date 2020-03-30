@@ -11,8 +11,8 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { elasticOut, bounceOut } from 'svelte/easing';
-	import Content from '../../app/ui/Content.svelte';
-	import Blog from '../../app/blog/Blog.svelte';
+	import Content from '../../client/ui/Content.svelte';
+	import Blog from '../../client/blog/Blog.svelte';
 
 	export let posts;
 

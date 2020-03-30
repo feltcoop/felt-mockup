@@ -1,7 +1,7 @@
 <script>
-	import SecondaryNav from '../../app/ui/SecondaryNav.svelte';
-	import { useWorld } from '../../app/world/context.js';
-	import { provideSpace } from '../../app/space/context.js';
+	import SecondaryNav from '../../client/ui/SecondaryNav.svelte';
+	import { useWorld } from '../../client/world/context.js';
+	import { provideSpace } from '../../client/space/context.js';
 
 	export let segment;
 

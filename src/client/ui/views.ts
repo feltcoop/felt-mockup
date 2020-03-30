@@ -5,8 +5,8 @@ import EventsView from '../events/EventsView.svelte';
 import EmojisView from '../emoji/EmojisView.svelte';
 
 // TODO this has circular dependencies
-// Circular dependency: src/app/forum/ForumReply.svelte -> src/app/forum/ForumReplies.svelte -> src/app/forum/ForumReply.svelte
-// Circular dependency: src/app/ui/View.svelte -> src/app/ui/views.js -> src/app/ui/BoxView.svelte -> src/app/ui/View.svelte
+// Circular dependency: src/client/forum/ForumReply.svelte -> src/client/forum/ForumReplies.svelte -> src/client/forum/ForumReply.svelte
+// Circular dependency: src/client/ui/View.svelte -> src/client/ui/views.js -> src/client/ui/BoxView.svelte -> src/client/ui/View.svelte
 
 // TODO this is temporarily hardcoded - should be pluginable
 // are we doing to want an async api for dynamic imports?
