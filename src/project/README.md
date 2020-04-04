@@ -17,7 +17,7 @@ In Felt, we want source code and configuration to be universally available
 so they can be used anywhere that's appropriate,
 maximizing code reuse and flexibility
 while benefitting from standardized tooling.
-To achieve this, we draw no unncessary distinctions between
+To achieve this, we draw no unnecessary distinctions between
 project-level and source-level concerns.
 
 In the future, this design will help us leverage powerful and interesting things
