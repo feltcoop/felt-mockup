@@ -63,10 +63,11 @@
     "useTabs": true,
     "singleQuote": true,
     "trailingComma": "all",
+    "bracketSpacing": false,
     "svelteSortOrder": "scripts-markup-styles",
     "overrides": [
       {
-        "files": "*.json",
+        "files": "*.{json,md}",
         "options": {
           "useTabs": false
         }
