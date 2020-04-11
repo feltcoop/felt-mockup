@@ -201,8 +201,8 @@ const createLocalDeploymentCommand = (): string => {
 		`cd ${deployPaths.remoteTempDir}`,
 		`cp ${paths.root}/package.json ${deployPaths.remoteTempDir}`,
 		`cp ${paths.root}/package-lock.json ${deployPaths.remoteTempDir}`,
-		`cp ${filePath.relative(paths.root, paths.buildDist)} ${deployPaths.remoteTempDir}`,
-		`cp ${filePath.relative(paths.root, paths.static)} ${deployPaths.remoteTempDir}`,
+		`cp ${paths.root}/${paths.buildDist} ${deployPaths.remoteTempDir}`,
+		`cp ${paths.root}/${paths.static} ${deployPaths.remoteTempDir}`,
 		'npm install --production',
 
 		`pm2 stop ${DEPLOY_NODE_PROCESS_NAME}`,
