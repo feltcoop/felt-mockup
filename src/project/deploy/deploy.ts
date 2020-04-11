@@ -181,13 +181,6 @@ const createLocalDeploymentCommand = (): string => {
 	// from https://stackoverflow.com/questions/821396/aborting-a-shell-script-if-any-command-returns-a-non-zero-value
 	const setupShell = `set -eu`;
 
-	const deployContents = [
-		'package.json',
-		'package-lock.json',
-		filePath.relative(paths.root, paths.buildDist),
-		filePath.relative(paths.root, paths.static),
-	];
-
 	const setupServer = [
 		setupShell,
 
