@@ -20,6 +20,10 @@ export DEPLOY_SERVER_USE=www-data
 #Step 3: set up https
 #????
 
+#Step 4: set up http2
+#????
+
+#Step 5: set up Nginx config
 #TODO parameriatize script with domain name (or make that seperate script/config)
 pwd=`pwd`
 
