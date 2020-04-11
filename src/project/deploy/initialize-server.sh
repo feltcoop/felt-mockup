@@ -15,6 +15,7 @@ sudo chmod g+s /var/www
 sudo mkdir /var/www/felt.dev
 sudo chown $USER /var/www/felt.dev
 
+##TODO exports are not sticking
 export DEPLOY_SERVER_DIR=/var/www/felt.dev
 export DEPLOY_NODE_PROCESS_NAME=/var/www/felt.dev/pm2-app.json
 export SERVER_DEPLOY=true
