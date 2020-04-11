@@ -212,7 +212,7 @@ const createLocalDeploymentCommand = (): string => {
 	].join('\n');
 
 	const deploymentCommand = [
-		`'${setupServer}'`,
+		`${setupServer}`,
 	].join('\n');
 
 	return deploymentCommand;
