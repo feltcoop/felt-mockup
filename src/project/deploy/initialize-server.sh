@@ -17,7 +17,7 @@ sudo chown $USER /var/www/felt.dev
 
 export DEPLOY_SERVER_DIR=/var/www/felt.dev
 export DEPLOY_NODE_PROCESS_NAME=/var/www/felt.dev/pm2-app.json
-export SERVER_DEPLOY
+export SERVER_DEPLOY=true
 
 #Step 3: set up https
 #????
@@ -38,8 +38,13 @@ ln -sf ${pwd}/src/project/deploy/pm2-app.json /var/www/felt.dev/pm2-app.json
 # manage Node via fnm - https://github.com/Schniz/fnm
 sudo apt install -y unzip # fnm dependency
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+
+###seems to be an issue here where fnm isn't sourcing onto the cli properly
 source /root/.bashrc
 fnm install v12.16 && fnm use v12.16
+# install dependencies for build
+npm i
+
 # install pm2 to manage the Node server process - https://github.com/Unitech/pm2
 npm i -g pm2
 
