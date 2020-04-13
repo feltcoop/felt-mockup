@@ -41,7 +41,7 @@ TODO: (replacing `felt.dev` in both the config file and path automatically)
 
 There are two ways to build and deploy the server. Either locally or from the machine itself.
 
-To build & deploy from your local machine, follow the <setup instructs TODO link goes here> then 
+To build & deploy from your local machine, follow the [setup](src/project/setup) instructions then:
 
 copy src/project/deploy/pm2-app.json to /var/www/felt.dev
 run npm run build to create the build
