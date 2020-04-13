@@ -43,18 +43,8 @@ curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
 ###seems to be an issue here where fnm isn't sourcing onto the cli properly
 source /root/.bashrc
 fnm install v12.16 && fnm use v12.16
-# install dependencies for build
-npm i
 
 # install pm2 to manage the Node server process - https://github.com/Unitech/pm2
 npm i -g pm2
 
-#Step 7: Start the server for the first time
-npm run build
-npm run deploy
-
-pm2 start /var/www/felt.dev/pm2-app.json
-pm2 ls
-pm2 startup
-pm2 save
 
