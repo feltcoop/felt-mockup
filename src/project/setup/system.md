@@ -24,14 +24,15 @@ We recommend [fnm](https://github.com/Schniz/fnm):
 Running `fnm use` in the root of the project will tell you what version to install.
 
 ```bash
-$ fnm install v12
-$ fnm use v12
+$ fnm install v14.0
+$ fnm use v14.0
+$ fnm default v14.0
 ```
 
 You should now have both Node and npm installed.
 
 ```bash
-$ node --version # => v12...
+$ node --version # => v14.0...
 $ npm --version # => 6...
 ```
 
