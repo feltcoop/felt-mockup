@@ -5,6 +5,8 @@ sudo apt update
 
 sudo apt -y install nginx
 
+sudo ufw allow 'Nginx HTTPS'
+
 sudo addgroup sftp-users
 sudo adduser $USER sftp-users
 sudo adduser www-data sftp-users
@@ -30,7 +32,11 @@ export SERVER_DEPLOY=true>>~/.bashrc
 pwd=`pwd`
 
 mkdir /etc/nginx/sites-available/felt.dev
-ln -sf ${pwd}/src/project/deploy/nginx_server_config.conf /etc/nginx/sites-available/felt.dev/nginx_server_config.conf
+ln -sf ${pwd}/src/project/deploy/nginx_server_config.conf /etc/nginx/sites-available/felt.dev
+
+# restart service to pick up new config
+sudo nginx -t
+sudo systemctl restart nginx
 
 ln -sf ${pwd}/src/project/deploy/pm2-app.json /var/www/felt.dev/pm2-app.json
 
