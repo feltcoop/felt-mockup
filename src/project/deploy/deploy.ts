@@ -8,14 +8,15 @@ const {
 	DEPLOY_SERVER_DIR,
 	DEPLOY_DRY_RUN,
 	DEPLOY_NODE_PROCESS_NAME,
+	SERVER_DEPLOY,
 } = process.env;
 if (NODE_ENV !== 'production') {
 	throw Error(`Expected NODE_ENV to be 'production', not '${NODE_ENV}'`);
 }
-if (!DEPLOY_SERVER_USER) {
+if (!DEPLOY_SERVER_USER && !SERVER_DEPLOY) {
 	throw Error('DEPLOY_SERVER_USER env var is required for deployment');
 }
-if (!DEPLOY_SERVER_IP) {
+if (!DEPLOY_SERVER_IP && !SERVER_DEPLOY) {
 	throw Error('DEPLOY_SERVER_IP env var is required for deployment');
 }
 if (!DEPLOY_SERVER_DIR) {
@@ -25,8 +26,8 @@ if (!DEPLOY_NODE_PROCESS_NAME) {
 	throw Error('DEPLOY_NODE_PROCESS_NAME env var is required for deployment');
 }
 
-import * as fs from 'fs';
-import * as fp from 'path';
+import * as fileSystem from 'fs';
+import * as filePath from 'path';
 import { exec } from 'child_process';
 import kleur from 'kleur';
 
@@ -36,13 +37,13 @@ const { magenta, cyan, yellow, green } = kleur;
 const root = process.cwd();
 const paths = {
 	root,
-	static: fp.join(root, 'static'),
-	build: fp.join(root, '__sapper__'),
-	buildDist: fp.join(root, '__sapper__/build'),
+	static: filePath.join(root, 'static'),
+	build: filePath.join(root, '__sapper__'),
+	buildDist: filePath.join(root, '__sapper__/build'),
 };
 
 // ensure the build is ready
-if (!fs.existsSync(paths.buildDist)) {
+if (!fileSystem.existsSync(paths.buildDist)) {
 	throw Error(
 		`Build directory does not exist: ${paths.buildDist} -- run 'npm run build' and try again`,
 	);
@@ -61,7 +62,12 @@ directly deployed without special handling.
 
 */
 const deploy = async (): Promise<void> => {
-	const command = createDeploymentCommand();
+	var command: string;
+	if (SERVER_DEPLOY) {
+		command = createLocalDeploymentCommand();
+	} else {
+		command = createDeploymentCommand();
+	}
 	info(magenta(`deployment command`), cyan(command));
 
 	if (DEPLOY_DRY_RUN) {
@@ -99,8 +105,8 @@ Returns a Bash/Dash script string that performs the deployment.
 
 */
 const createDeploymentCommand = (): string => {
-	const p = createDeploymentPaths();
-	info(magenta('deployment paths'), p);
+	const deployPaths = createDeploymentPaths();
+	info(magenta('deployment paths'), deployPaths);
 
 	// Configure shell behavior.
 	// -e - exit the script if any command returns a nonzero exit code
@@ -111,28 +117,28 @@ const createDeploymentCommand = (): string => {
 	const tarballContents = [
 		'package.json',
 		'package-lock.json',
-		fp.relative(paths.root, paths.buildDist),
-		fp.relative(paths.root, paths.static),
+		filePath.relative(paths.root, paths.buildDist),
+		filePath.relative(paths.root, paths.static),
 	];
-	const createTarball = `tar -czf ${p.localTarball} -C ${
+	const createTarball = `tar -czf ${deployPaths.localTarball} -C ${
 		paths.root
-	} ${tarballContents.join(' ')}`;
+		} ${tarballContents.join(' ')}`;
 
 	const serverHost = `${DEPLOY_SERVER_USER}@${DEPLOY_SERVER_IP}`;
 
 	const scpTarball = `scp ${
 		DEPLOY_SERVER_SSH_PORT ? `-P ${DEPLOY_SERVER_SSH_PORT}` : ''
-	} -p ${p.localTarball} ${serverHost}:${p.remoteRootDir}`;
+		} -p ${deployPaths.localTarball} ${serverHost}:${deployPaths.remoteRootDir}`;
 
 	const ssh = `ssh -t ${serverHost}${
 		DEPLOY_SERVER_SSH_PORT ? ` -p ${DEPLOY_SERVER_SSH_PORT}` : ''
-	}`;
+		}`;
 
 	const setupServer = [
 		setupShell,
 
 		// Change to the app's root directory to fail early if it doesn't exist.
-		`cd ${p.remoteRootDir}`,
+		`cd ${deployPaths.remoteRootDir}`,
 
 		// The non-interactive `ssh` does not load `.bashrc` and
 		// we need both `npm` and the Node module `pm2` to deploy,
@@ -143,15 +149,15 @@ const createDeploymentCommand = (): string => {
 		'export PATH=~/.fnm:$PATH',
 		'eval "`fnm env --multi`"',
 
-		`rm -rf ${p.remoteTempDir}`,
-		`mkdir -p ${p.remoteTempDir}`,
-		`cd ${p.remoteTempDir}`,
-		`tar -xzf ${p.remoteTarball}`,
+		`rm -rf ${deployPaths.remoteTempDir}`,
+		`mkdir -p ${deployPaths.remoteTempDir}`,
+		`cd ${deployPaths.remoteTempDir}`,
+		`tar -xzf ${deployPaths.remoteTarball}`,
 		'npm install --production',
 
 		`pm2 stop ${DEPLOY_NODE_PROCESS_NAME}`,
-		`rm -rf ${p.remoteDistDir}`,
-		`mv ${p.remoteTempDir} ${p.remoteDistDir}`,
+		`rm -rf ${deployPaths.remoteDistDir}`,
+		`mv ${deployPaths.remoteTempDir} ${deployPaths.remoteDistDir}`,
 		`pm2 restart ${DEPLOY_NODE_PROCESS_NAME}`,
 	].join('\n');
 
@@ -164,6 +170,53 @@ const createDeploymentCommand = (): string => {
 
 	return deploymentCommand;
 };
+
+const createLocalDeploymentCommand = (): string => {
+	const deployPaths = createDeploymentPaths();
+	info(magenta('deployment paths'), deployPaths);
+
+	// Configure shell behavior.
+	// -e - exit the script if any command returns a nonzero exit code
+	// -u - throw an error if nonexistent variables are accessed
+	// from https://stackoverflow.com/questions/821396/aborting-a-shell-script-if-any-command-returns-a-non-zero-value
+	const setupShell = `set -eu`;
+
+	const setupServer = [
+		setupShell,
+
+		// Change to the app's root directory to fail early if it doesn't exist.
+		`cd ${deployPaths.remoteRootDir}`,
+
+		// The non-interactive `ssh` does not load `.bashrc` and
+		// we need both `npm` and the Node module `pm2` to deploy,
+		// so we load fnm manually so the script can acccess them.
+		// https://github.com/Schniz/fnm
+		// TODO could put this setup in `.profile` and source it with '. ~/.profile'
+		// but we'd need to automate adding these same lines to `.profile`.
+		'export PATH=~/.fnm:$PATH',
+		'eval "`fnm env --multi`"',
+
+		`rm -rf ${deployPaths.remoteTempDir}`,
+		`mkdir -p ${deployPaths.remoteTempDir}`,
+		`cd ${deployPaths.remoteTempDir}`,
+		`cp ${paths.root}/package.json ${deployPaths.remoteTempDir}`,
+		`cp ${paths.root}/package-lock.json ${deployPaths.remoteTempDir}`,
+		`cp -r ${paths.build} ${deployPaths.remoteTempDir}`,
+		`cp -r ${paths.static} ${deployPaths.remoteTempDir}`,
+		'npm install --production',
+
+		`pm2 stop ${DEPLOY_NODE_PROCESS_NAME}`,
+		`rm -rf ${deployPaths.remoteDistDir}`,
+		`mv ${deployPaths.remoteTempDir} ${deployPaths.remoteDistDir}`,
+		`pm2 restart ${DEPLOY_NODE_PROCESS_NAME}`,
+	].join('\n');
+
+	const deploymentCommand = [
+		`${setupServer}`,
+	].join('\n');
+
+	return deploymentCommand;
+}
 
 interface DeploymentPaths {
 	tarFileName: string;
@@ -179,11 +232,11 @@ const createDeploymentPaths = (): DeploymentPaths => {
 	const remoteRootDir = DEPLOY_SERVER_DIR;
 	return {
 		tarFileName,
-		localTarball: fp.join(paths.build, tarFileName),
+		localTarball: filePath.join(paths.build, tarFileName),
 		remoteRootDir,
-		remoteTarball: fp.join(remoteRootDir, tarFileName),
-		remoteDistDir: fp.join(remoteRootDir, 'dist'),
-		remoteTempDir: fp.join(remoteRootDir, 'temp'),
+		remoteTarball: filePath.join(remoteRootDir, tarFileName),
+		remoteDistDir: filePath.join(remoteRootDir, 'dist'),
+		remoteTempDir: filePath.join(remoteRootDir, 'temp'),
 	};
 };
 
