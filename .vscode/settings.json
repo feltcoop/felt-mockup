@@ -9,15 +9,13 @@
     "**/.git": true,
     "**/node_modules/**": true,
     "__sapper__": true,
-    "src/routes/_data.js": true,
-    "static/index.css": true
+    "src/routes/_data.js": true
   },
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
     "__sapper__": true,
     "src/routes/_data.js": true,
-    "static/index.css": true,
     "package-lock.json": true
   }
 }

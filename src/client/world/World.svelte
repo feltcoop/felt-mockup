@@ -45,12 +45,12 @@
 	</div>
 </div>
 
-<style lang="postcss">
-	.active-world-link {
+<style>
+	/* .active-world-link {
 		@apply text-purple-400 !important;
-	}
+	} */
 	.active-world-link:active {
 		top: -2px;
-		@apply border-purple-300;
+		/* @apply border-purple-300; */
 	}
 </style>

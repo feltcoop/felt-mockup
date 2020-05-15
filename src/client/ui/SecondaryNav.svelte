@@ -27,7 +27,7 @@
 	</ul>
 </nav>
 
-<style lang="postcss">
+<style>
 	nav {
 		height: 100%;
 	}

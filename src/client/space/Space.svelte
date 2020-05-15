@@ -71,19 +71,19 @@
 	</div>
 </div>
 
-<style lang="postcss">
-	.active-space-link {
+<style>
+	/* .active-space-link {
 		@apply text-purple-400 !important;
-	}
+	} */
 	a {
 		position: relative;
 	}
 	a:active {
 		top: 2px;
-		@apply border-green-300;
+		/* @apply border-green-300; */
 	}
 	.active-space-link:active {
 		top: -2px;
-		@apply border-purple-300;
+		/* @apply border-purple-300; */
 	}
 </style>

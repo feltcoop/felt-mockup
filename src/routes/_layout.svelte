@@ -28,19 +28,19 @@
 	<slot />
 </main>
 
-<style lang="postcss">
-	:global(hr) {
+<style>
+	/* :global(hr) {
 		@apply border-dashed border-t-2 border-purple-200;
 	}
 	:global(textarea) {
 		@apply px-2 py-1 rounded-bl-lg rounded-tr-lg;
-	}
+	} */
 	:global(img) {
 		/* do not show alt text by default */
 		color: transparent;
 	}
-	:global(a) {
-		/* TODO doing this because of underlining */
+	/* :global(a) {
+		TODO doing this because of underlining
 		@apply text-green-700;
-	}
+	} */
 </style>

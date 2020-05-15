@@ -43,7 +43,7 @@
 {/if}
 
 <style>
-	.syntax {
+	/* .syntax {
 		@apply text-gray-500;
-	}
+	} */
 </style>

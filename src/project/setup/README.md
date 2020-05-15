@@ -70,8 +70,7 @@ before [deploying to a production server](../deploy).
 
 ```bash
 $ npm run ts # for typescript
-$ npm run tw # open another shell for tailwind
-$ npm run dev # open a third shell for the dev server
+$ npm run dev # open another shell for the dev server
 ```
 
 > TODO wrap these into a single command

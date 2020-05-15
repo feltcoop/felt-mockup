@@ -15,16 +15,16 @@
 	<slot />
 </div>
 
-<style lang="postcss">
+<style>
 	.subheading {
 		cursor: default;
 	}
 	.subheading:active {
 		top: 2px;
-		@apply border-green-300;
+		/* @apply border-green-300; */
 	}
 	.subheading.selected:active {
-		@apply border-purple-300;
+		/* @apply border-purple-300; */
 		top: -2px;
 	}
 </style>

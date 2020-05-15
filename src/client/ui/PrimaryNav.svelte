@@ -108,7 +108,7 @@
 	</ul>
 </nav>
 
-<style lang="postcss">
+<style>
 	nav {
 		height: 100%;
 	}
@@ -133,11 +133,11 @@
 		top: -2px;
 	}
 	.logo a.selected {
-		@apply text-purple-700;
+		/* @apply text-purple-700; */
 		cursor: default;
-		@apply bg-purple-100;
+		/* @apply bg-purple-100; */
 	}
-	.logo a.selected {
+	/* .logo a.selected {
 		@apply bg-transparent;
 	}
 	.logo a:hover .felt-icon {
@@ -148,7 +148,7 @@
 	}
 	.logo a.selected .felt-icon {
 		@apply border-primary;
-	}
+	} */
 	.felt-icon {
 		width: 64px;
 		height: 64px;
@@ -156,13 +156,13 @@
 		border: 2px dashed transparent;
 		max-width: none;
 		padding: 10px;
-		@apply bg-green-100 border-green-200;
+		/* @apply bg-green-100 border-green-200; */
 	}
 	.item-icon {
 		width: 24px;
 		height: 24px;
-		@apply mr-3;
-		@apply border-purple-200;
+		/* @apply mr-3;
+		@apply border-purple-200; */
 		border-width: 3px;
 		border-style: dashed;
 	}
