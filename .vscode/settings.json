@@ -7,15 +7,15 @@
   },
   "files.watcherExclude": {
     "**/.git": true,
-    "**/node_modules/**": true,
-    "__sapper__": true,
-    "src/routes/_data.js": true
+    "**/node_modules": true,
+    "**/__sapper__": true,
+    "**/build": true
   },
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
     "__sapper__": true,
-    "src/routes/_data.js": true,
+    "build": true,
     "package-lock.json": true
   }
 }

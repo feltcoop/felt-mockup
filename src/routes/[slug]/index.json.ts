@@ -7,7 +7,7 @@ worlds.forEach(world => {
 	worldsBySlug.set(world.slug, JSON.stringify(world));
 });
 
-export function get(req, res, next) {
+export function get(req: any, res: any) { // TODO types
 	// the `slug` parameter is available because
 	// this file is called [slug].json.js
 	const { slug } = req.params;
