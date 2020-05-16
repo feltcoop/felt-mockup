@@ -11,8 +11,8 @@ import {printPath} from '@feltcoop/gro/dist/utils/print.js';
 /*
 
 This task is part of Felt's work-in-progress build process.
-We currently defer compilation of Svelte, TypeScript, and Tailwind
-to existing build processes using Sapper, `tsc` and `tailwind`, respectively.
+We currently defer compilation of Svelte and TypeScript
+to existing build processes using Rollup and `tsc`.
 
 Eventually, this task will be the sole entrypoint
 for building Felt in development.
