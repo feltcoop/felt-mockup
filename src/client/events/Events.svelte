@@ -2,14 +2,12 @@
 	import EventsList from './EventsList.svelte';
 	import EventsListItem from './EventsListItem.svelte';
 	import EventInput from './EventInput.svelte';
-	import { id } from '../../routes/_data.js';
-	import { useSession } from '../session/context.js';
+	import {id} from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
 
 	const session = useSession();
 
 	export let events;
-	export let classes = '';
-	export let style = '';
 
 	let titleValue = '';
 	let contentValue = '';
@@ -55,7 +53,7 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col {classes}" {style}>
+<div>
 	<EventInput
 		bind:value={titleValue}
 		bind:el={titleEl}
@@ -66,13 +64,11 @@
 		bind:el={contentEl}
 		submit={submitContent}
 		placeholder="event info • • •" />
-	<div
-		class="overflow-y-scroll flex flex-col flex-1 border-4 border-purple-200
-		rounded-bl-lg rounded-tr-lg">
+	<div>
 		{#if hasDraft}
-			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
+			<div class="draft">
 				<EventsListItem
-					event={{ author: $session.person.slug, title: titleValue, content: contentValue }} />
+					event={{author: $session.person.slug, title: titleValue, content: contentValue}} />
 			</div>
 		{/if}
 		{#if events && events.length}
@@ -80,3 +76,9 @@
 		{:else}• • •{/if}
 	</div>
 </div>
+
+<style>
+	.draft {
+		border: 3px solid purple;
+	}
+</style>

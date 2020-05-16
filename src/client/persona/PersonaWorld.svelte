@@ -1,5 +1,4 @@
 <script>
-	import EntityExplorer from '../ui/EntityExplorer.svelte';
 	import InboxList from '../inbox/InboxList.svelte';
 	import NotesList from '../notes/NotesList.svelte';
 	import ActivitiesList from '../activity/ActivitiesList.svelte';
@@ -18,11 +17,7 @@
 <Content>
 	<PlaceholderInfo>
 		this is one of your personas,
-		<WorldName
-			classes="text-4xl"
-			style="font-weight: 100;"
-			name={$world.slug}
-			isMention={true} />
+		<WorldName name={$world.slug} isMention={true} />
 	</PlaceholderInfo>
 	<PlaceholderInfo>
 		personas are pseudonyms, names under your control in online spaces

@@ -4,11 +4,11 @@
 	export let note;
 </script>
 
-<div class="mr-4">
+<div>
 	<WorldName name={note.author} />
 </div>
 {#if note.title}
-	<div class="mr-4">{note.title}</div>
+	<div>{note.title}</div>
 {/if}
 <div>
 	{@html note.content}

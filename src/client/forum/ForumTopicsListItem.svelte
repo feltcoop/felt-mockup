@@ -7,8 +7,4 @@
 	export let selection;
 </script>
 
-<!-- TODO currently we just inline everything -->
-
-<div class="my-4">
-	<ForumTopic {topic} {addReply} {selectReply} {selection} />
-</div>
+<ForumTopic {topic} {addReply} {selectReply} {selection} />

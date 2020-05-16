@@ -1,9 +1,8 @@
 <script>
-	import { scale } from 'svelte/transition';
+	import {scale} from 'svelte/transition';
 
-	import { isEmail } from '../email/utils.js';
+	import {isEmail} from '../email/utils.js';
 	import Button from '../ui/Button.svelte';
-	import Content from '../ui/Content.svelte';
 	import WaitingAnimation from '../ui/WaitingAnimation.svelte';
 	import EmailInput from '../email/EmailInput.svelte';
 
@@ -35,8 +34,8 @@
 		try {
 			const res = await fetch('/mailing-list', {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ email }),
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({email}),
 			});
 			if (res.ok) {
 				submitting = false;
@@ -60,10 +59,10 @@
 	};
 </script>
 
-<Content classes="wrapper relative" style="height: 180px;">
+<div class="wrapper">
 	{#if !submittedEmail}
 		<div in:scale class="inner-wrapper">
-			<h2>want more? join our mailing list!</h2>
+			<div>want more? join our mailing list!</div>
 			<div class="input-wrapper">
 				<EmailInput
 					bind:el={inputEl}
@@ -94,11 +93,11 @@
 			</p>
 		</div>
 	{/if}
-</Content>
+</div>
 
 <style>
 	.wrapper {
-		height: 180px; /* hardcoded bc children are absolute pos for transiton */
+		height: 215px; /* hardcoded bc children are absolute pos for transiton */
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -127,32 +126,6 @@
 		align-items: stretch;
 		margin-bottom: 1em;
 	}
-	/* button {
-		border-radius: 3px;
-		border-width: 2px;
-		padding: 10px 16px;
-		border-color: rgb(73, 84, 153);
-		position: relative;
-		background-color: rgba(73, 84, 153, 0.1);
-		box-shadow: 0 -4px 20px 1px rgba(73, 84, 153, 0.1) inset,
-			0 -2px 5px 1px rgba(73, 84, 153, 0.2) inset;
-	}
-	button:hover {
-		background-color: rgba(73, 84, 153, 0.15);
-		box-shadow: 0 -4px 20px 1px rgba(73, 84, 153, 0.2) inset,
-			0 -2px 5px 1px rgba(73, 84, 153, 0.4) inset;
-	}
-	button:active {
-		top: 1px;
-		box-shadow: 0 4px 30px 1px rgba(73, 84, 153, 0.35) inset,
-			0 2px 10px 1px rgba(73, 84, 153, 0.55) inset;
-	}
-	button[disabled] {
-		top: 0;
-		background-color: rgba(203, 208, 233, 0.35);
-		box-shadow: 0 -4px 30px 1px rgba(221, 223, 233, 0.3) inset,
-			0 -1px 10px 1px rgba(220, 222, 230, 0.5) inset;
-	} */
 	p {
 		margin: 0 0 0.5em;
 	}

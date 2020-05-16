@@ -3,7 +3,6 @@
 
 	export let posts;
 	export let addComment;
-	// $: console.log('blog post list', posts);
 </script>
 
 <ul>

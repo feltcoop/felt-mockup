@@ -7,10 +7,10 @@
 	export let addComment;
 </script>
 
-<li class="my-10">
+<li>
 	<BlogPost {post} />
 	{#if post.children}
 		<ForumReplies parent={post} />
 	{/if}
-	<BlogCommentComposer {post}  {addComment} />
+	<BlogCommentComposer {post} {addComment} />
 </li>

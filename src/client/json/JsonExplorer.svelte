@@ -1,27 +1,23 @@
 <script>
-	import { getJsonType } from '../json/index.js';
+	import {getJsonType} from '../json/index.js';
 
 	export let json;
-	export let indentedClasses = 'pl-6';
 
 	$: jsonType = getJsonType(json);
 </script>
 
 {#if jsonType === 'number'}
-	<span class="text-yellow-700">{json}</span>
+	<span class="type-number">{json}</span>
 	<span class="syntax">,</span>
-	<!-- <small class="bg-gray-200 mx-2">number</small> -->
 {:else if jsonType === 'string'}
-	<span class="text-green-700">'{json}'</span>
+	<span class="type-string">'{json}'</span>
 	<span class="syntax">,</span>
-	<!-- <small class="bg-gray-200 mx-2">string</small> -->
 {:else if jsonType === 'boolean'}
-	<span class="text-blue-700">{json}</span>
+	<span class="type-boolean">{json}</span>
 	<span class="syntax">,</span>
-	<!-- <small class="bg-gray-200 mx-2">boolean</small> -->
 {:else if jsonType === 'null'}
+	<span class="type-null">null</span>
 	<span class="syntax">,</span>
-	<span class="syntax">null</span>
 {:else if jsonType === 'array'}
 	<span class="syntax">[</span>
 	{#each json as item}
@@ -31,10 +27,10 @@
 {:else}
 	<span class="syntax">{'{'}</span>
 	{#each Object.keys(json) as key}
-		<div class={indentedClasses}>
+		<div class="indented">
 			<span>
 				{key}
-				<span class="text-gray-500">:</span>
+				<span class="syntax">:</span>
 			</span>
 			<svelte:self json={json[key]} />
 		</div>
@@ -43,7 +39,22 @@
 {/if}
 
 <style>
-	/* .syntax {
-		@apply text-gray-500;
-	} */
+	.syntax {
+		color: gray;
+	}
+	.indented {
+		padding-left: 10px;
+	}
+	.type-number {
+		color: yellow;
+	}
+	.type-string {
+		color: green;
+	}
+	.type-boolean {
+		color: blue;
+	}
+	.type-null {
+		color: gray;
+	}
 </style>

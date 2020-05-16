@@ -12,8 +12,14 @@
 <div>
 	{#each view.children as child}
 		<!-- TODO class should probably be provided by the view data, and wrapper element should probably be removed -->
-		<div class="mb-10">
+		<div class="child">
 			<View view={child} />
 		</div>
 	{/each}
 </div>
+
+<style>
+	.child {
+		margin-bottom: 20px;
+	}
+</style>

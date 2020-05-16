@@ -6,8 +6,7 @@
 	export let value = '';
 	export let el = undefined;
 	export let submit = undefined;
-	export let classes = '';
 	export let placeholder = undefined;
 </script>
 
-<TextInput bind:value bind:el {submit} {classes} {placeholder} />
+<TextInput bind:value bind:el {submit} {placeholder} />

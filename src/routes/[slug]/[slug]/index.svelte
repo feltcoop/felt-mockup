@@ -1,7 +1,7 @@
 <script>
 	import Space from '../../../client/space/Space.svelte';
-	import { useWorld } from '../../../client/world/context.js';
-	import { useSpace } from '../../../client/space/context.js';
+	import {useWorld} from '../../../client/world/context.js';
+	import {useSpace} from '../../../client/space/context.js';
 
 	const world = useWorld();
 	const space = useSpace();
@@ -11,4 +11,4 @@
 	<title>felt / {$world.title} / {$space.title}</title>
 </svelte:head>
 
-<Space {world} {space} classes="h-full" />
+<Space {world} {space} />

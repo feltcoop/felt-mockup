@@ -2,5 +2,10 @@
 	export let message;
 </script>
 
-<!-- TODO error color -->
-<div class="text-red-600">{message}</div>
+<div>{message}</div>
+
+<style>
+	div {
+		color: red;
+	}
+</style>

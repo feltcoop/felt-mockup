@@ -3,17 +3,13 @@
 	import ForumTopicsListItem from './ForumTopicsListItem.svelte';
 	import ForumInput from './ForumInput.svelte';
 	import Button from '../ui/Button.svelte';
-	import { id } from '../../routes/_data.js';
-	import { slugify } from '../url/utils.js';
-	import { useSession } from '../session/context.js';
-	import { useSelection } from '../selection/context.js';
-	import { symbols } from '../ui/symbols.js';
+	import {id} from '../../routes/_data.js';
+	import {slugify} from '../url/utils.js';
+	import {useSession} from '../session/context.js';
+	import {useSelection} from '../selection/context.js';
+	import {symbols} from '../ui/symbols.js';
 
 	export let topics;
-	export let classes = '';
-	export let style = '';
-	export let topicsClasses = '';
-	export let topicsStyle = '';
 
 	const session = useSession();
 	const selection = useSelection();
@@ -96,8 +92,8 @@
 </script>
 
 <!-- TODO how to do height? -->
-<div class="flex flex-col {classes}" {style}>
-	<div class="mb-2">
+<div>
+	<div>
 		{#if showDraft}
 			<Button on:click={toggleDraft}>{symbols.command} stash draft</Button>
 			<Button on:click={submit}>{symbols.publish} publish this draft</Button>
@@ -118,18 +114,23 @@
 			bind:el={contentEl}
 			bind:value={contentValue}
 			placeholder="• • • content!"
-			submit={submitContent}
-			classes="border-t-0" />
+			submit={submitContent} />
 		{#if hasDraft}
-			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg p-2">
+			<div class="draft">
 				<ForumTopicsListItem
-					topic={{ author, slug, title: titleValue, content: contentValue }} />
+					topic={{author, slug, title: titleValue, content: contentValue}} />
 			</div>
 		{/if}
 	{/if}
 	{#if topics && topics.length}
-		<div class="overflow-y-auto p-1 {topicsClasses}" style={topicsStyle}>
+		<div>
 			<ForumTopicsList {topics} {addReply} {selectReply} {selection} />
 		</div>
 	{:else}• • •{/if}
 </div>
+
+<style>
+	.draft {
+		border: 3px solid purple;
+	}
+</style>

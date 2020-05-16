@@ -1,5 +1,4 @@
 <script>
-	import EntityExplorer from '../ui/EntityExplorer.svelte';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 	import View from '../ui/View.svelte';
 

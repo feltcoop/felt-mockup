@@ -4,7 +4,7 @@
 	export let emojis;
 </script>
 
-<div class="flex items-center flex-wrap">
+<div style="display: flex; flex-wrap: wrap; align-items: center;">
 	{#each emojis as emoji}
 		<EmojisListItem {emoji} />
 	{/each}

@@ -3,20 +3,10 @@
 	import ForumReplies from './ForumReplies.svelte';
 
 	export let reply;
-	export let selectReply;
-	export let isSelected;
-	export let classes = '';
-
-	$: selectedClasses = isSelected
-		? 'border-4 border-green-200 rounded-bl-lg rounded-tr-lg'
-		: '';
 </script>
 
-<div
-	class="pl-4 {classes}
-	{selectedClasses}"
-	on:click={selectReply ? () => selectReply(reply) : undefined}>
-	<WorldName name={reply.author} classes="pr-2" />
+<div>
+	<WorldName name={reply.author} />
 	<span>
 		{@html reply.content}
 	</span>

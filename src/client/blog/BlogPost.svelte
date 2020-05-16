@@ -6,9 +6,9 @@
 </script>
 
 <Content>
-	<h1 class="font-hairline">
-		<span class="mr-2">{post.title}</span>
-		<WorldName innerClasses="font-hairline" name={post.author} />
-	</h1>
+	<h2>
+		<a href={`blog/${post.slug}`}>{post.title}</a>
+		<WorldName name={post.author} />
+	</h2>
 	{@html post.content}
 </Content>

@@ -5,7 +5,5 @@
 </script>
 
 {#each notes as note}
-	<div class="flex">
-		<InboxListItem {note} />
-	</div>
+	<InboxListItem {note} />
 {/each}
