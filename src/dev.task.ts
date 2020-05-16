@@ -7,6 +7,7 @@ import {
 import {watchNodeFs, WatcherChange} from '@feltcoop/gro/dist/fs/watchNodeFs.js';
 import {copy, remove} from '@feltcoop/gro/dist/fs/nodeFs.js';
 import {printPath} from '@feltcoop/gro/dist/utils/print.js';
+import {UnreachableError} from '@feltcoop/gro/dist/utils/error.js';
 
 /*
 
@@ -63,6 +64,9 @@ export const task: Task = {
 							await remove(basePathToBuildId(path));
 						}
 						break;
+					}
+					default: {
+						throw new UnreachableError(change);
 					}
 				}
 			},
