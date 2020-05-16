@@ -27,8 +27,9 @@ const isFileIgnoredByCurrentBuild = (path: string): boolean =>
 
 export const task: Task = {
 	description: 'copies build files that the existing build process misses',
-	run: async ({log}): Promise<void> => {
-		const {init} = watchNodeFs({
+	run: async ({log, args}): Promise<void> => {
+		const watch = args.watch === undefined ? true : args.watch; // TODO declare args
+		const {init, dispose} = watchNodeFs({
 			dir: paths.source,
 			onInit: async paths => {
 				log.trace(`init ${paths.size} paths`);
@@ -67,6 +68,10 @@ export const task: Task = {
 			},
 		});
 		await init;
-		log.info('watching...');
+		if (watch) {
+			log.info('watching...');
+		} else {
+			dispose();
+		}
 	},
 };
