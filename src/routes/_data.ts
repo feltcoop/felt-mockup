@@ -1,5 +1,5 @@
-import { symbols } from '../client/ui/symbols.js';
-import { emotionEmoji } from '../client/emoji/emoji.js';
+import {symbols} from '../client/ui/symbols.js';
+import {emotionEmoji} from '../client/emoji/emoji.js';
 
 export type Id = number;
 let idCounter = 0;
@@ -10,9 +10,9 @@ const createMessages = (
 	author1: string = 'rick',
 	author2: string = 'alice',
 ): ChatMessageData[] => [
-	{ type: 'message', id: id(), author: author1, content: 'hi!' },
-	{ type: 'message', id: id(), author: author2, content: 'supp' },
-	{ type: 'message', id: id(), author: author2, content: 'i found a bug' },
+	{type: 'message', id: id(), author: author1, content: 'hi!'},
+	{type: 'message', id: id(), author: author2, content: 'supp'},
+	{type: 'message', id: id(), author: author2, content: 'i found a bug'},
 ];
 const createAnonMessages = (): ChatMessageData[] => [
 	{
@@ -300,7 +300,7 @@ const createPosts = (author: string = 'rick'): BlogPostData[] => [
 				author: 'alice',
 				content: 'comments go here',
 			},
-			{ type: 'reply', id: id(), author: 'bob', content: 'me too' },
+			{type: 'reply', id: id(), author: 'bob', content: 'me too'},
 			{
 				type: 'reply',
 				id: id(),
@@ -323,7 +323,7 @@ const createPosts = (author: string = 'rick'): BlogPostData[] => [
 					},
 				],
 			},
-			{ type: 'reply', id: id(), author: 'alex', content: ':P' },
+			{type: 'reply', id: id(), author: 'alex', content: ':P'},
 		],
 	},
 	{
@@ -342,7 +342,7 @@ const createPosts = (author: string = 'rick'): BlogPostData[] => [
 				author,
 				content: 'wait what where am i?',
 			},
-			{ type: 'reply', id: id(), author: 'chris', content: 'dont ask' },
+			{type: 'reply', id: id(), author: 'chris', content: 'dont ask'},
 		],
 	},
 ];
@@ -355,7 +355,7 @@ const randPosts = (author: string = 'rick'): BlogPostData[] => [
 		slug: '2',
 		author,
 		content: 'Blog post content 2 <small>:O:D</small>',
-		children: [{ type: 'reply', id: id(), author: 'dana', content: '!??' }],
+		children: [{type: 'reply', id: id(), author: 'dana', content: '!??'}],
 	},
 	{
 		type: 'post',
@@ -365,7 +365,7 @@ const randPosts = (author: string = 'rick'): BlogPostData[] => [
 		author: 'alex',
 		content: 'Blog post content 1 <small>:):)</small>',
 		children: [
-			{ type: 'reply', id: id(), author: 'dana', content: 'ohhh' },
+			{type: 'reply', id: id(), author: 'dana', content: 'ohhh'},
 			{
 				type: 'reply',
 				id: id(),
@@ -385,9 +385,9 @@ const people: PersonData[] = [
 		title: 'Rick',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -398,13 +398,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -446,9 +446,9 @@ const people: PersonData[] = [
 		title: 'Alex',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -459,13 +459,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -494,9 +494,9 @@ const people: PersonData[] = [
 		title: 'Sue',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -507,13 +507,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -542,9 +542,9 @@ const people: PersonData[] = [
 		title: 'Alice',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -555,13 +555,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -590,9 +590,9 @@ const people: PersonData[] = [
 		title: 'Bob',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -603,13 +603,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -658,9 +658,9 @@ const people: PersonData[] = [
 		title: 'Chris',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -671,13 +671,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -706,9 +706,9 @@ const people: PersonData[] = [
 		title: 'Dana', // who controls this? allow client renaming?
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -719,13 +719,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -1101,7 +1101,7 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'ChatView',
-						props: { chatSlug: 'hi' }, // TODO bikeshed
+						props: {chatSlug: 'hi'}, // TODO bikeshed
 					},
 				],
 			},
@@ -1156,7 +1156,7 @@ const data: Data = {
 									parent: 1, // TODO this is a nonsense value now that we're randomizing ids
 									author: 'alex',
 									content:
-										'wtf <span class="text-4xl leading-none">r</span> <span class="text-5xl leading-none">U</span> <span class="text-xl">SERIOUS?</span>',
+										'wtf r <span style="font-size: 3em">U</span> SERIOUS?',
 									children: [
 										{
 											type: 'reply',
@@ -1291,17 +1291,12 @@ const data: Data = {
 							author: 'alex',
 							title: 'Who can drink the most parsecs in a millenium?',
 							slug: 'what-should-the-name-of-the-top-level-community-be',
-							content: `
-							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 90px">Han 18%</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 250px">shot b 49%</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 170px">first c 33%</div>
-							</div>`,
+							content: `<div style="color: orange;">(content)</div>`,
 							status: 'open',
 						},
 					],
 				},
-				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
+				{type: 'events', id: id(), title: 'events', slug: 'events', events},
 				createEmojis('mood'),
 				createForum('web'),
 				createChat('net'),
@@ -1356,12 +1351,7 @@ const data: Data = {
 							author: 'rick',
 							title: 'What should the name of the top-level community be?',
 							slug: 'what-should-the-name-of-the-top-level-community-be',
-							content: `
-							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 90px">felt</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 250px">i dunno</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 170px">felt.social</div>
-							</div>`,
+							content: `<div style="color: orange;">(content)</div>`,
 							status: 'open',
 						},
 						{
@@ -1397,8 +1387,8 @@ const data: Data = {
 						},
 					],
 				},
-				{ type: 'chat', id: id(), title: 'heh', slug: 'heh', messages: [] },
-				{ type: 'forum', id: id(), title: 'hah', slug: 'hah', topics: [] },
+				{type: 'chat', id: id(), title: 'heh', slug: 'heh', messages: []},
+				{type: 'forum', id: id(), title: 'hah', slug: 'hah', topics: []},
 			],
 		},
 		{
@@ -1435,7 +1425,7 @@ const data: Data = {
 						},
 					],
 				},
-				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
+				{type: 'events', id: id(), title: 'events', slug: 'events', events},
 				createForum('questions'),
 				createForum('design'),
 				createForum('requests'),
@@ -1475,12 +1465,7 @@ const data: Data = {
 							author: 'alex',
 							title: 'we need topics and replies!',
 							slug: 'we-need-topics-and-replies',
-							content: `
-							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 90px">topics 18%</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 250px">?? 49%</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 170px">replies..? 33%</div>
-							</div>`,
+							content: `<div style="color: orange;">(content)</div>`,
 						},
 					],
 				},
@@ -1508,12 +1493,7 @@ const data: Data = {
 							author: 'rick',
 							title: 'Which software license should we use?',
 							slug: 'which-software-license-should-we-use',
-							content: `
-							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 90px">AGPL 18%</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 250px">ISC 49%</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 170px">I feel disenfranchised 33%</div>
-							</div>`,
+							content: `<div style="color: orange;">(content)</div>`,
 							status: 'done',
 						},
 						{
@@ -1543,9 +1523,9 @@ const data: Data = {
 					title: 'huh',
 					slug: 'huh',
 					messages: [
-						{ type: 'message', id: id(), author: 'rick', content: 'hii' },
-						{ type: 'message', id: id(), author: 'alice', content: 'omggg' },
-						{ type: 'message', id: id(), author: 'bob', content: 'why?' },
+						{type: 'message', id: id(), author: 'rick', content: 'hii'},
+						{type: 'message', id: id(), author: 'alice', content: 'omggg'},
+						{type: 'message', id: id(), author: 'bob', content: 'why?'},
 						{
 							type: 'message',
 							id: id(),
@@ -1609,12 +1589,7 @@ const data: Data = {
 							author: 'alex',
 							title: 'we need topics and replies!',
 							slug: 'we-need-topics-and-replies',
-							content: `
-							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 90px">topics 18%</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 250px">?? 49%</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 170px">replies..? 33%</div>
-							</div>`,
+							content: `<div style="color: orange;">(content)</div>`,
 						},
 					],
 				},
@@ -1642,12 +1617,7 @@ const data: Data = {
 							author: 'rick',
 							title: 'Which software license should we use?',
 							slug: 'which-software-license-should-we-use',
-							content: `
-							<div style="width: 300px;">
-								<div class="border-pink-300 bg-pink-200 text-pink-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 90px">AGPL 18%</div>
-								<div class="border-indigo-300 bg-indigo-200 text-indigo-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 250px">ISC 49%</div>
-								<div class="border-yellow-300 bg-yellow-200 text-yellow-700 text-xl rounded-lg mb-1 pl-1 whitespace-no-wrap border-l-4 border-b-4 border-t-2 border-r-2 border-dashed" style="height: 32px; width: 170px">I feel disenfranchised 33%</div>
-							</div>`,
+							content: `<div style="color: orange;">(content)</div>`,
 							status: 'done',
 						},
 						{
@@ -1706,7 +1676,7 @@ const data: Data = {
 						// TODO maybe click this for more flavor, class="flavor-text"
 						'<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
 				}, // :dolphin:
-				{ type: 'events', id: id(), title: 'raids', slug: 'raids', events },
+				{type: 'events', id: id(), title: 'raids', slug: 'raids', events},
 				{
 					type: 'chat',
 					id: id(),
@@ -1761,13 +1731,13 @@ const data: Data = {
 								type: 'view',
 								id: id(),
 								component: 'ChatView',
-								props: { chatSlug: 'tavern' }, // TODO bikeshed
+								props: {chatSlug: 'tavern'}, // TODO bikeshed
 							}, // TODO slug? we're pointing to a resource - should they be ids?
 							{
 								type: 'view',
 								id: id(),
 								component: 'ForumView',
-								props: { forumSlug: 'library' }, // TODO bikeshed
+								props: {forumSlug: 'library'}, // TODO bikeshed
 							}, // TODO slug? we're pointing to a resource - should they be ids?
 						],
 					},
@@ -1775,13 +1745,13 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'EmojisView',
-						props: { emojisSlug: 'mood' },
+						props: {emojisSlug: 'mood'},
 					}, // TODO slug? we're pointing to a resource - should they be ids?
 					{
 						type: 'view',
 						id: id(),
 						component: 'EventsView',
-						props: { eventsSlug: 'raids' }, // TODO bikeshed
+						props: {eventsSlug: 'raids'}, // TODO bikeshed
 					}, // TODO slug? we're pointing to a resource - should they be ids?
 				],
 			},
@@ -1809,7 +1779,7 @@ const data: Data = {
 							author: 'alice',
 							content: 'what can we help you with?',
 						},
-						{ type: 'message', id: id(), author: 'alex', content: 'im lost' },
+						{type: 'message', id: id(), author: 'alex', content: 'im lost'},
 					],
 				},
 				createForum(),
@@ -1825,7 +1795,7 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'ChatView',
-						props: { chatSlug: 'chat' }, // TODO bikeshed
+						props: {chatSlug: 'chat'}, // TODO bikeshed
 						// props: { chatSlug: './chat' }, // TODO bikeshed
 						// props: { chatSlug: 'help/chat' }, // TODO bikeshed
 					}, // TODO slug? we're pointing to a resource - should they be ids?
@@ -1833,7 +1803,7 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'ForumView',
-						props: { forumSlug: 'forum' }, // TODO bikeshed
+						props: {forumSlug: 'forum'}, // TODO bikeshed
 					}, // TODO slug? we're pointing to a resource - should they be ids?
 				],
 			},

@@ -2,15 +2,12 @@
 	import NotesList from './NotesList.svelte';
 	import NotesInput from './NotesInput.svelte';
 	import NotesListItem from './NotesListItem.svelte';
-	import WorldName from '../world/WorldName.svelte';
-	import { id } from '../../routes/_data.js';
-	import { useSession } from '../session/context.js';
+	import {id} from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
 
 	// TODO should type="inbox" be type="activity"?
 
 	export let notes;
-	export let classes = '';
-	export let style = '';
 
 	const session = useSession();
 
@@ -21,7 +18,7 @@
 		e.stopPropagation();
 		// console.log('submit content', content);
 		notes = [
-			{ type: 'note', author: $session.person.slug, id: id(), content },
+			{type: 'note', author: $session.person.slug, id: id(), content},
 			...notes,
 		];
 		value = '';
@@ -30,16 +27,20 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col h-full {classes}" {style}>
-	<NotesInput bind:value {submit} />
-	{#if value}
-		<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-			<NotesListItem note={{ author: $session.person.slug, content: value }} />
-		</div>
-	{/if}
-	{#if notes && notes.length}
-		<div class="overflow-y-scroll flex flex-col justify-start flex-1">
-			<NotesList {notes} />
-		</div>
-	{:else}• • •{/if}
-</div>
+<NotesInput bind:value {submit} />
+{#if value}
+	<div class="draft">
+		<NotesListItem note={{author: $session.person.slug, content: value}} />
+	</div>
+{/if}
+{#if notes && notes.length}
+	<div>
+		<NotesList {notes} />
+	</div>
+{:else}• • •{/if}
+
+<style>
+	.draft {
+		border: 3px solid purple;
+	}
+</style>

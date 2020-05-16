@@ -29,7 +29,8 @@ code {
 	}
 }
 
-#sapper {
+main,
+#app {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -40,13 +41,12 @@ code {
 	background-color: #e9d8fd;
 }
 
-.clickable {
-	transform: scale3d(1, 1, 1);
-	transition: transform 0.06s ease-out;
+ul {
+	/* content components re-apply list-style */
+	list-style: none;
 }
-.clickable:hover {
-	transform: scale3d(1.07, 1.07, 1);
-}
-.clickable:active {
-	transform: scale3d(1.15, 1.15, 1);
+
+img {
+	/* do not show alt text by default */
+	color: transparent;
 }

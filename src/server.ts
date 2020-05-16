@@ -3,7 +3,7 @@ import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
-import fs from 'fs-extra';
+import fs from 'fs';
 import fp from 'path';
 import bodyParser from 'body-parser';
 
@@ -15,7 +15,7 @@ const dev = NODE_ENV === 'development';
 
 // TODO put these in a centralized paths module
 const DATA_DIR = fp.resolve(dev ? '__sapper__/data' : '../data');
-fs.ensureDirSync(DATA_DIR);
+if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
 const EMAILS_FILE_PATH = fp.join(DATA_DIR, 'emails.txt');
 
 polka()

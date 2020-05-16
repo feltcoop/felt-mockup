@@ -1,7 +1,7 @@
 <script>
 	import SecondaryNav from '../../client/ui/SecondaryNav.svelte';
-	import { useWorld } from '../../client/world/context.js';
-	import { provideSpace } from '../../client/space/context.js';
+	import {useWorld} from '../../client/world/context.js';
+	import {provideSpace} from '../../client/space/context.js';
 
 	export let segment;
 
@@ -15,6 +15,6 @@
 </script>
 
 <SecondaryNav {segment} {world} />
-<div class="flex flex-col flex-1">
+<div>
 	<slot />
 </div>

@@ -1,18 +1,10 @@
 <script>
-	export let classes = '';
 	export let el = undefined;
 	export let disabled = false;
 </script>
 
 <!-- TODO custom colors -->
-<button
-	class="border-2 border-green-300 rounded-tl-sm rounded-br-sm rounded-bl-lg
-	rounded-tr-lg text-green-500 font-bold px-3 pt-2 pb-3 relative hover:underline
-	focus:underline {classes}"
-	{disabled}
-	type="button"
-	on:click
-	bind:this={el}>
+<button {disabled} type="button" on:click bind:this={el}>
 	<slot />
 </button>
 

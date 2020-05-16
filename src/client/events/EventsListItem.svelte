@@ -4,9 +4,9 @@
 	export let event;
 </script>
 
-<article class="p-2">
-	<div class="flex">
-		<WorldName name={event.author} classes="mr-2" />
+<article>
+	<div>
+		<WorldName name={event.author} />
 		<div>
 			{@html event.title}
 		</div>

@@ -2,14 +2,12 @@
 	import ActivitiesList from './ActivitiesList.svelte';
 	import ActivitiesListItem from './ActivitiesListItem.svelte';
 	import ActivityInput from './ActivityInput.svelte';
-	import { id } from '../../routes/_data.js';
-	import { useSession } from '../session/context.js';
+	import {id} from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
 
 	const session = useSession();
 
 	export let activities;
-	export let classes = '';
-	export let style = '';
 
 	let value = '';
 
@@ -18,7 +16,7 @@
 		e.stopPropagation();
 		// console.log('submit activity content', content);
 		activities = [
-			{ author: $session.person.slug, id: id(), content },
+			{author: $session.person.slug, id: id(), content},
 			...activities,
 		];
 		value = '';
@@ -27,15 +25,13 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col {classes}" {style}>
+<div>
 	<ActivityInput bind:value {submit} placeholder="• • •" />
-	<div
-		class="overflow-y-scroll flex flex-col flex-1 border-4 border-purple-200
-		rounded-bl-lg rounded-tr-lg">
+	<div>
 		{#if value}
-			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
+			<div class="draft">
 				<ActivitiesListItem
-					activity={{ author: $session.person.slug, content: value }} />
+					activity={{author: $session.person.slug, content: value}} />
 			</div>
 		{/if}
 		{#if activities && activities.length}
@@ -43,3 +39,9 @@
 		{:else}• • •{/if}
 	</div>
 </div>
+
+<style>
+	.draft {
+		border: 3px solid purple;
+	}
+</style>

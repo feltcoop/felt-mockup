@@ -1,10 +1,10 @@
 <script>
 	import BlogCommentInput from './BlogCommentInput.svelte';
 	import TextButton from '../ui/TextButton.svelte';
-	import { useSession } from '../session/context.js';
-	import { id } from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
+	import {id} from '../../routes/_data.js';
 	import ForumReply from '../forum/ForumReply.svelte';
-	import { symbols } from '../ui/symbols.js';
+	import {symbols} from '../ui/symbols.js';
 
 	const session = useSession();
 
@@ -47,8 +47,8 @@
 </script>
 
 {#if isOpen && value}
-	<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-		<ForumReply reply={{ content: value, author: $session.person.slug }} />
+	<div class="draft">
+		<ForumReply reply={{content: value, author: $session.person.slug}} />
 	</div>
 {/if}
 <TextButton symbol={symbols.command} on:click={() => toggleOpen()}>
@@ -57,3 +57,9 @@
 {#if isOpen}
 	<BlogCommentInput bind:el={commentEl} bind:value {submit} />
 {/if}
+
+<style>
+	.draft {
+		border: 3px solid purple;
+	}
+</style>

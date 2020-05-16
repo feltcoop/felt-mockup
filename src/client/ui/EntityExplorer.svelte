@@ -7,6 +7,6 @@
 	export let entity;
 </script>
 
-<div class="font-mono">
+<div>
 	<JsonExplorer json={entity} />
 </div>

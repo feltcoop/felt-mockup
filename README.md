@@ -32,8 +32,6 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 [`babel`](https://github.com/babel/babel) .
 [`rollup`](https://github.com/rollup/rollup) .
 [`prettier`](https://github.com/prettier/prettier) .
-[`postcss`](https://github.com/postcss/postcss) .
-[`tailwindcss`](https://github.com/tailwindcss/tailwindcss) .
 [`sirv`](https://github.com/lukeed/sirv) .
 [`polka`](https://github.com/lukeed/polka) .
 [`node`](https://github.com/nodejs/node) .

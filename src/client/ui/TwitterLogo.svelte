@@ -1,13 +1,9 @@
 <script>
 	export let size = 64;
 	export let fill = '#495499';
-	export let classes = '';
 </script>
 
-<svg
-	viewBox="0 0 400 400"
-	style="width: {size}px; height: {size}px;"
-	class={classes}>
+<svg viewBox="0 0 400 400" style="width: {size}px; height: {size}px;">
 	<path
 		{fill}
 		d="M400,200c0,110.5-89.5,200-200,200S0,310.5,0,200S89.5,0,200,0S400,89.5,400,200z

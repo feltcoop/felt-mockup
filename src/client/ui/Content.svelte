@@ -1,44 +1,31 @@
-<script>
-	export let classes = '';
-	export let style = '';
-</script>
-
-<div class="content {classes}" {style}>
+<div class="content">
 	<slot />
 </div>
 
-<style lang="postcss">
+<style>
 	.content {
-		@apply mb-2;
-		max-width: 640px; /* TODO variable */
+		max-width: 640px;
 	}
+
 	.content :global(a) {
-		@apply text-green-700;
+		color: green;
 		font-weight: bold;
 	}
 	.content :global(a:hover) {
-		@apply text-purple-700;
+		color: purple;
 		text-decoration: underline;
 	}
 	/* TODO different outline colors based on if it's an external or internal link */
 	.content :global(a:focus) {
-		@apply text-green-700;
-		outline: 3px dotted #b794f4; /* TODO add class? tailwind keeps me wanting @apply outline-purple-400 */
-	}
-	.content :global(h1) {
-		@apply text-2xl;
-		@apply mb-4;
-	}
-	.content :global(h2) {
-		@apply text-lg;
-		@apply mb-4;
+		color: green;
+		outline: 3px dotted #b794f4;
 	}
 
-	.content :global(ul) {
-		@apply p-4 list-disc;
+	.content :global(h1) {
+		font-size: 4em;
 	}
-	.content :global(ol) {
-		@apply p-4 list-decimal;
+	.content :global(h2) {
+		font-size: 3em;
 	}
 
 	.content :global(pre) {
@@ -55,14 +42,16 @@
 	}
 
 	.content :global(ul) {
+		list-style: disc;
+		line-height: 1.5;
+	}
+
+	.content :global(ol) {
+		list-style: decimal;
 		line-height: 1.5;
 	}
 
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
-	}
-
-	.content :global(p) {
-		@apply mb-4;
 	}
 </style>

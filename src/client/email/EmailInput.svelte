@@ -6,7 +6,6 @@
 </script>
 
 <input
-	class="border-2 rounded-tr-lg rounded-bl-lg"
 	bind:this={el}
 	type="email"
 	bind:value

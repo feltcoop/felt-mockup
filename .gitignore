@@ -7,7 +7,5 @@ node_modules/
 
 *.ignore.*
 
-/static/index.css
-
 *.js
 !index.json.js

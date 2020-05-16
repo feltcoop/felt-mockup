@@ -2,8 +2,8 @@
 	import InboxList from './InboxList.svelte';
 	import InboxInput from './InboxInput.svelte';
 	import InboxListItem from './InboxListItem.svelte';
-	import { id } from '../../routes/_data.js';
-	import { useSession } from '../session/context.js';
+	import {id} from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 
 	// TODO should type="inbox" be type="activity"?
@@ -11,8 +11,6 @@
 	const session = useSession();
 
 	export let notes;
-	export let classes = '';
-	export let style = '';
 
 	let contentValue = '';
 	let titleValue = '';
@@ -48,7 +46,7 @@
 	// TODO need a store per chat that saves the input state
 </script>
 
-<div class="flex flex-col {classes}" {style}>
+<div>
 	<InboxInput
 		placeholder="• • • notes notes • • •"
 		bind:value={contentValue}
@@ -61,18 +59,23 @@
 		bind:value={titleValue}
 		submit={submitTitle} />
 	{#if contentValue || titleValue}
-		<div class="flex border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
+		<div class="draft">
 			<InboxListItem
-				note={{ author: $session.person.slug, content: contentValue, title: titleValue }} />
+				note={{author: $session.person.slug, content: contentValue, title: titleValue}} />
 		</div>
 	{/if}
-	<div class="overflow-y-scroll flex flex-col flex-1">
+	<div>
 		{#if notes && notes.length}
 			<InboxList {notes} />
 		{:else}• • •{/if}
 		<PlaceholderInfo>
-			<span class="text-2xl">TODO</span>
-			toggle these inbox items among various states
+			TODO - toggle these inbox items among various states
 		</PlaceholderInfo>
 	</div>
 </div>
+
+<style>
+	.draft {
+		border: 3px solid purple;
+	}
+</style>

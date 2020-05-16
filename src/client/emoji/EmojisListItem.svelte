@@ -1,10 +1,17 @@
 <script>
-	import WorldName from '../world/WorldName.svelte';
-	import { sizeClasses } from './emoji.js';
-
 	export let emoji;
-
-	$: sizeClass = sizeClasses[emoji.size];
 </script>
 
-<div class={sizeClass}>{emoji.text}</div>
+<div class={'size-' + emoji.size}>{emoji.text}</div>
+
+<style>
+	.size-1 {
+		font-size: 1em;
+	}
+	.size-2 {
+		font-size: 2em;
+	}
+	.size-3 {
+		font-size: 3em;
+	}
+</style>
