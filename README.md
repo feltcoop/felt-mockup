@@ -20,6 +20,7 @@ and improve our communication.
 - [project](src/project)
   - [setup](src/project/setup) - get started developing Felt
   - [deploy](src/project/deploy) - run Felt in production
+- [database management](src/db)
 
 ## Credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
 
@@ -32,11 +33,13 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 [`babel`](https://github.com/babel/babel) .
 [`rollup`](https://github.com/rollup/rollup) .
 [`gro`](https://github.com/feltcoop/gro) .
+[`knex`](https://github.com/knex/knex) .
 [`prettier`](https://github.com/prettier/prettier) .
 [`sirv`](https://github.com/lukeed/sirv) .
 [`polka`](https://github.com/lukeed/polka) .
 [`node`](https://github.com/nodejs/node) .
 [`fnm`](https://github.com/Schniz/fnm) .
+[`postgresql`](https://www.postgresql.org/) .
 [`github`](https://github.com) . [`git`](https://git-scm.com/)
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
