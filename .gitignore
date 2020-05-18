@@ -4,8 +4,6 @@ node_modules/
 .env
 
 /__sapper__/
+/build
 
 *.ignore.*
-
-*.js
-!index.json.js

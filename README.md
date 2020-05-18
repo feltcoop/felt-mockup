@@ -31,6 +31,7 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 [`typescript`](https://github.com/microsoft/TypeScript) .
 [`babel`](https://github.com/babel/babel) .
 [`rollup`](https://github.com/rollup/rollup) .
+[`gro`](https://github.com/feltcoop/gro) .
 [`prettier`](https://github.com/prettier/prettier) .
 [`sirv`](https://github.com/lukeed/sirv) .
 [`polka`](https://github.com/lukeed/polka) .

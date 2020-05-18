@@ -1,7 +1,7 @@
 {
   "name": "felt",
   "description": "customizable community tools that feel good 💚",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "license": "ISC",
   "author": {
     "name": "Felt.coop",
@@ -9,10 +9,10 @@
     "url": "https://felt.social"
   },
   "scripts": {
-    "dev": "sapper dev",
-    "build": "npm run build:ts && sapper build --legacy",
-    "deploy": "cp src/project/deploy/deploy.js src/project/deploy/deploy.mjs && NODE_ENV=production node --experimental-modules src/project/deploy/deploy.mjs",
-    "deploy:dry": "cp src/project/deploy/deploy.js src/project/deploy/deploy.mjs && DEPLOY_DRY_RUN=1 NODE_ENV=production node --experimental-modules src/project/deploy/deploy.mjs",
+    "dev": "sapper dev --src build --routes build/routes --output build/node_modules/@sapper",
+    "build": "npm run build:ts && gro dev --no-watch && sapper build --legacy --src build --routes build/routes --output build/node_modules/@sapper",
+    "deploy": "NODE_ENV=production node build/project/deploy/deploy.js",
+    "deploy:dry": "DEPLOY_DRY_RUN=1 NODE_ENV=production node build/project/deploy/deploy.js",
     "build:ts": "tsc",
     "ts": "tsc -w",
     "start": "node __sapper__/build",
@@ -33,6 +33,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "@feltcoop/gro": "^0.1.1",
     "@rollup/plugin-replace": "^2.3.1",
     "@types/body-parser": "^1.19.0",
     "@types/compression": "^1.7.0",
@@ -42,14 +43,14 @@
     "@types/node": "^12.12.32",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
-    "rollup": "^2.3.1",
+    "rollup": "^2.8.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.2.0",
     "rollup-plugin-terser": "^5.3.0",
     "sapper": "^0.27.11",
-    "svelte": "^3.20.1",
+    "svelte": "^3.22.2",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   },
@@ -68,6 +69,7 @@
       }
     ]
   },
+  "type": "module",
   "engines": {
     "node": "~14.0"
   }

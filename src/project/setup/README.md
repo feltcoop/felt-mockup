@@ -69,8 +69,9 @@ before [deploying to a production server](../deploy).
 **5. Run the dev server!**
 
 ```bash
-$ npm run ts # for typescript
-$ npm run dev # open another shell for the dev server
+$ npm run ts # compile typescript - let it finish before continuing
+$ gro dev # eventually this will be the only command
+$ npm run dev # open a third shell (lol TODO) for the sapper dev server
 ```
 
 > TODO wrap these into a single command
