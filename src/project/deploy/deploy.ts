@@ -28,24 +28,17 @@ if (!DEPLOY_NODE_PROCESS_NAME) {
 
 import * as fileSystem from 'fs';
 import * as filePath from 'path';
-import { exec } from 'child_process';
+import {exec} from 'child_process';
 import kleur from 'kleur';
 
-const { magenta, cyan, yellow, green } = kleur;
+const {magenta, cyan, yellow, green} = kleur;
 
-// TODO move to centralized paths module
-const root = process.cwd();
-const paths = {
-	root,
-	static: filePath.join(root, 'static'),
-	build: filePath.join(root, '__sapper__'),
-	buildDist: filePath.join(root, '__sapper__/build'),
-};
+import {paths} from '../../paths.js';
 
 // ensure the build is ready
-if (!fileSystem.existsSync(paths.buildDist)) {
+if (!fileSystem.existsSync(paths.sapperBuild)) {
 	throw Error(
-		`Build directory does not exist: ${paths.buildDist} -- run 'npm run build' and try again`,
+		`Build directory does not exist: ${paths.sapperBuild} -- run 'npm run build' and try again`,
 	);
 }
 
@@ -76,12 +69,12 @@ const deploy = async (): Promise<void> => {
 	}
 
 	info(magenta('executing deployment command'));
-	const { stdout, stderr } = await new Promise((resolve, reject) => {
+	const {stdout, stderr} = await new Promise((resolve, reject) => {
 		exec(command, (err, stdout, stderr) => {
 			if (err) {
 				reject(err);
 			} else {
-				resolve({ stdout, stderr });
+				resolve({stdout, stderr});
 			}
 		});
 	});
@@ -117,22 +110,22 @@ const createDeploymentCommand = (): string => {
 	const tarballContents = [
 		'package.json',
 		'package-lock.json',
-		filePath.relative(paths.root, paths.buildDist),
+		filePath.relative(paths.root, paths.sapperBuild),
 		filePath.relative(paths.root, paths.static),
 	];
 	const createTarball = `tar -czf ${deployPaths.localTarball} -C ${
 		paths.root
-		} ${tarballContents.join(' ')}`;
+	} ${tarballContents.join(' ')}`;
 
 	const serverHost = `${DEPLOY_SERVER_USER}@${DEPLOY_SERVER_IP}`;
 
 	const scpTarball = `scp ${
 		DEPLOY_SERVER_SSH_PORT ? `-P ${DEPLOY_SERVER_SSH_PORT}` : ''
-		} -p ${deployPaths.localTarball} ${serverHost}:${deployPaths.remoteRootDir}`;
+	} -p ${deployPaths.localTarball} ${serverHost}:${deployPaths.remoteRootDir}`;
 
 	const ssh = `ssh -t ${serverHost}${
 		DEPLOY_SERVER_SSH_PORT ? ` -p ${DEPLOY_SERVER_SSH_PORT}` : ''
-		}`;
+	}`;
 
 	const setupServer = [
 		setupShell,
@@ -181,7 +174,7 @@ const createLocalDeploymentCommand = (): string => {
 	// from https://stackoverflow.com/questions/821396/aborting-a-shell-script-if-any-command-returns-a-non-zero-value
 	const setupShell = `set -eu`;
 
-	const setupServer = [
+	const deploymentCommand = [
 		setupShell,
 
 		// Change to the app's root directory to fail early if it doesn't exist.
@@ -211,12 +204,8 @@ const createLocalDeploymentCommand = (): string => {
 		`pm2 restart ${DEPLOY_NODE_PROCESS_NAME}`,
 	].join('\n');
 
-	const deploymentCommand = [
-		`${setupServer}`,
-	].join('\n');
-
 	return deploymentCommand;
-}
+};
 
 interface DeploymentPaths {
 	tarFileName: string;
