@@ -16,7 +16,6 @@ export const task: Task = {
 		log.info('building sapper');
 		await spawnProcess('node_modules/.bin/sapper', [
 			'build',
-			'--legacy',
 			'--src',
 			'build',
 			'--routes',
