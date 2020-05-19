@@ -18,11 +18,11 @@
   },
   "scripts": {
     "dev": "sapper dev --src build --routes build/routes --output build/node_modules/@sapper",
-    "build": "npm run build:ts && gro dev --no-watch && sapper build --legacy --src build --routes build/routes --output build/node_modules/@sapper",
+    "build": "npm run ts:build && gro dev --no-watch && sapper build --legacy --src build --routes build/routes --output build/node_modules/@sapper",
     "deploy": "NODE_ENV=production node build/project/deploy/deploy.js",
     "deploy:dry": "DEPLOY_DRY_RUN=1 NODE_ENV=production node build/project/deploy/deploy.js",
-    "build:ts": "tsc",
     "ts": "tsc -w",
+    "ts:build": "tsc",
     "start": "node __sapper__/build",
     "test": "echo 'to be decided!'"
   },
@@ -31,7 +31,9 @@
     "compression": "^1.7.1",
     "dotenv": "^8.2.0",
     "kleur": "^3.0.3",
+    "knex": "^0.21.1",
     "minimist": "^1.2.5",
+    "pg": "^8.2.1",
     "polka": "next",
     "sirv": "^0.4.0"
   },
@@ -41,7 +43,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "@feltcoop/gro": "^0.1.1",
+    "@feltcoop/gro": "^0.1.2",
     "@rollup/plugin-replace": "^2.3.1",
     "@types/body-parser": "^1.19.0",
     "@types/compression": "^1.7.0",
