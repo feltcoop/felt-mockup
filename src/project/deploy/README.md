@@ -24,7 +24,7 @@ for any cloud Linux VPS provider.
 
 This will set up the folder and permissions structures, install dependencies, and overall set you up to build and deploy new versions of felt onto your server.
 
-NOTE: Currently the script expects the domain name to be <felt.dev>, you will currently have to manually replace it with your own anticipated URL 
+NOTE: Currently the script expects the domain name to be <felt.dev>, you will currently have to manually replace it with your own anticipated URL
 
 TODO: (replacing `felt.dev` in both the config file and path automatically)
 
@@ -44,7 +44,7 @@ There are two ways to build and deploy the server. Either locally or from the ma
 To build & deploy from your local machine, follow the [setup](../setup) instructions then:
 
 1. copy src/project/deploy/pm2-app.json to /var/www/felt.dev
-2. run `npm run build` to create the build
+2. run `gro build` to create the build
 3. run `npm run deploy` to copy the build /var/www/felt.dev/dist
 
 ```bash
@@ -59,8 +59,8 @@ To build & deploy on your server, run the following commands from the repository
 
 ```bash
 $ npm i
-$ npm run build
+$ gro build
 $ npm run deploy
 ```
 
-For either choice, subsequent deployments should be as simple as `npm run build && npm run deploy`.
+For either choice, subsequent deployments should be as simple as `gro build && npm run deploy`.
