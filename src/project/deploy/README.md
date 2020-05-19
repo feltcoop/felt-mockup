@@ -14,13 +14,13 @@ for any cloud Linux VPS provider.
 ### 2. Nginx installation & Server Configuration
 
 - Clone the felt git repository into your server
-```bash
+  ```bash
   git clone https://github.com/feltcoop/felt.git
-```
+  ```
 - Then move into the newly cloned repo and run the initialization script
-```bash
+  ```bash
   ./src/project/deploy/initialize-server.sh
-```
+  ```
 
 This will set up the folder and permissions structures, install dependencies, and overall set you up to build and deploy new versions of felt onto your server.
 
@@ -41,11 +41,11 @@ TODO: (replacing `felt.dev` in both the config file and path automatically)
 
 There are two ways to build and deploy the server. Either locally or from the machine itself.
 
-To build & deploy from your local machine, follow the [setup](src/project/setup) instructions then:
+To build & deploy from your local machine, follow the [setup](../setup) instructions then:
 
-copy src/project/deploy/pm2-app.json to /var/www/felt.dev
-run npm run build to create the build
-run npm run deploy to copy the build /var/www/felt.dev/dist
+1. copy src/project/deploy/pm2-app.json to /var/www/felt.dev
+2. run `npm run build` to create the build
+3. run `npm run deploy` to copy the build /var/www/felt.dev/dist
 
 ```bash
 $ pm2 start /var/www/felt.dev/pm2-app.json
