@@ -30,7 +30,6 @@ and [a community](https://felt.social)
 using [`svelte`](https://github.com/sveltejs/svelte) .
 [`sapper`](https://github.com/sveltejs/sapper) .
 [`typescript`](https://github.com/microsoft/TypeScript) .
-[`babel`](https://github.com/babel/babel) .
 [`rollup`](https://github.com/rollup/rollup) .
 [`gro`](https://github.com/feltcoop/gro) .
 [`knex`](https://github.com/knex/knex) .
