@@ -18,6 +18,7 @@
   },
   "scripts": {
     "dev": "sapper dev --src build --routes build/routes --output build/node_modules/@sapper",
+    "build": "gro build",
     "deploy": "NODE_ENV=production node build/project/deploy/deploy.js",
     "deploy:dry": "DEPLOY_DRY_RUN=1 NODE_ENV=production node build/project/deploy/deploy.js",
     "ts": "tsc -w",
