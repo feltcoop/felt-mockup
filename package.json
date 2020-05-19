@@ -3,10 +3,18 @@
   "description": "customizable community tools that feel good 💚",
   "version": "0.0.0",
   "license": "ISC",
+  "homepage": "https://felt.dev",
   "author": {
     "name": "Felt.coop",
     "email": "team@felt.social",
     "url": "https://felt.social"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feltcoop/felt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feltcoop/felt/issues"
   },
   "scripts": {
     "dev": "sapper dev --src build --routes build/routes --output build/node_modules/@sapper",
