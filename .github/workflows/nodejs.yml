@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: gro build
+      - run: node_modules/.bin/gro build
       - run: npm test
         env:
           CI: true
