@@ -74,14 +74,17 @@ export const task: Task = {
 		await init;
 
 		log.info('starting sapper');
-		await spawnProcess('node_modules/.bin/sapper', [
-			'dev',
-			'--src',
-			'build',
-			'--routes',
-			'build/routes',
-			'--output',
-			'build/node_modules/@sapper',
+		await Promise.all([
+			spawnProcess('node_modules/.bin/sapper', [
+				'dev',
+				'--src',
+				'build',
+				'--routes',
+				'build/routes',
+				'--output',
+				'build/node_modules/@sapper',
+			]),
+			spawnProcess('node_modules/.bin/tsc', ['-w', '--preserveWatchOutput']),
 		]);
 	},
 };
