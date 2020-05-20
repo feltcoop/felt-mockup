@@ -1,10 +1,7 @@
 import {join} from 'path';
-import {
-	paths as defaultPaths,
-	basePathToSourceId,
-} from '@feltcoop/gro/dist/paths.js';
+import {paths as defaultPaths} from '@feltcoop/gro/dist/paths.js';
 
-const db = basePathToSourceId('db/');
+const db = join(defaultPaths.source, 'db/');
 const sapper = join(defaultPaths.root, '__sapper__/');
 
 export const paths = {
