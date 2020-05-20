@@ -8,6 +8,7 @@ import {watchNodeFs, WatcherChange} from '@feltcoop/gro/dist/fs/watchNodeFs.js';
 import {copy, remove} from '@feltcoop/gro/dist/fs/nodeFs.js';
 import {printPath} from '@feltcoop/gro/dist/utils/print.js';
 import {UnreachableError} from '@feltcoop/gro/dist/utils/error.js';
+import {spawnProcess} from '@feltcoop/gro/dist/utils/process.js';
 
 /*
 
@@ -27,13 +28,12 @@ const isFileIgnoredByCurrentBuild = (path: string): boolean =>
 	path.endsWith('.svelte') || path.endsWith('.html');
 
 export const task: Task = {
-	description: 'copies build files that the existing build process misses',
-	run: async ({log, args}): Promise<void> => {
-		const watch = args.watch === undefined ? true : args.watch; // TODO declare args
-		const {init, dispose} = watchNodeFs({
+	description: 'builds the project for development and watches for changes',
+	run: async ({log}): Promise<void> => {
+		const {init} = watchNodeFs({
 			dir: paths.source,
 			onInit: async paths => {
-				log.trace(`init ${paths.size} paths`);
+				log.trace(`init file watcher with ${paths.size} paths`);
 				await Promise.all(
 					Array.from(paths.keys()).map(path => {
 						if (!isFileIgnoredByCurrentBuild(path)) return null;
@@ -72,10 +72,16 @@ export const task: Task = {
 			},
 		});
 		await init;
-		if (watch) {
-			log.info('watching...');
-		} else {
-			dispose();
-		}
+
+		log.info('starting sapper');
+		await spawnProcess('node_modules/.bin/sapper', [
+			'dev',
+			'--src',
+			'build',
+			'--routes',
+			'build/routes',
+			'--output',
+			'build/node_modules/@sapper',
+		]);
 	},
 };
