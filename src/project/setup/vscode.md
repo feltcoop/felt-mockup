@@ -16,8 +16,8 @@ Unfortunately it does not work with WSL on Windows when this was written.
 
 ## Recommended extensions
 
-[Svelte language support](https://github.com/UnwrittenFun/svelte-vscode) -
-[`jamesbirtles.svelte-vscode`](https://marketplace.visualstudio.com/items?itemName=JamesBirtles.svelte-vscode)
+[Svelte for VS Code](https://github.com/sveltejs/language-tools) -
+[`svelte.svelte-vscode`](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 
 [Prettier code formatter](https://github.com/prettier/prettier-vscode) -
 [`esbenp.prettier-vscode`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
