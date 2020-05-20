@@ -38,7 +38,7 @@ import {paths} from '../../paths.js';
 // ensure the build is ready
 if (!fileSystem.existsSync(paths.sapperBuild)) {
 	throw Error(
-		`Build directory does not exist: ${paths.sapperBuild} -- run 'npm run build' and try again`,
+		`Build directory does not exist: ${paths.sapperBuild} -- run 'gro build' and try again`,
 	);
 }
 
