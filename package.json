@@ -21,7 +21,6 @@
     "dev": "gro dev",
     "deploy": "NODE_ENV=production node build/project/deploy/deploy.js",
     "deploy:dry": "DEPLOY_DRY_RUN=1 NODE_ENV=production node build/project/deploy/deploy.js",
-    "ts": "tsc -w",
     "start": "node __sapper__/build",
     "test": "echo 'to be decided!'"
   },
