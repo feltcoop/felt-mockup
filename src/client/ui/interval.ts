@@ -1,11 +1,8 @@
-import { onMount, onDestroy } from 'svelte';
+import {onMount, onDestroy} from 'svelte';
 
 type ClearInterval = () => void;
 
-export const useInterval = (
-	cb: () => void,
-	getTime: () => number,
-): ClearInterval => {
+export const useInterval = (cb: () => void, getTime: () => number): ClearInterval => {
 	let timeout: any; // TODO type for Node and browser?
 	const run = () => {
 		timeout = setTimeout(() => {

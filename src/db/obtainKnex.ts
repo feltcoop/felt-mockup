@@ -20,5 +20,5 @@ export const obtainKnex = createObtainable(
 		});
 		return knex;
 	},
-	knex => knex.destroy(),
+	(knex) => knex.destroy(),
 );

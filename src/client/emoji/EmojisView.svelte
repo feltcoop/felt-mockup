@@ -7,7 +7,7 @@
 
 	const world = useWorld();
 
-	$: emojisSpace = $world.spaces.find(s => s.slug === view.props.emojisSlug);
+	$: emojisSpace = $world.spaces.find((s) => s.slug === view.props.emojisSlug);
 </script>
 
 {#if emojisSpace}

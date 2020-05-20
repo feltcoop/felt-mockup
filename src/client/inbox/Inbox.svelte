@@ -52,25 +52,22 @@
 		bind:value={contentValue}
 		bind:el={contentEl}
 		{submit}
-		submitMatcher={/.+\n\n$/} />
+		submitMatcher={/.+\n\n$/}
+	/>
 	<!-- TODO should `subject` be the data name instead of `title`? -->
-	<InboxInput
-		placeholder="subject?"
-		bind:value={titleValue}
-		submit={submitTitle} />
+	<InboxInput placeholder="subject?" bind:value={titleValue} submit={submitTitle} />
 	{#if contentValue || titleValue}
 		<div class="draft">
 			<InboxListItem
-				note={{author: $session.person.slug, content: contentValue, title: titleValue}} />
+				note={{author: $session.person.slug, content: contentValue, title: titleValue}}
+			/>
 		</div>
 	{/if}
 	<div>
 		{#if notes && notes.length}
 			<InboxList {notes} />
 		{:else}• • •{/if}
-		<PlaceholderInfo>
-			TODO - toggle these inbox items among various states
-		</PlaceholderInfo>
+		<PlaceholderInfo>TODO - toggle these inbox items among various states</PlaceholderInfo>
 	</div>
 </div>
 

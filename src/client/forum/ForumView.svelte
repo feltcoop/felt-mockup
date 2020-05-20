@@ -7,7 +7,7 @@
 
 	const world = useWorld();
 
-	$: forum = $world.spaces.find(s => s.slug === view.props.forumSlug);
+	$: forum = $world.spaces.find((s) => s.slug === view.props.forumSlug);
 </script>
 
 {#if forum}

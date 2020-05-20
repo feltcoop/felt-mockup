@@ -15,10 +15,7 @@
 		<li>
 			<a href="/about">
 				<span>→ learn about Felt ←</span>
-				<img
-					src="/logo-heart.png"
-					alt="fuzzy felt heart"
-					style="width: 192px; height: 178px;" />
+				<img src="/logo-heart.png" alt="fuzzy felt heart" style="width: 192px; height: 178px;" />
 			</a>
 		</li>
 		<li>

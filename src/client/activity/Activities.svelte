@@ -15,10 +15,7 @@
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit activity content', content);
-		activities = [
-			{author: $session.person.slug, id: id(), content},
-			...activities,
-		];
+		activities = [{author: $session.person.slug, id: id(), content}, ...activities];
 		value = '';
 	};
 
@@ -30,8 +27,7 @@
 	<div>
 		{#if value}
 			<div class="draft">
-				<ActivitiesListItem
-					activity={{author: $session.person.slug, content: value}} />
+				<ActivitiesListItem activity={{author: $session.person.slug, content: value}} />
 			</div>
 		{/if}
 		{#if activities && activities.length}

@@ -1,7 +1,7 @@
-import { setContext, getContext } from 'svelte';
-import { writable, Writable } from 'svelte/store';
+import {setContext, getContext} from 'svelte';
+import {writable, Writable} from 'svelte/store';
 
-import { WorldData } from '../../routes/_data.js';
+import {WorldData} from '../../routes/_data.js';
 
 export const KEY = {};
 

@@ -54,9 +54,7 @@ export const task: Task = {
 	run: async ({log, args}): Promise<void> => {
 		const dry = !!args.dry;
 
-		const command = SERVER_DEPLOY
-			? createLocalDeploymentCommand()
-			: createDeploymentCommand();
+		const command = SERVER_DEPLOY ? createLocalDeploymentCommand() : createDeploymentCommand();
 		info(magenta(`deployment command`), cyan(command));
 
 		if (dry) {
@@ -78,11 +76,7 @@ export const task: Task = {
 		}
 
 		log.info(
-			[
-				green('~~~~~~~~~~~~~~~~'),
-				green('~❤~ deployed ~❤~'),
-				green('~~~~~~~~~~~~~~~~'),
-			].join('\n'),
+			[green('~~~~~~~~~~~~~~~~'), green('~❤~ deployed ~❤~'), green('~~~~~~~~~~~~~~~~')].join('\n'),
 		);
 		if (dry) log.info(magenta('dry run complete'));
 	},
@@ -124,9 +118,9 @@ const createDeploymentCommand = (): string => {
 
 	const serverHost = `${DEPLOY_SERVER_USER}@${DEPLOY_SERVER_IP}`;
 
-	const scpTarball = `scp ${
-		DEPLOY_SERVER_SSH_PORT ? `-P ${DEPLOY_SERVER_SSH_PORT}` : ''
-	} -p ${deployPaths.localTarball} ${serverHost}:${deployPaths.remoteRootDir}`;
+	const scpTarball = `scp ${DEPLOY_SERVER_SSH_PORT ? `-P ${DEPLOY_SERVER_SSH_PORT}` : ''} -p ${
+		deployPaths.localTarball
+	} ${serverHost}:${deployPaths.remoteRootDir}`;
 
 	const ssh = `ssh -t ${serverHost}${
 		DEPLOY_SERVER_SSH_PORT ? ` -p ${DEPLOY_SERVER_SSH_PORT}` : ''
@@ -159,12 +153,9 @@ const createDeploymentCommand = (): string => {
 		`pm2 restart ${DEPLOY_NODE_PROCESS_NAME}`,
 	].join('\n');
 
-	const deploymentCommand = [
-		setupShell,
-		createTarball,
-		scpTarball,
-		`${ssh} '${setupServer}'`,
-	].join('\n');
+	const deploymentCommand = [setupShell, createTarball, scpTarball, `${ssh} '${setupServer}'`].join(
+		'\n',
+	);
 
 	return deploymentCommand;
 };

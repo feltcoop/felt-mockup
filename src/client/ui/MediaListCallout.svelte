@@ -13,7 +13,7 @@
 	let errorMessage;
 	let submitting;
 
-	const submit = async e => {
+	const submit = async (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		if (!email) {
@@ -52,7 +52,7 @@
 		}
 	};
 
-	const onKeyPress = e => {
+	const onKeyPress = (e) => {
 		if (e.key === 'Enter') {
 			submit(e);
 		}
@@ -69,7 +69,8 @@
 					bind:value={email}
 					on:keypress={onKeyPress}
 					disabled={submitting}
-					placeholder="email@address.com" />
+					placeholder="email@address.com"
+				/>
 
 				<Button bind:el={buttonEl} on:click={submit} disabled={submitting}>
 					{#if submitting}

@@ -5,7 +5,11 @@
 	$: items = values
 		.map((value, i) => {
 			const isGrowing = !(i % 2);
-			const result = [{size: 1, value}, {size: 2, value}, {size: 3, value}];
+			const result = [
+				{size: 1, value},
+				{size: 2, value},
+				{size: 3, value},
+			];
 			if (!isGrowing) result.reverse();
 			return result;
 		})
@@ -14,9 +18,7 @@
 
 <div style="display: flex; flex-wrap: wrap; align-items: center;">
 	{#each items as item}
-		<button
-			class={'size-' + item.size}
-			on:click={() => submit(item.value, item.size)}>
+		<button class={'size-' + item.size} on:click={() => submit(item.value, item.size)}>
 			{item.value}
 		</button>
 	{/each}

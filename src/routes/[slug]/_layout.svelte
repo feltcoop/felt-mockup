@@ -7,10 +7,8 @@
 
 	const world = useWorld();
 
-	const space = provideSpace($world.spaces.find(w => w.slug === segment));
-	$: $space = segment
-		? $world.spaces.find(w => w.slug === segment)
-		: $world.spaces[0];
+	const space = provideSpace($world.spaces.find((w) => w.slug === segment));
+	$: $space = segment ? $world.spaces.find((w) => w.slug === segment) : $world.spaces[0];
 	// $: console.log('space', $space);
 </script>
 
