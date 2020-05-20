@@ -1,7 +1,7 @@
 {
   // Commented-out options have their default values.
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*"],
+  "include": ["src"],
+  // "exclude": [],
   // "files": [], // A list of relative or absolute file paths to include.
   // "extends": "", // A string containing a path to another configuration file to inherit from.
   // "references": [], // An array of objects `{"path": "./to/dirOrConfig"}` that specifies projects to reference.
@@ -15,8 +15,8 @@
     // "allowJs": false, // Allow javascript files to be compiled.
     // "checkJs": false, // Report errors in .js files.
     // "outFile": "./", // Concatenate and emit output to single file.
-    "outDir": "./build", // Redirect output structure to the directory.
-    "rootDir": "./src", // Specify the root directory of input files. Use to control the output directory structure with `--outDir`.
+    "outDir": "build", // Redirect output structure to the directory.
+    "rootDir": "src", // Specify the root directory of input files. Use to control the output directory structure with `--outDir`.
     // "project": "", // Compile a project given a valid configuration file.
 
     // Compilation options
@@ -60,12 +60,12 @@
     // "paths": {}, // A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.
     // "rootDirs": [], // List of root folders whose combined content represents the structure of the project at runtime.
     // "typeRoots": [], // List of folders to include type definitions from.
-    "types": [], // Type declaration files to be included in compilation.
+    // "types": [], // Type declaration files to be included in compilation.
     "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
     // "esModuleInterop": false, // Emit '__importStar' and '__importDefault' helpers for runtime babel ecosystem compatibility and enable '--allowSyntheticDefaultImports' for typesystem compatibility.
     // "maxNodeModuleJsDepth": 0, // The maximum dependency depth to search under node_modules and load JavaScript files. Only applicable with --allowJs.
     // "preserveSymlinks": false, // Do not resolve the real path of symlinks.
-    "resolveJsonModule": true // Include modules imported with '.json' extension.
+    "resolveJsonModule": true, // Include modules imported with '.json' extension.
 
     // Emit options
     // "declaration": false, // Generates corresponding '.d.ts' file.
@@ -73,7 +73,7 @@
     // "declarationMap": false, // Generates a sourcemap for each corresponding '.d.ts' file.
     // "emitBOM": false, // Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
     // "emitDeclarationOnly": false, // Only emit ‘.d.ts’ declaration files.
-    // "importHelpers": false, // Import emit helpers from 'tslib'.
+    "importHelpers": true // Import emit helpers from 'tslib'.
     // "newLine": "LF", // Use the specified end of line sequence to be used when emitting files: "crlf" (windows) or "lf" (unix).”
     // "noEmit": true, // Do not emit outputs.
     // "noEmitHelpers": false, // Do not generate custom helper functions like __extends in compiled output.
