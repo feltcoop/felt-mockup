@@ -69,12 +69,8 @@ before [deploying to a production server](../deploy).
 **5. Run the dev server!**
 
 ```bash
-$ npm run ts # compile typescript - let it finish before continuing
-$ gro dev # eventually this will be the only command
-$ npm run dev # open a third shell (lol TODO) for the sapper dev server
+$ gro dev
 ```
-
-> TODO wrap these into a single command
 
 Now open your browser to `localhost:3000` or whatever it says.
 
