@@ -24,7 +24,7 @@
     "ts": "tsc -w",
     "ts:build": "tsc",
     "start": "node __sapper__/build",
-    "test": "echo 'to be decided!'"
+    "test": "gro test"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
