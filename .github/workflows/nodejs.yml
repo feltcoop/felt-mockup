@@ -24,6 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
+      - run: node_modules/.bin/gro format --check
       - run: npm test
         env:
           CI: true
