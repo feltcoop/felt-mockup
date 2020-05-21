@@ -27,3 +27,4 @@ jobs:
       - run: npm test
         env:
           CI: true
+      - run: node_modules/.bin/gro format --check

@@ -7,7 +7,7 @@
 
 	const world = useWorld();
 
-	$: chat = $world.spaces.find(s => s.slug === view.props.chatSlug);
+	$: chat = $world.spaces.find((s) => s.slug === view.props.chatSlug);
 </script>
 
 {#if chat}

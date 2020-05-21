@@ -16,8 +16,8 @@
 	provideSession(initialSessionData);
 	provideSelection(null);
 
-	const world = provideWorld(worlds.find(w => w.slug === segment) || worlds[0]);
-	$: $world = worlds.find(w => w.slug === segment) || worlds[0];
+	const world = provideWorld(worlds.find((w) => w.slug === segment) || worlds[0]);
+	$: $world = worlds.find((w) => w.slug === segment) || worlds[0];
 	// $: console.log('world', $world);
 </script>
 

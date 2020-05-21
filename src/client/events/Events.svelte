@@ -17,7 +17,7 @@
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = e => {
+	const submit = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit event', titleValue, contentValue);
@@ -58,17 +58,20 @@
 		bind:value={titleValue}
 		bind:el={titleEl}
 		submit={submitTitle}
-		placeholder="name of your event • • •" />
+		placeholder="name of your event • • •"
+	/>
 	<EventInput
 		bind:value={contentValue}
 		bind:el={contentEl}
 		submit={submitContent}
-		placeholder="event info • • •" />
+		placeholder="event info • • •"
+	/>
 	<div>
 		{#if hasDraft}
 			<div class="draft">
 				<EventsListItem
-					event={{author: $session.person.slug, title: titleValue, content: contentValue}} />
+					event={{author: $session.person.slug, title: titleValue, content: contentValue}}
+				/>
 			</div>
 		{/if}
 		{#if events && events.length}

@@ -27,9 +27,7 @@
 				(how? blending? svg? canvas? animate it into place?)
 			-->
 		<div>/</div>
-		<a href="{$world.slug}/{$space.slug}">
-			{$space.title} {symbols[$space.type] || symbols.other}
-		</a>
+		<a href="{$world.slug}/{$space.slug}">{$space.title} {symbols[$space.type] || symbols.other}</a>
 	</div>
 	{#if $space.description}
 		<Content>

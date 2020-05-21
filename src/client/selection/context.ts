@@ -1,7 +1,7 @@
-import { setContext, getContext } from 'svelte';
-import { Writable } from 'svelte/store';
+import {setContext, getContext} from 'svelte';
+import {Writable} from 'svelte/store';
 
-import { createSelectionStore, SelectionStoreState } from './store.js';
+import {createSelectionStore, SelectionStoreState} from './store.js';
 
 export const KEY = {};
 
@@ -16,5 +16,4 @@ export const provideSelection = (
 	return store;
 };
 
-export const useSelection = (): Writable<SelectionStoreState> =>
-	getContext(KEY);
+export const useSelection = (): Writable<SelectionStoreState> => getContext(KEY);

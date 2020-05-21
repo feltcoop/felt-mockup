@@ -17,10 +17,7 @@
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', content);
-		notes = [
-			{type: 'note', author: $session.person.slug, id: id(), content},
-			...notes,
-		];
+		notes = [{type: 'note', author: $session.person.slug, id: id(), content}, ...notes];
 		value = '';
 	};
 

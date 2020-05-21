@@ -11,9 +11,7 @@ export const task: Task = {
 			_: [migrationName],
 		} = args;
 		if (!migrationName) {
-			throw Error(
-				'Task "migration" requires a migration name argument: `gro migration <name>`.',
-			);
+			throw Error('Task "migration" requires a migration name argument: `gro migration <name>`.');
 		}
 		if (typeof migrationName !== 'string') {
 			throw Error(
@@ -25,10 +23,7 @@ export const task: Task = {
 
 		const migratorConfig = getMigrationConfigWithDefaultSource();
 
-		const newMigrationPath = await knex.migrate.make(
-			migrationName,
-			migratorConfig,
-		);
+		const newMigrationPath = await knex.migrate.make(migrationName, migratorConfig);
 		log.info('created migration', printPath(newMigrationPath));
 
 		releaseKnex();

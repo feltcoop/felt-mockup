@@ -24,10 +24,7 @@
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', content);
-		messages = [
-			...(messages || []),
-			{type: 'message', author, id: id(), content},
-		];
+		messages = [...(messages || []), {type: 'message', author, id: id(), content}];
 		value = '';
 	};
 

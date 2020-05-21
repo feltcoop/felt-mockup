@@ -1,5 +1,5 @@
 <script>
-	import {getJsonType} from '../json/index.js';
+	import {getJsonType} from '@feltcoop/gro/dist/utils/json.js';
 
 	export let json;
 

@@ -5,9 +5,9 @@
 	export let submit = undefined;
 	export let placeholder = '• • •';
 	export let submitMatcher = undefined; // optional regexp that includes the input value snapshot BEFORE any current keyboard event is applied
-	export let shouldSubmit = v => (submitMatcher ? submitMatcher.test(v) : true);
+	export let shouldSubmit = (v) => (submitMatcher ? submitMatcher.test(v) : true);
 
-	const onKeyDown = e => {
+	const onKeyDown = (e) => {
 		console.log('keydown', e.key);
 		switch (e.key) {
 			case 'Enter': {

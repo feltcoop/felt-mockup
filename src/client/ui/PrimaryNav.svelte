@@ -9,10 +9,10 @@
 	const world = useWorld();
 	// $: console.log('primary nav world', $world);
 
-	$: personas = worlds.filter(w => w.type === 'persona');
-	$: communities = worlds.filter(w => w.type === 'community');
-	$: friends = worlds.filter(w => w.type === 'person' && w.slug !== 'rick');
-	$: pages = worlds.filter(w => w.type === 'page');
+	$: personas = worlds.filter((w) => w.type === 'persona');
+	$: communities = worlds.filter((w) => w.type === 'community');
+	$: friends = worlds.filter((w) => w.type === 'person' && w.slug !== 'rick');
+	$: pages = worlds.filter((w) => w.type === 'page');
 
 	let subheadingsOpen = {
 		persona: true,
@@ -20,7 +20,7 @@
 		person: true,
 		page: true,
 	};
-	const toggleSubheading = subheading => {
+	const toggleSubheading = (subheading) => {
 		subheadingsOpen = {
 			...subheadingsOpen,
 			[subheading]: !subheadingsOpen[subheading],
@@ -36,7 +36,8 @@
 	<PrimaryNavSubheading
 		isOpen={subheadingsOpen.persona}
 		isSelected={$world && $world.type === 'persona'}
-		on:click={() => toggleSubheading('persona')}>
+		on:click={() => toggleSubheading('persona')}
+	>
 		personas
 	</PrimaryNavSubheading>
 
@@ -52,7 +53,8 @@
 	<PrimaryNavSubheading
 		isOpen={subheadingsOpen.community}
 		isSelected={$world && $world.type === 'community'}
-		on:click={() => toggleSubheading('community')}>
+		on:click={() => toggleSubheading('community')}
+	>
 		communities
 	</PrimaryNavSubheading>
 
@@ -68,7 +70,8 @@
 	<PrimaryNavSubheading
 		isOpen={subheadingsOpen.person}
 		isSelected={$world && $world.type === 'person'}
-		on:click={() => toggleSubheading('person')}>
+		on:click={() => toggleSubheading('person')}
+	>
 		friends
 	</PrimaryNavSubheading>
 
@@ -84,7 +87,8 @@
 	<PrimaryNavSubheading
 		isOpen={subheadingsOpen.page}
 		isSelected={$world && $world.type === 'page'}
-		on:click={() => toggleSubheading('page')}>
+		on:click={() => toggleSubheading('page')}
+	>
 		felt.dev
 	</PrimaryNavSubheading>
 

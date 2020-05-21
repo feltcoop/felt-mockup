@@ -8,7 +8,7 @@
 	const world = useWorld();
 
 	// TODO points to a naming issue - "events.events" vs "forum.topic" and "chat.messages"
-	$: eventsSpace = $world.spaces.find(s => s.slug === view.props.eventsSlug);
+	$: eventsSpace = $world.spaces.find((s) => s.slug === view.props.eventsSlug);
 </script>
 
 {#if eventsSpace}

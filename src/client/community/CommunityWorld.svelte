@@ -7,9 +7,7 @@
 
 {#if !$world.view}
 	<PlaceholderInfo>the community's main page goes here</PlaceholderInfo>
-	<PlaceholderInfo>
-		the community customizes the page & embeds/links to resources
-	</PlaceholderInfo>
+	<PlaceholderInfo>the community customizes the page & embeds/links to resources</PlaceholderInfo>
 	<PlaceholderInfo>
 		this page also has stuff like quick access to activity in @{$world.title}
 	</PlaceholderInfo>

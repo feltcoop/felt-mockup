@@ -61,9 +61,7 @@ interface MigrationFile {
 	directory: string; // relative path to migrations directory
 }
 
-const createMigrationSource = (
-	relativeDir: string,
-): MigrationSource<MigrationFile> => {
+const createMigrationSource = (relativeDir: string): MigrationSource<MigrationFile> => {
 	const absoluteDir = resolve(relativeDir);
 	const modules = new Map();
 	return {
@@ -73,15 +71,15 @@ const createMigrationSource = (
 			const migrationFileNames = readdirSync(absoluteDir);
 			migrationFileNames.sort((a, b) => (a > b ? 1 : -1));
 			await Promise.all(
-				migrationFileNames.map(async fileName => {
+				migrationFileNames.map(async (fileName) => {
 					const mod = await import(join(absoluteDir, fileName));
 					modules.set(fileName, mod);
 				}),
 			);
-			return migrationFileNames.map(file => ({file, directory: relativeDir}));
+			return migrationFileNames.map((file) => ({file, directory: relativeDir}));
 		},
-		getMigrationName: migration => migration.file,
-		getMigration: migration => ({
+		getMigrationName: (migration) => migration.file,
+		getMigration: (migration) => ({
 			up: modules.get(migration.file).up,
 			down: async () => {},
 		}),
