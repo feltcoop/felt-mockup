@@ -1,18 +1,13 @@
 import dotenv from 'dotenv';
 dotenv.config();
 const {
-	NODE_ENV,
 	DEPLOY_SERVER_USER,
 	DEPLOY_SERVER_IP,
 	DEPLOY_SERVER_SSH_PORT,
 	DEPLOY_SERVER_DIR,
-	DEPLOY_DRY_RUN,
 	DEPLOY_NODE_PROCESS_NAME,
 	SERVER_DEPLOY,
 } = process.env;
-if (NODE_ENV !== 'production') {
-	throw Error(`Expected NODE_ENV to be 'production', not '${NODE_ENV}'`);
-}
 if (!DEPLOY_SERVER_USER && !SERVER_DEPLOY) {
 	throw Error('DEPLOY_SERVER_USER env var is required for deployment');
 }
@@ -29,11 +24,10 @@ if (!DEPLOY_NODE_PROCESS_NAME) {
 import * as fileSystem from 'fs';
 import * as filePath from 'path';
 import {exec} from 'child_process';
-import kleur from 'kleur';
+import {magenta, cyan, green} from '@feltcoop/gro/dist/colors/terminal.js';
+import {Task} from '@feltcoop/gro';
 
-const {magenta, cyan, yellow, green} = kleur;
-
-import {paths} from '../../paths.js';
+import {paths} from './paths.js';
 
 // ensure the build is ready
 if (!fileSystem.existsSync(paths.sapperBuild)) {
@@ -53,34 +47,45 @@ Note that this task does not build any project files.
 Building and deploying are intentionally decoupled so that anything can be
 directly deployed without special handling.
 
+To perform a dry run without executing any commands, include the CLI arg `--dry`.
+
 */
-const deploy = async (): Promise<void> => {
-	var command: string;
-	if (SERVER_DEPLOY) {
-		command = createLocalDeploymentCommand();
-	} else {
-		command = createDeploymentCommand();
-	}
-	info(magenta(`deployment command`), cyan(command));
+export const task: Task = {
+	run: async ({log, args}): Promise<void> => {
+		const dry = !!args.dry;
 
-	if (DEPLOY_DRY_RUN) {
-		console.log(magenta('dry run - skipping deployment command execution'));
-		return;
-	}
+		const command = SERVER_DEPLOY
+			? createLocalDeploymentCommand()
+			: createDeploymentCommand();
+		info(magenta(`deployment command`), cyan(command));
 
-	info(magenta('executing deployment command'));
-	const {stdout, stderr} = await new Promise((resolve, reject) => {
-		exec(command, (err, stdout, stderr) => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve({stdout, stderr});
-			}
-		});
-	});
-	if (stdout) console.log(stdout);
-	if (stderr) console.error(stderr);
-	info(magenta('executed deployment command'));
+		if (dry) {
+			log.info(magenta('dry run - skipping deployment command execution'));
+		} else {
+			info(magenta('executing deployment command'));
+			const {stdout, stderr} = await new Promise((resolve, reject) => {
+				exec(command, (err, stdout, stderr) => {
+					if (err) {
+						reject(err);
+					} else {
+						resolve({stdout, stderr});
+					}
+				});
+			});
+			if (stdout) log.info(stdout);
+			if (stderr) log.error(stderr);
+			info(magenta('executed deployment command'));
+		}
+
+		log.info(
+			[
+				green('~~~~~~~~~~~~~~~~'),
+				green('~❤~ deployed ~❤~'),
+				green('~~~~~~~~~~~~~~~~'),
+			].join('\n'),
+		);
+		if (dry) log.info(magenta('dry run complete'));
+	},
 };
 
 /*
@@ -228,23 +233,3 @@ const createDeploymentPaths = (): DeploymentPaths => {
 		remoteTempDir: filePath.join(remoteRootDir, 'temp'),
 	};
 };
-
-// TODO do this at the task level, exporting `deploy` instead of calling it here
-deploy()
-	.then(() => {
-		console.log(
-			[
-				green('~~~~~~~~~~~~~~~~'),
-				green('~❤~ deployed ~❤~'),
-				green('~~~~~~~~~~~~~~~~'),
-			].join('\n'),
-		);
-		if (DEPLOY_DRY_RUN) console.log(magenta('dry run complete'));
-	})
-	.catch((err: Error): void => {
-		const message = err.stack
-			? yellow(err.stack)
-			: yellow(`Error: ${err.message}`);
-		console.error(message);
-		process.exit(1);
-	});

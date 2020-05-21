@@ -45,7 +45,9 @@ To build & deploy from your local machine, follow the [setup](../setup) instruct
 
 1. copy src/project/deploy/pm2-app.json to /var/www/felt.dev
 2. run `gro build` to create the build
-3. run `npm run deploy` to copy the build /var/www/felt.dev/dist
+3. run `gro deploy` to copy the build /var/www/felt.dev/dist
+
+> Tip: you can run `gro deploy --dry` to see the final deployment command without executing it.
 
 ```bash
 $ pm2 start /var/www/felt.dev/pm2-app.json
@@ -60,7 +62,7 @@ To build & deploy on your server, run the following commands from the repository
 ```bash
 $ npm i
 $ gro build
-$ npm run deploy
+$ gro deploy
 ```
 
-For either choice, subsequent deployments should be as simple as `gro build && npm run deploy`.
+For either choice, subsequent deployments should be as simple as `gro build && gro deploy`.
