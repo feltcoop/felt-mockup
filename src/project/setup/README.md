@@ -30,7 +30,7 @@ Install it globally to add its CLI to your system PATH:
 
 ```bash
 $ npm i -g @feltcoop/gro
-$ gro # lists all available tasks
+$ gro # lists all available tasks, deferring to the locally installed Gro version
 ```
 
 **4. Initialize .env**
