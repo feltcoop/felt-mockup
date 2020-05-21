@@ -42,6 +42,9 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 [`github`](https://github.com) . [`git`](https://git-scm.com/)
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
+## Governance
+Goverened under a Temporary Benevolent Dictatorship [defined here](GOVERNANCE.md)
+
 ## License
 
 [ISC](license)
