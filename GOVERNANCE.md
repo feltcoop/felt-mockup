@@ -2,7 +2,7 @@
 
 ## Basics
 
-For now, one community member, the benevolent dictator (BD) currently defined as the Felt.coop membership, holds ultimate decision-making power, until the community is ready for a more inclusive model.
+For now, one community member, the benevolent dictator (BD), holds ultimate decision-making power, until the community is ready for a more inclusive model.
 
 This Rule reflects the idea of #ExitToCommunity—that community ownership and control is the destination even if it's not the origin.
 
