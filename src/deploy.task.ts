@@ -51,6 +51,7 @@ To perform a dry run without executing any commands, include the CLI arg `--dry`
 
 */
 export const task: Task = {
+	description: 'deploy the project to production',
 	run: async ({log, args}): Promise<void> => {
 		const dry = !!args.dry;
 
