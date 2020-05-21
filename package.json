@@ -17,8 +17,6 @@
     "url": "https://github.com/feltcoop/felt/issues"
   },
   "scripts": {
-    "build": "gro build",
-    "dev": "gro dev",
     "start": "node __sapper__/build",
     "test": "gro test"
   },
