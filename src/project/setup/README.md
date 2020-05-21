@@ -74,5 +74,7 @@ $ gro dev
 
 Now open your browser to `localhost:3000` or whatever it says.
 
+> If you experience any issues with `gro dev` failing with a weird error, try running `gro clean`.
+
 All done! Felt should now be running on your local machine for development.
 To deploy to a real life server, see [our deployment instructions](../deploy).
