@@ -19,8 +19,6 @@
   "scripts": {
     "build": "gro build",
     "dev": "gro dev",
-    "deploy": "NODE_ENV=production node build/project/deploy/deploy.js",
-    "deploy:dry": "DEPLOY_DRY_RUN=1 NODE_ENV=production node build/project/deploy/deploy.js",
     "start": "node __sapper__/build",
     "test": "gro test"
   },
@@ -28,7 +26,6 @@
     "body-parser": "^1.19.0",
     "compression": "^1.7.1",
     "dotenv": "^8.2.0",
-    "kleur": "^3.0.3",
     "knex": "^0.21.1",
     "pg": "^8.2.1",
     "polka": "next",
