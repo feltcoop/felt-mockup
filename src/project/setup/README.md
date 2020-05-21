@@ -25,6 +25,14 @@ See [`package.json`](/package.json) for more about what's being installed.
 Felt tries to minimize external dependencies within reason -
 if you see avoidable bloat please help us reduce it!
 
+Felt uses [Gro](https://github.com/feltcoop/gro) for task running and other development needs.
+Install it globally to add its CLI to your system PATH:
+
+```bash
+$ npm i -g @feltcoop/gro
+$ gro # lists all available tasks, deferring to the locally installed Gro version
+```
+
 **4. Initialize .env**
 
 Copy [`.env.sample`](.env.sample) as `.env` to the root directory.
@@ -69,7 +77,7 @@ before [deploying to a production server](../deploy).
 **5. Run the dev server!**
 
 ```bash
-$ gro dev
+$ gro dev # the globally installed Gro defers to the local version
 ```
 
 Now open your browser to `localhost:3000` or whatever it says.
