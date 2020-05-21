@@ -19,13 +19,13 @@ export const task: Task = {
 			);
 		}
 
-		const [knex, releaseKnex] = obtainKnex();
+		const [knex, unobtainKnex] = obtainKnex();
 
 		const migratorConfig = getMigrationConfigWithDefaultSource();
 
 		const newMigrationPath = await knex.migrate.make(migrationName, migratorConfig);
 		log.info('created migration', printPath(newMigrationPath));
 
-		releaseKnex();
+		unobtainKnex();
 	},
 };

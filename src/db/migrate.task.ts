@@ -6,12 +6,12 @@ import {getMigrationConfigWithCustomSource} from './getKnexMigrationConfig.js';
 export const task: Task = {
 	description: 'run all migrations',
 	run: async () => {
-		const [knex, releaseKnex] = obtainKnex();
+		const [knex, unobtainKnex] = obtainKnex();
 
 		const migrationConfig = getMigrationConfigWithCustomSource();
 
 		await knex.migrate.latest(migrationConfig);
 
-		releaseKnex();
+		unobtainKnex();
 	},
 };

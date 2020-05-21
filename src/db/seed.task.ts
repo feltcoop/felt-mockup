@@ -5,7 +5,7 @@ import {obtainKnex} from './obtainKnex.js';
 export const task: Task = {
 	description: 'seed the database',
 	run: async () => {
-		const [knex, releaseKnex] = obtainKnex();
+		const [knex, unobtainKnex] = obtainKnex();
 
 		await knex('accounts').insert([
 			{email: 'test1@email.com'},
@@ -13,6 +13,6 @@ export const task: Task = {
 			{email: 'test3@email.com'},
 		]);
 
-		releaseKnex();
+		unobtainKnex();
 	},
 };
