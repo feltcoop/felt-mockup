@@ -21,6 +21,7 @@ Bikeshed:
 	- `record` seems too overloaded
 	- is `row` too SQL-specific?
 	- `model` kinda works
+- what query verb instead of `get`? `find`? `read`?
 
 */
 
