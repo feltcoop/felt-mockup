@@ -24,6 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm i -g @feltcoop/gro
+      - run: gro setup
       - run: gro check
         env:
           CI: true
