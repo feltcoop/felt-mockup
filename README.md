@@ -43,7 +43,7 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
 ## Governance
-Goverened under a Temporary Benevolent Dictatorship [defined here](GOVERNANCE.md)
+Governed under a Temporary Benevolent Dictatorship. [See GOVERNANCE.md](GOVERNANCE.md).
 
 ## License
 

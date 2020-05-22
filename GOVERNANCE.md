@@ -2,7 +2,7 @@
 
 ## Basics
 
-For now, one community member, the benevolent dictator (BD), holds ultimate decision-making power, until the community is ready for a more inclusive model.
+For now, Felt.coop ([@feltcoop](https://github.com/feltcoop)), the benevolent dictator (BD), holds ultimate decision-making power, until the community is ready for a more inclusive model.
 
 This Rule reflects the idea of #ExitToCommunity—that community ownership and control is the destination even if it's not the origin.
 
@@ -35,7 +35,7 @@ When the Board reaches 5 members, including the BD, the Board assumes control of
 
 ---
 
-[![CommunityRule derived](https://communityrule.info/assets/CommunityRule-derived-000000.svg)](https://communityrule.info)
+[![CommunityRule derived](https://communityrule.info/assets/CommunityRule-derived-000000.svg)]( https://communityrule.info/create/?r=1589491067257)
 
 Created with [CommunityRule](https://communityrule.info)
 
