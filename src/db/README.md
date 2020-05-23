@@ -1,6 +1,6 @@
 # Database management
 
-Felt has a number of Gro tasks for managing the database.
+Felt has a number of [Gro](https://github.com/feltcoop/gro) tasks for managing the database.
 To view all of them, run `gro db`.
 
 ## Create the database
