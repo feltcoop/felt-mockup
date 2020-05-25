@@ -14,12 +14,7 @@ test('AccountsRepo', () => {
 			t.ok(account.email);
 		});
 		test('fails to find a nonexistent account', async () => {
-			try {
-				await accountsRepo.findById(0);
-			} catch (err) {
-				return;
-			}
-			t.fail('should fail');
+			await t.rejects(accountsRepo.findById(0));
 		});
 	});
 });
