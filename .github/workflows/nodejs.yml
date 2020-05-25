@@ -41,6 +41,8 @@ jobs:
       - run: npm i -g @feltcoop/gro
 
       - run: gro setup
+        env:
+          POSTGRES_HOST: localhost
       - run: gro db/create # TODO do this in setup?
       # - run: gro check # TODO figure out task composition
       - run: gro typecheck
