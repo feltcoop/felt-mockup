@@ -22,7 +22,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD: password # TODO is this needed?
+          POSTGRES_PASSWORD: postgres # TODO is this needed?
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
