@@ -43,6 +43,7 @@ using [`svelte`](https://github.com/sveltejs/svelte) .
 and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
 ## Governance
+
 Governed under a Temporary Benevolent Dictatorship (TBD). [See GOVERNANCE.md](GOVERNANCE.md).
 
 ## License
