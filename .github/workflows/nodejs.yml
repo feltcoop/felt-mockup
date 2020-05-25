@@ -42,8 +42,8 @@ jobs:
       # Set up the Postgres database
       # TODO move this to `gro setup`
       # TODO is this right? does this belong in a `before_script` block?
-      - run: psql -c "CREATE DATABASE felt_dev;" -U postgres
-      - run: psql -c "CREATE USER postgres WITH PASSWORD 'password';" -U postgres
+      # - run: psql -c "CREATE DATABASE felt_dev;" -U postgres
+      # - run: psql -c "CREATE USER postgres WITH PASSWORD 'password';" -U postgres
 
       - run: gro setup
       - run: gro db/create # TODO do this in setup?
