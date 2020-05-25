@@ -16,6 +16,20 @@ jobs:
       matrix:
         node-version: [14.0]
 
+    services:
+      # Postgres config taken from GitHub Actions help docs
+      # https://help.github.com/en/actions/configuring-and-managing-workflows/creating-postgresql-service-containers
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: password # TODO is this needed?
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -24,7 +38,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm i -g @feltcoop/gro
+
+      # Set up the Postgres database
+      # TODO move this to `gro setup`
+      # TODO is this right? does this belong in a `before_script` block?
+      - run: psql -c "CREATE DATABASE felt_dev;" -U postgres
+      - run: psql -c "CREATE USER postgres WITH PASSWORD 'password';" -U postgres
+
       - run: gro setup
+      - run: gro db/create # TODO do this in setup?
       - run: gro check
         env:
           CI: true
