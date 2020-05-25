@@ -33,16 +33,13 @@ $ npm i -g @feltcoop/gro
 $ gro # lists all available tasks, deferring to the locally installed Gro version
 ```
 
-**4. Initialize .env**
-
-Copy [`.env.sample`](.env.sample) as `.env` to the root directory.
-This file will not be committed in git.
+**4. Run the Gro setup task**
 
 ```bash
-$ cp src/project/setup/.env.sample .env
+$ gro setup # performs initial setup for the project
 ```
 
-> TODO automate this with a setup task
+**5. Initialize the database**
 
 Now it's time to set up a database and environment variables.
 By default PostgreSQL uses the "postgres" user.
@@ -58,6 +55,9 @@ postgres=# \password
 ```
 
 Add that password to `.env` at the root of your project.
+The `.env` file was copied to the root by the `gro setup` task above and
+is excluded from source control by `.gitignore`,
+so it should be safe to put your secrets in it.
 
 ```bash
 DB_NAME=felt_dev
@@ -74,7 +74,7 @@ $ sudo -u postgres createdb felt_dev # same as DB_NAME
 Note that you'll have to add additional config to this file
 before [deploying to a production server](../deploy).
 
-**5. Run the dev server!**
+**6. Run the dev server!**
 
 ```bash
 $ gro dev # the globally installed Gro defers to the local version
