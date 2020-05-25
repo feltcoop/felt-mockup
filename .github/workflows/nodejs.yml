@@ -22,7 +22,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD: postgres # TODO is this needed?
+          POSTGRES_PASSWORD: password # TODO is this needed?
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
@@ -41,15 +41,10 @@ jobs:
       - run: npm ci
       - run: npm i -g @feltcoop/gro
 
-      # Set up the Postgres database
-      # TODO move this to `gro setup`
-      # TODO is this right? does this belong in a `before_script` block?
-      # - run: psql -c "CREATE DATABASE felt_dev;" -U postgres
-      # - run: psql -c "CREATE USER postgres WITH PASSWORD 'password';" -U postgres
-
       - run: gro setup
       - run: gro db/create # TODO do this in setup?
-      - run: gro check
-        env:
-          CI: true
+      # - run: gro check # TODO figure out task composition
+      - run: gro typecheck
+      - run: gro test
+      - run: gro format --check
       - run: gro build
