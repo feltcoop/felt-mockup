@@ -21,8 +21,8 @@ jobs:
       # https://help.github.com/en/actions/configuring-and-managing-workflows/creating-postgresql-service-containers
       postgres:
         image: postgres
-        env:
-          POSTGRES_PASSWORD: password # TODO is this needed?
+        # env:
+        # POSTGRES_PASSWORD: password # TODO is this needed?
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
