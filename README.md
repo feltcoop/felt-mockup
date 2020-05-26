@@ -50,3 +50,5 @@ Governed under a Temporary Benevolent Dictatorship (TBD). [See GOVERNANCE.md](GO
 
 [ISC](license)
 <sub>permissive <3 [learn more at Wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub>
+
+# :evergreen_tree:
