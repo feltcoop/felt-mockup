@@ -5,7 +5,9 @@ import {spawnProcess} from '@feltcoop/gro/dist/utils/process.js';
 
 export const task: Task = {
 	description: 'performs initial project setup',
-	run: async ({log}): Promise<void> => {
+	run: async (ctx): Promise<void> => {
+		const {log} = ctx;
+
 		if (await pathExists('.env')) {
 			log.info('.env already exists - skipping its copy step');
 		} else {
@@ -19,6 +21,7 @@ export const task: Task = {
 		if (!DB_USER) throw Error(`Expected environment variable DB_USER`);
 		if (!DB_PASS) throw Error(`Expected environment variable DB_PASS`);
 		process.env.PGPASSWORD = DB_PASS;
+		// TODO trying to set these to get psql to work in CI, but it's currently broken
 		process.env.POSTGRES_HOST = 'localhost';
 		process.env.POSTGRES_PORT = '5432';
 		process.env.POSTGRES_DB = DB_NAME;
@@ -43,5 +46,11 @@ export const task: Task = {
 			DB_USER,
 			'-w',
 		]);
+
+		// create the database
+		// TODO importing here because it currently errors if the env isn't yet set up
+		// we should probably defer that check to when `dotenv.config()` is actually called
+		const {task: createDbTask} = await import('./db/create.task.js');
+		await createDbTask.run(ctx);
 	},
 };
