@@ -1,5 +1,7 @@
+import {ModelId} from '../db/Model.js';
+
 export interface AccountModel {
-	id: number;
+	id: ModelId;
 	email: string;
 }
 
