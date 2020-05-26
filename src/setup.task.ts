@@ -20,28 +20,25 @@ export const task: Task = {
 			if (!DB_USER) throw Error(`Expected environment variable DB_USER`);
 			if (!DB_PASS) throw Error(`Expected environment variable DB_PASS`);
 			process.env.PGPASSWORD = DB_PASS;
-			// process.env.POSTGRES_HOST = 'localhost';
-			// process.env.POSTGRES_PORT = '5432';
-			const spawnOptions = {env: process.env};
-			await spawnProcess(
-				`psql`,
-				['-c', `CREATE DATABASE ${DB_NAME};`, '-U', DB_USER, '-w'],
-				spawnOptions,
-			);
+			await spawnProcess(`psql`, ['-c', `CREATE DATABASE ${DB_NAME};`, '-U', DB_USER, '-w']);
 			// TODO what's the right way to do this?
 			// there's currently a contradiction about setting up the user and password
 			// what does a fresh setup with no existing database look like?
 			// maybe we need to split the admin db user/password from the app user/password?
-			await spawnProcess(
-				`psql`,
-				['-c', `CREATE USER ${DB_USER} WITH PASSWORD '${DB_PASS}';`, '-U', DB_USER, '-w'],
-				spawnOptions,
-			);
-			await spawnProcess(
-				`psql`,
-				['-c', `ALTER ROLE ${DB_USER} WITH PASSWORD '${DB_PASS}';`, '-U', DB_USER, '-w'],
-				spawnOptions,
-			);
+			await spawnProcess(`psql`, [
+				'-c',
+				`CREATE USER ${DB_USER} WITH PASSWORD '${DB_PASS}';`,
+				'-U',
+				DB_USER,
+				'-w',
+			]);
+			await spawnProcess(`psql`, [
+				'-c',
+				`ALTER ROLE ${DB_USER} WITH PASSWORD '${DB_PASS}';`,
+				'-U',
+				DB_USER,
+				'-w',
+			]);
 		}
 	},
 };
