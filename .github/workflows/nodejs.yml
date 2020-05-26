@@ -22,6 +22,13 @@ jobs:
       postgres:
         image: postgres
         env:
+          # TODO This is expected to be in sync with .env.sample
+          # How can we make it use the .env that gets copied to the root in `gro setup` below?
+          # Running `psql` in the config here and within the `gro setup` task
+          # gives a server connection error and I couldn't figure it out.
+          # Maybe we want to change to running in a container? (to make networking easier?)
+          # It's probably a one-liner change.
+          POSTGRES_DB: felt_dev
           POSTGRES_PASSWORD: pw
         options: >-
           --health-cmd pg_isready
@@ -40,10 +47,22 @@ jobs:
       - run: npm ci
       - run: npm i -g @feltcoop/gro
 
-      - run: psql -c "CREATE DATABASE felt_dev;" -U postgres
-      - run: psql -c "CREATE USER postgres WITH PASSWORD 'pw';" -U postgres
+      # TODO see notes above - this doesn't work, but it's not what we wanted to do anyway,
+      # we want this to be performed in `gro setup` using the `.env`.
+      # - run: psql -c "CREATE DATABASE felt_dev;" -U postgres
+      #   env:
+      #     POSTGRES_HOST: postgres
+      #     POSTGRES_PORT: 5432
+      # - run: psql -c "CREATE USER postgres WITH PASSWORD 'pw';" -U postgres
+      #   env:
+      #     POSTGRES_HOST: postgres
+      #     POSTGRES_PORT: 5432
 
+      # TODO see notes above - can't get this to set up the database from the `.env`.
+      # The CI env var is used to bypass the normal database setup.
       - run: gro setup
+        env:
+          CI: true
       - run: gro db/create # TODO do this in setup?
       # - run: gro check # TODO figure out task composition
       - run: gro typecheck
