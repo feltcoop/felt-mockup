@@ -19,7 +19,7 @@ jobs:
         node-version: [14.0]
 
     services:
-      # Postgres config taken from GitHub Actions help docs
+      # Postgres config taken from GitHub Actions help docs:
       # https://help.github.com/en/actions/configuring-and-managing-workflows/creating-postgresql-service-containers
       postgres:
         image: postgres
@@ -43,8 +43,6 @@ jobs:
       - run: npm ci
       - run: npm i -g @feltcoop/gro
       - run: gro setup
-        env:
-          CI: true
       - run: gro typecheck
       - run: gro test
       - run: gro format --check

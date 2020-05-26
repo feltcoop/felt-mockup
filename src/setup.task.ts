@@ -8,6 +8,7 @@ export const task: Task = {
 	run: async (ctx): Promise<void> => {
 		const {log} = ctx;
 
+		// copy a fresh `.env` to the root if one doesn't already exist
 		if (await pathExists('.env')) {
 			log.info('.env already exists - skipping its copy step');
 		} else {
@@ -15,41 +16,30 @@ export const task: Task = {
 			await copy('src/project/setup/.env.sample', '.env');
 		}
 
+		// set up the database - the first two are no-ops if they already exist
 		dotenv.config();
 		const {DB_NAME, DB_USER, DB_PASS} = process.env;
 		if (!DB_NAME) throw Error(`Expected environment variable DB_NAME`);
 		if (!DB_USER) throw Error(`Expected environment variable DB_USER`);
 		if (!DB_PASS) throw Error(`Expected environment variable DB_PASS`);
-		process.env.PGPASSWORD = DB_PASS;
-		// TODO trying to set these to get psql to work in CI, but it's currently broken
-		process.env.POSTGRES_HOST = 'localhost';
-		process.env.POSTGRES_PORT = '5432';
-		process.env.POSTGRES_DB = DB_NAME;
-		process.env.POSTGRES_USER = DB_USER;
-		process.env.POSTGRES_PASSWORD = DB_PASS;
-		await spawnProcess(`psql`, ['-c', `CREATE DATABASE ${DB_NAME};`, '-U', DB_USER, '-w']);
-		// TODO what's the right way to do this?
-		// there's currently a contradiction about setting up the user and password
-		// what does a fresh setup with no existing database look like?
-		// maybe we need to split the admin db user/password from the app user/password?
+		process.env.PGPASSWORD = DB_PASS; // this is read by `psql`
+		await spawnProcess(`psql`, ['-c', `CREATE DATABASE ${DB_NAME};`, '-U', 'postgres', '-w']);
 		await spawnProcess(`psql`, [
 			'-c',
 			`CREATE USER ${DB_USER} WITH PASSWORD '${DB_PASS}';`,
 			'-U',
-			DB_USER,
+			'postgres',
 			'-w',
 		]);
 		await spawnProcess(`psql`, [
 			'-c',
 			`ALTER ROLE ${DB_USER} WITH PASSWORD '${DB_PASS}';`,
 			'-U',
-			DB_USER,
+			'postgres',
 			'-w',
 		]);
 
-		// create the database
-		// TODO importing here because it currently errors if the env isn't yet set up
-		// we should probably defer that check to when `dotenv.config()` is actually called
+		// create the database's schema and seed it
 		const {task: createDbTask} = await import('./db/create.task.js');
 		await createDbTask.run(ctx);
 	},
