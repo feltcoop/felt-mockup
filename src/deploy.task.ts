@@ -1,5 +1,12 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import * as fileSystem from 'fs';
+import * as filePath from 'path';
+import {exec} from 'child_process';
+import {magenta, cyan, green} from '@feltcoop/gro/dist/colors/terminal.js';
+import {Task} from '@feltcoop/gro';
+
+import {paths} from './paths.js';
+import {getEnv} from './project/env.js';
+
 const {
 	DEPLOY_SERVER_USER,
 	DEPLOY_SERVER_IP,
@@ -7,7 +14,7 @@ const {
 	DEPLOY_SERVER_DIR,
 	DEPLOY_NODE_PROCESS_NAME,
 	SERVER_DEPLOY,
-} = process.env;
+} = getEnv();
 if (!DEPLOY_SERVER_USER && !SERVER_DEPLOY) {
 	throw Error('DEPLOY_SERVER_USER env var is required for deployment');
 }
@@ -20,14 +27,6 @@ if (!DEPLOY_SERVER_DIR) {
 if (!DEPLOY_NODE_PROCESS_NAME) {
 	throw Error('DEPLOY_NODE_PROCESS_NAME env var is required for deployment');
 }
-
-import * as fileSystem from 'fs';
-import * as filePath from 'path';
-import {exec} from 'child_process';
-import {magenta, cyan, green} from '@feltcoop/gro/dist/colors/terminal.js';
-import {Task} from '@feltcoop/gro';
-
-import {paths} from './paths.js';
 
 // ensure the build is ready
 if (!fileSystem.existsSync(paths.sapperBuild)) {

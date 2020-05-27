@@ -1,7 +1,8 @@
-import dotenv from 'dotenv';
 import {Task} from '@feltcoop/gro';
 import {copy, pathExists} from '@feltcoop/gro/dist/fs/nodeFs.js';
 import {spawnProcess} from '@feltcoop/gro/dist/utils/process.js';
+
+import {getEnv} from './project/env.js';
 
 export const task: Task = {
 	description: 'performs initial project setup',
@@ -17,8 +18,7 @@ export const task: Task = {
 		}
 
 		// set up the database - the first two are no-ops if they already exist
-		dotenv.config();
-		const {DB_NAME, DB_USER, DB_PASS} = process.env;
+		const {DB_NAME, DB_USER, DB_PASS} = getEnv(true);
 		if (!DB_NAME) throw Error(`Expected environment variable DB_NAME`);
 		if (!DB_USER) throw Error(`Expected environment variable DB_USER`);
 		if (!DB_PASS) throw Error(`Expected environment variable DB_PASS`);
