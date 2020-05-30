@@ -1,4 +1,3 @@
-import dotenv from 'dotenv';
 import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
@@ -8,9 +7,9 @@ import fp from 'path';
 import bodyParser from 'body-parser';
 
 import {isEmail, normalizeEmail} from './client/email/utils.js';
+import {getEnv} from './project/env.js';
 
-dotenv.config();
-const {PORT, NODE_ENV} = process.env;
+const {PORT, NODE_ENV} = getEnv();
 const dev = NODE_ENV === 'development';
 
 // TODO put these in a centralized paths module
