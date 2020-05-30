@@ -6,9 +6,7 @@ import {getEnv} from './project/env.js';
 
 export const task: Task = {
 	description: 'performs initial project setup',
-	run: async (ctx): Promise<void> => {
-		const {log} = ctx;
-
+	run: async ({log, invokeTask}): Promise<void> => {
 		// copy a fresh `.env` to the root if one doesn't already exist
 		if (await pathExists('.env')) {
 			log.info('.env already exists - skipping its copy step');
@@ -40,7 +38,6 @@ export const task: Task = {
 		]);
 
 		// create the database's schema and seed it
-		const {task: createDbTask} = await import('./db/create.task.js');
-		await createDbTask.run(ctx);
+		await invokeTask('db/create');
 	},
 };

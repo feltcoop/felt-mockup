@@ -43,7 +43,5 @@ jobs:
       - run: npm ci
       - run: npm i -g @feltcoop/gro
       - run: gro setup
-      - run: gro typecheck
-      - run: gro test
-      - run: gro format --check
+      - run: gro check
       - run: gro build
