@@ -1,16 +1,28 @@
 <script>
+	import {stores} from '@sapper/app';
+
 	import SocialLinks from '../client/ui/SocialLinks.svelte';
-	import MediaListCallout from '../client/ui/MediaListCallout.svelte';
+	import AccountLoginForm from '../client/ui/AccountLoginForm.svelte';
+	import AccountLogoutForm from '../client/ui/AccountLogoutForm.svelte';
+
+	const {session} = stores();
+	$: console.log('$session changed', $session); // TODO logging
 </script>
 
 <svelte:head>
 	<title>Felt</title>
 </svelte:head>
 <div style="max-width: 640px;">
+	<h1>Felt</h1>
+	<small>customizable community tools that feel good</small>
 	<ul>
 		<li>
-			<div>Felt</div>
-			<div>customizable community tools that feel good</div>
+			{#if $session.account}
+				{$session.account.email}
+				<AccountLogoutForm />
+			{:else}
+				<AccountLoginForm />
+			{/if}
 		</li>
 		<li>
 			<a href="/about">
@@ -29,9 +41,6 @@
 		<li>
 			<a href="https://felt.dev">Felt.dev</a>
 			<span>is for Felt the free software</span>
-		</li>
-		<li style="position: relative;">
-			<MediaListCallout />
 		</li>
 		<li>
 			<SocialLinks />

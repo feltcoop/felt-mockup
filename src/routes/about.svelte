@@ -1,7 +1,6 @@
 <script>
 	import Content from '../client/ui/Content.svelte';
 	import SocialLinks from '../client/ui/SocialLinks.svelte';
-	import MediaListCallout from '../client/ui/MediaListCallout.svelte';
 
 	let el;
 </script>
@@ -110,8 +109,5 @@
 		</p>
 		<p>Your feedback is 💚💚</p>
 		<SocialLinks />
-		<div style="position: relative">
-			<MediaListCallout />
-		</div>
 	</Content>
 </div>

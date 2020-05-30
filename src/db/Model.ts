@@ -1,1 +1,1 @@
-export type ModelId = number & {__type?: 'ModelId'}; // incrementing integers
+export type ModelId<T extends string = string> = number & {__type?: 'ModelId'; __model?: T};
