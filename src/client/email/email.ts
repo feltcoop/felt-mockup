@@ -1,4 +1,4 @@
-export type Email = string & {__type?: 'email'};
+export type Email = Flavored<string, 'Email'>;
 
 export const EMAIL_MATCHER = /^.+\@.+\..+$/;
 
