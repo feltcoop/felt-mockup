@@ -1,6 +1,5 @@
 import {Repo, QueryResult} from '../db/Repo.js';
-import {ModelId} from '../db/Model.js';
-import {AccountModel} from './AccountModel.js';
+import {AccountModel, AccountModelId} from './AccountModel.js';
 import {isEmail, normalizeEmail, Email} from '../client/email/email.js';
 
 export class AccountsRepo extends Repo<AccountModel> {
@@ -30,7 +29,7 @@ export class AccountsRepo extends Repo<AccountModel> {
 		return {ok: true, value};
 	}
 
-	async findById(id: ModelId): Promise<QueryResult<AccountModel, {type: 'noAccountFound'}>> {
+	async findById(id: AccountModelId): Promise<QueryResult<AccountModel, {type: 'noAccountFound'}>> {
 		const value = await this.query().where('id', id).first();
 		return value
 			? {ok: true, value}
