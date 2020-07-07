@@ -18,13 +18,13 @@ export const accountLoginMiddleware = (server: Server): Middleware => {
 
 		if (req.account) {
 			if (req.account.email === email) {
-				return send(res, 400, {reason: `Already logged in with this email.`});
+				return send(res, 400, {reason: `Already logged in with email '${email}'.`});
 			} else {
-				// TODO what's the desired behavior here?
-				// We probably want to log the user out and back in with this new email.
-				// However we need to be careful that the session and account get updated properly.
-				// For now just return an error - the client UI should not allow this in any case.
-				return send(res, 400, {reason: `Already logged in with email '${req.account.email}'.`});
+				return send(res, 400, {
+					reason:
+						`Already logged in with email '${req.account.email}'.` +
+						` Please first log out if you wish to log in with email '${email}'.`,
+				});
 			}
 		}
 
