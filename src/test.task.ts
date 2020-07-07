@@ -1,5 +1,4 @@
 import {Task} from '@feltcoop/gro';
-import {task as testTask} from '@feltcoop/gro/dist/test.task.js';
 import {Unobtain} from '@feltcoop/gro/dist/utils/createObtainable.js';
 
 import {obtainKnex, KnexInstance} from './db/obtainKnex.js';
@@ -15,12 +14,10 @@ export const getKnex = () => {
 
 export const task: Task = {
 	description: 'run tests',
-	run: async (ctx) => {
-		const {log} = ctx;
+	run: async ({invokeTask}) => {
+		await invokeTask('gro/test');
 
-		log.info('testing');
-		await testTask.run(ctx);
-
+		// Tests may open a database connection, so we tear it down here if so.
 		if (unobtainKnex) unobtainKnex();
 	},
 };
