@@ -49,6 +49,8 @@ export const accountLoginMiddleware = (server: Server): Middleware => {
 		if (process.env.NODE_ENV === 'development') {
 			// TODO how to ensure this NEVER gets run in production?
 			// If the deployment somehow runs in dev mode.. this code is a disaster!
+			// > Ham: Maybe instead of making it a dev env thing,
+			// > we can have a role we can add to local dev accounts to grant a similar amount of access?
 
 			// This assigns a trusted identity to the session cookie.
 			// In development, that's every submission with no security.
