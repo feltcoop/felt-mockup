@@ -22,19 +22,16 @@ test('AccountsRepo', () => {
 			const result = await accountsRepo.create({email: testEmail});
 			t.ok(!result.ok);
 			t.is(result.type, 'duplicateEmail');
-			t.ok(!result.error);
 		});
 		test('fails to create an account with a duplicate email with different case', async () => {
 			const result = await accountsRepo.create({email: testEmailUppercase});
 			t.ok(!result.ok);
 			t.is(result.type, 'duplicateEmail');
-			t.ok(!result.error);
 		});
 		test('fails to create an account with an invalid email', async () => {
 			const result = await accountsRepo.create({email: 'not_an_email'});
 			t.ok(!result.ok);
 			t.is(result.type, 'invalidEmail');
-			t.ok(!result.error);
 		});
 		test('errors with an undefined email', async () => {
 			// bypass the type system as a security check - accounts are extra important!
@@ -52,7 +49,6 @@ test('AccountsRepo', () => {
 			const result = await accountsRepo.findById(0);
 			t.ok(!result.ok);
 			t.is(result.type, 'noAccountFound');
-			t.ok(!result.error);
 		});
 		test('errors with an undefined id', async () => {
 			// bypass the type system as a security check - accounts are extra important!
@@ -75,13 +71,11 @@ test('AccountsRepo', () => {
 			const result = await accountsRepo.findByEmail(`dont_add_to_db@email.com`);
 			t.ok(!result.ok);
 			t.is(result.type, 'noAccountFound');
-			t.ok(!result.error);
 		});
 		test('fails with an invalid email', async () => {
 			const result = await accountsRepo.findByEmail('not_an_email');
 			t.ok(!result.ok);
 			t.is(result.type, 'invalidEmail');
-			t.ok(!result.error);
 		});
 		test('errors with an undefined email', async () => {
 			// bypass the type system as a security check - accounts are extra important!

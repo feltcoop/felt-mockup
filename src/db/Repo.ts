@@ -5,11 +5,7 @@ import {KnexInstance} from '../db/obtainKnex.js';
 // The pattern of extending errors will likely be used many places.
 export type QueryResult<TValue, TError extends {type?: string} = {}> =
 	| {ok: true; value: TValue}
-	| (TError & {
-			ok: false;
-			reason: string;
-			error?: Error;
-	  });
+	| (TError & {ok: false; reason: string});
 
 export abstract class Repo<T> {
 	public abstract readonly name: string;
