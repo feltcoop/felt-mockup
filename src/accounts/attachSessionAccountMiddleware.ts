@@ -15,7 +15,13 @@ export const attachSessionAccountMiddleware = (server: Server): Middleware => {
 			req.account = findAccountResult.value;
 		} else {
 			req.session = null!;
-			return send(res, 500, {reason: findAccountResult.reason}); // TODO correct status code? not really a 401 is it?
+			const code =
+				findAccountResult.type === 'noAccountFound'
+					? 404
+					: findAccountResult.type === 'invalidEmail'
+					? 400
+					: 500;
+			return send(res, code, {reason: findAccountResult.reason});
 		}
 
 		next();
