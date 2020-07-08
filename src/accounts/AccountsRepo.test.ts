@@ -12,9 +12,7 @@ test('AccountsRepo', () => {
 	let testAccount: AccountModel;
 
 	test('create()', async () => {
-		test('creates an account', async () => {
-			// Create the account with an uppercase email and ensure that the
-			// stored value is a normalized lowercase version.
+		test('creates an account with a case-insensitive email address', async () => {
 			const result = await accountsRepo.create({email: testEmailUppercase});
 			t.ok(result.ok);
 			t.equal(result.value.email, testEmail);
