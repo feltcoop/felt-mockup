@@ -23,8 +23,10 @@
     "test": "gro test"
   },
   "dependencies": {
+    "@polka/send-type": "^0.5.2",
     "body-parser": "^1.19.0",
     "compression": "^1.7.1",
+    "cookie-session": "^1.4.0",
     "dotenv": "^8.2.0",
     "knex": "^0.21.1",
     "pg": "^8.2.1",
@@ -32,13 +34,15 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
-    "@feltcoop/gro": "^0.1.12",
+    "@feltcoop/gro": "^0.2.4",
     "@rollup/plugin-replace": "^2.3.1",
     "@types/body-parser": "^1.19.0",
     "@types/compression": "^1.7.0",
+    "@types/cookie-session": "^2.0.40",
     "@types/dotenv": "^8.2.0",
     "@types/fs-extra": "^8.1.0",
     "@types/node": "^12.12.32",
+    "@types/trouter": "^3.1.0",
     "prettier": "^2.0.5",
     "prettier-plugin-svelte": "^1.1.0",
     "rollup": "^2.8.2",

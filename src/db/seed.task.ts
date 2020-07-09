@@ -8,9 +8,11 @@ export const task: Task = {
 		const [knex, unobtainKnex] = obtainKnex();
 
 		await knex('accounts').insert([
-			{email: 'test1@email.com'},
-			{email: 'test2@email.com'},
-			{email: 'test3@email.com'},
+			{email: 'a@a.a'},
+			{email: 'b@b.b'},
+			{email: 'c@c.c'},
+			{email: 'd@d.d'},
+			{email: 'e@e.e'},
 		]);
 
 		unobtainKnex();
