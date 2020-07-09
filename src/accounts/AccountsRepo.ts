@@ -1,4 +1,4 @@
-import {Repo, QueryResult} from '../db/Repo.js';
+import {Repo} from '../db/Repo.js';
 import {AccountModel, AccountModelId} from './AccountModel.js';
 import {isEmail, normalizeEmail, Email} from '../client/email/email.js';
 
@@ -7,7 +7,12 @@ export class AccountsRepo extends Repo<AccountModel> {
 
 	async create(
 		partialModel: Pick<AccountModel, 'email'>,
-	): Promise<QueryResult<AccountModel, {type: 'invalidEmail'} | {type: 'duplicateEmail'}>> {
+	): Promise<
+		Result<
+			{value: AccountModel},
+			{type: 'invalidEmail'; reason: string} | {type: 'duplicateEmail'; reason: string}
+		>
+	> {
 		const email = normalizeEmail(partialModel.email);
 		if (!isEmail(email)) {
 			// TODO formalize validation
@@ -29,7 +34,9 @@ export class AccountsRepo extends Repo<AccountModel> {
 		return {ok: true, value};
 	}
 
-	async findById(id: AccountModelId): Promise<QueryResult<AccountModel, {type: 'noAccountFound'}>> {
+	async findById(
+		id: AccountModelId,
+	): Promise<Result<{value: AccountModel}, {type: 'noAccountFound'; reason: string}>> {
 		const value = await this.query().where('id', id).first();
 		return value
 			? {ok: true, value}
@@ -38,7 +45,12 @@ export class AccountsRepo extends Repo<AccountModel> {
 
 	async findByEmail(
 		email: Email,
-	): Promise<QueryResult<AccountModel, {type: 'invalidEmail'} | {type: 'noAccountFound'}>> {
+	): Promise<
+		Result<
+			{value: AccountModel},
+			{type: 'invalidEmail'; reason: string} | {type: 'noAccountFound'; reason: string}
+		>
+	> {
 		email = normalizeEmail(email);
 		if (!isEmail(email)) {
 			// TODO formalize validation
