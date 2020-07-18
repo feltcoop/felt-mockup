@@ -21,7 +21,8 @@ to take advantage of tools that provide big dev-time benefits.
 export const task: Task = {
 	description: 'builds the project for development and watches for changes',
 	run: async ({log}): Promise<void> => {
-		await spawnProcess('node_modules/.bin/tsc', ['--preserveWatchOutput']);
+		log.info('compiling TypeScript');
+		await spawnProcess('node_modules/.bin/tsc');
 		await copyIgnoredBuildFiles(log, true);
 
 		log.info('starting Sapper and the TypeScript compiler in watch mode');
