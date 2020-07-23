@@ -15,7 +15,7 @@ test('AccountsRepo', () => {
 		test('creates an account with a case-insensitive email address', async () => {
 			const result = await accountsRepo.create({email: testEmailUppercase});
 			t.ok(result.ok);
-			t.equal(result.value.email, testEmail);
+			t.is(result.value.email, testEmail);
 			testAccount = result.value;
 		});
 		test('fails to create an account with a duplicate email', async () => {

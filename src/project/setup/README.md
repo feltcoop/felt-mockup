@@ -74,7 +74,23 @@ $ sudo -u postgres createdb felt_dev # same as DB_NAME
 Note that you'll have to add additional config to this file
 before [deploying to a production server](../deploy).
 
-**6. Run the dev server!**
+**6. Set up email authentication**
+
+Felt uses email for account creation and login.
+In production, email is always enabled,
+and in development mode, it's optional and bypassed by default.
+
+To configure email for development or production,
+see the `email` field of [`felt.config.ts`](../felt.config.ts).
+The `email.smtpTransportOptions` field is a
+[nodemailer](https://github.com/nodemailer/nodemailer)
+config object that's
+[passed to `nodemailer.createTransport`](https://nodemailer.com/smtp/).
+
+> TODO fully document the config file and link it from here
+> (the config file already has some documentation, but it needs more)
+
+**7. Run the dev server!**
 
 ```bash
 $ gro dev # the globally installed Gro defers to the local version

@@ -2,7 +2,7 @@
 	export let status;
 	export let error;
 
-	const dev = process.env.NODE_ENV === 'development';
+	const __DEV__ = process.env.NODE_ENV === 'development'; // TODO replace in build step
 </script>
 
 <svelte:head>
@@ -13,6 +13,6 @@
 
 <p>{error.message}</p>
 
-{#if dev && error.stack}
+{#if __DEV__ && error.stack}
 	<pre>{error.stack}</pre>
 {/if}

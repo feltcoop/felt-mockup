@@ -7,3 +7,6 @@ node_modules/
 /build
 
 *.ignore.*
+*.ignore
+
+/src/felt.config.ts
