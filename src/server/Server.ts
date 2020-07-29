@@ -4,6 +4,7 @@ import * as sapper from '@sapper/server';
 import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
 import polka, {Polka, Request} from 'polka';
+import nodemailer from 'nodemailer';
 
 import {accountLoginMiddleware} from '../accounts/accountLoginMiddleware.js';
 import {accountLogoutMiddleware} from '../accounts/accountLogoutMiddleware.js';
@@ -11,9 +12,11 @@ import {attachSessionAccountMiddleware} from '../accounts/attachSessionAccountMi
 import {Db} from '../db/Db.js';
 import {ClientSession} from '../client/session/session.js';
 import {getEnv} from '../project/env.js';
+import {loginWithSecretMiddleware} from '../accounts/loginWithSecretMiddleware.js';
+import {FeltConfig} from '../project/config.js';
 
-const {PORT, NODE_ENV} = getEnv();
-const __DEV__ = NODE_ENV === 'development';
+const {NODE_ENV} = getEnv();
+const __DEV__ = NODE_ENV === 'development'; // TODO replace in build step
 
 const TODO_SERVER_COOKIE_KEYS = ['TODO', 'KEY_2_TODO', 'KEY_3_TODO'];
 
@@ -22,12 +25,13 @@ type ExpressMiddleware = any; // TODO this is a temporary type hack - see `./pol
 export class Server {
 	readonly app: Polka;
 	readonly db: Db;
+	readonly mailer: nodemailer.Transporter | null;
 
-	constructor() {
+	constructor(public readonly config: FeltConfig) {
 		this.app = polka();
 		this.db = new Db();
 
-		// Set up app middleware.
+		// Set up the app and its middleware.
 		this.app
 			.use((req, _res, next) => {
 				// TODO proper logger
@@ -47,16 +51,37 @@ export class Server {
 			.use(attachSessionAccountMiddleware(this))
 			.post('/api/v1/accounts/login', accountLoginMiddleware(this))
 			.post('/api/v1/accounts/logout', accountLogoutMiddleware(this))
+			.get('/api/v1/logins/:secret', loginWithSecretMiddleware(this))
 			.use(
 				sapper.middleware({
 					session: (req: Request): ClientSession =>
 						req.account ? {account: req.account} : {isGuest: true},
 				}),
-			)
-			.listen(PORT, () => {
+			);
+
+		// Set up email.
+		this.mailer = config.email.isEnabled
+			? nodemailer.createTransport(config.email.smtpTransportOptions)
+			: null;
+	}
+
+	async init(): Promise<this> {
+		const {port} = this.config.server;
+		// Start the app.
+		await new Promise((resolve) => {
+			this.app.listen(port, () => {
 				// TODO proper logger
-				console.log(`listening on localhost:${PORT}`);
+				console.log(`listening on localhost:${port}`);
+				resolve();
 			});
+		});
+
+		// Verify mailer connection.
+		if (this.mailer) {
+			await this.mailer.verify();
+		}
+
+		return this;
 	}
 
 	// TODO test this

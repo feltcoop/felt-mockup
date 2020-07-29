@@ -48,7 +48,10 @@
 			const response = await fetch('/api/v1/accounts/login', {
 				method: 'POST',
 				headers: {'Content-Type': 'application/json'},
-				body: JSON.stringify({email}),
+				body: JSON.stringify({
+					email,
+					redirectPath: window.location.href.slice(window.location.origin.length),
+				}),
 			});
 			const responseData = await response.json();
 			console.log('responseData', responseData); // TODO logging
@@ -56,7 +59,11 @@
 				submittedEmail = email;
 				email = '';
 				errorMessage = '';
-				$session = responseData.session;
+				if (responseData.session) {
+					// In dev mode, email login is bypassed by default,
+					// so if it returns a session, we can use it directly.
+					$session = responseData.session;
+				}
 			} else {
 				console.error('response', response); // TODO logging
 				errorMessage = `Something went wrong. Maybe check your Internet connection? Here's what the server said: "${responseData.reason}"`;
