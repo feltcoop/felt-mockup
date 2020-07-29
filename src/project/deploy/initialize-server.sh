@@ -27,7 +27,6 @@ sudo chown $USER /var/www/felt.dev
 #TODO parameriatize script with domain name (or make that seperate script/config)
 pwd=`pwd`
 
-mkdir /etc/nginx/sites-available/felt.dev
 ln -sf ${pwd}/src/project/deploy/nginx_server_config.conf /etc/nginx/sites-available/felt.dev
 
 # restart service to pick up new config
