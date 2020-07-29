@@ -17,10 +17,6 @@ sudo chmod g+s /var/www
 sudo mkdir /var/www/felt.dev
 sudo chown $USER /var/www/felt.dev
 
-export DEPLOY_SERVER_DIR=/var/www/felt.dev>>~/.bashrc
-export DEPLOY_NODE_PROCESS_NAME=/var/www/felt.dev/pm2-app.json>>~/.bashrc
-export SERVER_DEPLOY=true>>~/.bashrc
-
 #Step 3: set up https
 #????
 
@@ -52,4 +48,10 @@ fnm install v12.16 && fnm use v12.16
 # install pm2 to manage the Node server process - https://github.com/Unitech/pm2
 npm i -g pm2
 
+# install gro
+npm i -g @feltcoop/gro
 
+# put these at the end to play nice with others?
+export DEPLOY_SERVER_DIR=/var/www/felt.dev>>~/.bashrc
+export DEPLOY_NODE_PROCESS_NAME=/var/www/felt.dev/pm2-app.json>>~/.bashrc
+export SERVER_DEPLOY=true>>~/.bashrc

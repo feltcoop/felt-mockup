@@ -192,6 +192,7 @@ const createLocalDeploymentCommand = (): string => {
 		`cp ${paths.root}/package-lock.json ${deployPaths.remoteTempDir}`,
 		`cp -r ${paths.build} ${deployPaths.remoteTempDir}`,
 		`cp -r ${paths.static} ${deployPaths.remoteTempDir}`,
+		`cp -r ${paths.sapper} ${deployPaths.remoteTempDir}`,
 		'npm install --production',
 
 		`pm2 stop ${DEPLOY_NODE_PROCESS_NAME}`,
