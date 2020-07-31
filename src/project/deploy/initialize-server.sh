@@ -39,10 +39,10 @@ ln -sf ${pwd}/src/project/deploy/pm2-app.json /var/www/felt.dev/pm2-app.json
 # manage Node via fnm - https://github.com/Schniz/fnm
 sudo apt install -y unzip # fnm dependency
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+source /root/.bashrc
 
 ###seems to be an issue here where fnm isn't sourcing onto the cli properly
 fnm install
-source /root/.bashrc
 fnm use
 
 # install pm2 to manage the Node server process - https://github.com/Unitech/pm2
