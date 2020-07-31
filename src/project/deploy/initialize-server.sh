@@ -41,8 +41,9 @@ sudo apt install -y unzip # fnm dependency
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
 
 ###seems to be an issue here where fnm isn't sourcing onto the cli properly
+fnm install
 source /root/.bashrc
-fnm install v12.16 && fnm use v12.16
+fnm use
 
 # install pm2 to manage the Node server process - https://github.com/Unitech/pm2
 npm i -g pm2
