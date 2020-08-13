@@ -20,8 +20,7 @@
     "dev": "gro dev",
     "build": "gro build",
     "start": "node __sapper__/build",
-    "test": "gro test",
-    "safestart": "node --experimental-modules __sapper__/build"
+    "test": "gro test"
   },
   "dependencies": {
     "@polka/send-type": "^0.5.2",

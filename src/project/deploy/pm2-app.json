@@ -1,5 +1,5 @@
 {
   "name": "felt.dev",
-  "script": "npm run safestart",
+  "script": "npm run start",
   "cwd": "/var/www/felt.dev/dist"
 }
