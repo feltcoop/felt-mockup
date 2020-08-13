@@ -1,5 +1,5 @@
 {
   "name": "felt.dev",
-  "script": "__sapper__/build/index.js",
+  "script": "run safestart",
   "cwd": "/var/www/felt.dev/dist"
 }
