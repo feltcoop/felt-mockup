@@ -198,7 +198,7 @@ const createLocalDeploymentCommand = (): string => {
 		`pm2 stop ${DEPLOY_NODE_PROCESS_NAME}`,
 		`rm -rf ${deployPaths.remoteDistDir}`,
 		`mv ${deployPaths.remoteTempDir} ${deployPaths.remoteDistDir}`,
-		`pm2 start ${DEPLOY_NODE_PROCESS_NAME} -- run safestart`,
+		`pm2 start ${DEPLOY_NODE_PROCESS_NAME}`,
 	].join('\n');
 
 	return deploymentCommand;

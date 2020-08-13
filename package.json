@@ -21,7 +21,7 @@
     "build": "gro build",
     "start": "node __sapper__/build",
     "test": "gro test",
-    "safestart": "node --experimental-modules __sapper__/build/index.js"
+    "safestart": "node --experimental-modules __sapper__/build"
   },
   "dependencies": {
     "@polka/send-type": "^0.5.2",
