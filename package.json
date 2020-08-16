@@ -21,7 +21,7 @@
     "build": "gro build",
     "start": "node __sapper__/build",
     "test": "gro test",
-    "pm2": "NODE_ENV=production node __sapper__/build/server/server.js"
+    "pm2": "NODE_ENV=production PORT=3000 node __sapper__/build/server/server.js"
   },
   "dependencies": {
     "@polka/send-type": "^0.5.2",
