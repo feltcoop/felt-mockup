@@ -19,7 +19,7 @@ for any cloud Linux VPS provider.
   ```
 - Then move into the newly cloned repo and run the initialization script
   ```bash
-  ./src/project/deploy/initialize-server.sh
+  . src/project/deploy/initialize-server.sh
   ```
 
 This will set up the folder and permissions structures, install dependencies, and overall set you up to build and deploy new versions of felt onto your server.
