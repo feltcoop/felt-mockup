@@ -37,9 +37,9 @@ export default {
 			commonjs(),
 
 			!dev &&
-				terser({
-					module: true,
-				}),
+			terser({
+				module: true,
+			}),
 		],
 
 		onwarn,
