@@ -9,7 +9,8 @@
 </script>
 
 <a class:selected={isSelected} href="{$world.slug}/{space.slug}">
-	{symbols[space.type] || symbols.other} {space.title}
+	{symbols[space.type] || symbols.other}
+	{space.title}
 </a>
 
 <style>

@@ -12,9 +12,7 @@
 <div style="max-width: 640px;">
 	<!-- TODO componentize - SpaceBreadcrumb or PathBreadcrumb or SlugBreadcrumb -->
 	<!-- TODO make this transition with the equivalent component (and DOM element) in `<Space/>` -->
-	<div>
-		<a href={$world.slug}>{$world.title}</a>
-	</div>
+	<div><a href={$world.slug}>{$world.title}</a></div>
 	{#if $world.description}
 		<div>
 			{@html $world.description}

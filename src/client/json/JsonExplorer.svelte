@@ -28,10 +28,7 @@
 	<span class="syntax">{'{'}</span>
 	{#each Object.keys(json) as key}
 		<div class="indented">
-			<span>
-				{key}
-				<span class="syntax">:</span>
-			</span>
+			<span> {key} <span class="syntax">:</span></span>
 			<svelte:self json={json[key]} />
 		</div>
 	{/each}
