@@ -19,15 +19,16 @@
 		<!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
 		%sapper.head%
+
+		<!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+			 initialise the router.
+		   Scripts are given the `defer` attribute so it's best to put them in the <head> -->
+		%sapper.scripts%
 	</head>
 	<body>
 		<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 		<div id="app">%sapper.html%</div>
-
-		<!-- Sapper creates a <script> tag containing `src/client.js`
-	     and anything else it needs to hydrate the app and
-	     initialise the router -->
-		%sapper.scripts%
 	</body>
 </html>

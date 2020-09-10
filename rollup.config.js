@@ -55,6 +55,7 @@ export default {
 			}),
 			svelte({
 				generate: 'ssr',
+				hydratable: true,
 				dev,
 			}),
 			resolve({
