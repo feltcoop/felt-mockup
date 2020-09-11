@@ -3,6 +3,7 @@ import {Unobtain} from '@feltcoop/gro/dist/utils/createObtainable';
 import {obtainKnex, KnexInstance} from './obtainKnex.js';
 import {AccountsRepo} from '../accounts/AccountsRepo.js';
 import {LoginsRepo} from '../accounts/LoginsRepo.js';
+import {PersonasRepo} from '../personas/PersonasRepo.js';
 
 /*
 
@@ -27,6 +28,7 @@ export class Db {
 		this.repos = {
 			accounts: new AccountsRepo(knex),
 			logins: new LoginsRepo(knex),
+			personas: new PersonasRepo(knex),
 		};
 	}
 
@@ -38,4 +40,5 @@ export class Db {
 interface DbRepos {
 	readonly accounts: AccountsRepo;
 	readonly logins: LoginsRepo;
+	readonly personas: PersonasRepo;
 }

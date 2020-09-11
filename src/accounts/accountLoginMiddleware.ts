@@ -4,7 +4,7 @@ import send from '@polka/send-type';
 import {isEmail, normalizeEmail} from '../client/email/email.js';
 import {Server} from '../server/Server.js';
 import {AccountModel} from './AccountModel.js';
-import {ClientSession} from '../client/session/session.js';
+import {loadClientSession} from '../db/loadClientSession.js';
 
 export const accountLoginMiddleware = (server: Server): Middleware => {
 	return async (req, res) => {
@@ -60,7 +60,7 @@ export const accountLoginMiddleware = (server: Server): Middleware => {
 			// In development, that's every submission with no security.
 			req.session.email = account.email;
 			console.log('bypassing email login', account); // TODO logging
-			const clientSession: ClientSession = {account};
+			const clientSession = await loadClientSession(server.db, account);
 			return send(res, 200, {session: clientSession}); // TODO API types
 		} else {
 			// Send an email with the login link.

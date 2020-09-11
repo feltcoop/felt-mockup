@@ -12,7 +12,9 @@
 	// Might want to move it to a store and/or remove for production.
 	const EMAIL_STORAGE_KEY = 'FELT__email';
 	const loadEmail = () => {
-		return typeof localStorage === 'undefined' ? '' : localStorage.getItem(EMAIL_STORAGE_KEY) || '';
+		return (
+			(typeof localStorage !== 'undefined' && localStorage.getItem(EMAIL_STORAGE_KEY)) || 'a@a.a'
+		);
 	};
 	const saveEmail = (email) => {
 		if (typeof localStorage !== 'undefined') localStorage.setItem(EMAIL_STORAGE_KEY, email);

@@ -4,6 +4,8 @@
 	import SocialLinks from '../client/ui/SocialLinks.svelte';
 	import AccountLoginForm from '../client/ui/AccountLoginForm.svelte';
 	import AccountLogoutForm from '../client/ui/AccountLogoutForm.svelte';
+	import CreatePersona from '../client/persona/CreatePersona.svelte';
+	import PersonaList from '../client/persona/PersonaList.svelte';
 
 	const {session} = stores();
 	$: console.log('$session changed', $session); // TODO logging
@@ -15,15 +17,21 @@
 <div style="max-width: 640px;">
 	<h1>Felt</h1>
 	<small>customizable community tools that feel good</small>
+	<section>
+		{#if $session.account}
+			{$session.account.email}
+			<AccountLogoutForm />
+		{:else}
+			<AccountLoginForm />
+		{/if}
+	</section>
+	{#if $session.account}
+		<section>
+			<CreatePersona {session} />
+			<PersonaList personas={$session.personas} />
+		</section>
+	{/if}
 	<ul>
-		<li>
-			{#if $session.account}
-				{$session.account.email}
-				<AccountLogoutForm />
-			{:else}
-				<AccountLoginForm />
-			{/if}
-		</li>
 		<li>
 			<a href="/about">
 				<span>→ learn about Felt ←</span>
