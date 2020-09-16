@@ -101,9 +101,8 @@
 	{/if}
 {:else}
 	<div>
-		we're sending an email to
-		<span class="submitted-email">{submittedEmail}</span>
-		to get you logged in
+		we're sending an email to <span class="submitted-email">{submittedEmail}</span> to get you logged
+		in
 	</div>
 {/if}
 

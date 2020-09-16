@@ -15,9 +15,7 @@
 	{#if isAnonymous}
 		<span>{name}</span>
 	{:else}
-		{#if isMention}
-			<span>@</span>
-		{/if}
+		{#if isMention}<span>@</span>{/if}
 		{name}
 	{/if}
 </a>

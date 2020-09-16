@@ -5,9 +5,7 @@
 </script>
 
 <button type="button" on:click bind:this={el} {disabled}>
-	{#if symbol}
-		<span>{symbol}</span>
-	{/if}
+	{#if symbol}<span>{symbol}</span>{/if}
 	<span>
 		<slot />
 	</span>

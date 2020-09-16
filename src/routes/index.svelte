@@ -34,14 +34,8 @@
 			<span>source code at</span>
 			<a href="https://github.com/feltcoop/felt">github.com/feltcoop/felt</a>
 		</li>
-		<li>
-			<a href="https://felt.social">Felt.social</a>
-			<span>is our service and business</span>
-		</li>
-		<li>
-			<a href="https://felt.dev">Felt.dev</a>
-			<span>is for Felt the free software</span>
-		</li>
+		<li><a href="https://felt.social">Felt.social</a> <span>is our service and business</span></li>
+		<li><a href="https://felt.dev">Felt.dev</a> <span>is for Felt the free software</span></li>
 		<li>
 			<SocialLinks />
 		</li>
