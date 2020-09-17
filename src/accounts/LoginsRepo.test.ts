@@ -33,10 +33,13 @@ test('LoginsRepo', () => {
 		test('errors with an invalid account id', async () => {
 			await t.rejects(loginsRepo.create(-1));
 		});
+		test('errors with a null account id', async () => {
+			// bypass the type system as a security check
+			await t.rejects(loginsRepo.create(null as any));
+		});
 		test('errors with an undefined account id', async () => {
 			// bypass the type system as a security check
 			await t.rejects(loginsRepo.create(undefined as any));
-			await t.rejects(loginsRepo.create(null as any));
 		});
 	});
 
@@ -56,6 +59,10 @@ test('LoginsRepo', () => {
 			t.ok(!result.ok);
 			t.is(result.type, 'noLoginFound');
 		});
+		test('errors with a null id', async () => {
+			// bypass the type system as a security check
+			await t.rejects(loginsRepo.findBySecret(null as any));
+		});
 		test('errors with an undefined id', async () => {
 			// bypass the type system as a security check
 			await t.rejects(loginsRepo.findBySecret(undefined as any));
@@ -74,6 +81,12 @@ test('LoginsRepo', () => {
 		});
 		test('fails with an invalid id', async () => {
 			const result = await loginsRepo.deleteById(-1);
+			t.ok(!result.ok);
+			t.is(result.type, 'noLoginFound');
+		});
+		test('fails with a null id', async () => {
+			// bypass the type system as a security check
+			const result = await loginsRepo.deleteById(null as any);
 			t.ok(!result.ok);
 			t.is(result.type, 'noLoginFound');
 		});

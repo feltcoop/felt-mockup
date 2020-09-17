@@ -46,7 +46,13 @@ test('AccountsRepo', () => {
 			t.equal(result.value, testAccount);
 		});
 		test('fails to find a nonexistent account', async () => {
-			const result = await accountsRepo.findById(0);
+			const result = await accountsRepo.findById(-1);
+			t.ok(!result.ok);
+			t.is(result.type, 'noAccountFound');
+		});
+		test('fails to find a null account', async () => {
+			// bypass the type system as a security check - accounts are extra important!
+			const result = await accountsRepo.findById(null as any);
 			t.ok(!result.ok);
 			t.is(result.type, 'noAccountFound');
 		});
@@ -68,7 +74,7 @@ test('AccountsRepo', () => {
 			t.equal(result.value, testAccount);
 		});
 		test('fails to find a nonexistent account', async () => {
-			const result = await accountsRepo.findByEmail(`dont_add_to_db@email.com`);
+			const result = await accountsRepo.findByEmail(`not_in_db@email.com`);
 			t.ok(!result.ok);
 			t.is(result.type, 'noAccountFound');
 		});
@@ -76,6 +82,10 @@ test('AccountsRepo', () => {
 			const result = await accountsRepo.findByEmail('not_an_email');
 			t.ok(!result.ok);
 			t.is(result.type, 'invalidEmail');
+		});
+		test('errors with a null email', async () => {
+			// bypass the type system as a security check - accounts are extra important!
+			await t.rejects(accountsRepo.findByEmail(null as any));
 		});
 		test('errors with an undefined email', async () => {
 			// bypass the type system as a security check - accounts are extra important!
