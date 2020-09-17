@@ -42,7 +42,7 @@ curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
 export PATH=/root/.fnm:$PATH
 eval "`fnm env --multi`"
 
-###seems to be an issue here where fnm isn't sourcing onto the cli properly
+###Install Fast Node Manager
 fnm install
 fnm use
 
