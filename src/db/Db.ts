@@ -5,6 +5,8 @@ import {AccountsRepo} from '../accounts/AccountsRepo.js';
 import {LoginsRepo} from '../accounts/LoginsRepo.js';
 import {PersonasRepo} from '../personas/PersonasRepo.js';
 import {CommunitiesRepo} from '../communities/CommunitiesRepo.js';
+import {CommunityRolesRepo} from '../communities/CommunityRolesRepo.js';
+import {PersonaCommunityRolesRepo} from '../personas/PersonaCommunityRolesRepo.js';
 
 /*
 
@@ -31,6 +33,8 @@ export class Db {
 			logins: new LoginsRepo(knex),
 			personas: new PersonasRepo(knex),
 			communities: new CommunitiesRepo(knex),
+			communityRoles: new CommunityRolesRepo(knex),
+			personaCommunityRoles: new PersonaCommunityRolesRepo(knex),
 		};
 	}
 
@@ -44,4 +48,6 @@ interface DbRepos {
 	readonly logins: LoginsRepo;
 	readonly personas: PersonasRepo;
 	readonly communities: CommunitiesRepo;
+	readonly communityRoles: CommunityRolesRepo;
+	readonly personaCommunityRoles: PersonaCommunityRolesRepo;
 }

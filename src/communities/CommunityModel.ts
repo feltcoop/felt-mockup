@@ -4,5 +4,5 @@ export type CommunityModelId = ModelId<CommunityModel>;
 
 export interface CommunityModel {
 	id: CommunityModelId;
-	name: string;
+	name: string; // TODO flavored type?
 }

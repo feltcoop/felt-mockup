@@ -33,4 +33,22 @@ export const up = async (knex: KnexInstance) => {
 		t.text('name').index().notNullable().unique();
 		// t.text('icon').notNullable(); // see above in personas
 	});
+
+	await knex.schema.createTable('communityRoles', (t) => {
+		t.increments();
+		t.integer('community').unsigned().notNullable();
+		t.foreign('community').references('id').inTable('communities');
+		t.text('name').notNullable(); // TODO does this need an index? or does the primary key handle this?
+		// t.primary(['community', 'name']); // TODO these don't work because of the foreign keys I think? is this not correct to try?
+		t.json('permissions'); // TODO?
+	});
+
+	await knex.schema.createTable('personaCommunityRoles', (t) => {
+		t.increments();
+		t.integer('persona').unsigned().notNullable();
+		t.foreign('persona').references('id').inTable('personas');
+		t.integer('communityRole').unsigned().notNullable();
+		t.foreign('communityRole').references('id').inTable('communityRoles');
+		// t.primary(['persona', 'communityRole']); // TODO these don't work because of the foreign keys I think? is this not correct to try?
+	});
 };
