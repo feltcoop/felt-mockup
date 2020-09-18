@@ -13,5 +13,6 @@ export const loadClientSession = async (db: Db, account: AccountModel): Promise<
 	return {
 		account,
 		personas: unwrap(await db.repos.personas.findByAccount(account.id)),
+		communities: [], // TODO query communities by persona roles once they're implemented
 	};
 };

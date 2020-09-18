@@ -16,17 +16,21 @@ export const up = async (knex: KnexInstance) => {
 		t.text('redirectPath');
 	});
 
+	// TODO review indexes on these new tables
+
 	await knex.schema.createTable('personas', (t) => {
 		t.increments();
 		t.integer('account').unsigned().notNullable();
 		t.foreign('account').references('id').inTable('accounts');
-		// TODO does this need an index for searching duplicate names within each community?
-		// or can we encode this constraint in the database somehow?
-		// I tried to do `t.primary(['account', 'name'])` but got this error:
-		// 		alter table "personas" add constraint "personas_pkey" primary key ("account", "name") - multiple primary keys for table "personas" are not allowed
-		t.text('name').notNullable();
+		t.text('name').notNullable(); // TODO index? depends on final design
 		// TODO see ActivityStreams icon spec - https://www.w3.org/TR/activitystreams-vocabulary/#dfn-icon
 		// Should we go with that spec and make it a JSON object? Or keep it simple as a url? A foreign key?
 		// t.text('icon').notNullable();
+	});
+
+	await knex.schema.createTable('communities', (t) => {
+		t.increments();
+		t.text('name').index().notNullable().unique();
+		// t.text('icon').notNullable(); // see above in personas
 	});
 };
