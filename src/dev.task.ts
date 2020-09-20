@@ -1,5 +1,6 @@
 import {Task} from '@feltcoop/gro';
 import {spawnProcess} from '@feltcoop/gro/dist/utils/process.js';
+import {CachingCompiler} from '@feltcoop/gro/dist/compile/CachingCompiler.js';
 
 import {copyIgnoredBuildFiles} from './project/dev/copyIgnoredBuildFiles.js';
 
@@ -20,10 +21,11 @@ to take advantage of tools that provide big dev-time benefits.
 */
 export const task: Task = {
 	description: 'builds the project for development and watches for changes',
-	run: async ({log}): Promise<void> => {
-		log.info('compiling TypeScript');
-		await spawnProcess('node_modules/.bin/tsc');
+	run: async ({log, invokeTask}): Promise<void> => {
+		await invokeTask('compile');
 		await copyIgnoredBuildFiles(log, true);
+
+		const cachingCompiler = new CachingCompiler();
 
 		log.info('starting Sapper and the TypeScript compiler in watch mode');
 		await Promise.all([
@@ -36,7 +38,7 @@ export const task: Task = {
 				'--output',
 				'build/node_modules/@sapper',
 			]),
-			spawnProcess('node_modules/.bin/tsc', ['-w', '--preserveWatchOutput']),
+			cachingCompiler.init(),
 		]);
 	},
 };

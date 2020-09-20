@@ -10,9 +10,7 @@ export const task: Task = {
 		await spawnProcess('npm', ['install']);
 
 		// rebuild everything
-		await invokeTask('clean');
-		log.info('compiling TypeScript');
-		await spawnProcess('node_modules/.bin/tsc');
+		await invokeTask('compile');
 		await copyIgnoredBuildFiles(log, false);
 
 		// set up the database, clearing all data and running all migrations
