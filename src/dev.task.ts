@@ -1,6 +1,7 @@
 import {Task} from '@feltcoop/gro';
 import {spawnProcess} from '@feltcoop/gro/dist/utils/process.js';
 import {CachingCompiler} from '@feltcoop/gro/dist/compile/CachingCompiler.js';
+import {createCompileFile} from '@feltcoop/gro/dist/compile/compileFile.js';
 
 import {copyIgnoredBuildFiles} from './project/dev/copyIgnoredBuildFiles.js';
 
@@ -25,7 +26,7 @@ export const task: Task = {
 		await invokeTask('compile');
 		await copyIgnoredBuildFiles(log, true);
 
-		const cachingCompiler = new CachingCompiler();
+		const cachingCompiler = new CachingCompiler({compileFile: createCompileFile(log)});
 
 		log.info('starting Sapper and the TypeScript compiler in watch mode');
 		await Promise.all([
