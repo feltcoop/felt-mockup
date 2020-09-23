@@ -7,7 +7,7 @@ import {copyIgnoredBuildFiles} from './project/dev/copyIgnoredBuildFiles.js';
 
 /*
 
-Felt's build process currently composes TypeScript's compiler,
+Felt's build process currently composes a TypeScript compiler using `swc`,
 Sapper, and a small utility to glue them together via the `build/` directory.
 
 TypeScript is compiled to `build/`,
