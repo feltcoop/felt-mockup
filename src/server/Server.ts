@@ -16,6 +16,7 @@ import {getEnv} from '../project/env.js';
 import {loginWithSecretMiddleware} from '../accounts/loginWithSecretMiddleware.js';
 import {FeltConfig} from '../project/config.js';
 import {createPersonaMiddleware} from '../personas/createPersonaMiddleware.js';
+import {createCommunityMiddleware} from '../communities/createCommunityMiddleware.js';
 
 const {NODE_ENV} = getEnv();
 const __DEV__ = NODE_ENV === 'development'; // TODO replace in build step
@@ -54,6 +55,7 @@ export class Server {
 			.post('/api/v1/accounts/login', accountLoginMiddleware(this))
 			.post('/api/v1/accounts/logout', accountLogoutMiddleware(this))
 			.post('/api/v1/personas', createPersonaMiddleware(this)) // TODO declarative resource API
+			.post('/api/v1/communities', createCommunityMiddleware(this)) // TODO declarative resource API
 			.get('/api/v1/logins/:secret', loginWithSecretMiddleware(this))
 			.use(
 				sapper.middleware({

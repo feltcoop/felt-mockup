@@ -4,6 +4,7 @@ import {obtainKnex, KnexInstance} from './obtainKnex.js';
 import {AccountsRepo} from '../accounts/AccountsRepo.js';
 import {LoginsRepo} from '../accounts/LoginsRepo.js';
 import {PersonasRepo} from '../personas/PersonasRepo.js';
+import {CommunitiesRepo} from '../communities/CommunitiesRepo.js';
 
 /*
 
@@ -29,6 +30,7 @@ export class Db {
 			accounts: new AccountsRepo(knex),
 			logins: new LoginsRepo(knex),
 			personas: new PersonasRepo(knex),
+			communities: new CommunitiesRepo(knex),
 		};
 	}
 
@@ -41,4 +43,5 @@ interface DbRepos {
 	readonly accounts: AccountsRepo;
 	readonly logins: LoginsRepo;
 	readonly personas: PersonasRepo;
+	readonly communities: CommunitiesRepo;
 }

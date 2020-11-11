@@ -6,6 +6,8 @@
 	import AccountLogoutForm from '../client/ui/AccountLogoutForm.svelte';
 	import CreatePersona from '../client/persona/CreatePersona.svelte';
 	import PersonaList from '../client/persona/PersonaList.svelte';
+	import CreateCommunity from '../client/community/CreateCommunity.svelte';
+	import CommunityList from '../client/community/CommunityList.svelte';
 
 	const {session} = stores();
 	$: console.log('$session changed', $session); // TODO logging
@@ -29,6 +31,10 @@
 		<section>
 			<CreatePersona {session} />
 			<PersonaList personas={$session.personas} />
+		</section>
+		<section>
+			<CreateCommunity {session} />
+			<CommunityList communities={$session.communities} />
 		</section>
 	{/if}
 	<ul>
