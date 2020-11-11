@@ -2,7 +2,7 @@
   "name": "@feltcoop/felt",
   "description": "customizable community tools that feel good 💚",
   "version": "0.0.0",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://felt.dev",
   "author": {
     "name": "Felt.coop",
