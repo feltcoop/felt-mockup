@@ -83,9 +83,7 @@
 			<li><a href="https://twitter.com/feltcoop">twitter.com/feltcoop</a></li>
 		</ul>
 		<p>
-			Felt is free and open source software licensed under the <a
-				href="https://www.gnu.org/licenses/why-affero-gpl.html"
-			>AGPL</a>, and it's designed to be <a
+			Felt is free and open source software released under MIT license, and it's designed to be <a
 				href="https://github.com/feltcoop/felt/tree/master/src/project/deploy"
 			>
 				easily self-hosted
