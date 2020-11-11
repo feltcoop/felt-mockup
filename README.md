@@ -48,6 +48,8 @@ Governed under a Temporary Benevolent Dictatorship (TBD). [See GOVERNANCE.md](GO
 
 ## License
 
-[AGPL-3.0-only](LICENSE) Copyright (c) 2020 Felt.coop team@felt.coop (<https://felt.coop>)
+[MIT](LICENSE)
+
+Copyright (c) 2020 Felt.coop team@felt.social (<https://felt.social>)
 
 # :evergreen_tree:
