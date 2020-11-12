@@ -14,9 +14,8 @@ perhaps using completely different tools to improve the dev experience.
 */
 export const task: Task = {
 	description: 'builds everything for production',
-	run: async ({log}): Promise<void> => {
-		log.info('compiling TypeScript');
-		await spawnProcess('node_modules/.bin/tsc');
+	run: async ({log, invokeTask}): Promise<void> => {
+		await invokeTask('compile');
 		await copyIgnoredBuildFiles(log, false);
 
 		log.info('building sapper');
