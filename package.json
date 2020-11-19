@@ -20,7 +20,8 @@
     "dev": "gro dev",
     "build": "gro build",
     "start": "node __sapper__/build",
-    "test": "gro test"
+    "test": "gro test",
+    "pm2": "NODE_ENV=production PORT=3000 node __sapper__/build/server/server.js"
   },
   "dependencies": {
     "@feltcoop/gro": "^0.4.0",

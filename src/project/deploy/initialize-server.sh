@@ -17,10 +17,6 @@ sudo chmod g+s /var/www
 sudo mkdir /var/www/felt.dev
 sudo chown $USER /var/www/felt.dev
 
-export DEPLOY_SERVER_DIR=/var/www/felt.dev>>~/.bashrc
-export DEPLOY_NODE_PROCESS_NAME=/var/www/felt.dev/pm2-app.json>>~/.bashrc
-export SERVER_DEPLOY=true>>~/.bashrc
-
 #Step 3: set up https
 #????
 
@@ -31,7 +27,6 @@ export SERVER_DEPLOY=true>>~/.bashrc
 #TODO parameriatize script with domain name (or make that seperate script/config)
 pwd=`pwd`
 
-mkdir /etc/nginx/sites-available/felt.dev
 ln -sf ${pwd}/src/project/deploy/nginx_server_config.conf /etc/nginx/sites-available/felt.dev
 
 # restart service to pick up new config
@@ -44,12 +39,20 @@ ln -sf ${pwd}/src/project/deploy/pm2-app.json /var/www/felt.dev/pm2-app.json
 # manage Node via fnm - https://github.com/Schniz/fnm
 sudo apt install -y unzip # fnm dependency
 curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+export PATH=/root/.fnm:$PATH
+eval "`fnm env --multi`"
 
-###seems to be an issue here where fnm isn't sourcing onto the cli properly
-source /root/.bashrc
-fnm install v12.16 && fnm use v12.16
+###Install Fast Node Manager
+fnm install
+fnm use
 
 # install pm2 to manage the Node server process - https://github.com/Unitech/pm2
 npm i -g pm2
 
+# install gro
+npm i -g @feltcoop/gro
 
+# put these at the end to play nice with others?
+export DEPLOY_SERVER_DIR=/var/www/felt.dev>>~/.bashrc
+export DEPLOY_NODE_PROCESS_NAME=/var/www/felt.dev/pm2-app.json>>~/.bashrc
+export SERVER_DEPLOY=true>>~/.bashrc

@@ -1,5 +1,5 @@
 {
   "name": "felt.dev",
-  "script": "__sapper__/build/index.js",
+  "script": "npm run pm2",
   "cwd": "/var/www/felt.dev/dist"
 }

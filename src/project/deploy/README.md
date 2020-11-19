@@ -19,7 +19,7 @@ for any cloud Linux VPS provider.
   ```
 - Then move into the newly cloned repo and run the initialization script
   ```bash
-  ./src/project/deploy/initialize-server.sh
+  . src/project/deploy/initialize-server.sh
   ```
 
 This will set up the folder and permissions structures, install dependencies, and overall set you up to build and deploy new versions of felt onto your server.
@@ -37,7 +37,17 @@ TODO: (replacing `felt.dev` in both the config file and path automatically)
 - currently not enabled in [the nginx config](nginx_server_config.conf)
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-18-04
 
-### 5. Start the server
+### 5. Configure the DB
+
+Felt currently assumes a PostgresQL database is backing it. DB information is read from the .env file located in the deployed project's root directory.
+
+```bash
+cp src/project/setup/.env.sample /var/www/felt.dev/dist/.env
+```
+
+Will put a placeholder environment configuration in your deploy directory. You'll then want to update the `.env` with your database info accordingly.
+
+### 6. Start the server
 
 There are two ways to build and deploy the server. Either locally or from the machine itself.
 
