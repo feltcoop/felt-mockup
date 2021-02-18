@@ -15,6 +15,11 @@ and improve our communication.
 - learn [about Felt](https://felt.dev/about)
 - community at [Felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
 
+Felt wants to help us:
+
+- design our digital lives
+- get informed and involved with civics and democracy
+
 ## Docs
 
 - [project](src/project)
