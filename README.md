@@ -1,11 +1,11 @@
-# Felt
+# felt-mockup
 
 [<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
 
 > customizable community tools that feel good :green_heart:
 
-[Felt](https://github.com/feltcoop/felt)
-is a set of free and open source tools
+This is a mockup of [Felt](https://github.com/feltcoop/felt),
+a set of free and open source tools (pre-alpha)
 for building customizable self-governing communities.
 It seeks to empower us,
 help us organize,
