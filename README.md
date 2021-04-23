@@ -1,6 +1,6 @@
 # felt-mockup
 
-[<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
+[<img src="static/logo-192.png" align="right" width="192" height="192">](https://felt.dev)
 
 > customizable community tools that feel good :green_heart:
 

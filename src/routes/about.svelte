@@ -14,7 +14,7 @@
 		<div>
 			<img style="width: 192px; height: 178px;" src="logo-heart.png" alt="fuzzy felt heart" />
 			<span>about</span>
-			<img style="width: 192px; height: 192px;" src="logo-192-textured.png" alt="fuzzy felt logo" />
+			<img style="width: 192px; height: 192px;" src="logo-192.png" alt="fuzzy felt logo" />
 		</div>
 		<p>
 			Felt is a set of tools for building customizable self-governing communities. It seeks to

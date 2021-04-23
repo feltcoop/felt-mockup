@@ -1122,7 +1122,7 @@ const data: Data = {
 							type: 'message',
 							id: id(),
 							author: 'bob',
-							content: '<img src="/logo-192-textured.png"/>',
+							content: '<img src="/logo-192.png"/>',
 						},
 						...createMessages(),
 					],
