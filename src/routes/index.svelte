@@ -59,12 +59,14 @@
 			<Content classes="flex items-center justify-center">
 				<a
 					href="/about"
-					class="logo-heart flex flex-wrap flex-col items-center justify-center">
+					class="logo-heart flex flex-wrap flex-col items-center justify-center"
+				>
 					<span class="text-4xl mr-2 font-hairline">→ learn about Felt ←</span>
 					<img
-						src="/logo-heart.png"
+						src="/felt.png"
 						alt="fuzzy felt heart"
-						style="width: 192px; height: 178px;" />
+						style="width: 192px; height: 178px;"
+					/>
 				</a>
 			</Content>
 		</li>
@@ -74,7 +76,8 @@
 				<a
 					class="text-4xl"
 					style="font-weight: 100;"
-					href="https://github.com/feltcoop/felt">
+					href="https://github.com/feltcoop/felt"
+				>
 					github.com/feltcoop/felt
 				</a>
 			</Content>
@@ -84,7 +87,8 @@
 				<a
 					class="text-4xl"
 					style="font-weight: 100;"
-					href="https://felt.social">
+					href="https://felt.social"
+				>
 					Felt.social
 				</a>
 				<div>is our service and business</div>
@@ -92,7 +96,11 @@
 		</li>
 		<li class="py-4 mb-8">
 			<Content classes="font-hairline mb-4">
-				<a class="text-4xl" style="font-weight: 100;" href="https://felt.dev">
+				<a
+					class="text-4xl"
+					style="font-weight: 100;"
+					href="https://www.felt.dev"
+				>
 					Felt.dev
 				</a>
 				<div>is for Felt the free software</div>

@@ -1,47 +1,24 @@
 # Felt
 
-[<img src="static/logo-192-textured.png" align="right" width="192" height="192">](https://felt.dev)
+[<img src="src/static/felt.png" align="right" width="192" height="178">](https://www.felt.dev)
 
-> customizable community tools that feel good :green_heart:
+> customizable community tools that feel good :green_heart: mockup
 
-[Felt](https://github.com/feltcoop/felt)
-is a set of free and open source tools
-for building customizable self-governing communities.
-It seeks to empower us,
-help us organize,
-and improve our communication.
+mockup for [Felt](https://github.com/feltcoop/felt)
 
-- **work in progress** mockup at [Felt.dev](https://felt.dev)
-- learn [about Felt](https://felt.dev/about)
-- community at [Felt.social](https://felt.social) and [its source code](https://github.com/feltcoop/felt.social)
+## credits :turtle:<sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
 
-## Docs
+[Svelte](https://github.com/sveltejs/svelte) ∙
+[SvelteKit](https://github.com/sveltejs/kit) ∙
+[Vite](https://github.com/vitejs/vite) ∙
+[Gro](https://github.com/feltcoop/gro) ∙
+[Rollup](https://github.com/rollup/rollup) ∙
+[TypeScript](https://github.com/microsoft/TypeScript) ∙
+[esbuild](https://github.com/evanw/esbuild) ∙
+[Prettier](https://github.com/prettier/prettier) ∙
+[@lukeed\/\*](https://github.com/lukeed)
+& [more](package.json)
 
-- [project](src/project)
-  - [setup](src/project/setup) - get started developing Felt
-  - [deploy](src/project/deploy) - run Felt in production
+## license 🐦
 
-## Credits :turtle: <sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
-
-made by
-[all these people](https://github.com/feltcoop/felt/graphs/contributors)
-and [a community](https://felt.social)
-using [`svelte`](https://github.com/sveltejs/svelte) .
-[`sapper`](https://github.com/sveltejs/sapper) .
-[`typescript`](https://github.com/microsoft/TypeScript) .
-[`babel`](https://github.com/babel/babel) .
-[`rollup`](https://github.com/rollup/rollup) .
-[`prettier`](https://github.com/prettier/prettier) .
-[`postcss`](https://github.com/postcss/postcss) .
-[`tailwindcss`](https://github.com/tailwindcss/tailwindcss) .
-[`sirv`](https://github.com/lukeed/sirv) .
-[`polka`](https://github.com/lukeed/polka) .
-[`node`](https://github.com/nodejs/node) .
-[`fnm`](https://github.com/Schniz/fnm) .
-[`github`](https://github.com) . [`git`](https://git-scm.com/)
-and [so many more](https://en.wikipedia.org/wiki/Free_and_open-source_software)
-
-## License
-
-[ISC](license)
-<sub>permissive <3 [learn more at Wikipedia](https://en.wikipedia.org/wiki/ISC_license)</sub>
+public domain ([The Unlicense](license))

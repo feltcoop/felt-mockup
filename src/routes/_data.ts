@@ -1,5 +1,5 @@
-import { symbols } from '../client/ui/symbols.js';
-import { emotionEmoji } from '../client/emoji/emoji.js';
+import {symbols} from '../client/ui/symbols.js';
+import {emotionEmoji} from '../client/emoji/emoji.js';
 
 export type Id = number;
 let idCounter = 0;
@@ -10,9 +10,9 @@ const createMessages = (
 	author1: string = 'rick',
 	author2: string = 'alice',
 ): ChatMessageData[] => [
-	{ type: 'message', id: id(), author: author1, content: 'hi!' },
-	{ type: 'message', id: id(), author: author2, content: 'supp' },
-	{ type: 'message', id: id(), author: author2, content: 'i found a bug' },
+	{type: 'message', id: id(), author: author1, content: 'hi!'},
+	{type: 'message', id: id(), author: author2, content: 'supp'},
+	{type: 'message', id: id(), author: author2, content: 'i found a bug'},
 ];
 const createAnonMessages = (): ChatMessageData[] => [
 	{
@@ -300,7 +300,7 @@ const createPosts = (author: string = 'rick'): BlogPostData[] => [
 				author: 'alice',
 				content: 'comments go here',
 			},
-			{ type: 'reply', id: id(), author: 'bob', content: 'me too' },
+			{type: 'reply', id: id(), author: 'bob', content: 'me too'},
 			{
 				type: 'reply',
 				id: id(),
@@ -323,7 +323,7 @@ const createPosts = (author: string = 'rick'): BlogPostData[] => [
 					},
 				],
 			},
-			{ type: 'reply', id: id(), author: 'alex', content: ':P' },
+			{type: 'reply', id: id(), author: 'alex', content: ':P'},
 		],
 	},
 	{
@@ -342,7 +342,7 @@ const createPosts = (author: string = 'rick'): BlogPostData[] => [
 				author,
 				content: 'wait what where am i?',
 			},
-			{ type: 'reply', id: id(), author: 'chris', content: 'dont ask' },
+			{type: 'reply', id: id(), author: 'chris', content: 'dont ask'},
 		],
 	},
 ];
@@ -355,7 +355,7 @@ const randPosts = (author: string = 'rick'): BlogPostData[] => [
 		slug: '2',
 		author,
 		content: 'Blog post content 2 <small>:O:D</small>',
-		children: [{ type: 'reply', id: id(), author: 'dana', content: '!??' }],
+		children: [{type: 'reply', id: id(), author: 'dana', content: '!??'}],
 	},
 	{
 		type: 'post',
@@ -365,7 +365,7 @@ const randPosts = (author: string = 'rick'): BlogPostData[] => [
 		author: 'alex',
 		content: 'Blog post content 1 <small>:):)</small>',
 		children: [
-			{ type: 'reply', id: id(), author: 'dana', content: 'ohhh' },
+			{type: 'reply', id: id(), author: 'dana', content: 'ohhh'},
 			{
 				type: 'reply',
 				id: id(),
@@ -385,9 +385,9 @@ const people: PersonData[] = [
 		title: 'Rick',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -398,13 +398,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -446,9 +446,9 @@ const people: PersonData[] = [
 		title: 'Alex',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -459,13 +459,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -494,9 +494,9 @@ const people: PersonData[] = [
 		title: 'Sue',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -507,13 +507,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -542,9 +542,9 @@ const people: PersonData[] = [
 		title: 'Alice',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -555,13 +555,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -590,9 +590,9 @@ const people: PersonData[] = [
 		title: 'Bob',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -603,13 +603,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -658,9 +658,9 @@ const people: PersonData[] = [
 		title: 'Chris',
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -671,13 +671,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -706,9 +706,9 @@ const people: PersonData[] = [
 		title: 'Dana', // who controls this? allow client renaming?
 		id: id(),
 		personas: [
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
-			{ type: 'persona', name: `persona${id()}`, id: id() },
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
+			{type: 'persona', name: `persona${id()}`, id: id()},
 		],
 		view: {
 			type: 'view',
@@ -719,13 +719,13 @@ const people: PersonData[] = [
 					type: 'view',
 					id: id(),
 					component: 'ChatView',
-					props: { chatSlug: 'chat' }, // TODO bikeshed
+					props: {chatSlug: 'chat'}, // TODO bikeshed
 				},
 				{
 					type: 'view',
 					id: id(),
 					component: 'ForumView',
-					props: { forumSlug: 'forum' }, // TODO bikeshed
+					props: {forumSlug: 'forum'}, // TODO bikeshed
 				},
 			],
 		},
@@ -1101,7 +1101,7 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'ChatView',
-						props: { chatSlug: 'hi' }, // TODO bikeshed
+						props: {chatSlug: 'hi'}, // TODO bikeshed
 					},
 				],
 			},
@@ -1123,13 +1123,13 @@ const data: Data = {
 							id: id(),
 							author: 'alice',
 							content:
-								'<img style="width: 192px; height: 178px;" src="/logo-heart.png"/>',
+								'<img style="width: 192px; height: 178px;" src="/felt.png" />',
 						},
 						{
 							type: 'message',
 							id: id(),
 							author: 'bob',
-							content: '<img src="/logo-192-textured.png"/>',
+							content: '<img src="/felt.png"/>',
 						},
 						...createMessages(),
 					],
@@ -1301,7 +1301,7 @@ const data: Data = {
 						},
 					],
 				},
-				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
+				{type: 'events', id: id(), title: 'events', slug: 'events', events},
 				createEmojis('mood'),
 				createForum('web'),
 				createChat('net'),
@@ -1397,8 +1397,8 @@ const data: Data = {
 						},
 					],
 				},
-				{ type: 'chat', id: id(), title: 'heh', slug: 'heh', messages: [] },
-				{ type: 'forum', id: id(), title: 'hah', slug: 'hah', topics: [] },
+				{type: 'chat', id: id(), title: 'heh', slug: 'heh', messages: []},
+				{type: 'forum', id: id(), title: 'hah', slug: 'hah', topics: []},
 			],
 		},
 		{
@@ -1435,7 +1435,7 @@ const data: Data = {
 						},
 					],
 				},
-				{ type: 'events', id: id(), title: 'events', slug: 'events', events },
+				{type: 'events', id: id(), title: 'events', slug: 'events', events},
 				createForum('questions'),
 				createForum('design'),
 				createForum('requests'),
@@ -1543,9 +1543,9 @@ const data: Data = {
 					title: 'huh',
 					slug: 'huh',
 					messages: [
-						{ type: 'message', id: id(), author: 'rick', content: 'hii' },
-						{ type: 'message', id: id(), author: 'alice', content: 'omggg' },
-						{ type: 'message', id: id(), author: 'bob', content: 'why?' },
+						{type: 'message', id: id(), author: 'rick', content: 'hii'},
+						{type: 'message', id: id(), author: 'alice', content: 'omggg'},
+						{type: 'message', id: id(), author: 'bob', content: 'why?'},
 						{
 							type: 'message',
 							id: id(),
@@ -1706,7 +1706,7 @@ const data: Data = {
 						// TODO maybe click this for more flavor, class="flavor-text"
 						'<small>dark, wet, rock, depth, beetles, bioluminescence, mushrooms, moss, vines, tangled, critters</small>',
 				}, // :dolphin:
-				{ type: 'events', id: id(), title: 'raids', slug: 'raids', events },
+				{type: 'events', id: id(), title: 'raids', slug: 'raids', events},
 				{
 					type: 'chat',
 					id: id(),
@@ -1761,13 +1761,13 @@ const data: Data = {
 								type: 'view',
 								id: id(),
 								component: 'ChatView',
-								props: { chatSlug: 'tavern' }, // TODO bikeshed
+								props: {chatSlug: 'tavern'}, // TODO bikeshed
 							}, // TODO slug? we're pointing to a resource - should they be ids?
 							{
 								type: 'view',
 								id: id(),
 								component: 'ForumView',
-								props: { forumSlug: 'library' }, // TODO bikeshed
+								props: {forumSlug: 'library'}, // TODO bikeshed
 							}, // TODO slug? we're pointing to a resource - should they be ids?
 						],
 					},
@@ -1775,13 +1775,13 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'EmojisView',
-						props: { emojisSlug: 'mood' },
+						props: {emojisSlug: 'mood'},
 					}, // TODO slug? we're pointing to a resource - should they be ids?
 					{
 						type: 'view',
 						id: id(),
 						component: 'EventsView',
-						props: { eventsSlug: 'raids' }, // TODO bikeshed
+						props: {eventsSlug: 'raids'}, // TODO bikeshed
 					}, // TODO slug? we're pointing to a resource - should they be ids?
 				],
 			},
@@ -1809,7 +1809,7 @@ const data: Data = {
 							author: 'alice',
 							content: 'what can we help you with?',
 						},
-						{ type: 'message', id: id(), author: 'alex', content: 'im lost' },
+						{type: 'message', id: id(), author: 'alex', content: 'im lost'},
 					],
 				},
 				createForum(),
@@ -1825,7 +1825,7 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'ChatView',
-						props: { chatSlug: 'chat' }, // TODO bikeshed
+						props: {chatSlug: 'chat'}, // TODO bikeshed
 						// props: { chatSlug: './chat' }, // TODO bikeshed
 						// props: { chatSlug: 'help/chat' }, // TODO bikeshed
 					}, // TODO slug? we're pointing to a resource - should they be ids?
@@ -1833,7 +1833,7 @@ const data: Data = {
 						type: 'view',
 						id: id(),
 						component: 'ForumView',
-						props: { forumSlug: 'forum' }, // TODO bikeshed
+						props: {forumSlug: 'forum'}, // TODO bikeshed
 					}, // TODO slug? we're pointing to a resource - should they be ids?
 				],
 			},

@@ -1,13 +1,12 @@
-node_modules/
 .DS_Store
+node_modules
+/.svelte
+/build
+/functions
 
-.env
-
-/__sapper__/
-
+/.gro
+/dist
+*.ignore
 *.ignore.*
-
-/static/index.css
-
-*.js
-!index.json.js
+ignore/
+*.pem
