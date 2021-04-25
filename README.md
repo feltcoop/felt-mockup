@@ -2,9 +2,7 @@
 
 [<img src="src/static/felt.png" align="right" width="192" height="178">](https://www.felt.dev)
 
-> customizable community tools that feel good :green_heart: mockup
-
-mockup for [Felt](https://github.com/feltcoop/felt)
+> retired mockup for [Felt](https://github.com/feltcoop/felt) :green_heart:
 
 ## credits :turtle:<sub>:turtle:</sub><sub><sub>:turtle:</sub></sub>
 
