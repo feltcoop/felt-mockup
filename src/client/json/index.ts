@@ -1,18 +1,6 @@
-export type Json =
-	| string
-	| number
-	| boolean
-	| null
-	| { [prop: string]: Json }
-	| Json[];
+export type Json = string | number | boolean | null | {[prop: string]: Json} | Json[];
 
-export type JsonType =
-	| 'string'
-	| 'number'
-	| 'boolean'
-	| 'null'
-	| 'object'
-	| 'array';
+export type JsonType = 'string' | 'number' | 'boolean' | 'null' | 'object' | 'array';
 
 export const getJsonType = (x: Json): JsonType => {
 	const xType = typeof x;

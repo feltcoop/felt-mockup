@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ForumReply from './ForumReply.svelte';
 
 	export let parent;
@@ -10,5 +10,6 @@
 	<ForumReply
 		{reply}
 		{selectReply}
-		isSelected={selection ? selection.test(reply, $selection) : false} />
+		isSelected={selection ? selection.test(reply, $selection) : false}
+	/>
 {/each}

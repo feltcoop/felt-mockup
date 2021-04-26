@@ -1,5 +1,5 @@
-<script>
-	import { getJsonType } from '../json/index.js';
+<script lang="ts">
+	import {getJsonType} from '../json/index.js';
 
 	export let json;
 	export let indentedClasses = 'pl-6';

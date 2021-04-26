@@ -1,14 +1,10 @@
-<script>
+<script lang="ts">
 	export let size = 64;
 	export let fill = '#495499';
 	export let classes = '';
 </script>
 
-<svg
-	viewBox="0 0 1024 1024"
-	fill="none"
-	style="width: {size}px; height: {size}px"
-	class={classes}>
+<svg viewBox="0 0 1024 1024" fill="none" style="width: {size}px; height: {size}px" class={classes}>
 	<path
 		{fill}
 		fill-rule="evenodd"
@@ -24,5 +20,6 @@
 		7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01
 		13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71
 		14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-		transform="scale(64)" />
+		transform="scale(64)"
+	/>
 </svg>

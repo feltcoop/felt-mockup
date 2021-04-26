@@ -1,17 +1,14 @@
-<script>
+<script lang="ts">
 	import World from '../../client/world/World.svelte';
 	import Content from '../../client/ui/Content.svelte';
-	import { useWorld } from '../../client/world/context.js';
+	import {useWorld} from '../../client/world/context.js';
 	import TextInput from '../../client/ui/TextInput.svelte';
 
 	const world = useWorld();
 
 	let text = '';
 
-	const defaultNotes = () => [
-		{ content: 'im a note :D' },
-		{ content: 'same lol' },
-	];
+	const defaultNotes = () => [{content: 'im a note :D'}, {content: 'same lol'}];
 	let notes = defaultNotes();
 
 	$: $world, (notes = defaultNotes()); // TODO this is a hack to make things less confusing - the fix is to persist state per world
@@ -19,7 +16,7 @@
 	const submit = (_, e) => {
 		e.preventDefault(); // TODO needed?
 		e.stopPropagation(); // TODO needed?
-		notes = [...notes, { content: text }];
+		notes = [...notes, {content: text}];
 		text = '';
 	};
 </script>

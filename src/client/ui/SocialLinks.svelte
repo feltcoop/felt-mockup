@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import TwitterLogo from './TwitterLogo.svelte';
 	import GithubLogo from './GithubLogo.svelte';
 </script>

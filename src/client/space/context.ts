@@ -1,7 +1,7 @@
-import { setContext, getContext } from 'svelte';
-import { writable, Writable } from 'svelte/store';
+import {setContext, getContext} from 'svelte';
+import {writable, Writable} from 'svelte/store';
 
-import { SpaceData } from '../../routes/_data.js';
+import {SpaceData} from '../../routes/_data.js';
 
 export const KEY = {};
 

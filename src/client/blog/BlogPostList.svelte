@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import BlogPostListItem from './BlogPostListItem.svelte';
 
 	export let posts;

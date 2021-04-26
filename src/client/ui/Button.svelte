@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let classes = '';
 	export let el = undefined;
 	export let disabled = false;
@@ -12,7 +12,8 @@
 	{disabled}
 	type="button"
 	on:click
-	bind:this={el}>
+	bind:this={el}
+>
 	<slot />
 </button>
 

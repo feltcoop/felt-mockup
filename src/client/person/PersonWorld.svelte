@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import View from '../ui/View.svelte';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 

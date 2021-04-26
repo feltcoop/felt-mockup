@@ -1,6 +1,6 @@
-<script>
-	import { useSession } from '../session/context.js';
-	import { symbols } from '../ui/symbols.js';
+<script lang="ts">
+	import {useSession} from '../session/context.js';
+	import {symbols} from '../ui/symbols.js';
 
 	const session = useSession();
 	// console.log('worldname session', session);
@@ -18,12 +18,9 @@
 	// $: console.log('href', href, name, isAnonymous, symbols.persona);
 </script>
 
-<a
-	{href}
-	class="hover:underline {classes}
+<a {href} class="hover:underline {classes}
 	{colorClasses}
-	{innerClasses}"
-	{style}>
+	{innerClasses}" {style}>
 	{#if isAnonymous}
 		<span class="text-2xl leading-none">{name}</span>
 	{:else}

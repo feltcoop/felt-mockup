@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import EntityExplorer from '../ui/EntityExplorer.svelte';
 	import View from '../ui/View.svelte';
 

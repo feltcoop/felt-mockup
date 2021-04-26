@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let value = '';
 	$: cleanValue = value.trim();
 	export let el = undefined;
@@ -6,9 +6,9 @@
 	export let classes = '';
 	export let placeholder = '• • •';
 	export let submitMatcher = undefined; // optional regexp that includes the input value snapshot BEFORE any current keyboard event is applied
-	export let shouldSubmit = v => (submitMatcher ? submitMatcher.test(v) : true);
+	export let shouldSubmit = (v) => (submitMatcher ? submitMatcher.test(v) : true);
 
-	const onKeyDown = e => {
+	const onKeyDown = (e) => {
 		console.log('keydown', e.key);
 		switch (e.key) {
 			case 'Enter': {
@@ -24,7 +24,8 @@
 	bind:value
 	bind:this={el}
 	on:keydown={onKeyDown}
-	{placeholder} />
+	{placeholder}
+/>
 
 <style>
 	textarea:focus {

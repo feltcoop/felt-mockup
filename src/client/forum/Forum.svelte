@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
 	import ForumTopicsList from './ForumTopicsList.svelte';
 	import ForumTopicsListItem from './ForumTopicsListItem.svelte';
 	import ForumInput from './ForumInput.svelte';
 	import Button from '../ui/Button.svelte';
-	import { id } from '../../routes/_data.js';
-	import { slugify } from '../url/utils.js';
-	import { useSession } from '../session/context.js';
-	import { useSelection } from '../selection/context.js';
-	import { symbols } from '../ui/symbols.js';
+	import {id} from '../../routes/_data.js';
+	import {slugify} from '../url/utils.js';
+	import {useSession} from '../session/context.js';
+	import {useSelection} from '../selection/context.js';
+	import {symbols} from '../ui/symbols.js';
 
 	export let topics;
 	export let classes = '';
@@ -22,9 +22,7 @@
 	// TODO do this properly! this just infers anon status, which should be a property on the space
 	// `inferAuthor` or `getAuthor` could be a pluginable bit of code attached to spaces
 	$: author =
-		topics[0] && topics[0].author === symbols.persona
-			? symbols.persona
-			: $session.person.slug;
+		topics[0] && topics[0].author === symbols.persona ? symbols.persona : $session.person.slug;
 
 	let titleValue = '';
 	let contentValue = '';
@@ -44,7 +42,7 @@
 
 	$: slug = slugify(titleValue);
 
-	const submit = e => {
+	const submit = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', titleValue, contentValue);
@@ -79,7 +77,7 @@
 
 	const addReply = (topic, child) => {
 		// TODO handle nesting
-		topics = topics.map(p => {
+		topics = topics.map((p) => {
 			if (p.id !== topic.id) return p;
 			return {
 				...topic,
@@ -87,7 +85,7 @@
 			};
 		});
 	};
-	const selectReply = reply => {
+	const selectReply = (reply) => {
 		console.log('select reply', reply);
 		selection.select(reply);
 	};
@@ -113,17 +111,18 @@
 			bind:el={titleEl}
 			bind:value={titleValue}
 			placeholder="title • • •"
-			submit={submitTitle} />
+			submit={submitTitle}
+		/>
 		<ForumInput
 			bind:el={contentEl}
 			bind:value={contentValue}
 			placeholder="• • • content!"
 			submit={submitContent}
-			classes="border-t-0" />
+			classes="border-t-0"
+		/>
 		{#if hasDraft}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg p-2">
-				<ForumTopicsListItem
-					topic={{ author, slug, title: titleValue, content: contentValue }} />
+				<ForumTopicsListItem topic={{author, slug, title: titleValue, content: contentValue}} />
 			</div>
 		{/if}
 	{/if}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ForumReplies from './ForumReplies.svelte';
 	import WorldName from '../world/WorldName.svelte';
 	import ForumReplyComposer from './ForumReplyComposer.svelte';

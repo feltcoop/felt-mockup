@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ForumTopic from './ForumTopic.svelte';
 
 	export let topic;

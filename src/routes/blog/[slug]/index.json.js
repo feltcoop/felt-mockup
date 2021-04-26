@@ -1,16 +1,16 @@
 import data from '../../_data.js';
 
-const { posts } = data;
+const {posts} = data;
 
 const postsBySlug = new Map();
-posts.forEach(post => {
+posts.forEach((post) => {
 	postsBySlug.set(post.slug, JSON.stringify(post));
 });
 
 export function get(req, res, next) {
 	// the `slug` parameter is available because
 	// this file is called [slug].json.js
-	const { slug } = req.params;
+	const {slug} = req.params;
 
 	if (postsBySlug.has(slug)) {
 		res.writeHead(200, {

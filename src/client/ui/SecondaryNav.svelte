@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import SecondaryNavItem from './SecondaryNavItem.svelte';
 
 	export let segment;
@@ -23,7 +23,6 @@
 				<a>notifications</a>
 			</li>
 		{/if} -->
-
 	</ul>
 </nav>
 

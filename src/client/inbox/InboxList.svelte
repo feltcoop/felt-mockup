@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import InboxListItem from './InboxListItem.svelte';
 
 	export let notes;

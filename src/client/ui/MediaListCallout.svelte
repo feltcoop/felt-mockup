@@ -1,7 +1,7 @@
-<script>
-	import { scale } from 'svelte/transition';
+<script lang="ts">
+	import {scale} from 'svelte/transition';
 
-	import { isEmail } from '../email/utils.js';
+	import {isEmail} from '../email/utils.js';
 	import Button from '../ui/Button.svelte';
 	import Content from '../ui/Content.svelte';
 	import WaitingAnimation from '../ui/WaitingAnimation.svelte';
@@ -14,7 +14,7 @@
 	let errorMessage;
 	let submitting;
 
-	const submit = async e => {
+	const submit = async (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		if (!email) {
@@ -35,8 +35,8 @@
 		try {
 			const res = await fetch('/mailing-list', {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ email }),
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({email}),
 			});
 			if (res.ok) {
 				submitting = false;
@@ -53,7 +53,7 @@
 		}
 	};
 
-	const onKeyPress = e => {
+	const onKeyPress = (e) => {
 		if (e.key === 'Enter') {
 			submit(e);
 		}
@@ -70,7 +70,8 @@
 					bind:value={email}
 					on:keypress={onKeyPress}
 					disabled={submitting}
-					placeholder="email@address.com" />
+					placeholder="email@address.com"
+				/>
 
 				<Button bind:el={buttonEl} on:click={submit} disabled={submitting}>
 					{#if submitting}

@@ -1,5 +1,5 @@
-<script>
-	import { views } from './views.js';
+<script lang="ts">
+	import {views} from './views.js';
 
 	export let view; // `: ViewData`
 

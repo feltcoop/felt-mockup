@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import PersonWorld from '../person/PersonWorld.svelte';
 	import PersonaWorld from '../persona/PersonaWorld.svelte';
 	import CommunityWorld from '../community/CommunityWorld.svelte';
@@ -17,7 +17,8 @@
 			class="active-world-link relative bg-purple-100 px-4 cursor-default
 			border-dashed rounded-tr-lg rounded-bl-lg border-l-4 border-r-2 border-t-2
 			border-b-4 border-purple-200"
-			href={$world.slug}>
+			href={$world.slug}
+		>
 			{$world.title}
 		</a>
 	</div>

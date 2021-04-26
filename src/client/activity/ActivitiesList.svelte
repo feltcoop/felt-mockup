@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ActivitiesListItem from './ActivitiesListItem.svelte';
 
 	export let activities;

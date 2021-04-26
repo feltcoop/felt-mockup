@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import WorldName from '../world/WorldName.svelte';
-	import { sizeClasses } from './emoji.js';
+	import {sizeClasses} from './emoji.js';
 
 	export let emoji;
 

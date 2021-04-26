@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let isActive;
 	export let classes = '';
 	$: activeClasses = isActive
@@ -11,7 +11,8 @@
 	rounded-tr-lg border-l-4 border-r-2 border-t-2 border-b-4 {classes}
 	{activeClasses}"
 	class:selected={isActive}
-	on:click>
+	on:click
+>
 	<slot />
 </div>
 

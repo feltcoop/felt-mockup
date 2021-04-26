@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import WorldName from '../world/WorldName.svelte';
 
 	export let note;

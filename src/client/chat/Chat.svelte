@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import ChatMessages from './ChatMessages.svelte';
 	import ChatMessage from './ChatMessage.svelte';
 	import ChatInput from './ChatInput.svelte';
-	import { id } from '../../routes/_data.js';
-	import { useSession } from '../session/context.js';
-	import { useSelection } from '../selection/context.js';
-	import { symbols } from '../ui/symbols.js';
+	import {id} from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
+	import {useSelection} from '../selection/context.js';
+	import {symbols} from '../ui/symbols.js';
 
 	export let messages;
 	export let classes = '';
@@ -30,14 +30,11 @@
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', content);
-		messages = [
-			...(messages || []),
-			{ type: 'message', author, id: id(), content },
-		];
+		messages = [...(messages || []), {type: 'message', author, id: id(), content}];
 		value = '';
 	};
 
-	const selectMessage = message => {
+	const selectMessage = (message) => {
 		console.log('selectMessage', message);
 		selection.select(message);
 	};
@@ -50,13 +47,14 @@
 	<div
 		class="overflow-y-scroll flex flex-col justify-end flex-1 border-4
 		border-b-0 border-purple-200 rounded-tr-lg {messagesClasses}"
-		style={messagesStyle}>
+		style={messagesStyle}
+	>
 		{#if messages && messages.length}
 			<ChatMessages {messages} {selectMessage} {selection} />
 		{:else}• • •{/if}
 		{#if value}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-				<ChatMessage message={{ author, content: value }} />
+				<ChatMessage message={{author, content: value}} />
 			</div>
 		{/if}
 	</div>

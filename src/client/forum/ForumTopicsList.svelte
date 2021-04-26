@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ForumTopicsListItem from './ForumTopicsListItem.svelte';
 
 	export let topics;

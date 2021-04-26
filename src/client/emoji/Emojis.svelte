@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import EmojisList from './EmojisList.svelte';
 	import EmojisListItem from './EmojisListItem.svelte';
 	import EmojiInput from './EmojiInput.svelte';
-	import { id } from '../../routes/_data.js';
-	import { sizes } from './emoji.js';
-	import { randInt, randItem } from '../utils/random.js';
-	import { useInterval } from '../ui/interval.js';
+	import {id} from '../../routes/_data.js';
+	import {sizes} from './emoji.js';
+	import {randInt, randItem} from '../utils/random.js';
+	import {useInterval} from '../ui/interval.js';
 
 	// TODO animate the input emoji into the list
 
@@ -40,7 +40,8 @@
 	<EmojiInput {submit} {values} />
 	<div
 		class="overflow-y-hidden flex items-start flex-1 border-4 border-purple-200
-		rounded-bl-lg rounded-tr-lg">
+		rounded-bl-lg rounded-tr-lg"
+	>
 		{#if emojis && emojis.length}
 			<EmojisList {emojis} />
 		{/if}

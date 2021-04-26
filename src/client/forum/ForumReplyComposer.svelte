@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import ForumReplyInput from './ForumReplyInput.svelte';
 	import TextButton from '../ui/TextButton.svelte';
 	import ForumReply from './ForumReply.svelte';
-	import { useSession } from '../session/context.js';
-	import { id } from '../../routes/_data.js';
-	import { symbols } from '../ui/symbols.js';
+	import {useSession} from '../session/context.js';
+	import {id} from '../../routes/_data.js';
+	import {symbols} from '../ui/symbols.js';
 
 	const session = useSession();
 
@@ -53,10 +53,9 @@
 {#if isOpen && addReply}
 	<ForumReplyInput bind:el={commentEl} bind:value {submit} />
 	{#if value}
-		<div
-			class="px-2 py-1 border-4 border-purple-200 border-bl-lg rounded-bl-lg
+		<div class="px-2 py-1 border-4 border-purple-200 border-bl-lg rounded-bl-lg
 			rounded-tr-lg">
-			<ForumReply reply={{ author: $session.person.slug, content: value }} />
+			<ForumReply reply={{author: $session.person.slug, content: value}} />
 		</div>
 	{/if}
 {/if}

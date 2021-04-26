@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import TextInput from '../ui/TextInput.svelte';
 
 	// TODO doesn't do anything ... yet .. remove if this doesn't make sense!

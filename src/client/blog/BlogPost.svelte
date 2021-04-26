@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Content from '../ui/Content.svelte';
 	import WorldName from '../world/WorldName.svelte';
 

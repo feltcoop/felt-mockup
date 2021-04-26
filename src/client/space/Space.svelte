@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Content from '../ui/Content.svelte';
 	import Chat from '../chat/Chat.svelte';
 	import Forum from '../forum/Forum.svelte';
@@ -9,7 +9,7 @@
 	import Events from '../events/Events.svelte';
 	import Emojis from '../emoji/Emojis.svelte';
 	import ErrorMessage from '../ui/ErrorMessage.svelte';
-	import { symbols } from '../ui/symbols.js';
+	import {symbols} from '../ui/symbols.js';
 
 	export let world;
 	export let space;
@@ -23,7 +23,8 @@
 		<a
 			class="bg-green-100 px-4 rounded-bl-lg border-dashed border-l-4 border-t-2
 			border-b-4 border-green-200 text-green-700"
-			href={$world.slug}>
+			href={$world.slug}
+		>
 			{$world.title}
 		</a>
 		<!--
@@ -37,8 +38,10 @@
 			class="active-space-link bg-purple-100 px-4 border-r-2 border-t-2
 			border-b-4 border-purple-200 cursor-default rounded-tr-lg border-dashed
 			whitespace-no-wrap"
-			href="{$world.slug}/{$space.slug}">
-			{$space.title} {symbols[$space.type] || symbols.other}
+			href="{$world.slug}/{$space.slug}"
+		>
+			{$space.title}
+			{symbols[$space.type] || symbols.other}
 		</a>
 	</div>
 	{#if $space.description}

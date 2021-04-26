@@ -1,5 +1,5 @@
-<script>
-	import { symbols } from '../ui/symbols.js';
+<script lang="ts">
+	import {symbols} from '../ui/symbols.js';
 
 	export let segment;
 	export let world;
@@ -21,10 +21,9 @@
 		border-dashed border-r-2 border-l-4 border-t-2 border-b-4 border-tr-lg
 		border-bl-lg hover:bg-green-100 hover:border-green-200 {selectedClasses}"
 		class:selected={isSelected}
-		href="{$world.slug}/{space.slug}">
-		<div
-			class="w-8 text-center text-gray-400"
-			class:text-purple-300={isSelected}>
+		href="{$world.slug}/{space.slug}"
+	>
+		<div class="w-8 text-center text-gray-400" class:text-purple-300={isSelected}>
 			{symbols[space.type] || symbols.other}
 		</div>
 		<div class="title">{space.title}</div>

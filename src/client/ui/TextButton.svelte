@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let classes = '';
 	export let el = undefined;
 	export let disabled = false;
@@ -10,7 +10,8 @@
 	type="button"
 	on:click
 	bind:this={el}
-	{disabled}>
+	{disabled}
+>
 	{#if symbol}
 		<span class="text-3xl leading-none">{symbol}</span>
 	{/if}

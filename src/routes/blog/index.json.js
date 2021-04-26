@@ -1,6 +1,6 @@
 import data from '../_data.js';
 
-const { posts } = data;
+const {posts} = data;
 
 const contents = JSON.stringify(posts);
 

@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import InboxList from './InboxList.svelte';
 	import InboxInput from './InboxInput.svelte';
 	import InboxListItem from './InboxListItem.svelte';
-	import { id } from '../../routes/_data.js';
-	import { useSession } from '../session/context.js';
+	import {id} from '../../routes/_data.js';
+	import {useSession} from '../session/context.js';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 
 	// TODO should type="inbox" be type="activity"?
@@ -54,16 +54,15 @@
 		bind:value={contentValue}
 		bind:el={contentEl}
 		{submit}
-		submitMatcher={/.+\n\n$/} />
+		submitMatcher={/.+\n\n$/}
+	/>
 	<!-- TODO should `subject` be the data name instead of `title`? -->
-	<InboxInput
-		placeholder="subject?"
-		bind:value={titleValue}
-		submit={submitTitle} />
+	<InboxInput placeholder="subject?" bind:value={titleValue} submit={submitTitle} />
 	{#if contentValue || titleValue}
 		<div class="flex border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
 			<InboxListItem
-				note={{ author: $session.person.slug, content: contentValue, title: titleValue }} />
+				note={{author: $session.person.slug, content: contentValue, title: titleValue}}
+			/>
 		</div>
 	{/if}
 	<div class="overflow-y-scroll flex flex-col flex-1">

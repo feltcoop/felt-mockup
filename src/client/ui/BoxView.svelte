@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import View from './View.svelte';
 
 	// We're referring to this as a `BoxView` instead of `Box`

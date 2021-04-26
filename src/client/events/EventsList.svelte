@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import EventsListItem from './EventsListItem.svelte';
 
 	export let events;

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import TextInput from '../ui/TextInput.svelte';
 
 	export let value = '';
@@ -9,10 +9,4 @@
 	export let submitMatcher = /.+\n\n$/;
 </script>
 
-<TextInput
-	bind:value
-	bind:el
-	{submit}
-	{classes}
-	{placeholder}
-	{submitMatcher} />
+<TextInput bind:value bind:el {submit} {classes} {placeholder} {submitMatcher} />

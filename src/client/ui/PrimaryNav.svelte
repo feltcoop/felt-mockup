@@ -1,5 +1,5 @@
-<script>
-	import { useWorld } from '../world/context.js';
+<script lang="ts">
+	import {useWorld} from '../world/context.js';
 	import PrimaryNavItem from './PrimaryNavItem.svelte';
 	import PrimaryNavSubheading from './PrimaryNavSubheading.svelte';
 
@@ -18,10 +18,10 @@
 	// users should be able to share their layouts
 	// with friends or the public or other audiences.
 
-	$: personas = worlds.filter(w => w.type === 'persona');
-	$: communities = worlds.filter(w => w.type === 'community');
-	$: friends = worlds.filter(w => w.type === 'person' && w.slug !== 'rick');
-	$: pages = worlds.filter(w => w.type === 'page');
+	$: personas = worlds.filter((w) => w.type === 'persona');
+	$: communities = worlds.filter((w) => w.type === 'community');
+	$: friends = worlds.filter((w) => w.type === 'person' && w.slug !== 'rick');
+	$: pages = worlds.filter((w) => w.type === 'page');
 
 	let subheadingsOpen = {
 		persona: true,
@@ -29,7 +29,7 @@
 		person: true,
 		page: true,
 	};
-	const toggleSubheading = subheading => {
+	const toggleSubheading = (subheading) => {
 		subheadingsOpen = {
 			...subheadingsOpen,
 			[subheading]: !subheadingsOpen[subheading],
@@ -47,7 +47,8 @@
 
 		<PrimaryNavSubheading
 			isActive={$world && $world.type === 'persona'}
-			on:click={() => toggleSubheading('persona')}>
+			on:click={() => toggleSubheading('persona')}
+		>
 			personas
 		</PrimaryNavSubheading>
 
@@ -62,7 +63,8 @@
 
 		<PrimaryNavSubheading
 			isActive={$world && $world.type === 'community'}
-			on:click={() => toggleSubheading('community')}>
+			on:click={() => toggleSubheading('community')}
+		>
 			communities
 		</PrimaryNavSubheading>
 
@@ -77,7 +79,8 @@
 
 		<PrimaryNavSubheading
 			isActive={$world && $world.type === 'person'}
-			on:click={() => toggleSubheading('person')}>
+			on:click={() => toggleSubheading('person')}
+		>
 			friends
 		</PrimaryNavSubheading>
 
@@ -92,7 +95,8 @@
 
 		<PrimaryNavSubheading
 			isActive={$world && $world.type === 'page'}
-			on:click={() => toggleSubheading('page')}>
+			on:click={() => toggleSubheading('page')}
+		>
 			felt.dev
 		</PrimaryNavSubheading>
 
@@ -104,7 +108,6 @@
 				</PrimaryNavItem>
 			{/each}
 		{/if}
-
 	</ul>
 </nav>
 

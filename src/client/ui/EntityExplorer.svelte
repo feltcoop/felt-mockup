@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import JsonExplorer from '../json/JsonExplorer.svelte';
 
 	// TODO linkify and otherwise enrich this data,

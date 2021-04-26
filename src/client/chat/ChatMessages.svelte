@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ChatMessage from './ChatMessage.svelte';
 
 	export let messages;
@@ -7,8 +7,5 @@
 </script>
 
 {#each messages as message}
-	<ChatMessage
-		{message}
-		{selectMessage}
-		isSelected={selection.test(message, $selection)} />
+	<ChatMessage {message} {selectMessage} isSelected={selection.test(message, $selection)} />
 {/each}

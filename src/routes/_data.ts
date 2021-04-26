@@ -6,10 +6,7 @@ let idCounter = 0;
 export const id = (): number => idCounter++;
 
 // TODO chat messages
-const createMessages = (
-	author1: string = 'rick',
-	author2: string = 'alice',
-): ChatMessageData[] => [
+const createMessages = (author1: string = 'rick', author2: string = 'alice'): ChatMessageData[] => [
 	{type: 'message', id: id(), author: author1, content: 'hi!'},
 	{type: 'message', id: id(), author: author2, content: 'supp'},
 	{type: 'message', id: id(), author: author2, content: 'i found a bug'},
@@ -214,10 +211,7 @@ const createActivities = (author: string = 'rick'): ActivityData[] => [
 	},
 ];
 
-const createEmojis = (
-	slug: string = 'emojis',
-	doc?: Partial<EmojiSpaceData>,
-): EmojiSpaceData => ({
+const createEmojis = (slug: string = 'emojis', doc?: Partial<EmojiSpaceData>): EmojiSpaceData => ({
 	type: 'emojis',
 	id: id(),
 	title: slug,
@@ -1122,8 +1116,7 @@ const data: Data = {
 							type: 'message',
 							id: id(),
 							author: 'alice',
-							content:
-								'<img style="width: 192px; height: 178px;" src="/felt.png" />',
+							content: '<img style="width: 192px; height: 178px;" src="/felt.png" />',
 						},
 						{
 							type: 'message',
@@ -1146,8 +1139,7 @@ const data: Data = {
 							id: id(),
 							author: 'rick',
 							title: 'I have a serious topic to discuss!',
-							content:
-								"Now that we're here for the serious topic, who wants icecream?",
+							content: "Now that we're here for the serious topic, who wants icecream?",
 							slug: 'serious-topic',
 							children: [
 								{
@@ -1312,8 +1304,7 @@ const data: Data = {
 					title: 'steam',
 					id: id(),
 					slug: 'steam',
-					description:
-						'<small>science, technology, engineering, art, & mathematics</small>',
+					description: '<small>science, technology, engineering, art, & mathematics</small>',
 					topics: createTopics(),
 				},
 				{
@@ -1791,8 +1782,7 @@ const data: Data = {
 			id: id(),
 			title: 'help',
 			slug: 'help',
-			description:
-				"<small>need support? got some questions? we're here to help!</small>",
+			description: "<small>need support? got some questions? we're here to help!</small>",
 			spaces: [
 				{
 					...createChat(),
