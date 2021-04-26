@@ -1,8 +1,8 @@
 <script lang="ts">
-	import World from '../../client/world/World.svelte';
-	import Content from '../../client/ui/Content.svelte';
-	import {useWorld} from '../../client/world/context.js';
-	import TextInput from '../../client/ui/TextInput.svelte';
+	import World from '$lib/world/World.svelte';
+	import Content from '$lib/ui/Content.svelte';
+	import {useWorld} from '$lib/world/context.js';
+	import TextInput from '$lib/ui/TextInput.svelte';
 
 	const world = useWorld();
 

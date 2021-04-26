@@ -1,5 +1,5 @@
-import {symbols} from '../client/ui/symbols.js';
-import {emotionEmoji} from '../client/emoji/emoji.js';
+import {symbols} from '$lib/ui/symbols.js';
+import {emotionEmoji} from '$lib/emoji/emoji.js';
 
 export type Id = number;
 let idCounter = 0;

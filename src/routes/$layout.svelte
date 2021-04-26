@@ -1,10 +1,10 @@
 <script lang="ts">
-	import PrimaryNav from '../client/ui/PrimaryNav.svelte';
-	import {provideSession} from '../client/session/context.js';
-	import {provideWorld} from '../client/world/context.js';
-	import {provideSpace} from '../client/space/context.js';
-	import {provideSelection} from '../client/selection/context.js';
-	import {DEFAULT_WORLD} from '../client/world/constants.js';
+	import PrimaryNav from '$lib/ui/PrimaryNav.svelte';
+	import {provideSession} from '$lib/session/context.js';
+	import {provideWorld} from '$lib/world/context.js';
+	import {provideSpace} from '$lib/space/context.js';
+	import {provideSelection} from '$lib/selection/context.js';
+	import {DEFAULT_WORLD} from '$lib/world/constants.js';
 	import data from './_data.js';
 
 	const {worlds, session: initialSessionData} = data;

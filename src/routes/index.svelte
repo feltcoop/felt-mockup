@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Content from '../client/ui/Content.svelte';
-	import TextInput from '../client/ui/TextInput.svelte';
-	import SocialLinks from '../client/ui/SocialLinks.svelte';
-	import MediaListCallout from '../client/ui/MediaListCallout.svelte';
-	// import PlaceholderInfo from '../client/ui/PlaceholderInfo.svelte';
+	import Content from '$lib/ui/Content.svelte';
+	import TextInput from '$lib/ui/TextInput.svelte';
+	import SocialLinks from '$lib/ui/SocialLinks.svelte';
+	import MediaListCallout from '$lib/ui/MediaListCallout.svelte';
+	// import PlaceholderInfo from '$lib/ui/PlaceholderInfo.svelte';
 
 	// let text = '';
 

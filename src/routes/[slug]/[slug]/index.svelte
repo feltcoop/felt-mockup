@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Space from '../../../client/space/Space.svelte';
-	import {useWorld} from '../../../client/world/context.js';
-	import {useSpace} from '../../../client/space/context.js';
+	import Space from '$lib/space/Space.svelte';
+	import {useWorld} from '$lib/world/context.js';
+	import {useSpace} from '$lib/space/context.js';
 
 	const world = useWorld();
 	const space = useSpace();
