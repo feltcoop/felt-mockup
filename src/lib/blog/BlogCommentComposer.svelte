@@ -1,10 +1,10 @@
 <script lang="ts">
 	import BlogCommentInput from './BlogCommentInput.svelte';
 	import TextButton from '../ui/TextButton.svelte';
-	import {useSession} from '../session/context.js';
+	import {useSession} from '../session/context';
 	import {id} from '$lib/data';
 	import ForumReply from '../forum/ForumReply.svelte';
-	import {symbols} from '../ui/symbols.js';
+	import {symbols} from '../ui/symbols';
 
 	const session = useSession();
 

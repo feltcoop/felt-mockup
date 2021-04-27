@@ -1,9 +1,11 @@
 <script lang="ts">
-	import EntityExplorer from '../ui/EntityExplorer.svelte';
+	import type {Writable} from 'svelte/store';
+
+	import type {WorldData} from '$lib/data';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 	import View from '../ui/View.svelte';
 
-	export let world;
+	export let world: Writable<WorldData>;
 </script>
 
 {#if !$world.view}

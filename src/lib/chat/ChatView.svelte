@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Chat from './Chat.svelte';
-	import {useWorld} from '../world/context.js';
+	import {useWorld} from '../world/context';
 
 	// TODO should this be removed and a single generic used in its place?
 	export let view;

@@ -1,15 +1,16 @@
 <script lang="ts">
 	import ForumTopicsList from './ForumTopicsList.svelte';
 	import ForumTopicsListItem from './ForumTopicsListItem.svelte';
-	import ForumInput from './ForumInput.svelte';
+	import TextInput from './TextInput.svelte';
 	import Button from '../ui/Button.svelte';
-	import {id} from '$lib/data';
-	import {slugify} from '../url/utils.js';
-	import {useSession} from '../session/context.js';
-	import {useSelection} from '../selection/context.js';
-	import {symbols} from '../ui/symbols.js';
+	import {ForumReplyData, id} from '$lib/data';
+	import type {ForumTopicData} from '$lib/data';
+	import {slugify} from '../url/utils';
+	import {useSession} from '../session/context';
+	import {useSelection} from '../selection/context';
+	import {symbols} from '../ui/symbols';
 
-	export let topics;
+	export let topics: ForumTopicData[];
 	export let classes = '';
 	export let style = '';
 	export let topicsClasses = '';
@@ -42,7 +43,7 @@
 
 	$: slug = slugify(titleValue);
 
-	const submit = (e) => {
+	const submit = (e: KeyboardEvent | MouseEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', titleValue, contentValue);
@@ -52,6 +53,7 @@
 		}
 		topics = [
 			{
+				type: 'topic',
 				author,
 				id: id(),
 				content: contentValue,
@@ -64,18 +66,18 @@
 		contentValue = '';
 		toggleDraft();
 	};
-	const submitTitle = (_, e) => {
+	const submitTitle = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		contentEl.focus();
 	};
-	const submitContent = (_, e) => {
+	const submitContent = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		titleEl.focus();
 	};
 
-	const addReply = (topic, child) => {
+	const addReply = (topic: ForumTopicData, child: ForumReplyData) => {
 		// TODO handle nesting
 		topics = topics.map((p) => {
 			if (p.id !== topic.id) return p;
@@ -85,7 +87,7 @@
 			};
 		});
 	};
-	const selectReply = (reply) => {
+	const selectReply = (reply: ForumReplyData) => {
 		console.log('select reply', reply);
 		selection.select(reply);
 	};
@@ -107,13 +109,13 @@
 	</div>
 	{#if showDraft}
 		<!-- TODO make this first one shorter -->
-		<ForumInput
+		<TextInput
 			bind:el={titleEl}
 			bind:value={titleValue}
 			placeholder="title • • •"
 			submit={submitTitle}
 		/>
-		<ForumInput
+		<TextInput
 			bind:el={contentEl}
 			bind:value={contentValue}
 			placeholder="• • • content!"
@@ -122,7 +124,9 @@
 		/>
 		{#if hasDraft}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg p-2">
-				<ForumTopicsListItem topic={{author, slug, title: titleValue, content: contentValue}} />
+				<ForumTopicsListItem
+					topic={{type: 'topic', id: id(), author, slug, title: titleValue, content: contentValue}}
+				/>
 			</div>
 		{/if}
 	{/if}

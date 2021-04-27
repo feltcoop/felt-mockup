@@ -1,11 +1,11 @@
 <script lang="ts">
-	import {useSession} from '../session/context.js';
-	import {symbols} from '../ui/symbols.js';
+	import {useSession} from '../session/context';
+	import {symbols} from '../ui/symbols';
 
 	const session = useSession();
 	// console.log('worldname session', session);
 
-	export let name;
+	export let name: string;
 	export let isMention = false;
 	export let classes = '';
 	export let style = '';

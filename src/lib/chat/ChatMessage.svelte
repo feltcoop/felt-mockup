@@ -1,6 +1,6 @@
 <script lang="ts">
 	import WorldName from '../world/WorldName.svelte';
-	import {symbols} from '../ui/symbols.js';
+	import {symbols} from '../ui/symbols';
 
 	export let message;
 	export let selectMessage;

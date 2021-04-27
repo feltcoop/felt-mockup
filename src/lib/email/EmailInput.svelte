@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let el = undefined;
+	export let el: HTMLInputElement | undefined = undefined;
 	export let value = '';
 	export let placeholder = 'email@address.com';
 	export let disabled = false;

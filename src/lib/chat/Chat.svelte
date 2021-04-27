@@ -3,9 +3,9 @@
 	import ChatMessage from './ChatMessage.svelte';
 	import ChatInput from './ChatInput.svelte';
 	import {id} from '$lib/data';
-	import {useSession} from '../session/context.js';
-	import {useSelection} from '../selection/context.js';
-	import {symbols} from '../ui/symbols.js';
+	import {useSession} from '../session/context';
+	import {useSelection} from '../selection/context';
+	import {symbols} from '../ui/symbols';
 
 	export let messages;
 	export let classes = '';

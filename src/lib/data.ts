@@ -1,5 +1,5 @@
-import {symbols} from '$lib/ui/symbols.js';
-import {emotionEmoji} from '$lib/emoji/emoji.js';
+import {symbols} from '$lib/ui/symbols';
+import {emotionEmoji} from '$lib/emoji/emoji';
 
 export type Id = number;
 let idCounter = 0;
@@ -782,6 +782,7 @@ export interface NavData {
 }
 
 export interface WorldData extends Entity {
+	content?: string; // TODO adding just to make type error go away
 	type: 'persona' | 'community' | 'person' | 'page'; // TODO make this a union type like with spaces?
 	title: string;
 	slug: Slug;

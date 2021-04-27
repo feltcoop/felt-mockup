@@ -1,11 +1,14 @@
 <script lang="ts">
+	import type {Writable} from 'svelte/store';
+
+	import type {WorldData} from '$lib/data';
 	import PersonWorld from '../person/PersonWorld.svelte';
 	import PersonaWorld from '../persona/PersonaWorld.svelte';
 	import CommunityWorld from '../community/CommunityWorld.svelte';
 	import PageWorld from '../page/PageWorld.svelte';
 	import ErrorMessage from '../ui/ErrorMessage.svelte';
 
-	export let world;
+	export let world: Writable<WorldData>;
 </script>
 
 <!-- TODO where should this padding ideally go? -->

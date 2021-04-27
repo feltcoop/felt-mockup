@@ -1,10 +1,10 @@
 <script lang="ts">
-	import {useWorld} from '../world/context.js';
+	import {useWorld} from '../world/context';
 	import PrimaryNavItem from './PrimaryNavItem.svelte';
 	import PrimaryNavSubheading from './PrimaryNavSubheading.svelte';
 
-	export let segment;
-	export let worlds;
+	export let segment: string;
+	export let worlds: any[];
 
 	const world = useWorld();
 	// $: console.log('primary nav world', $world);
@@ -29,7 +29,7 @@
 		person: true,
 		page: true,
 	};
-	const toggleSubheading = (subheading) => {
+	const toggleSubheading = (subheading: keyof typeof subheadingsOpen) => {
 		subheadingsOpen = {
 			...subheadingsOpen,
 			[subheading]: !subheadingsOpen[subheading],

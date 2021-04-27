@@ -2,8 +2,8 @@
 	import TextInput from '../ui/TextInput.svelte';
 
 	export let value = '';
-	export let el = undefined;
-	export let submit = undefined;
+	export let el: HTMLTextAreaElement | undefined = undefined;
+	export let submit: ((value: string, e: KeyboardEvent) => void) | undefined = undefined;
 	export let classes = '';
 	export let placeholder = '• • • enter x3';
 	export let submitMatcher = /.+\n\n$/;

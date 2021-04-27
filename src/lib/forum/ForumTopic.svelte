@@ -2,12 +2,16 @@
 	import ForumReplies from './ForumReplies.svelte';
 	import WorldName from '../world/WorldName.svelte';
 	import ForumReplyComposer from './ForumReplyComposer.svelte';
+	import type {ForumReplyData, ForumTopicData} from '$lib/data';
+	import type {SelectionStore} from '$lib/selection/store';
 	// import ForumInput from './ForumInput.svelte';
 
-	export let topic;
-	export let addReply;
-	export let selectReply;
-	export let selection;
+	export let topic: ForumTopicData;
+	export let addReply:
+		| ((topic: ForumTopicData, reply: ForumReplyData) => void)
+		| undefined = undefined;
+	export let selectReply: ((reply: ForumReplyData) => void) | undefined = undefined;
+	export let selection: SelectionStore | undefined = undefined;
 
 	// TODO need a store per chat that saves the input state
 </script>

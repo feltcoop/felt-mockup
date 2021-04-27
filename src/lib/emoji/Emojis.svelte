@@ -3,9 +3,9 @@
 	import EmojisListItem from './EmojisListItem.svelte';
 	import EmojiInput from './EmojiInput.svelte';
 	import {id} from '$lib/data';
-	import {sizes} from './emoji.js';
-	import {randInt, randItem} from '../utils/random.js';
-	import {useInterval} from '../ui/interval.js';
+	import {sizes} from './emoji';
+	import {randInt, randItem} from '../utils/random';
+	import {useInterval} from '../ui/interval';
 
 	// TODO animate the input emoji into the list
 

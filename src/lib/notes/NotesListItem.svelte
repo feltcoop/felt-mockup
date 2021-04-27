@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let note;
+	import type {InboxNoteData} from '$lib/data';
+
+	export let note: InboxNoteData;
 </script>
 
 {#if note.title}

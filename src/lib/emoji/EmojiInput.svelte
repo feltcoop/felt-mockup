@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {sizeClasses} from './emoji.js';
+	import {sizeClasses} from './emoji';
 
 	export let values;
 	export let submit = undefined;

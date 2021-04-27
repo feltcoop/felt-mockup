@@ -1,7 +1,7 @@
 <script lang="ts">
-	import {getJsonType} from '../json/index.js';
+	import {getJsonType} from '../json/index';
 
-	export let json;
+	export let json: any;
 	export let indentedClasses = 'pl-6';
 
 	$: jsonType = getJsonType(json);

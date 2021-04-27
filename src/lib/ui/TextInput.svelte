@@ -1,14 +1,14 @@
 <script lang="ts">
 	export let value = '';
 	$: cleanValue = value.trim();
-	export let el = undefined;
-	export let submit = undefined;
+	export let el: HTMLTextAreaElement | undefined = undefined;
+	export let submit: undefined | ((v: any, e: KeyboardEvent) => void) = undefined;
 	export let classes = '';
 	export let placeholder = '• • •';
-	export let submitMatcher = undefined; // optional regexp that includes the input value snapshot BEFORE any current keyboard event is applied
-	export let shouldSubmit = (v) => (submitMatcher ? submitMatcher.test(v) : true);
+	export let submitMatcher: undefined | RegExp = undefined; // optional regexp that includes the input value snapshot BEFORE any current keyboard event is applied
+	export let shouldSubmit = (v: string) => (submitMatcher ? submitMatcher.test(v) : true);
 
-	const onKeyDown = (e) => {
+	const onKeyDown = (e: KeyboardEvent) => {
 		console.log('keydown', e.key);
 		switch (e.key) {
 			case 'Enter': {

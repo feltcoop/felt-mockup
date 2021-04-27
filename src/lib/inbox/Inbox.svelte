@@ -1,24 +1,25 @@
 <script lang="ts">
 	import InboxList from './InboxList.svelte';
-	import InboxInput from './InboxInput.svelte';
+	import TextInput from '../ui/TextInput.svelte';
 	import InboxListItem from './InboxListItem.svelte';
 	import {id} from '$lib/data';
-	import {useSession} from '../session/context.js';
+	import type {InboxNoteData} from '$lib/data';
+	import {useSession} from '../session/context';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 
 	// TODO should type="inbox" be type="activity"?
 
 	const session = useSession();
 
-	export let notes;
+	export let notes: InboxNoteData[];
 	export let classes = '';
 	export let style = '';
 
 	let contentValue = '';
 	let titleValue = '';
-	let contentEl;
+	let contentEl: HTMLTextAreaElement;
 
-	const submit = (_, e) => {
+	const submit = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		if (!contentValue && !titleValue) {
@@ -28,6 +29,7 @@
 		// console.log('submit content', contentValue, titleValue);
 		notes = [
 			{
+				type: 'note',
 				author: $session.person.slug,
 				id: id(),
 				content: contentValue,
@@ -39,7 +41,7 @@
 		titleValue = '';
 	};
 
-	const submitTitle = (_, e) => {
+	const submitTitle = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		contentEl.focus();
@@ -49,7 +51,7 @@
 </script>
 
 <div class="flex flex-col {classes}" {style}>
-	<InboxInput
+	<TextInput
 		placeholder="• • • notes notes • • •"
 		bind:value={contentValue}
 		bind:el={contentEl}
@@ -57,11 +59,17 @@
 		submitMatcher={/.+\n\n$/}
 	/>
 	<!-- TODO should `subject` be the data name instead of `title`? -->
-	<InboxInput placeholder="subject?" bind:value={titleValue} submit={submitTitle} />
+	<TextInput placeholder="subject?" bind:value={titleValue} submit={submitTitle} />
 	{#if contentValue || titleValue}
 		<div class="flex border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
 			<InboxListItem
-				note={{author: $session.person.slug, content: contentValue, title: titleValue}}
+				note={{
+					type: 'note',
+					id: id(),
+					author: $session.person.slug,
+					content: contentValue,
+					title: titleValue,
+				}}
 			/>
 		</div>
 	{/if}

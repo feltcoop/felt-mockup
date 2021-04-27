@@ -1,15 +1,20 @@
 <script lang="ts">
+	import type {ForumReplyData, ForumTopicData} from '$lib/data';
+	import type {SelectionStore} from '$lib/selection/store';
+
 	import ForumReply from './ForumReply.svelte';
 
-	export let parent;
-	export let selectReply = undefined;
-	export let selection = undefined;
+	export let parent: ForumReplyData | ForumTopicData;
+	export let selectReply: ((reply: ForumReplyData) => void) | undefined = undefined;
+	export let selection: SelectionStore | undefined = undefined;
+
+	$: children = parent.children!;
 </script>
 
-{#each parent.children as reply}
+{#each children as reply}
 	<ForumReply
 		{reply}
 		{selectReply}
-		isSelected={selection ? selection.test(reply, $selection) : false}
+		selected={selection ? selection.test(reply, $selection) : false}
 	/>
 {/each}

@@ -1,6 +1,11 @@
 <script lang="ts">
-	export let message;
+	export let message: string;
 </script>
 
-<!-- TODO error color -->
-<div class="text-red-600">{message}</div>
+<div class="error-message">{message}</div>
+
+<style>
+	.error-message {
+		color: #e53e3e;
+	}
+</style>

@@ -1,9 +1,12 @@
 <script lang="ts">
-	import {symbols} from '../ui/symbols.js';
+	import type {Writable} from 'svelte/store';
 
-	export let segment;
-	export let world;
-	export let space;
+	import type {SpaceData, WorldData} from '$lib/data';
+	import {symbols} from '../ui/symbols';
+
+	export let segment: string;
+	export let world: Writable<WorldData>;
+	export let space: SpaceData;
 
 	$: isSelected = segment === space.slug;
 	$: selectedClasses = isSelected

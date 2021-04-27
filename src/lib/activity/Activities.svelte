@@ -3,7 +3,7 @@
 	import ActivitiesListItem from './ActivitiesListItem.svelte';
 	import ActivityInput from './ActivityInput.svelte';
 	import {id} from '$lib/data';
-	import {useSession} from '../session/context.js';
+	import {useSession} from '../session/context';
 
 	const session = useSession();
 

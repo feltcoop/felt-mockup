@@ -1,6 +1,6 @@
 <script lang="ts">
 	import World from '$lib/world/World.svelte';
-	import {useWorld} from '$lib/world/context.js';
+	import {useWorld} from '$lib/world/context';
 	import TextInput from '$lib/ui/TextInput.svelte';
 
 	const world = useWorld();

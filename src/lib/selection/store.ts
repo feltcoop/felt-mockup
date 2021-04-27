@@ -1,8 +1,10 @@
 import {writable} from 'svelte/store';
 
-import {Entity} from '$lib/data';
+import type {Entity} from '$lib/data';
 
 export type SelectionStoreState = null | Entity | Entity[];
+
+export type SelectionStore = ReturnType<typeof createSelectionStore>;
 
 export const createSelectionStore = (initialValue: SelectionStoreState) => {
 	const {subscribe, set, update} = writable(initialValue);

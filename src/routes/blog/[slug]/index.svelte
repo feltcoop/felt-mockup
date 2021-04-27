@@ -14,13 +14,13 @@
 </script>
 
 <script lang="ts">
-	import Content from '$lib/ui/Content.svelte';
 	import BlogPost from '$lib/blog/BlogPost.svelte';
 	import BlogFooter from '$lib/blog/BlogFooter.svelte';
+	import type {BlogPostData} from '$lib/data';
 
 	// export let segment;
 	// console.log('blog slug segment', segment);
-	export let post;
+	export let post: BlogPostData;
 </script>
 
 <svelte:head>

@@ -2,19 +2,19 @@
 	import ForumReplyInput from './ForumReplyInput.svelte';
 	import TextButton from '../ui/TextButton.svelte';
 	import ForumReply from './ForumReply.svelte';
-	import {useSession} from '../session/context.js';
-	import {id} from '$lib/data';
-	import {symbols} from '../ui/symbols.js';
+	import {useSession} from '../session/context';
+	import {ForumReplyData, ForumTopicData, id} from '$lib/data';
+	import {symbols} from '../ui/symbols';
 
 	const session = useSession();
 
-	export let topic;
-	export let addReply;
+	export let topic: ForumTopicData;
+	export let addReply: (topic: ForumTopicData, reply: ForumReplyData) => void;
 
-	let value;
+	let value: string;
 	let isOpen = false; // TODO xstate?
 
-	let commentEl;
+	let commentEl: HTMLTextAreaElement;
 
 	const toggleOpen = (nextValue = !isOpen, focusInput = true) => {
 		isOpen = nextValue;
@@ -37,8 +37,9 @@
 		}
 		console.log('submit', $session.person);
 		addReply(topic, {
-			author: $session.person.slug,
+			type: 'reply',
 			id: id(),
+			author: $session.person.slug,
 			content: value,
 		});
 
@@ -55,7 +56,7 @@
 	{#if value}
 		<div class="px-2 py-1 border-4 border-purple-200 border-bl-lg rounded-bl-lg
 			rounded-tr-lg">
-			<ForumReply reply={{author: $session.person.slug, content: value}} />
+			<ForumReply reply={{type: 'reply', id: id(), author: $session.person.slug, content: value}} />
 		</div>
 	{/if}
 {/if}

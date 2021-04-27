@@ -1,8 +1,11 @@
 <script lang="ts">
+	import type {Writable} from 'svelte/store';
+
+	import type {WorldData} from '$lib/data';
 	import SecondaryNavItem from './SecondaryNavItem.svelte';
 
-	export let segment;
-	export let world;
+	export let segment: string;
+	export let world: Writable<WorldData>;
 </script>
 
 <nav class="pt-2 pl-2">

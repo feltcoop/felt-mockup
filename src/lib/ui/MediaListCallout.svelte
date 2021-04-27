@@ -1,20 +1,20 @@
 <script lang="ts">
 	import {scale} from 'svelte/transition';
 
-	import {isEmail} from '../email/utils.js';
+	import {isEmail} from '../email/utils';
 	import Button from '../ui/Button.svelte';
 	import Content from '../ui/Content.svelte';
 	import WaitingAnimation from '../ui/WaitingAnimation.svelte';
 	import EmailInput from '../email/EmailInput.svelte';
 
 	let email = process.env.NODE_ENV === 'development' ? 'hi@test.com' : '';
-	let submittedEmail;
-	let inputEl;
-	let buttonEl;
-	let errorMessage;
-	let submitting;
+	let submittedEmail: string | undefined;
+	let inputEl: HTMLInputElement;
+	let buttonEl: HTMLButtonElement;
+	let errorMessage: string | undefined;
+	let submitting: boolean | undefined;
 
-	const submit = async (e) => {
+	const submit = async (e: KeyboardEvent | MouseEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		if (!email) {
@@ -53,14 +53,14 @@
 		}
 	};
 
-	const onKeyPress = (e) => {
+	const onKeyPress = (e: KeyboardEvent) => {
 		if (e.key === 'Enter') {
 			submit(e);
 		}
 	};
 </script>
 
-<Content classes="wrapper relative" style="height: 180px;">
+<Content style="height: 180px; position: relative;">
 	{#if !submittedEmail}
 		<div in:scale class="inner-wrapper">
 			<h2>want more? join our mailing list!</h2>
@@ -98,21 +98,6 @@
 </Content>
 
 <style>
-	.wrapper {
-		height: 180px; /* hardcoded bc children are absolute pos for transiton */
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-	}
-	.wrapper > div {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-	}
 	.inner-wrapper {
 		display: flex;
 		flex-direction: column;

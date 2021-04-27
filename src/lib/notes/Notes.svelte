@@ -1,14 +1,14 @@
 <script lang="ts">
 	import NotesList from './NotesList.svelte';
-	import NotesInput from './NotesInput.svelte';
+	import TextInput from '../ui/TextInput.svelte';
 	import NotesListItem from './NotesListItem.svelte';
-	import WorldName from '../world/WorldName.svelte';
 	import {id} from '$lib/data';
-	import {useSession} from '../session/context.js';
+	import type {InboxNoteData} from '$lib/data';
+	import {useSession} from '../session/context';
 
 	// TODO should type="inbox" be type="activity"?
 
-	export let notes;
+	export let notes: InboxNoteData[];
 	export let classes = '';
 	export let style = '';
 
@@ -16,7 +16,7 @@
 
 	let value = '';
 
-	const submit = (content, e) => {
+	const submit = (content: string, e: KeyboardEvent): void => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', content);
@@ -28,10 +28,12 @@
 </script>
 
 <div class="flex flex-col h-full {classes}" {style}>
-	<NotesInput bind:value {submit} />
+	<TextInput bind:value {submit} />
 	{#if value}
 		<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-			<NotesListItem note={{author: $session.person.slug, content: value}} />
+			<NotesListItem
+				note={{type: 'note', id: id(), author: $session.person.slug, content: value}}
+			/>
 		</div>
 	{/if}
 	{#if notes && notes.length}

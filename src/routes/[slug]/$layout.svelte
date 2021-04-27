@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SecondaryNav from '$lib/ui/SecondaryNav.svelte';
-	import {useWorld} from '$lib/world/context.js';
-	import {provideSpace} from '$lib/space/context.js';
+	import {useWorld} from '$lib/world/context';
+	import {provideSpace} from '$lib/space/context';
 
 	export let segment;
 

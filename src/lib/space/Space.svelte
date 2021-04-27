@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type {Writable} from 'svelte/store';
+
 	import Content from '../ui/Content.svelte';
 	import Chat from '../chat/Chat.svelte';
 	import Forum from '../forum/Forum.svelte';
@@ -9,10 +11,10 @@
 	import Events from '../events/Events.svelte';
 	import Emojis from '../emoji/Emojis.svelte';
 	import ErrorMessage from '../ui/ErrorMessage.svelte';
-	import {symbols} from '../ui/symbols.js';
+	import {symbols} from '../ui/symbols';
 
-	export let world;
-	export let space;
+	export let world: Writable<any>; // TODO type
+	export let space: Writable<any>; // TODO type
 	export let classes = '';
 </script>
 

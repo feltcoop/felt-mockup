@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Content from '../ui/Content.svelte';
 	import WorldName from '../world/WorldName.svelte';
+	import type {BlogPostData} from '$lib/data';
 
-	export let post;
+	export let post: BlogPostData;
 </script>
 
 <Content>

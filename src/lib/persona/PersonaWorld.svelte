@@ -1,5 +1,7 @@
 <script lang="ts">
-	import EntityExplorer from '../ui/EntityExplorer.svelte';
+	import type {Writable} from 'svelte/store';
+
+	import type {WorldData} from '$lib/data';
 	import InboxList from '../inbox/InboxList.svelte';
 	import NotesList from '../notes/NotesList.svelte';
 	import ActivitiesList from '../activity/ActivitiesList.svelte';
@@ -8,11 +10,11 @@
 	import View from '../ui/View.svelte';
 	import Content from '../ui/Content.svelte';
 
-	export let world;
+	export let world: Writable<WorldData>;
 
-	$: inboxNotes = $world.spaces[0].notes; // TODO temporarily hardcoded
-	$: notesNotes = $world.spaces[0].notes; // TODO temporarily hardcoded
-	$: activities = $world.spaces[2].activities; // TODO temporarily hardcoded
+	$: inboxNotes = ($world.spaces[0] as any).notes; // TODO temporarily hardcoded
+	$: notesNotes = ($world.spaces[0] as any).notes; // TODO temporarily hardcoded
+	$: activities = ($world.spaces[2] as any).activities; // TODO temporarily hardcoded
 </script>
 
 <Content>

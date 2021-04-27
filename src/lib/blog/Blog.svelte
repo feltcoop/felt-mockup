@@ -5,8 +5,8 @@
 	import BlogPost from './BlogPost.svelte';
 	import Button from '../ui/Button.svelte';
 	import {id} from '$lib/data';
-	import {useSession} from '../session/context.js';
-	import {symbols} from '../ui/symbols.js';
+	import {useSession} from '../session/context';
+	import {symbols} from '../ui/symbols';
 
 	// TODO the ui here badly needs animations
 	// to make it less confusing when you toggle the drafts

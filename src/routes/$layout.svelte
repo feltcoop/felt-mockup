@@ -1,17 +1,21 @@
 <script lang="ts">
+	import {page} from '$app/stores';
+
 	import PrimaryNav from '$lib/ui/PrimaryNav.svelte';
-	import {provideSession} from '$lib/session/context.js';
-	import {provideWorld} from '$lib/world/context.js';
-	import {provideSelection} from '$lib/selection/context.js';
+	import {provideSession} from '$lib/session/context';
+	import {provideWorld} from '$lib/world/context';
+	import {provideSelection} from '$lib/selection/context';
 	import data from '$lib/data';
 
 	const {worlds, session: initialSessionData} = data;
 
-	// console.log('MAIN LAYOUT', initialSessionData);
+	console.log('MAIN LAYOUT', initialSessionData, page);
 
-	export let segment;
+	// export let segment: string;
+	$: console.log('$page', $page);
+	let segment = '';
 
-	// $: console.log('segment', segment);
+	$: console.log('segment', segment);
 
 	provideSession(initialSessionData);
 	provideSelection(null);
