@@ -1,6 +1,6 @@
 import {writable} from 'svelte/store';
 
-import {Entity} from '../../routes/_data.js';
+import {Entity} from '$lib/data';
 
 export type SelectionStoreState = null | Entity | Entity[];
 

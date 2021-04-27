@@ -1,7 +1,7 @@
 import {setContext, getContext} from 'svelte';
 import {writable, Writable} from 'svelte/store';
 
-import {SessionData} from '../../routes/_data.js';
+import {SessionData} from '$lib/data';
 
 export const KEY = {};
 

@@ -1,4 +1,4 @@
-import data from '../../_data.js';
+import data from '$lib/data';
 
 const {posts} = data;
 

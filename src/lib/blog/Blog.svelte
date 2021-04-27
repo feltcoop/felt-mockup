@@ -4,7 +4,7 @@
 	import BlogPostInput from './BlogPostInput.svelte';
 	import BlogPost from './BlogPost.svelte';
 	import Button from '../ui/Button.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {useSession} from '../session/context.js';
 	import {symbols} from '../ui/symbols.js';
 

@@ -2,7 +2,7 @@
 	import ChatMessages from './ChatMessages.svelte';
 	import ChatMessage from './ChatMessage.svelte';
 	import ChatInput from './ChatInput.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {useSession} from '../session/context.js';
 	import {useSelection} from '../selection/context.js';
 	import {symbols} from '../ui/symbols.js';

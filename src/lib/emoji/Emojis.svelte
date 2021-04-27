@@ -2,7 +2,7 @@
 	import EmojisList from './EmojisList.svelte';
 	import EmojisListItem from './EmojisListItem.svelte';
 	import EmojiInput from './EmojiInput.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {sizes} from './emoji.js';
 	import {randInt, randItem} from '../utils/random.js';
 	import {useInterval} from '../ui/interval.js';

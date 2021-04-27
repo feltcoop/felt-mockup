@@ -1,16 +1,14 @@
 {
   "name": "felt",
   "description": "customizable community tools that feel good 💚",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "license": "Unlicense",
   "scripts": {
     "dev": "gro dev",
     "build": "gro build",
     "test": "gro test",
     "start": "gro start",
-    "deploy": "gro deploy",
-    "build:tw": "NODE_ENV=production postcss static/tailwind.css -o static/index.css",
-    "tw": "postcss static/tailwind.css -o static/index.css -w"
+    "deploy": "gro deploy"
   },
   "author": {
     "name": "Felt.coop",

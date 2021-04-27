@@ -2,7 +2,7 @@
 	import BlogCommentInput from './BlogCommentInput.svelte';
 	import TextButton from '../ui/TextButton.svelte';
 	import {useSession} from '../session/context.js';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import ForumReply from '../forum/ForumReply.svelte';
 	import {symbols} from '../ui/symbols.js';
 

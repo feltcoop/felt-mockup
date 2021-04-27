@@ -2,10 +2,8 @@
 	import PrimaryNav from '$lib/ui/PrimaryNav.svelte';
 	import {provideSession} from '$lib/session/context.js';
 	import {provideWorld} from '$lib/world/context.js';
-	import {provideSpace} from '$lib/space/context.js';
 	import {provideSelection} from '$lib/selection/context.js';
-	import {DEFAULT_WORLD} from '$lib/world/constants.js';
-	import data from './_data.js';
+	import data from '$lib/data';
 
 	const {worlds, session: initialSessionData} = data;
 

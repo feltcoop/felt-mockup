@@ -3,7 +3,7 @@
 	import NotesInput from './NotesInput.svelte';
 	import NotesListItem from './NotesListItem.svelte';
 	import WorldName from '../world/WorldName.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {useSession} from '../session/context.js';
 
 	// TODO should type="inbox" be type="activity"?

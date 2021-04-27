@@ -46,7 +46,7 @@
 		</li>
 
 		<PrimaryNavSubheading
-			isActive={$world && $world.type === 'persona'}
+			selected={$world && $world.type === 'persona'}
 			on:click={() => toggleSubheading('persona')}
 		>
 			personas
@@ -62,7 +62,7 @@
 		{/if}
 
 		<PrimaryNavSubheading
-			isActive={$world && $world.type === 'community'}
+			selected={$world && $world.type === 'community'}
 			on:click={() => toggleSubheading('community')}
 		>
 			communities
@@ -78,7 +78,7 @@
 		{/if}
 
 		<PrimaryNavSubheading
-			isActive={$world && $world.type === 'person'}
+			selected={$world && $world.type === 'person'}
 			on:click={() => toggleSubheading('person')}
 		>
 			friends
@@ -94,7 +94,7 @@
 		{/if}
 
 		<PrimaryNavSubheading
-			isActive={$world && $world.type === 'page'}
+			selected={$world && $world.type === 'page'}
 			on:click={() => toggleSubheading('page')}
 		>
 			felt.dev

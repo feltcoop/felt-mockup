@@ -2,7 +2,7 @@
 	import EventsList from './EventsList.svelte';
 	import EventsListItem from './EventsListItem.svelte';
 	import EventInput from './EventInput.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {useSession} from '../session/context.js';
 
 	const session = useSession();

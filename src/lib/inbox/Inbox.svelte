@@ -2,7 +2,7 @@
 	import InboxList from './InboxList.svelte';
 	import InboxInput from './InboxInput.svelte';
 	import InboxListItem from './InboxListItem.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {useSession} from '../session/context.js';
 	import PlaceholderInfo from '../ui/PlaceholderInfo.svelte';
 

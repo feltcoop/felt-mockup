@@ -2,7 +2,7 @@
 	import ActivitiesList from './ActivitiesList.svelte';
 	import ActivitiesListItem from './ActivitiesListItem.svelte';
 	import ActivityInput from './ActivityInput.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {useSession} from '../session/context.js';
 
 	const session = useSession();

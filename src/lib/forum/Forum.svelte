@@ -3,7 +3,7 @@
 	import ForumTopicsListItem from './ForumTopicsListItem.svelte';
 	import ForumInput from './ForumInput.svelte';
 	import Button from '../ui/Button.svelte';
-	import {id} from '../../routes/_data.js';
+	import {id} from '$lib/data';
 	import {slugify} from '../url/utils.js';
 	import {useSession} from '../session/context.js';
 	import {useSelection} from '../selection/context.js';
@@ -26,8 +26,8 @@
 
 	let titleValue = '';
 	let contentValue = '';
-	let titleEl;
-	let contentEl;
+	let titleEl: HTMLInputElement;
+	let contentEl: HTMLInputElement;
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 

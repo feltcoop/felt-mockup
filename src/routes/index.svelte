@@ -1,46 +1,13 @@
 <script lang="ts">
 	import Content from '$lib/ui/Content.svelte';
-	import TextInput from '$lib/ui/TextInput.svelte';
 	import SocialLinks from '$lib/ui/SocialLinks.svelte';
 	import MediaListCallout from '$lib/ui/MediaListCallout.svelte';
-	// import PlaceholderInfo from '$lib/ui/PlaceholderInfo.svelte';
-
-	// let text = '';
-
-	// let notes = [{ content: 'im a note :)' }];
-
-	// const submit = (_, e) => {
-	// 	e.preventDefault(); // TODO needed?
-	// 	e.stopPropagation(); // TODO needed?
-	// 	notes = [{ content: text }, ...notes];
-	// 	text = '';
-	// };
 </script>
 
 <svelte:head>
 	<title>Felt</title>
 </svelte:head>
 <div class="flex flex-col flex-1 p-2 items-center" style="max-width: 640px;">
-	<!-- <div class="flex flex-col" style="width: 240xp;">
-		<TextInput bind:value={text} {submit} />
-		{#if text}
-			<div
-				class="px-2 py-1 border-4 border-purple-200 border-bl-lg rounded-bl-lg
-				rounded-tr-lg">
-				{text}
-			</div>
-		{/if}
-		<ul>
-			{#each notes as note}
-				<li>
-					{@html note.content}
-				</li>
-			{/each}
-		</ul>
-	</div>
-	<PlaceholderInfo>
-		TODO add global activity, user settings, & other info
-	</PlaceholderInfo> -->
 	<ul class="text-2xl text-center">
 		<li class="py-4 font-hairline flex flex-col items-center">
 			<div class="text-6xl">Felt</div>
