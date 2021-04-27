@@ -12,7 +12,7 @@
 
 	$: $world, (notes = defaultNotes()); // TODO this is a hack to make things less confusing - the fix is to persist state per world
 
-	const submit = (_, e) => {
+	const submit = (_: any, e: KeyboardEvent) => {
 		e.preventDefault(); // TODO needed?
 		e.stopPropagation(); // TODO needed?
 		notes = [...notes, {content: text}];

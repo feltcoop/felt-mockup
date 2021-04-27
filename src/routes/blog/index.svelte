@@ -1,6 +1,6 @@
 <script context="module">
-	export function preload({params, query}) {
-		return this.fetch(`blog.json`)
+	export function load({fetch}) {
+		return fetch(`blog.json`)
 			.then((r) => r.json())
 			.then((posts) => {
 				return {posts};
@@ -12,8 +12,9 @@
 	import {fly} from 'svelte/transition';
 	import {elasticOut, bounceOut} from 'svelte/easing';
 	import Blog from '$lib/blog/Blog.svelte';
+	import type {BlogPostData} from '$lib/data';
 
-	export let posts;
+	export let posts: BlogPostData[];
 
 	let count1 = 0;
 	let count2 = 0;
@@ -62,7 +63,7 @@
 			{#if count3}+ {count3}{/if}
 		</div>
 		<div class="flex">
-			{#each {length: count1} as item}
+			{#each {length: count1} as _item}
 				<div
 					class="bg-pink-200 text-pink-700 border-pink-300 border-dashed mb-1
 					rounded-lg border-l-4 border-b-4 border-t-2 border-r-2 text-xl p-2
@@ -74,7 +75,7 @@
 					:D
 				</div>
 			{/each}
-			{#each {length: count2} as item}
+			{#each {length: count2} as _item}
 				<div
 					class="bg-indigo-200 text-indigo-700 border-indigo-300 border-dashed
 					mb-1 rounded-lg border-l-4 border-b-4 border-t-2 border-r-2 text-xl
@@ -86,7 +87,7 @@
 					:)
 				</div>
 			{/each}
-			{#each {length: count3} as item}
+			{#each {length: count3} as _item}
 				<div
 					class="bg-yellow-200 text-yellow-700 border-yellow-300 border-dashed
 					mb-1 rounded-lg border-l-4 border-b-4 border-t-2 border-r-2 text-xl

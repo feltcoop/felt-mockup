@@ -3,12 +3,12 @@
 	import {useWorld} from '$lib/world/context';
 	import {provideSpace} from '$lib/space/context';
 
-	export let segment;
+	export let segment: string;
 
 	const world = useWorld();
 
-	const space = provideSpace($world.spaces.find((w) => w.slug === segment));
-	$: $space = segment ? $world.spaces.find((w) => w.slug === segment) : $world.spaces[0];
+	const space = provideSpace($world.spaces.find((w) => w.slug === segment)!);
+	$: $space = segment ? $world.spaces.find((w) => w.slug === segment)! : $world.spaces[0];
 	// $: console.log('space', $space);
 </script>
 
