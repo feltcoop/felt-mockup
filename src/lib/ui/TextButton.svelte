@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let classes = '';
-	export let el = undefined;
+	export let el: HTMLButtonElement | undefined = undefined;
 	export let disabled = false;
 	export let symbol = '+';
 </script>
@@ -13,7 +13,7 @@
 	{disabled}
 >
 	{#if symbol}
-		<span class="text-3xl leading-none">{symbol}</span>
+		<span class="symbol">{symbol}</span>
 	{/if}
 	<span class="content">
 		<slot />
@@ -26,5 +26,9 @@
 	}
 	button:focus {
 		outline: 3px dotted rgba(0, 0, 0, 0.4);
+	}
+	.symbol {
+		font-size: 1.875rem;
+		line-height: 1;
 	}
 </style>

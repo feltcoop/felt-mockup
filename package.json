@@ -8,7 +8,9 @@
     "build": "gro build",
     "test": "gro test",
     "start": "gro start",
-    "deploy": "gro deploy"
+    "deploy": "gro deploy",
+    "build:tw": "NODE_ENV=production postcss src/static/tailwind.css -o src/static/index.css",
+    "tw": "postcss src/static/tailwind.css -o src/static/index.css -w"
   },
   "author": {
     "name": "Felt.coop",

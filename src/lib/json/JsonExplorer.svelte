@@ -44,6 +44,6 @@
 
 <style>
 	.syntax {
-		@apply text-gray-500;
+		color: #a0aec0;
 	}
 </style>

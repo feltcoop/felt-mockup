@@ -30,7 +30,7 @@
 	</a>
 </li>
 
-<style lang="postcss">
+<style>
 	a {
 		color: inherit;
 		width: 100%;
@@ -38,19 +38,19 @@
 		position: relative;
 	}
 	a.selected {
-		@apply text-purple-700;
+		color: #6b46c1;
 		cursor: default;
-		@apply bg-purple-100;
+		background-color: #faf5ff;
 	}
 	a:hover .title {
 		text-decoration: underline;
 	}
 	a:active {
 		top: 2px;
-		@apply border-green-300;
+		border-color: #9ae6b4;
 	}
 	a.selected:active {
 		top: -2px;
-		@apply border-purple-300;
+		border-color: #d6bcfa;
 	}
 </style>

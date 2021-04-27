@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let status;
-	export let error;
+	export let status: string;
+	export let error: Error;
 
 	const dev = process.env.NODE_ENV === 'development';
 </script>
@@ -17,7 +17,7 @@
 	<pre>{error.stack}</pre>
 {/if}
 
-<style lang="postcss">
+<style>
 	h1,
 	p {
 		margin: 0 auto;

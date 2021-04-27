@@ -9,11 +9,11 @@
 </svelte:head>
 <div class="flex flex-col flex-1 p-2 items-center" style="max-width: 640px;">
 	<ul class="text-2xl text-center">
-		<li class="py-4 font-hairline flex flex-col items-center">
+		<li class="padded font-hairline flex flex-col items-center">
 			<div class="text-6xl">Felt</div>
 			<div>customizable community tools that feel good</div>
 		</li>
-		<li class="py-4 font-hairline">
+		<li class="padded font-hairline">
 			<span class="text-4xl">hi, welcome!</span>
 			<div>
 				this is a
@@ -21,7 +21,7 @@
 				not a working website
 			</div>
 		</li>
-		<li class="py-4 mt-8">
+		<li class="padded spaced-top">
 			<!-- wrap it so it doesn't fill the space -->
 			<Content classes="flex items-center justify-center">
 				<a href="/about" class="logo-heart flex flex-wrap flex-col items-center justify-center">
@@ -30,30 +30,30 @@
 				</a>
 			</Content>
 		</li>
-		<li class="py-4 mb-8">
-			<Content classes="font-hairline mb-4">
+		<li class="padded spaced-bottom-lg">
+			<Content classes="font-hairline spaced-bottom">
 				<div>source code at</div>
 				<a class="text-4xl" style="font-weight: 100;" href="https://github.com/feltcoop/felt">
 					github.com/feltcoop/felt
 				</a>
 			</Content>
 		</li>
-		<li class="py-4 mb-8">
-			<Content classes="font-hairline mb-4">
+		<li class="padded spaced-bottom-lg">
+			<Content classes="font-hairline spaced-bottom">
 				<a class="text-4xl" style="font-weight: 100;" href="https://felt.social"> Felt.social </a>
 				<div>is our service and business</div>
 			</Content>
 		</li>
-		<li class="py-4 mb-8">
-			<Content classes="font-hairline mb-4">
+		<li class="padded spaced-bottom-lg">
+			<Content classes="font-hairline spaced-bottom">
 				<a class="text-4xl" style="font-weight: 100;" href="https://www.felt.dev"> Felt.dev </a>
 				<div>is for Felt the free software</div>
 			</Content>
 		</li>
-		<li class="mb-8 text-base">
+		<li class="spaced-bottom-lg text-base">
 			<MediaListCallout />
 		</li>
-		<li class="mb-8">
+		<li class="spaced-bottom-lg">
 			<SocialLinks />
 		</li>
 	</ul>
@@ -72,5 +72,15 @@
 	}
 	.logo-heart:active img {
 		transform: scale3d(1.06, 1.06, 1);
+	}
+	.padded {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.spaced-top {
+		margin-top: 2rem;
+	}
+	.spaced-bottom-lg {
+		margin-bottom: 2rem;
 	}
 </style>

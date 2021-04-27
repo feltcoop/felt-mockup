@@ -19,7 +19,7 @@
 <!-- TODO where should this padding ideally go? -->
 <div class="flex flex-col flex-1 p-2" style="max-width: 640px;">
 	<!-- TODO componentize - SpaceBreadcrumb or PathBreadcrumb or SlugBreadcrumb -->
-	<div class="flex text-3xl font-hairline mb-4">
+	<div class="address">
 		<a
 			class="bg-green-100 px-4 rounded-bl-lg border-dashed border-l-4 border-t-2
 			border-b-4 border-green-200 text-green-700"
@@ -74,19 +74,25 @@
 	</div>
 </div>
 
-<style lang="postcss">
+<style>
 	.active-space-link {
-		@apply text-purple-400 !important;
+		color: #b794f4 !important;
 	}
 	a {
 		position: relative;
 	}
 	a:active {
 		top: 2px;
-		@apply border-green-300;
+		border-color: #9ae6b4;
 	}
 	.active-space-link:active {
 		top: -2px;
-		@apply border-purple-300;
+		border-color: #d6bcfa;
+	}
+	.address {
+		margin-bottom: 1rem;
+		display: flex;
+		font-size: 1.875rem;
+		font-weight: 100;
 	}
 </style>

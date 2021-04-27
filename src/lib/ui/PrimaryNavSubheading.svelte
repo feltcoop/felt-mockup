@@ -1,32 +1,42 @@
 <script lang="ts">
 	export let selected: boolean;
 	export let classes = '';
-	// TODO move to the css
-	$: selectedClasses = selected
-		? 'text-purple-700 border-purple-200 bg-purple-100'
-		: 'text-gray-500 border-gray-200';
 </script>
 
-<div
-	class="subheading relative text-sm pl-4 mt-4 border-dashed rounded-bl-lg
-	rounded-tr-lg border-l-4 border-r-2 border-t-2 border-b-4 {classes}
-	{selectedClasses}"
-	class:selected
-	on:click
->
+<div class="subheading {classes}" class:selected on:click>
 	<slot />
 </div>
 
-<style lang="postcss">
+<style>
 	.subheading {
 		cursor: default;
+		position: relative;
+		font-size: 0.875rem;
+		padding-left: 1rem;
+		margin-top: 1rem;
+		border-style: dashed;
+		border-bottom-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+		border-left-width: 4px;
+		border-right-width: 2px;
+		border-top-width: 2px;
+		border-bottom-width: 4px;
 	}
 	.subheading:active {
 		top: 2px;
-		@apply border-green-300;
+		border-color: #9ae6b4;
 	}
 	.subheading.selected:active {
-		@apply border-purple-300;
+		border-color: #d6bcfa;
 		top: -2px;
+	}
+	.subheading {
+		color: #a0aec0;
+		border-color: #edf2f7;
+	}
+	.selected {
+		color: #6b46c1;
+		border-color: #e9d8fd;
+		background-color: #faf5ff;
 	}
 </style>

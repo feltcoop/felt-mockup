@@ -7,38 +7,40 @@
 	<slot />
 </div>
 
-<style lang="postcss">
+<style>
 	.content {
-		@apply mb-2;
+		margin-bottom: 0.5rem;
 		max-width: 640px; /* TODO variable */
 	}
 	.content :global(a) {
-		@apply text-green-700;
+		color: #2f855a;
 		font-weight: bold;
 	}
 	.content :global(a:hover) {
-		@apply text-purple-700;
+		color: #6b46c1;
 		text-decoration: underline;
 	}
 	/* TODO different outline colors based on if it's an external or internal link */
 	.content :global(a:focus) {
-		@apply text-green-700;
-		outline: 3px dotted #b794f4; /* TODO add class? tailwind keeps me wanting @apply outline-purple-400 */
+		color: #2f855a;
+		outline: 3px dotted #b794f4;
 	}
 	.content :global(h1) {
-		@apply text-2xl;
-		@apply mb-4;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
 	}
 	.content :global(h2) {
-		@apply text-lg;
-		@apply mb-4;
+		font-size: 1.125rem;
+		margin-bottom: 1rem;
 	}
 
 	.content :global(ul) {
-		@apply p-4 list-disc;
+		padding: 1rem;
+		list-style: disc;
 	}
 	.content :global(ol) {
-		@apply p-4 list-decimal;
+		padding: 1rem;
+		list-style: decimal;
 	}
 
 	.content :global(pre) {
@@ -63,6 +65,10 @@
 	}
 
 	.content :global(p) {
-		@apply mb-4;
+		margin-bottom: 1rem;
+	}
+
+	.content :global(.spaced-bottom) {
+		margin-bottom: 1rem;
 	}
 </style>

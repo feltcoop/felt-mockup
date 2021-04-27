@@ -35,7 +35,7 @@ code {
 	}
 }
 
-#sapper {
+#svelte {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -55,4 +55,25 @@ code {
 }
 .clickable:active {
 	transform: scale3d(1.15, 1.15, 1);
+}
+
+hr {
+	border-style: dashed;
+	border-top-width: 2px;
+	border-color: #e9d8fd;
+}
+textarea {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	border-bottom-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+img {
+	/* do not show alt text by default */
+	color: transparent;
+}
+a {
+	color: #2f855a;
 }

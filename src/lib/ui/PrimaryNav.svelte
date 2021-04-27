@@ -54,7 +54,7 @@
 
 		{#if subheadingsOpen.persona}
 			{#each personas as world}
-				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+				<PrimaryNavItem selected={segment === world.slug} href={world.slug}>
 					<div class="item-icon" />
 					{world.title}
 				</PrimaryNavItem>
@@ -70,7 +70,7 @@
 
 		{#if subheadingsOpen.community}
 			{#each communities as world}
-				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+				<PrimaryNavItem selected={segment === world.slug} href={world.slug}>
 					<div class="item-icon" />
 					{world.title}
 				</PrimaryNavItem>
@@ -86,7 +86,7 @@
 
 		{#if subheadingsOpen.person}
 			{#each friends as world}
-				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+				<PrimaryNavItem selected={segment === world.slug} href={world.slug}>
 					<div class="item-icon" />
 					{world.title}
 				</PrimaryNavItem>
@@ -102,7 +102,7 @@
 
 		{#if subheadingsOpen.page}
 			{#each pages as world}
-				<PrimaryNavItem isSelected={segment === world.slug} href={world.slug}>
+				<PrimaryNavItem selected={segment === world.slug} href={world.slug}>
 					<div class="item-icon" />
 					{world.title}
 				</PrimaryNavItem>
@@ -111,7 +111,7 @@
 	</ul>
 </nav>
 
-<style lang="postcss">
+<style>
 	nav {
 		height: 100%;
 	}
@@ -136,21 +136,21 @@
 		top: -2px;
 	}
 	.logo a.selected {
-		@apply text-purple-700;
+		color: #6b46c1;
 		cursor: default;
-		@apply bg-purple-100;
+		background-color: #faf5ff;
 	}
 	.logo a.selected {
-		@apply bg-transparent;
+		background-color: transparent;
 	}
 	.logo a:hover .felt-icon {
-		@apply border-green-300;
+		border-color: #9ae6b4;
 	}
 	.logo a:active .felt-icon {
-		@apply border-green-500;
+		border-color: #48bb78;
 	}
 	.logo a.selected .felt-icon {
-		@apply border-primary;
+		border-color: #549949;
 	}
 	.felt-icon {
 		width: 64px;
@@ -159,13 +159,14 @@
 		border: 2px dashed transparent;
 		max-width: none;
 		padding: 10px;
-		@apply bg-green-100 border-green-200;
+		background-color: #f0fff4;
+		border-color: #c6f6d5;
 	}
 	.item-icon {
 		width: 24px;
 		height: 24px;
-		@apply mr-3;
-		@apply border-purple-200;
+		margin-right: 0.75rem;
+		border-color: #e9d8fd;
 		border-width: 3px;
 		border-style: dashed;
 	}

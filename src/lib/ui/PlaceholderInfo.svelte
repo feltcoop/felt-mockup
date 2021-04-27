@@ -14,9 +14,9 @@
 
 <style>
 	.interactive:hover {
-		@apply text-purple-700;
+		color: #6b46c1;
 	}
 	.interactive:active {
-		@apply text-green-700;
+		color: #2f855a;
 	}
 </style>
