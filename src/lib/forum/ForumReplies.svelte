@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type {ForumReplyData, ForumTopicData} from '$lib/data';
+	import type {BlogPostData, ForumReplyData, ForumTopicData} from '$lib/data';
 	import type {SelectionStore} from '$lib/selection/store';
 
 	import ForumReply from './ForumReply.svelte';
 
-	export let parent: ForumReplyData | ForumTopicData;
+	export let parent: ForumReplyData | ForumTopicData | BlogPostData;
 	export let selectReply: ((reply: ForumReplyData) => void) | undefined = undefined;
 	export let selection: SelectionStore | undefined = undefined;
 

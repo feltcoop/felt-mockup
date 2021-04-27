@@ -1,14 +1,15 @@
 <script lang="ts">
+	import type {EmojiSize} from '$lib/data';
 	import {sizeClasses} from './emoji';
 
-	export let values;
-	export let submit = undefined;
+	export let values: string[];
+	export let submit: (text: string, size: EmojiSize) => void;
 	export let classes = '';
 
 	$: items = values
 		.map((value, i) => {
 			const isGrowing = !(i % 2);
-			const result = [
+			const result: {value: string; classes: string; size: EmojiSize}[] = [
 				{size: 1, value, classes: sizeClasses[1]},
 				{size: 2, value, classes: sizeClasses[2]},
 				{size: 3, value, classes: sizeClasses[3]},

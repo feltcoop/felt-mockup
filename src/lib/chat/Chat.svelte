@@ -1,13 +1,14 @@
 <script lang="ts">
 	import ChatMessages from './ChatMessages.svelte';
 	import ChatMessage from './ChatMessage.svelte';
-	import ChatInput from './ChatInput.svelte';
-	import {id} from '$lib/data';
+	import TextInput from './TextInput.svelte';
+	import {ChatMessageData, id} from '$lib/data';
 	import {useSession} from '../session/context';
 	import {useSelection} from '../selection/context';
 	import {symbols} from '../ui/symbols';
+	import type {SelectionStoreState} from '$lib/selection/store';
 
-	export let messages;
+	export let messages: ChatMessageData[];
 	export let classes = '';
 	export let style = '';
 	export let messagesClasses = '';
@@ -26,7 +27,7 @@
 			? symbols.persona
 			: $session.person.slug;
 
-	const submit = (content, e) => {
+	const submit = (content: string, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit content', content);
@@ -34,7 +35,7 @@
 		value = '';
 	};
 
-	const selectMessage = (message) => {
+	const selectMessage = (message: SelectionStoreState) => {
 		console.log('selectMessage', message);
 		selection.select(message);
 	};
@@ -54,9 +55,9 @@
 		{:else}• • •{/if}
 		{#if value}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-				<ChatMessage message={{author, content: value}} />
+				<ChatMessage message={{type: 'message', id: id(), author, content: value}} />
 			</div>
 		{/if}
 	</div>
-	<ChatInput bind:value {submit} />
+	<TextInput bind:value {submit} />
 </div>

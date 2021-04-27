@@ -1,20 +1,20 @@
 <script lang="ts">
 	import EmojisList from './EmojisList.svelte';
-	import EmojisListItem from './EmojisListItem.svelte';
 	import EmojiInput from './EmojiInput.svelte';
 	import {id} from '$lib/data';
+	import type {EmojiData, EmojiSize} from '$lib/data';
 	import {sizes} from './emoji';
 	import {randInt, randItem} from '../utils/random';
 	import {useInterval} from '../ui/interval';
 
 	// TODO animate the input emoji into the list
 
-	export let emojis;
-	export let values;
+	export let emojis: EmojiData[];
+	export let values: string[];
 	export let classes = '';
 	export let style = '';
 
-	const submit = (text, size) => {
+	const submit = (text: string, size: EmojiSize): void => {
 		// console.log('submit emoji', text, size);
 		emojis = [
 			{
@@ -29,7 +29,7 @@
 
 	// we're not alone!
 	useInterval(
-		() => submit(randItem(values), randItem(sizes)),
+		() => submit(randItem(values)!, randItem(sizes) as EmojiSize),
 		() => randInt(150, 1500),
 	);
 

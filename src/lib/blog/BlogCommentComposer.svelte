@@ -2,18 +2,19 @@
 	import BlogCommentInput from './BlogCommentInput.svelte';
 	import TextButton from '../ui/TextButton.svelte';
 	import {useSession} from '../session/context';
-	import {id} from '$lib/data';
+	import {ForumReplyData, id} from '$lib/data';
+	import type {BlogPostData} from '$lib/data';
 	import ForumReply from '../forum/ForumReply.svelte';
 	import {symbols} from '../ui/symbols';
 
 	const session = useSession();
 
-	export let post;
-	export let addComment;
+	export let post: BlogPostData;
+	export let addComment: (post: BlogPostData, comment: ForumReplyData) => void;
 	export let value = '';
 	export let isOpen = false; // TODO xstate?
 
-	let commentEl;
+	let commentEl: HTMLTextAreaElement;
 
 	const toggleOpen = (nextValue = !isOpen, focusInput = true) => {
 		isOpen = nextValue;
@@ -36,6 +37,7 @@
 		}
 		console.log('submit', $session.person);
 		addComment(post, {
+			type: 'reply',
 			author: $session.person.slug,
 			id: id(),
 			content: value,
@@ -48,7 +50,7 @@
 
 {#if isOpen && value}
 	<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-		<ForumReply reply={{content: value, author: $session.person.slug}} />
+		<ForumReply reply={{type: 'reply', id: id(), content: value, author: $session.person.slug}} />
 	</div>
 {/if}
 <TextButton symbol={symbols.command} on:click={() => toggleOpen()}>

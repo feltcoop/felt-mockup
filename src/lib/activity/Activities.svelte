@@ -3,21 +3,25 @@
 	import ActivitiesListItem from './ActivitiesListItem.svelte';
 	import ActivityInput from './ActivityInput.svelte';
 	import {id} from '$lib/data';
+	import type {ActivityData} from '$lib/data';
 	import {useSession} from '../session/context';
 
 	const session = useSession();
 
-	export let activities;
+	export let activities: ActivityData[];
 	export let classes = '';
 	export let style = '';
 
 	let value = '';
 
-	const submit = (content, e) => {
+	const submit = (content: string, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit activity content', content);
-		activities = [{author: $session.person.slug, id: id(), content}, ...activities];
+		activities = [
+			{type: 'activity', author: $session.person.slug, id: id(), content},
+			...activities,
+		];
 		value = '';
 	};
 
@@ -32,7 +36,9 @@
 	>
 		{#if value}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
-				<ActivitiesListItem activity={{author: $session.person.slug, content: value}} />
+				<ActivitiesListItem
+					activity={{type: 'activity', id: id(), author: $session.person.slug, content: value}}
+				/>
 			</div>
 		{/if}
 		{#if activities && activities.length}

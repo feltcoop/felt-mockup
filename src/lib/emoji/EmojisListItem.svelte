@@ -1,8 +1,8 @@
 <script lang="ts">
-	import WorldName from '../world/WorldName.svelte';
+	import type {EmojiData} from '$lib/data';
 	import {sizeClasses} from './emoji';
 
-	export let emoji;
+	export let emoji: EmojiData;
 
 	$: sizeClass = sizeClasses[emoji.size];
 </script>

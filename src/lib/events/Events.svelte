@@ -1,25 +1,25 @@
 <script lang="ts">
 	import EventsList from './EventsList.svelte';
 	import EventsListItem from './EventsListItem.svelte';
-	import EventInput from './EventInput.svelte';
-	import {id} from '$lib/data';
+	import TextInput from './TextInput.svelte';
+	import {EventData, id} from '$lib/data';
 	import {useSession} from '../session/context';
 
 	const session = useSession();
 
-	export let events;
+	export let events: EventData[];
 	export let classes = '';
 	export let style = '';
 
 	let titleValue = '';
 	let contentValue = '';
 
-	let titleEl;
-	let contentEl;
+	let titleEl: HTMLInputElement;
+	let contentEl: HTMLTextAreaElement;
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = (e) => {
+	const submit = (e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// console.log('submit event', titleValue, contentValue);
@@ -29,6 +29,7 @@
 		}
 		events = [
 			{
+				type: 'event',
 				author: $session.person.slug,
 				id: id(),
 				title: titleValue,
@@ -41,12 +42,12 @@
 		titleEl.focus();
 	};
 
-	const submitTitle = (_, e) => {
+	const submitTitle = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		contentEl.focus();
 	};
-	const submitContent = (_, e) => {
+	const submitContent = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		submit(e); // TODO almost definitely want buttons instead
@@ -56,13 +57,13 @@
 </script>
 
 <div class="flex flex-col {classes}" {style}>
-	<EventInput
+	<TextInput
 		bind:value={titleValue}
 		bind:el={titleEl}
 		submit={submitTitle}
 		placeholder="name of your event • • •"
 	/>
-	<EventInput
+	<TextInput
 		bind:value={contentValue}
 		bind:el={contentEl}
 		submit={submitContent}
@@ -75,7 +76,13 @@
 		{#if hasDraft}
 			<div class="border-4 border-purple-200 rounded-bl-lg rounded-tr-lg">
 				<EventsListItem
-					event={{author: $session.person.slug, title: titleValue, content: contentValue}}
+					event={{
+						type: 'event',
+						id: id(),
+						author: $session.person.slug,
+						title: titleValue,
+						content: contentValue,
+					}}
 				/>
 			</div>
 		{/if}

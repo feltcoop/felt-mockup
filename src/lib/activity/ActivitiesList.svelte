@@ -1,7 +1,8 @@
 <script lang="ts">
+	import type {ActivityData} from '$lib/data';
 	import ActivitiesListItem from './ActivitiesListItem.svelte';
 
-	export let activities;
+	export let activities: ActivityData[];
 </script>
 
 {#each activities as activity}

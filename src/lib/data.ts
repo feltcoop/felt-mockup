@@ -896,8 +896,9 @@ export interface EventData extends Entity {
 export interface EmojiData extends Entity {
 	type: 'emoji';
 	text: string;
-	size: 1 | 2 | 3; // small/medium/large
+	size: EmojiSize;
 }
+export type EmojiSize = 1 | 2 | 3; // small/medium/large
 export interface ViewData extends Entity {
 	type: 'view';
 	component: string;
