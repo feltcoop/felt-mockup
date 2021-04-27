@@ -1,17 +1,16 @@
 <script lang="ts">
-	import Content from '../ui/Content.svelte';
 	import BlogPostList from './BlogPostList.svelte';
 	import BlogPostInput from './BlogPostInput.svelte';
 	import BlogPost from './BlogPost.svelte';
 	import Button from '../ui/Button.svelte';
-	import {id} from '$lib/data';
+	import {BlogPostData, ForumReplyData, id} from '$lib/data';
 	import {useSession} from '../session/context';
 	import {symbols} from '../ui/symbols';
 
 	// TODO the ui here badly needs animations
 	// to make it less confusing when you toggle the drafts
 
-	export let posts;
+	export let posts: BlogPostData[];
 	export let classes = '';
 	export let style = '';
 	// $: console.log('blog posts', posts);
@@ -19,8 +18,8 @@
 	let titleValue = '';
 	let contentValue = '';
 
-	let titleEl;
-	let contentEl;
+	let titleEl: HTMLInputElement;
+	let contentEl: HTMLTextAreaElement;
 
 	let showDraft = false;
 
@@ -36,7 +35,7 @@
 
 	$: hasDraft = Boolean(titleValue || contentValue);
 
-	const submit = (e) => {
+	const submit = (e: KeyboardEvent | MouseEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		// TODO publish confirmation
@@ -53,10 +52,12 @@
 		console.log('submit', $session.person);
 		posts = [
 			{
+				type: 'post',
 				author: $session.person.slug,
 				id: id(),
 				title: titleValue,
 				content: contentValue,
+				slug: contentValue,
 			},
 			...posts,
 		];
@@ -64,19 +65,19 @@
 		contentValue = '';
 		showDraft = false;
 	};
-	const submitTitle = (_, e) => {
+	const submitTitle = (_: any, e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		contentEl.focus();
 	};
-	const submitContent = (_, e) => {
+	const submitContent = (_: any, e: KeyboardEvent) => {
 		if (contentValue.endsWith('\n\n')) {
 			e.preventDefault();
 			e.stopPropagation();
 			titleEl.focus();
 		}
 	};
-	const addComment = (post, comment) => {
+	const addComment = (post: BlogPostData, comment: ForumReplyData) => {
 		posts = posts.map((p) => {
 			if (p.id !== post.id) return p;
 			return {
@@ -119,7 +120,16 @@
 	{/if}
 	{#if showDraft && hasDraft}
 		<div class="border-4 rounded-bl-lg rounded-tr-lg border-purple-200">
-			<BlogPost post={{author: $session.person.slug, title: titleValue, content: contentValue}} />
+			<BlogPost
+				post={{
+					type: 'post',
+					id: id(),
+					author: $session.person.slug,
+					title: titleValue,
+					content: contentValue,
+					slug: contentValue,
+				}}
+			/>
 		</div>
 	{/if}
 	{#if posts && posts.length}
